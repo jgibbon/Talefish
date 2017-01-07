@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="de" version="2.1">
 <context>
     <name>FolderSelector</name>
     <message>
@@ -22,10 +20,7 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation>
-            <numerusform>Klick auf eine Datei oder akzeptiere Dialog, um sie zu öffnen</numerusform>
-            <numerusform>Klick auf eine Datei oder akzeptiere Dialog, um %1 Dateien zu öffnen</numerusform>
-        </translation>
+        <translation><numerusform>Klick auf eine Datei oder akzeptiere Dialog, um sie zu öffnen</numerusform><numerusform>Klick auf eine Datei oder akzeptiere Dialog, um %1 Dateien zu öffnen</numerusform></translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
@@ -34,10 +29,7 @@
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation>
-            <numerusform>Klick auf eine Datei oder akzeptiere Dialog, um sie anzuhängen</numerusform>
-            <numerusform>Klick auf eine Datei oder akzeptiere Dialog, um %1 Dateien anzuhängen</numerusform>
-        </translation>
+        <translation><numerusform>Klick auf eine Datei oder akzeptiere Dialog, um sie anzuhängen</numerusform><numerusform>Klick auf eine Datei oder akzeptiere Dialog, um %1 Dateien anzuhängen</numerusform></translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
@@ -216,24 +208,18 @@
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
-        <translation>
-            <numerusform>insgesamt %1% abgespielt</numerusform>
-            <numerusform></numerusform>
-        </translation>
+        <translation><numerusform>insgesamt %1% abgespielt</numerusform><numerusform>insgesamt %1% abgespielt</numerusform></translation>
     </message>
     <message>
         <source>[No Cover]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Kein Cover]</translation>
     </message>
 </context>
 <context>
     <name>PlaylistPage</name>
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
-        <translation>
-            <numerusform>Eine Datei geöffnet</numerusform>
-            <numerusform>%L1 Dateien geöffnet</numerusform>
-        </translation>
+        <translation><numerusform>Eine Datei geöffnet</numerusform><numerusform>%L1 Dateien geöffnet</numerusform></translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
@@ -256,10 +242,7 @@
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
-        <translation>
-            <numerusform>%1 Datei</numerusform>
-            <numerusform>%1 Dateien</numerusform>
-        </translation>
+        <translation><numerusform>%1 Datei</numerusform><numerusform>%1 Dateien</numerusform></translation>
     </message>
     <message>
         <source>no Duration</source>
