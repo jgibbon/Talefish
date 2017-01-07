@@ -1,0 +1,40 @@
+# Rename this file as Talefish.changes to include changelog
+# entries in your RPM file.
+#
+# Add new changelog entries following the format below.
+# Add newest entries to the top of the list.
+# Separate entries from eachother with a blank line.
+
+# TODO
+# - nothing urgent ;)
+
+
+# * date Author's Name <author's email> version-release
+# - Summary of changes
+* Sat Jan 07 velox 0.0-6
+- bugfix: fix playback bug introduced in 0.0-5 while trying to fix speed issue
+- bugfix: more sane speed reset workaround
+- bugfix: skipping by time pauses playback when it switches to previous track
+- add missing german translation strings
+
+* Fri Jan 06 2017 velox 0.0-5
+- bugfix: speed often resets to 100% as track switches
+- new option (experimental): control with head set buttons (call/hangup = play/pause)
+- new option: periodically save current progress
+- new option: verbose logging
+- new option: sort naturally when scanning files
+- options are saved when leaving options page (previously only on clean app exit)
+
+* Fri Jan 06 2017 velox 0.0-4
+- Display file/folder names on Lock Screen
+- Simple enqueue function (will not save progress for reopening that directory)
+- Show directory name in Playlist view
+
+* Sun Jan 03 2016 velox 0.0-3
+- uppercase file suffixes (*.MP3 instead of *.mp3) allowed
+
+* Sun Jan 03 2016 velox 0.0-2
+- now lets you open *.mp3, *.m4a, *.m4b, *.flac, *.ogg. *.wav files (ability to play equals system media player)
+
+
+
