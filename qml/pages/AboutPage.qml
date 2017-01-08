@@ -117,6 +117,7 @@ Page {
 
             Label {
                 text: qsTr("A big thank you to the translators:")
+                      + '<br />eson (sv)'
                       + '<br />Caballlero (es)'
                 width: parent.width
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
