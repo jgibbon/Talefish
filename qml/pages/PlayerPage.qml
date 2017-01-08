@@ -107,14 +107,12 @@ Page {
             OpenPlaylistButton {
                 id: opnBtn
                 visible: false
-                log: app.log
             }
 
             OpenPlaylistButton {
                 id: enqueueBtn
                 visible: false
                 enqueue: true
-                log: app.log
             }
 
             MenuItem {
@@ -145,7 +143,6 @@ Page {
                     //                    pageStack.push(Qt.resolvedUrl("../lib/OpenDirectoryDialog.qml"), {options:options,appstate:appstate, firstPage:page});
                     opnBtn.openDirectoryDialog() //pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
             }
-
 
         }
         Item {
