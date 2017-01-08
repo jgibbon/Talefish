@@ -157,11 +157,11 @@
     </message>
     <message>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar si tiene archivos numerados sin ceros a la izquierda. Sólo aplicable cuando se clasifica por nombre.</translation>
     </message>
     <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilice los botones del auricular/Bluetooth para controlar Talefish</translation>
     </message>
 </context>
 <context>
@@ -169,105 +169,105 @@
     <message>
         <source>Options</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Opciones</translation>
     </message>
     <message>
         <source>Playlist</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Lista a reproducir</translation>
     </message>
     <message>
         <source>Enqueue</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>En cola</translation>
     </message>
     <message>
         <source>Open</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <source>Nothing to play</source>
-        <translation type="unfinished"></translation>
+        <translation>Nada para reproducir</translation>
     </message>
     <message>
         <source>Open Files by pulling down.</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir ficheros tirando hacia abajo</translation>
     </message>
     <message>
         <source>Rewind Track</source>
-        <translation type="unfinished"></translation>
+        <translation>Pista anterior</translation>
     </message>
     <message>
         <source>Previous Track</source>
-        <translation type="unfinished"></translation>
+        <translation>Pista previa</translation>
     </message>
     <message>
         <source>Next Track</source>
-        <translation type="unfinished"></translation>
+        <translation>Pista siguiente</translation>
     </message>
     <message>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 / %2 (File %L3 of %L4)</translation>
     </message>
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
-        <translation type="unfinished">
+        <translation>%1% total reproducido
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>[No Cover]</source>
-        <translation type="unfinished"></translation>
+        <translation>[No portada]</translation>
     </message>
 </context>
 <context>
     <name>PlaylistPage</name>
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
-        <translation type="unfinished">
+        <translation>%L1 ficheros(s)abiertos
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 de %2 reproducidos (track %3)</translation>
     </message>
 </context>
 <context>
     <name>PlaylistView</name>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error</translation>
     </message>
 </context>
 <context>
     <name>scanDialog</name>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error</translation>
     </message>
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
-        <translation type="unfinished">
+        <translation>%1 Ficheros
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation type="unfinished"></translation>
+        <translation>No duración</translation>
     </message>
     <message>
         <source>Reading Durations</source>
-        <translation type="unfinished"></translation>
+        <translation>Leyendo duraciones</translation>
     </message>
     <message>
         <source>Reading Durations and matching Cover files</source>
-        <translation type="unfinished"></translation>
+        <translation>Leyendo duraciones y comparando portada de ficheros</translation>
     </message>
 </context>
 </TS>n
