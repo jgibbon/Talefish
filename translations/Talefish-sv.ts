@@ -4,66 +4,66 @@
     <message>
         <source>About Talefish</source>
         <comment>header</comment>
-        <translation type="unfinished"/>
+        <translation>Om Talefish</translation>
     </message>
     <message>
         <source>Contribute</source>
         <comment>section header</comment>
-        <translation type="unfinished"/>
+        <translation>Medverka</translation>
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation type="unfinished"/>
+        <translation>Diskutera eller klicka &quot;Thanks!&quot; på maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
-        <translation type="unfinished"/>
+        <translation>TMO-tråd</translation>
     </message>
     <message>
         <source>GitHub page</source>
-        <translation type="unfinished"/>
+        <translation>GitHub-sida</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation type="unfinished"/>
+        <translation>Du kan också bidra med översättningar på Transifex, om du inte gillar GitHub:</translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation type="unfinished"/>
+        <translation>Transifex-sida</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation type="unfinished"/>
+        <translation>Eller bjuda mig på en öl, om du verkligen känner för det:</translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation type="unfinished"/>
+        <translation>PayPal-donation</translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation type="unfinished"/>
+        <translation>Tack!</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation type="unfinished"/>
+        <translation>Tack till alla användare för förslag och till alla som hjälper mig!</translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation type="unfinished"/>
+        <translation>Översättare</translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation type="unfinished"/>
+        <translation>Stort tack till översättarna:</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation type="unfinished"/>
+        <translation>Talefish är en mappbaserad ljudboksspelare, skriven huvudsakligen i QML. Den är licensierad under GPL2 av John Gibbon med hjälp av gemenskapen.</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation type="unfinished"/>
+        <translation>Projektstjärnor, kodbidrag och felrapporter är välkomna på GitHub:</translation>
     </message>
 </context>
 <context>
@@ -227,7 +227,7 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished"/>
+        <translation>Om</translation>
     </message>
 </context>
 <context>
