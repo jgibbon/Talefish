@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es">
+<TS version="2.0" language="es">
 <context>
     <name>FolderSelector</name>
     <message>
@@ -22,7 +22,10 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation><numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)<numerusform></numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
+        <translation>
+            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+        </translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
@@ -31,7 +34,10 @@
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation><numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)<numerusform></numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
+        <translation>
+            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+        </translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
@@ -210,8 +216,8 @@
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
-        <translation>%1% total reproducido
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1% total reproducido</numerusform>
         </translation>
     </message>
     <message>
@@ -223,8 +229,8 @@
     <name>PlaylistPage</name>
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
-        <translation>%L1 ficheros(s)abiertos
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%L1 ficheros(s)abiertos</numerusform>
         </translation>
     </message>
     <message>
@@ -248,8 +254,9 @@
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
-        <translation>%1 Ficheros
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1 Ficheros</numerusform>
+            <numerusform>%1 Ficheros</numerusform>
         </translation>
     </message>
     <message>
@@ -266,4 +273,4 @@
         <translation>Leyendo duraciones y comparando portada de ficheros</translation>
     </message>
 </context>
-</TS>n
+</TS>
