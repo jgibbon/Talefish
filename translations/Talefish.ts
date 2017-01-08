@@ -2,6 +2,73 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <source>About Talefish</source>
+        <comment>header</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contribute</source>
+        <comment>section header</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TMO thread</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Project stars, Pull requests or bug reports are welcome on GitHub:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>GitHub page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transifex page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Or buy me a beer if you really feel like it:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PayPal donation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thanks!</source>
+        <comment>header</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thanks to all users suggesting things and everyone helping me out!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Translators</source>
+        <comment>header</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A big thank you to the translators:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FolderSelector</name>
     <message>
         <source>Sort by Name</source>
@@ -161,6 +228,11 @@
     </message>
     <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <comment>pulley</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>
