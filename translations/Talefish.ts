@@ -9,10 +9,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Contribute</source>
         <comment>section header</comment>
         <translation type="unfinished"></translation>
@@ -23,10 +19,6 @@
     </message>
     <message>
         <source>TMO thread</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Project stars, Pull requests or bug reports are welcome on GitHub:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -65,6 +57,14 @@
     </message>
     <message>
         <source>A big thank you to the translators:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

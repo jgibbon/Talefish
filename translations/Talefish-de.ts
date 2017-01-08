@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.0" language="de">
 <context>
     <name>AboutPage</name>
     <message>
         <source>About Talefish</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon.</source>
-        <translation type="unfinished"></translation>
+        <translation>Über Talefish</translation>
     </message>
     <message>
         <source>Contribute</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Hilf mit</translation>
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation type="unfinished"></translation>
+        <translation>Diskutiere oder klicke &quot;thanks&quot; auf talk.maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Project stars, Pull requests or bug reports are welcome on GitHub:</source>
-        <translation type="unfinished"></translation>
+        <translation>TMO Thread</translation>
     </message>
     <message>
         <source>GitHub page</source>
-        <translation type="unfinished"></translation>
+        <translation>GitHub-Seite</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kannst Übersetzungen auf Transifex machen, wenn du GitHub nicht magst:</translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation type="unfinished"></translation>
+        <translation>Transifex-Seite</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oder gib&apos; mir ein Bier aus, wenn du magst:</translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation type="unfinished"></translation>
+        <translation>PayPal-Spende</translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Danke!</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation type="unfinished"></translation>
+        <translation>Vielen Dank an alle User, die Dinge vorgeschlagen haben und an alle, die mir aushelfen!</translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzer</translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein großer Dank gilt auch den Übersetzern:</translation>
+    </message>
+    <message>
+        <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
+        <translation>Talefish ist ein Ordnerbasierter Hörbuch-Player, der hauptsächlich in QML geschrieben ist. Er ist unter GPL2 veröffentlicht und wurde von John Gibbon mit der Hilfe der Community gemacht.</translation>
+    </message>
+    <message>
+        <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
+        <translation>Projektsterne, Pull Requests und Fehlerberichte sind auf GitHub sehr willkommen: </translation>
     </message>
 </context>
 <context>
@@ -218,7 +218,7 @@
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
-        <translation>Gibt einen Haufen Dinge im Hintergrund aus, kann etwas langsam sein. Lies die Ausgaben, indem du Talefish im Terminal öffnest</translation>
+        <translation>Gibt einen Haufen Dinge im Hintergrund aus, kann etwas langsam sein. Lies die Ausgaben, indem du Talefish im Terminal öffnest.</translation>
     </message>
     <message>
         <source>Sort directory naturally while scanning</source>
@@ -235,7 +235,7 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Über</translation>
     </message>
 </context>
 <context>
