@@ -40,7 +40,8 @@ QT += dbus
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += \
     translations/Talefish-de.ts \
-    translations/Talefish-sv.ts
+    translations/Talefish-sv.ts \
+    translations/Talefish-es.ts
 
 DISTFILES += \
     qml/lib/FolderSelector.qml \
