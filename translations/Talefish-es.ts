@@ -1,5 +1,4 @@
 <?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
-<TS version="2.1">
 <context>
     <name>FolderSelector</name>
     <message>
