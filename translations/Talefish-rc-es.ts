@@ -65,7 +65,7 @@
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation type="unfinished"></translation>
+        <translation>Estrellas del proyecto, tirar peticiones o informes de errores son bienvenidos en GitHub:</translation>
     </message>
 </context>
 <context>
