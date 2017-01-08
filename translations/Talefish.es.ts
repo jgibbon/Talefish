@@ -5,19 +5,19 @@
     <name>FolderSelector</name>
     <message>
         <source>Sort by Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar por nombre</translation>
     </message>
     <message>
         <source>Sort by Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar por tipo</translation>
     </message>
     <message>
         <source>Sort by Last Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar por últimas modificadas</translation>
     </message>
     <message>
         <source>Open Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir directorio</translation>
     </message>
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
