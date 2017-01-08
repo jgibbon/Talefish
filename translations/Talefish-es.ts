@@ -20,9 +20,7 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation>clic en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)
-            <numerusform></numerusform>
-        </translation>
+        <translation>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)<numerusform></numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
