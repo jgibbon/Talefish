@@ -6,62 +6,62 @@
     <message>
         <source>About Talefish</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Acerca de Talefish</translation>
     </message>
     <message>
         <source>Contribute</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Contribuir</translation>
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation type="unfinished"></translation>
+        <translation>Discutir o click &quot;gracias&quot; en talk.maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
-        <translation type="unfinished"></translation>
+        <translation>TMO hilo</translation>
     </message>
     <message>
         <source>GitHub page</source>
-        <translation type="unfinished"></translation>
+        <translation>página GitHub</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation type="unfinished"></translation>
+        <translation> Se puede enviar traducciones por Transifex, si desea don&apos;me gusta GitHub:</translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation type="unfinished"></translation>
+        <translation>página Transifex</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation type="unfinished"></translation>
+        <translation>O comprame una cerveza si realmente sientes que te gusta:</translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation type="unfinished"></translation>
+        <translation>PayPal donación</translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Gracias!</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation type="unfinished"></translation>
+        <translation>Gracias a todos los usuarios que me sugeriron cosas, y me ayudaron!</translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Traductores</translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation type="unfinished"></translation>
+        <translation>Un gran agradecimiento a los traductores:</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation type="unfinished"></translation>
+        <translation>Talefish es un directorio basado en un reproductor de libros de audio escrto en QML. Es&apos;s Licenciado bajo GPLv2 y hecho por John Gibbon con la ayuda de la comunidad.</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
