@@ -22,7 +22,7 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)<numerusform></numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
+        <translation><numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)<numerusform></numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
@@ -31,7 +31,7 @@
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)<numerusform></numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
+        <translation><numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)<numerusform></numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
