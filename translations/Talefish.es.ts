@@ -90,58 +90,58 @@
     </message>
     <message>
         <source>Display playlist progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar progreso de la lista de reproducción</translation>
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Deslizar la portada (o por encima del título ) para saltar pistas</translation>
     </message>
     <message>
         <source>Cassette shows progress of</source>
-        <translation type="unfinished"></translation>
+        <translation>Casete muestra el progreso de</translation>
     </message>
     <message>
         <source>track</source>
-        <translation type="unfinished"></translation>
+        <translation>Pista</translation>
     </message>
     <message>
         <source>directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio</translation>
     </message>
     <message>
         <source>Tape Animations</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Animaciones de cinta</translation>
     </message>
     <message>
         <source>Player Page Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Animación de la página del jugador</translation>
     </message>
     <message>
         <source>App-Cover Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Animación de portada de la aplicación</translation>
     </message>
     <message>
         <source>Open Files</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Abrir ficheros</translation>
     </message>
     <message>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar &quot;En cola &quot; Polea</translation>
     </message>
     <message>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Diversos</translation>
     </message>
     <message>
         <source>Save progress periodically</source>
-        <translation type="unfinished"></translation>
+        <translation>guardar progreso periodicamente</translation>
     </message>
     <message>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si está deshabilitado, el estado de reproducción actual sólo guardará cuando la aplicación esté limpia. en contrario, guardará el progreso cada pocos segundos</translation>
     </message>
     <message>
         <source>Verbose logging enabled</source>
@@ -149,11 +149,11 @@
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salidas de un monton cosas de fondo, puede estar poco lento. Ver salida abriendo Talefish por Terminal</translation>
     </message>
     <message>
         <source>Sort directory naturally while scanning</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar directorio de forma natural durante el escaneo</translation>
     </message>
     <message>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
