@@ -22,24 +22,24 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation type="unfinished">
+        <translation>Haga clic en el archivo para abrirlo o aceptar el diálogo para abrir el archivo %1 (s)
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directorio en cola</translation>
     </message>
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation type="unfinished">
+        <translation>Haga clic en el archivo para abrirlo o aceptar el diálogo para abrir el archivo %1 (s)
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
-        <translation type="unfinished"></translation>
+        <translation>Progreso no se guardará para reabrir archivos en cola.</translation>
     </message>
 </context>
 <context>
@@ -47,46 +47,46 @@
     <message>
         <source>Options</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Opciones</translation>
     </message>
     <message>
         <source>Playback</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Reproducir</translation>
     </message>
     <message>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
-        <translation type="unfinished"></translation>
+        <translation>Reproducir velocidad: %1%</translation>
     </message>
     <message>
         <source>Play next Track automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Reproducir siguiente pista automáticamente</translation>
     </message>
     <message>
         <source>Short Skip duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Duración del salto corto</translation>
     </message>
     <message>
         <source>Long Skip duration</source>
-        <translation type="unfinished"></translation>
+        <translation>Duración del salto largo</translation>
     </message>
     <message>
         <source>Search best cover image for each file</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar la mejor imagen de portada para cada archivo</translation>
     </message>
     <message>
         <source>Do Animations</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer animaciones</translation>
     </message>
     <message>
         <source>Player Page</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Página del jugador</translation>
     </message>
     <message>
         <source>Display directory name</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar nombre del directorio</translation>
     </message>
     <message>
         <source>Display playlist progress</source>
