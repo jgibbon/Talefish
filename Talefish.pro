@@ -64,7 +64,8 @@ DISTFILES += \
     qml/pages/OptionsPage.qml \
     qml/lib/OpenDirectoryDialog.qml \
     qml/lib/OptionComboBox.qml \
-    qml/lib/StringScore.js
+    qml/lib/StringScore.js \
+    qml/pages/AboutPage.qml
 
 SUBDIRS += \
     lib/folderlistmodel/folderlistmodel.pro

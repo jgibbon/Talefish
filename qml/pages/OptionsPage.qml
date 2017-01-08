@@ -33,6 +33,19 @@ Page {
         anchors.fill: parent
         contentHeight: mainColumn.height
 
+
+        PullDownMenu {
+            id: pulleyTop
+
+            MenuItem {
+                text: qsTr('About', 'pulley')
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("AboutPage.qml"), {options:options,appstate:appstate, firstPage:page});
+                }
+            }
+        }
+
+
         Column {
             width: parent.width
             id: mainColumn
