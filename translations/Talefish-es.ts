@@ -29,9 +29,7 @@
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation>Haga clic en el archivo para abrirlo o aceptar el diálogo para abrir el archivo %1 (s)
-            <numerusform></numerusform>
-        </translation>
+        <translation>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)<numerusform></numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
