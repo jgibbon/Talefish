@@ -174,7 +174,7 @@
     <message>
         <source>Playlist</source>
         <comment>pulley</comment>
-        <translation>Lista a reproducir</translation>
+        <translation>Lista de reproducción</translation>
     </message>
     <message>
         <source>Enqueue</source>
