@@ -11,6 +11,12 @@
 
 # * date Author's Name <author's email> version-release
 # - Summary of changes
+* [git only]
+- added swedish translation by eson
+- added spanish translation by caballlero
+- new page: about
+- new option: purge old saved directory progress
+
 * Sat Jan 07 velox 0.0-6
 - bugfix: fix playback bug introduced in 0.0-5 while trying to fix speed issue
 - bugfix: more sane speed reset workaround
