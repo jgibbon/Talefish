@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de">
+<TS version="2.1" language="de">
 <context>
     <name>AboutPage</name>
     <message>
@@ -256,7 +256,7 @@
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation type="unfinished">Um zu verhindern, dass sich gespeicherte Daten für alte oder gar gelöschte Ordner ansammeln, sucht Talefish beim Programmstart nach alten Daten. Dies hat keinen Einfluss auf das geöffnete Verzeichnis.</translation>
+        <translation>Um zu verhindern, dass sich gespeicherte Daten für alte oder gar gelöschte Ordner ansammeln, sucht Talefish beim Programmstart nach alten Daten. Dies hat keinen Einfluss auf das geöffnete Verzeichnis.</translation>
     </message>
 </context>
 <context>
