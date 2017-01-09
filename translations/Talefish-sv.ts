@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="sv" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="sv">
 <context>
     <name>AboutPage</name>
     <message>
@@ -87,7 +89,10 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation><numerusform>Tryck på en fil för att öppna den, eller &quot;Öppna mappen&quot; för att öppna %1 fil</numerusform><numerusform>Tryck på en fil för att öppna den, eller &quot;Öppna mappen&quot; för att öppna %1 filer</numerusform></translation>
+        <translation>
+            <numerusform>Tryck på en fil för att öppna den, eller &quot;Öppna mappen&quot; för att öppna %1 fil</numerusform>
+            <numerusform>Tryck på en fil för att öppna den, eller &quot;Öppna mappen&quot; för att öppna %1 filer</numerusform>
+        </translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
@@ -96,7 +101,10 @@
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation><numerusform>Tryck på en fil för att köa den, eller &quot;Köa mapp&quot; för att köa %1 fil</numerusform><numerusform>Tryck på en fil för att köa den, eller &quot;Köa mapp&quot; för att köa %1 filer</numerusform></translation>
+        <translation>
+            <numerusform>Tryck på en fil för att köa den, eller &quot;Köa mapp&quot; för att köa %1 fil</numerusform>
+            <numerusform>Tryck på en fil för att köa den, eller &quot;Köa mapp&quot; för att köa %1 filer</numerusform>
+        </translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
@@ -229,6 +237,27 @@
         <comment>pulley</comment>
         <translation>Om</translation>
     </message>
+    <message>
+        <source>Keep directory progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>for %1 day(s)</source>
+        <comment>keep progress for x days</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>forever</source>
+        <comment>keep progress forever</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PlayerPage</name>
@@ -280,7 +309,10 @@
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
-        <translation><numerusform>%1% uppspelad totalt</numerusform><numerusform>%1% uppspelade totalt</numerusform></translation>
+        <translation>
+            <numerusform>%1% uppspelad totalt</numerusform>
+            <numerusform>%1% uppspelade totalt</numerusform>
+        </translation>
     </message>
     <message>
         <source>[No Cover]</source>
@@ -291,7 +323,10 @@
     <name>PlaylistPage</name>
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
-        <translation><numerusform>%L1 fil öppnad</numerusform><numerusform>%L1 filer öppnade</numerusform></translation>
+        <translation>
+            <numerusform>%L1 fil öppnad</numerusform>
+            <numerusform>%L1 filer öppnade</numerusform>
+        </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
@@ -314,7 +349,10 @@
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
-        <translation><numerusform>%1 fil</numerusform><numerusform>%1 filer</numerusform></translation>
+        <translation>
+            <numerusform>%1 fil</numerusform>
+            <numerusform>%1 filer</numerusform>
+        </translation>
     </message>
     <message>
         <source>no Duration</source>

@@ -17,11 +17,12 @@ Item {
             dirprogress[playlistActive.folder.replace('file://', '')] = {
                 percent: ((currentPosition + playlistActive.playlistOffset) * 100)/playlist.duration,
                 index: playlistIndex,
-                position: currentPosition
+                position: currentPosition,
+                lastAccess: new Date().getTime()
             }
             savedDirectoryProgress = dirprogress;
             } else {
-
+                //current file was enqueued
             }
         }
     }
@@ -66,6 +67,35 @@ Item {
         onTriggered: persistentObj.save()
     }
 
+    property bool allDBsLoaded: persistentObj._loaded && options._loaded
+    onAllDBsLoadedChanged: {
+        var keepDays = options.keepUnopenedDirectoryProgressDays,
+            keepMs = keepDays * 24 * 360000;
+
+        if(keepDays < 9999) {
+            var progress = {}
+            var now = new Date().getTime();
+            app.log('checking for obsolete directory progress');
+            for(var dir in savedDirectoryProgress) {
+                var el = savedDirectoryProgress[dir];
+                if(!el.lastAccess) { //compatibility with older versions. remove at some point.
+                    app.log('progress: last access not saved, setting to now', dir);
+                    el.lastAccess = now;
+                }
+                var diff = now - el.lastAccess;
+                if(diff < keepMs){
+                    app.log('keeping progress for ', dir);
+                    progress[dir] = el;
+                } else {
+                    app.log('removing progress for ', dir);
+                }
+            }
+            savedDirectoryProgress = progress;
+        }
+
+
+    }
+
     PersistentObject {
         id: persistentObj
 
@@ -80,17 +110,14 @@ Item {
         property int playlistDuration: appstate.playlist.duration
         property var savedDirectoryProgress: ({})
         onPlaylistJSChanged: {
-            //            console.log('onPlaylistJSChanged:', persistentObj.playlistJS)
             playlist.fromJSON(persistentObj.playlistJS);
         }
+
     }
     Component.onDestruction: { // hopefully before destruction of persistentObj :)
         persistentObj.playlistJS = appstate.playlist.toJSON();
-        //        console.log('save this shit!', persistentObj.playlistJS)
-        //persistentObj.save();
     }
     Component.onCompleted: {
-        //        console.log('completed:', persistentObj.playlistJS)
         playlist.fromJSON(persistentObj.playlistJS);
     }
 }

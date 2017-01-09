@@ -235,6 +235,26 @@
         <comment>pulley</comment>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Keep directory progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>for %1 day(s)</source>
+        <comment>keep progress for x days</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>forever</source>
+        <comment>keep progress forever</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PlayerPage</name>

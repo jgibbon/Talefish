@@ -262,6 +262,19 @@ Page {
 
             }
 
+            OptionComboBox {
+                optionname: 'keepUnopenedDirectoryProgressDays'
+                label:qsTr("Keep directory progress")
+                description: qsTr('To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.')
+                jsonData: [
+                    {text:qsTr('for %1 day(s)', 'keep progress for x days', 1).arg(1), value: 1},
+                    {text:qsTr('for %1 day(s)', 'keep progress for x days', 10).arg(10), value: 10},
+                    {text:qsTr('for %1 day(s)', 'keep progress for x days', 30).arg(30), value: 30},
+                    {text:qsTr('for %1 day(s)', 'keep progress for x days', 50).arg(50), value: 50},
+                    {text:qsTr('for %1 day(s)', 'keep progress for x days', 100).arg(100), value: 100},
+                    {text:qsTr('forever', 'keep progress forever'), value: 9999}
+                ]
+            }
         }
     }
 

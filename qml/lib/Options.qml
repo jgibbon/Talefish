@@ -21,6 +21,7 @@ PersistentObject {
     property int skipDurationSmall: 10000 //10s
     property int skipDurationNormal: 60000 //1m
 
+
     property real playbackRate:1
 
     //open files
@@ -44,6 +45,7 @@ PersistentObject {
     property bool useHeadphoneCommands: false
     property bool saveProgressPeriodically: false
     property bool doLog: false
+    property int keepUnopenedDirectoryProgressDays: 30
 
     // LEGACY   ))
     property bool appCoverAnimateEnabled: true

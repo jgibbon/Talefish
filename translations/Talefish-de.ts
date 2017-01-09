@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de">
+<TS version="2.0" language="de">
 <context>
     <name>AboutPage</name>
     <message>
@@ -236,6 +236,27 @@
         <source>About</source>
         <comment>pulley</comment>
         <translation>Über</translation>
+    </message>
+    <message>
+        <source>Keep directory progress</source>
+        <translation>Behalte Ordnerfortschritt</translation>
+    </message>
+    <message numerus="yes">
+        <source>for %1 day(s)</source>
+        <comment>keep progress for x days</comment>
+        <translation>
+            <numerusform>für einen Tag</numerusform>
+            <numerusform>für %1 Tage</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>forever</source>
+        <comment>keep progress forever</comment>
+        <translation>für immer</translation>
+    </message>
+    <message>
+        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
+        <translation type="unfinished">Um zu verhindern, dass sich gespeicherte Daten für alte oder gar gelöschte Ordner ansammeln, sucht Talefish beim Programmstart nach alten Daten. Dies hat keinen Einfluss auf das geöffnete Verzeichnis.</translation>
     </message>
 </context>
 <context>

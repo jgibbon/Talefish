@@ -1,69 +1,71 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" sourcelanguage="en" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="es" sourcelanguage="en">
 <context>
     <name>AboutPage</name>
     <message>
         <source>About Talefish</source>
         <comment>header</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Contribute</source>
         <comment>section header</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>TMO thread</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>GitHub page</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -87,7 +89,10 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation><numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform><numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
+        <translation>
+            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+        </translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
@@ -96,7 +101,10 @@
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation><numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform><numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform></translation>
+        <translation>
+            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+        </translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
@@ -206,7 +214,7 @@
     </message>
     <message>
         <source>Verbose logging enabled</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
@@ -227,7 +235,28 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keep directory progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>for %1 day(s)</source>
+        <comment>keep progress for x days</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>forever</source>
+        <comment>keep progress forever</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -280,7 +309,10 @@
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <source>[No Cover]</source>
@@ -291,7 +323,10 @@
     <name>PlaylistPage</name>
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
@@ -314,7 +349,10 @@
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
-        <translation><numerusform>%1 Ficheros</numerusform><numerusform>%1 Ficheros</numerusform></translation>
+        <translation>
+            <numerusform>%1 Ficheros</numerusform>
+            <numerusform>%1 Ficheros</numerusform>
+        </translation>
     </message>
     <message>
         <source>no Duration</source>

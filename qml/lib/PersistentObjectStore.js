@@ -35,7 +35,7 @@ function save(obj) {
                     tx.executeSql('DELETE FROM settings WHERE settingsName=?;', [obj.objectName]);
 
                     // Save all fields
-                    var skippedAttributes = ['objectName', 'doPersist', 'storeSettings'];
+                    var skippedAttributes = ['objectName', 'doPersist', 'storeSettings', '_loaded'];
                     for (var fieldName in obj) {
                         var value = JSON.stringify(obj[fieldName]);
                         //values starting with 'on' should be blatantly ignored.
@@ -70,6 +70,7 @@ function load(obj) {
 
                         }
                     }
+                    obj._loaded = true
                 }
                 );
 }
