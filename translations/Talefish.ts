@@ -89,8 +89,8 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Click file to open it or accept dialog to open %1 file</numerusform>
         </translation>
     </message>
     <message>
@@ -100,8 +100,8 @@
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Click file to enqueue or accept dialog to enqueue %1 file</numerusform>
         </translation>
     </message>
     <message>
@@ -243,7 +243,7 @@
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>for %1 day</numerusform>
         </translation>
     </message>
     <message>
@@ -320,7 +320,7 @@
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%L1 file opened</numerusform>
         </translation>
     </message>
     <message>
@@ -345,7 +345,7 @@
         <source>%1 Files</source>
         <comment>header</comment>
         <translation type="unfinished">
-            <numerusform></numerusform>
+            <numerusform>%1 File</numerusform>
         </translation>
     </message>
     <message>

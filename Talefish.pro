@@ -39,6 +39,7 @@ QT += dbus
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += \
+    translations/Talefish-en.ts \
     translations/Talefish-de.ts \
     translations/Talefish-sv.ts \
     translations/Talefish-es.ts
