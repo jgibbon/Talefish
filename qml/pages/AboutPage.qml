@@ -31,6 +31,7 @@ Page {
         }
 
         anchors.fill: parent
+        anchors.bottomMargin: Theme.paddingLarge
         contentHeight: mainColumn.height
 
         Column {
@@ -44,6 +45,7 @@ Page {
                 leftMargin: Theme.horizontalPageMargin
                 right: parent.right
                 rightMargin: Theme.horizontalPageMargin
+
             }
             Label {
                 text:qsTr("Talefish is a directory based audio book player written mainly in QML. It's licensed under GPL2 and made by John Gibbon with the help of the community.")
@@ -122,7 +124,6 @@ Page {
                 width: parent.width
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
 
-                anchors.bottomMargin: Theme.paddingLarge
             }
         }
     }
