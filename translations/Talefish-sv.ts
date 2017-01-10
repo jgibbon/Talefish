@@ -244,9 +244,9 @@
     <message numerus="yes">
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform>for %1 day(s)</numerusform>
-            <numerusform>for %1 day(s)</numerusform>
+        <translation>
+            <numerusform>i %1 dag</numerusform>
+            <numerusform>i %1 dagar</numerusform>
         </translation>
     </message>
     <message>
