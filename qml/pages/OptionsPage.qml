@@ -63,16 +63,31 @@ Page {
                 maximumValue: 1.2
                 value: options.playbackRate
                 stepSize: 0.01
-                onClicked:  {
-                    //                    value = 1
-                }
-                onHighlightedChanged: {
-                    if(!highlighted)
-                        options.playbackRate = value
-                }
+                property bool isLongPressed: false
 
                 label: qsTr('Playback Speed: %1\%', 'percent').arg(Math.round(value * 100))
 
+                onPressed: {
+                    isLongPressed = false
+                }
+
+                onPressAndHold: {
+                    options.playbackRate = value = 1
+                    isLongPressed = true
+                }
+                onReleased: {
+                    if(!isLongPressed) {
+                        options.playbackRate = value
+                    }
+                    else {
+                        value = 1
+                    }
+                }
+                onValueChanged: {
+                    if(isLongPressed) {
+                        value = 1
+                    }
+                }
             }
 
 
