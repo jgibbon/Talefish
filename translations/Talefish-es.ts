@@ -214,7 +214,7 @@
     </message>
     <message>
         <source>Verbose logging enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar registro detallado</translation>
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
@@ -235,16 +235,16 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Keep directory progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantener progreso del directorio</translation>
     </message>
     <message numerus="yes">
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
+        <translation>por %1 día(s)
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -252,11 +252,11 @@
     <message>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation type="unfinished"></translation>
+        <translation>Mantener progreso siempre</translation>
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Para evitar datos almacenados en caché por directorios antiguos o borrados se acumulen con el tiempo, Talefish comprobará si hay entradas antiguas en el inicio de la aplicación. No afectará al directorio actualmente cargado.</translation>
     </message>
 </context>
 <context>
@@ -304,12 +304,12 @@
     <message>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation>%1 / %2 (File %L3 of %L4)</translation>
+        <translation>%1 / %2 (Fichero %L3 de %L4)</translation>
     </message>
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
-        <translation type="unfinished">
+        <translation>%1% Reproducido en total
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -323,14 +323,14 @@
     <name>PlaylistPage</name>
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
-        <translation type="unfinished">
+        <translation>Lista de reproducción
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
-        <translation>%1 de %2 reproducidos (track %3)</translation>
+        <translation>%1 de %2 reproducidos (pista %3)</translation>
     </message>
 </context>
 <context>
