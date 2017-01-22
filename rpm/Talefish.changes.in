@@ -11,9 +11,10 @@
 
 # * date Author's Name <author's email> version-release
 # - Summary of changes
-* [git only]
-- added swedish translation by eson
-- added spanish translation by caballlero
+* Sun Jan 22 2017 velox 0.0-7
+- new (EXPERIMENTAL/UNTESTED) feature/options: configure hang up button press + long press
+- bugfix: fixed regression where skipping always paused playback
+- added available parts (some features were implemented later) of sv/es/ru/pl translations (thanks eson/caballlero/ancelad/marmistrz)
 - new page: about
 - new option: purge old saved directory progress
 - new convenience setting: reset playback speed by long pressing slider

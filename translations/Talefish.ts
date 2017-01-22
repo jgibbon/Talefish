@@ -255,6 +255,38 @@
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>to track beginning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External Commands skip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Play/Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip backward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Call/Hangup Button equals</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Long pressing Call/Hangup Button equals</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PlayerPage</name>

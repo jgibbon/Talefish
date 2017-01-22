@@ -705,54 +705,19 @@ Page {
                 property int sizeOfEntries: (Theme.itemSizeSmall + spacing) * numberOfEntries - spacing;
 
                 property bool isPlaying: appstate.tplayer.isplaying
-                function seek(value) {
-                    //                    app.log('seek from button:', value)
-                    var targetposition = appstate.currentPosition + value,
-                            isplaying = playback.playbackState === Audio.PlayingState;
-                    app.log('icon seek', value, targetposition, 'next track',targetposition > appstate.playlist.get(appstate.playlistIndex).duration );
-                    if(targetposition < 0) {//previousfile
 
-                        app.log('seeking to previous track. seekable:', playback.seekable )
-                        if(appstate.playlistIndex > 0) {
-                            appstate.tplayer.playIndex(appstate.playlistIndex - 1, {
-                                                           offset: targetposition,
-                                                           isPlaying: appstate.tplayer.isplaying,
-                                                           isUserAction:true
-                                                       });
-
-
-                        }
-
-                    } else if(targetposition > appstate.playlist.get(appstate.playlistIndex).duration) {
-                        app.log('seeking to next track. seekable:', playback.seekable )
-                        if( appstate.playlist.count - 1 > appstate.playlistIndex && appstate.playlist.get(appstate.playlistIndex + 1).path) {
-                            appstate.tplayer.playIndex(appstate.playlistIndex + 1, {
-                                                           offset:targetposition - appstate.playlist.get(appstate.playlistIndex).duration,
-                                                           isplaying: appstate.tplayer.isplaying,
-                                                           isUserAction: true
-                                                       });
-
-                        }
-                    } else {
-                        appstate.tplayer.playIndex(appstate.playlistIndex, {
-                                                       offset:targetposition,
-                                                       isplaying: appstate.tplayer.isplaying,
-                                                       isUserAction: true
-                                                   });
-                    }
-                }
                 IconButton {
                     icon.source: "../icon-l-frwd.png"
                     enabled: totalPosition.value > options.skipDurationNormal
                     onClicked: {
-                        iconButtons.seek(0 - options.skipDurationNormal)
+                        appstate.tplayer.seek(0 - options.skipDurationNormal)
                     }
                 }
                 IconButton {
                     enabled: totalPosition.value > options.skipDurationSmall
                     icon.source: "../icon-l-rwd.png"
                     onClicked: {
-                        iconButtons.seek(0 - options.skipDurationSmall)
+                        appstate.tplayer.seek(0 - options.skipDurationSmall)
                     }
                 }
                 IconButton {
@@ -765,14 +730,14 @@ Page {
                     icon.source: "../icon-l-fwd.png"
                     enabled: totalPosition.maximumValue - totalPosition.value > options.skipDurationSmall
                     onClicked: {
-                        iconButtons.seek(options.skipDurationSmall)
+                        appstate.tplayer.seek(options.skipDurationSmall)
                     }
                 }
                 IconButton {
                     icon.source: "../icon-l-ffwd.png"
                     enabled: totalPosition.maximumValue - totalPosition.value > options.skipDurationNormal
                     onClicked: {
-                        iconButtons.seek( options.skipDurationNormal)
+                        appstate.tplayer.seek( options.skipDurationNormal)
                     }
                 }
             }

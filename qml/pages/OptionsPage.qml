@@ -121,7 +121,17 @@ Page {
                 jsonData: [{text:'30s', value: 30000}, {text:'45s', value: 45000}, {text:'60s', value: 60000},{text:'120s', value: 120000}, ]
             }
 
-
+            OptionComboBox {
+//                visible: options.useHeadphoneCommands
+                optionname: 'externalCommandSkipDuration'
+                label: qsTr('External Commands skip')
+                description: qsTr('External Commands are those executed from the lock screen or via headsets/bluetooth.')
+                jsonData: [
+                    {text: qsTr('to track beginning'), value: '0'},
+                    {text: qsTr('Short Skip duration'), value: 'small'},
+                    {text: qsTr('Long Skip duration'), value: 'normal'},
+                ]
+            }
 
 
 
@@ -253,6 +263,20 @@ Page {
                     options.useHeadphoneCommands = checked
                 }
 
+            }
+            property var headPhonesCommands : [{text:qsTr('Play/Pause'), value: 'playPause'}, {text:qsTr('Skip forward'), value: 'next'}, {text:qsTr('Skip backward'), value: 'prev'} ]
+            OptionComboBox {
+                visible: options.useHeadphoneCommands
+                optionname: 'headphoneCallButtonDoes'
+                label:qsTr("Call/Hangup Button equals")
+                jsonData: parent.headPhonesCommands
+            }
+
+            OptionComboBox {
+                visible: options.useHeadphoneCommands
+                optionname: 'headphoneCallButtonLongpressDoes'
+                label:qsTr("Long pressing Call/Hangup Button equals")
+                jsonData: parent.headPhonesCommands
             }
             TextSwitch {
                 id:saveProgressPeriodicallySwitch

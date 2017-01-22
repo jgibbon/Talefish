@@ -28,20 +28,45 @@ Item {
         function playPause() {app.log('external command: playPause'); root.playPause();}
         function next() {
             app.log('external command: next');
-            if(appstate.playlistIndex < appstate.playlist.count - 1){
-                playIndex(appstate.playlistIndex+1, {isPlaying: !!playback.isPlaying});
+            switch(options.externalCommandSkipDuration){
+            case 'small':
+                seek(options.skipDurationSmall)
+                break;
+
+            case 'normal':
+                seek(options.skipDurationNormal)
+                break;
+
+            default:
+                if(appstate.playlistIndex < appstate.playlist.count - 1){
+                    playIndex(appstate.playlistIndex+1, {isPlaying: !!playback.isPlaying});
+                }
             }
+
         }
         function prev() {app.log('external command: prev');
-            if(appstate.playlistIndex > 0){
-                playIndex(appstate.playlistIndex-1, {isPlaying: !!playback.isPlaying});
+
+            switch(options.externalCommandSkipDuration){
+            case 'small':
+                seek(0 - options.skipDurationSmall)
+                break;
+
+            case 'normal':
+                seek(0 - options.skipDurationNormal)
+                break;
+
+            default:
+                if(appstate.playlistIndex > 0){
+                    playIndex(appstate.playlistIndex-1, {isPlaying: !!playback.isPlaying});
+                }
+                else {
+                    playIndex(0, {isPlaying: !!playback.isPlaying});
+                }
             }
-            else {
-                playIndex(0, {isPlaying: !!playback.isPlaying});
-            }
+
         }
         function stop() {app.log('external command: stop');
-            playback.stop()
+            playback.pause()
         }
     }
 
@@ -150,6 +175,51 @@ Item {
 
         if(opts.isPlaying) { //has to be called twice for skipping to previous track?! TODO: check if still necessary
             playback.play();
+        }
+    }
+    function seek(value) {
+        var targetposition = appstate.currentPosition + value,
+                isplaying = playback.playbackState === Audio.PlayingState;
+        app.log('seek', value, targetposition, 'next track',targetposition > appstate.playlist.get(appstate.playlistIndex).duration );
+        app.log('isPlaying', isplaying, appstate.tplayer.isPlaying, appstate.tplayer.isplaying)
+        if(targetposition < 0) {//previousfile
+
+            if(appstate.playlistIndex > 0) {
+
+                app.log('seeking to previous track. seekable:', playback.seekable )
+                appstate.tplayer.playIndex(appstate.playlistIndex - 1, {
+                                               offset: targetposition,
+                                               isPlaying: appstate.tplayer.isplaying,
+                                               isUserAction:true
+                                           });
+
+
+            } else {
+
+                app.log('no previous track. seeking to position 0. seekable:', playback.seekable )
+                appstate.tplayer.playIndex(appstate.playlistIndex, {
+                                               offset: 0,
+                                               isPlaying: appstate.tplayer.isplaying,
+                                               isUserAction:true
+                                           });
+            }
+
+        } else if(targetposition > appstate.playlist.get(appstate.playlistIndex).duration) {
+            app.log('seeking to next track. seekable:', playback.seekable )
+            if( appstate.playlist.count - 1 > appstate.playlistIndex && appstate.playlist.get(appstate.playlistIndex + 1).path) {
+                appstate.tplayer.playIndex(appstate.playlistIndex + 1, {
+                                               offset:targetposition - appstate.playlist.get(appstate.playlistIndex).duration,
+                                               isPlaying: appstate.tplayer.isplaying,
+                                               isUserAction: true
+                                           });
+
+            }
+        } else {
+            appstate.tplayer.playIndex(appstate.playlistIndex, {
+                                           offset:targetposition,
+                                           isPlaying: appstate.tplayer.isplaying,
+                                           isUserAction: true
+                                       });
         }
     }
 
@@ -386,9 +456,25 @@ onMetaDataChanged: {
     }
 
     MediaKey {
+        property bool isLongPressed: false
         enabled: options.useHeadphoneCommands
         key: Qt.Key_ToggleCallHangup
-        onReleased: {externalCommand.playPause()}
+        onReleased: {
+            hangupButtonTimer.stop()
+            if(!isLongPressed) {externalCommand[options.headphoneCallButtonDoes]()}
+        }
+        onPressed: {
+            isLongPressed=false
+            hangupButtonTimer.restart()
+        }
+        Timer {
+            id: hangupButtonTimer
+            interval: 1000
+            onTriggered: {
+                parent.isLongPressed = true
+                externalCommand[options.headphoneCallButtonLongpressDoes]()
+            }
+        }
     }
 
 

@@ -121,6 +121,8 @@ Page {
                 text: qsTr("A big thank you to the translators:")
                       + '<br />eson (sv)'
                       + '<br />Caballlero (es)'
+                      + '<br />Ancelad (ru)'
+                      + '<br />marmistrz (pl)'
                 width: parent.width
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
 

@@ -42,7 +42,9 @@ TRANSLATIONS += \
     translations/Talefish-en.ts \
     translations/Talefish-de.ts \
     translations/Talefish-sv.ts \
-    translations/Talefish-es.ts
+    translations/Talefish-es.ts \
+    translations/Talefish-ru.ts \
+    translations/Talefish-pl.ts
 
 DISTFILES += \
     qml/lib/FolderSelector.qml \

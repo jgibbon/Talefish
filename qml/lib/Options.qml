@@ -20,7 +20,7 @@ PersistentObject {
     property int skipBackTrackThreshold: 1000//1s has to be played to just skip to track beginning
     property int skipDurationSmall: 10000 //10s
     property int skipDurationNormal: 60000 //1m
-
+    property string externalCommandSkipDuration: '0' // '0': skip to track beginning, 'small'/'normal': use set durations
 
     property real playbackRate:1
 
@@ -43,6 +43,8 @@ PersistentObject {
 
     //misc
     property bool useHeadphoneCommands: false
+    property string headphoneCallButtonDoes: 'playPause' //'', 'prev', 'next', 'playpause', 'stop'
+    property string headphoneCallButtonLongpressDoes: 'next' //'', 'prev', 'next', 'playpause', 'stop'
     property bool saveProgressPeriodically: false
     property bool doLog: false
     property int keepUnopenedDirectoryProgressDays: 30
