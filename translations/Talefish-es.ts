@@ -15,7 +15,7 @@
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>Discutir o click &quot;gracias&quot; en talk.maemo.org:</translation>
+        <translation>Discutir o dar &quot;gracias&quot; en talk.maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
@@ -23,11 +23,11 @@
     </message>
     <message>
         <source>GitHub page</source>
-        <translation>página GitHub</translation>
+        <translation>Página GitHub</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>Se puede enviar traducciones por Transifex, si desea don&apos;me gusta GitHub:</translation>
+        <translation>Usted puede enviar traducciones por Transifex, si no te&apos;gusta por GitHub:</translation>
     </message>
     <message>
         <source>Transifex page</source>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>O comprame una cerveza si realmente sientes que te gusta:</translation>
+        <translation>Comprame una cerveza si realmente te gusta es:</translation>
     </message>
     <message>
         <source>PayPal donation</source>
@@ -57,15 +57,15 @@
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation>Un gran agradecimiento a los traductores:</translation>
+        <translation>Gracias a todos los traductores:</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish es un directorio basado en un reproductor de libros de audio escrto en QML. Es&apos;s Licenciado bajo GPLv2 y hecho por John Gibbon con la ayuda de la comunidad.</translation>
+        <translation>Talefish es un directorio basado en un reproductor de libros de audio escrito en QML. Es&apos;licenciado bajo GPLv2 y hecho por John Gibbon con la ayuda de la comunidad.</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>Estrellas del proyecto, tirar peticiones o informes de errores son bienvenidos en GitHub:</translation>
+        <translation>Estrellas pal proyecto, tirar peticiones o informes de errores son bienvenidos en GitHub:</translation>
     </message>
 </context>
 <context>
@@ -116,7 +116,7 @@
     <message>
         <source>Options</source>
         <comment>header</comment>
-        <translation>Opciones</translation>
+        <translation>Configuración</translation>
     </message>
     <message>
         <source>Playback</source>
@@ -130,19 +130,19 @@
     </message>
     <message>
         <source>Play next Track automatically</source>
-        <translation>Reproducir siguiente pista automáticamente</translation>
+        <translation>Tocar siguiente pista siempre</translation>
     </message>
     <message>
         <source>Short Skip duration</source>
-        <translation>Duración del salto corto</translation>
+        <translation>Duración de salto corto</translation>
     </message>
     <message>
         <source>Long Skip duration</source>
-        <translation>Duración del salto largo</translation>
+        <translation>Duración de salto largo</translation>
     </message>
     <message>
         <source>Search best cover image for each file</source>
-        <translation>Buscar la mejor imagen de portada para cada archivo</translation>
+        <translation>Buscar mejor portada por archivo</translation>
     </message>
     <message>
         <source>Do Animations</source>
@@ -151,7 +151,7 @@
     <message>
         <source>Player Page</source>
         <comment>section header</comment>
-        <translation>Página del jugador</translation>
+        <translation>Zona del reproductor</translation>
     </message>
     <message>
         <source>Display directory name</source>
@@ -159,15 +159,15 @@
     </message>
     <message>
         <source>Display playlist progress</source>
-        <translation>Mostrar progreso de la lista de reproducción</translation>
+        <translation>Mostrar avance de lista restante</translation>
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>Deslizar la portada (o por encima del título ) para saltar pistas</translation>
+        <translation>Deslizar la portada para saltar pistas</translation>
     </message>
     <message>
         <source>Cassette shows progress of</source>
-        <translation>Casete muestra el progreso de</translation>
+        <translation>Casete muestra el progreso de:</translation>
     </message>
     <message>
         <source>track</source>
@@ -184,7 +184,7 @@
     </message>
     <message>
         <source>Player Page Animation</source>
-        <translation>Animación de la página del jugador</translation>
+        <translation>Animación en zona del reproductor</translation>
     </message>
     <message>
         <source>App-Cover Animation</source>
@@ -197,7 +197,7 @@
     </message>
     <message>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>Mostrar &quot;En cola &quot; Polea</translation>
+        <translation>Mostrar &quot;en cola&quot; en la polea</translation>
     </message>
     <message>
         <source>Miscellaneous</source>
@@ -252,7 +252,7 @@
     <message>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation type="unfinished">siempre</translation>
+        <translation>siempre</translation>
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
@@ -260,35 +260,35 @@
     </message>
     <message>
         <source>to track beginning</source>
-        <translation type="unfinished"></translation>
+        <translation>Para rastrear el comienzo</translation>
     </message>
     <message>
         <source>External Commands skip</source>
-        <translation type="unfinished"></translation>
+        <translation>Saltar comandos externos</translation>
     </message>
     <message>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation type="unfinished"></translation>
+        <translation>Comandos externos son ejecutados desde la pantalla de bloqueo o mediante auriculares/bluetooth</translation>
     </message>
     <message>
         <source>Play/Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Tocar/Pausa</translation>
     </message>
     <message>
         <source>Skip forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Saltar siguiente</translation>
     </message>
     <message>
         <source>Skip backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Saltar anterior</translation>
     </message>
     <message>
         <source>Call/Hangup Button equals</source>
-        <translation type="unfinished"></translation>
+        <translation>Botón Llamar/Colgar para:</translation>
     </message>
     <message>
         <source>Long pressing Call/Hangup Button equals</source>
-        <translation type="unfinished"></translation>
+   <translation>Sostener botón de llamar/colgar para: </translation>
     </message>
 </context>
 <context>
