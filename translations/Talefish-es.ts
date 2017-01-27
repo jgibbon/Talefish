@@ -288,7 +288,7 @@
     </message>
     <message>
         <source>Long pressing Call/Hangup Button equals</source>
-        <translation>Sostener botón de llamar/colgar para: </translation>
+        <translation>Sostener botón de llamar/colgar para</translation>
     </message>
 </context>
 <context>
