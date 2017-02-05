@@ -130,7 +130,7 @@
     </message>
     <message>
         <source>Play next Track automatically</source>
-        <translation>Tocar siguiente pista siempre</translation>
+   <translation>Autoreproducir pistas </translation>
     </message>
     <message>
         <source>Short Skip duration</source>
@@ -283,12 +283,24 @@
         <translation>Saltar anterior</translation>
     </message>
     <message>
-        <source>Call/Hangup Button equals</source>
-        <translation>Botón Llamar/Colgar para:</translation>
-    </message>
-    <message>
         <source>Long pressing Call/Hangup Button equals</source>
         <translation>Sostener botón de llamar/colgar para</translation>
+        <source>Do nothing</source>
+        <translation>deshabilitar</translation>
+    </message>
+    <message>
+        <source>Button Press:</source>
+        <translation>Presionar botón:</translation>
+    </message>
+    <message>
+        <source>Long press:</source>
+        <translation>Mantener presionar:</translation>
+    </message>
+    <message>
+        <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
+        <translation>Puedes elegir la acción que prefiera ejecutar al pulsar el botón &quot;Llamar/Colgar&quot; botón, que aveces es el único botón en el auricular:</translation>
+        <source>Call/Hangup Button equals</source>
+        <translation>Botón Llamar/Colgar para:</translation>
     </message>
 </context>
 <context>

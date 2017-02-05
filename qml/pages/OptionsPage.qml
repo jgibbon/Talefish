@@ -264,19 +264,45 @@ Page {
                 }
 
             }
-            property var headPhonesCommands : [{text:qsTr('Play/Pause'), value: 'playPause'}, {text:qsTr('Skip forward'), value: 'next'}, {text:qsTr('Skip backward'), value: 'prev'} ]
-            OptionComboBox {
-                visible: options.useHeadphoneCommands
-                optionname: 'headphoneCallButtonDoes'
-                label:qsTr("Call/Hangup Button equals")
-                jsonData: parent.headPhonesCommands
-            }
+            Column {
+                id: headPhoneButtonColumn
 
-            OptionComboBox {
-                visible: options.useHeadphoneCommands
-                optionname: 'headphoneCallButtonLongpressDoes'
-                label:qsTr("Long pressing Call/Hangup Button equals")
-                jsonData: parent.headPhonesCommands
+                opacity: 0
+                height: 0
+                states: State {
+                    name: "active"; when: options.useHeadphoneCommands
+                    PropertyChanges { target: headPhoneButtonColumn; height: headPhoneButtonColumn.implicitHeight; opacity: 1 }
+                }
+
+                transitions: Transition {
+                    NumberAnimation { properties: "height,opacity"; easing.type: Easing.InOutQuad }
+                }
+//                property bool active: options.useHeadphoneCommands
+                width: parent.width - Theme.horizontalPageMargin - x
+                x: Theme.horizontalPageMargin * 2
+
+                Label {
+                    wrapMode: Text.Wrap
+                    x: Theme.horizontalPageMargin
+                    width: parent.width - Theme.horizontalPageMargin * 2
+                    font.pixelSize: Theme.fontSizeTiny
+                    text: qsTr('You can choose the action you prefer to be executed when pressing the "Call/Hangup" button, which often is the only button on a headset:')
+                }
+
+                property var headPhonesCommands : [{text: qsTr('Do nothing'), value: 'nothing'}, {text:qsTr('Play/Pause'), value: 'playPause'}, {text:qsTr('Skip forward'), value: 'next'}, {text:qsTr('Skip backward'), value: 'prev'} ]
+                OptionComboBox {
+//                    visible: options.useHeadphoneCommands
+                    optionname: 'headphoneCallButtonDoes'
+                    label:qsTr("Button Press:")
+                    jsonData: parent.headPhonesCommands
+                }
+
+                OptionComboBox {
+//                    visible: options.useHeadphoneCommands
+                    optionname: 'headphoneCallButtonLongpressDoes'
+                    label:qsTr("Long press:")
+                    jsonData: parent.headPhonesCommands
+                }
             }
             TextSwitch {
                 id:saveProgressPeriodicallySwitch

@@ -68,6 +68,7 @@ Item {
         function stop() {app.log('external command: stop');
             playback.pause()
         }
+        function nothing(){} //for call button setting.
     }
 
     function seekToInitial(){
