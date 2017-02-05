@@ -260,34 +260,42 @@
     </message>
     <message>
         <source>to track beginning</source>
-        <translation type="unfinished"></translation>
+        <translation>Till spårets början</translation>
     </message>
     <message>
         <source>External Commands skip</source>
-        <translation type="unfinished"></translation>
+        <translation>Externa snabbspolningskommandon</translation>
     </message>
     <message>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation type="unfinished"></translation>
+        <translation>Externa kommandon är de som körs från låsskärmen, eller från hörlurar/bluetooth.</translation>
     </message>
     <message>
         <source>Play/Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Spela/Pausa</translation>
     </message>
     <message>
         <source>Skip forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Snabbspola framåt</translation>
     </message>
     <message>
         <source>Skip backward</source>
+        <translation>Snabbspola bakåt</translation>
+    </message>
+    <message>
+        <source>You can choose the action you prefer to be executed when pressing the Call/Hangup Button, which often is the only button on a headset:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Call/Hangup Button equals</source>
+        <source>Do nothing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Long pressing Call/Hangup Button equals</source>
+        <source>Button Press:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Long press:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -296,7 +304,7 @@
     <message>
         <source>Options</source>
         <comment>pulley</comment>
-        <translation>Alternativ</translation>
+        <translation>Inställningar</translation>
     </message>
     <message>
         <source>Playlist</source>
