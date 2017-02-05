@@ -266,26 +266,7 @@ Page {
             }
             Column {
                 id: headPhoneButtonColumn
-//                state: options.useHeadphoneCommands ? 'active' : 'inactive'
-//                states: [
-//                    State {
-//                        name: 'active'
-//                        PropertyChanges {
-//                            target: headPhoneButtonColum
-//                            height: headPhoneButtonColumn.implicitHeight
-//                            opacity: 1
-//                        }
-//                    },
-//                    State {
-//                        name: 'inactive'
-//                        PropertyChanges {
-//                            target: headPhoneButtonColum
-//                            height: 0
-//                            opacity: 0
-//                        }
-//                    }
 
-//                ]
                 opacity: 0
                 height: 0
                 states: State {
@@ -305,7 +286,7 @@ Page {
                     x: Theme.horizontalPageMargin
                     width: parent.width - Theme.horizontalPageMargin * 2
                     font.pixelSize: Theme.fontSizeTiny
-                    text: qsTr('You can choose the action you prefer to be executed when pressing the Call/Hangup Button, which often is the only button on a headset:')
+                    text: qsTr('You can choose the action you prefer to be executed when pressing the "Call/Hangup" button, which often is the only button on a headset:')
                 }
 
                 property var headPhonesCommands : [{text: qsTr('Do nothing'), value: 'nothing'}, {text:qsTr('Play/Pause'), value: 'playPause'}, {text:qsTr('Skip forward'), value: 'next'}, {text:qsTr('Skip backward'), value: 'prev'} ]

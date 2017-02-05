@@ -283,10 +283,6 @@
         <translation>Snabbspola bakåt</translation>
     </message>
     <message>
-        <source>You can choose the action you prefer to be executed when pressing the Call/Hangup Button, which often is the only button on a headset:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Do nothing</source>
         <translation type="unfinished"></translation>
     </message>
@@ -296,6 +292,10 @@
     </message>
     <message>
         <source>Long press:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
