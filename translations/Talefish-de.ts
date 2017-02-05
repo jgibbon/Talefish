@@ -284,19 +284,19 @@
     </message>
     <message>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Nichts tun</translation>
     </message>
     <message>
         <source>Button Press:</source>
-        <translation type="unfinished"></translation>
+        <translation>Knopfdruck:</translation>
     </message>
     <message>
         <source>Long press:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lange drücken:</translation>
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kannst auswählen, welche Aktion ausgeführt werden soll, wenn du den &quot;Anrufen/Annehmen&quot;-Knopf drückst, der oft der einzige Knopf an Headsets ist.</translation>
     </message>
 </context>
 <context>
