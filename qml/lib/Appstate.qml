@@ -63,7 +63,7 @@ Item {
         id: saveProgressPeriodicallyTimer
         interval: 5000
         repeat: true
-        running: options.saveProgressPeriodically && tplayer.isplaying
+        running: options.saveProgressPeriodically && tplayer.player.isPlaying
         onTriggered: persistentObj.save()
     }
 
