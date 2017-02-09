@@ -54,18 +54,6 @@ Page {
     property int directoryDuration : appstate.playlistDuration
     property bool isplaying: false //should i be playing? (regardless of actual playback state)
     property bool isPlaying: playback.isPlaying
-    property string coverActionCommand: cmd.cover
-    onCoverActionCommandChanged: {
-        if(coverActionCommand === '') {return;}
-        switch(coverActionCommand) {
-        case 'playpause':
-            appstate.tplayer.playPause()
-            break;
-
-        default:
-            break;
-        }
-    }
 
     onDirectoryDurationChanged: {
         page.readDurations();
@@ -134,13 +122,11 @@ Page {
                 text: qsTr("Enqueue", 'pulley')
                 visible: appstate.playlist.count > 0 && options.showEnqueuePulley
                 onClicked:
-                    //                    pageStack.push(Qt.resolvedUrl("../lib/OpenDirectoryDialog.qml"), {options:options,appstate:appstate, firstPage:page});
                     enqueueBtn.openDirectoryDialog() //pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
             }
             MenuItem {
                 text: qsTr("Open", 'pulley')
                 onClicked:
-                    //                    pageStack.push(Qt.resolvedUrl("../lib/OpenDirectoryDialog.qml"), {options:options,appstate:appstate, firstPage:page});
                     opnBtn.openDirectoryDialog() //pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
             }
 
@@ -197,9 +183,6 @@ Page {
         Item {
             id: backgroundCoverContainer
             anchors.fill: coverImageContainer
-            //            x: coverImageContainer.x
-            //            width: coverImageContainer.width
-            //            y: coverImageContainer.y
             z:-3
             Image {
                 id: coverDisplayImage
@@ -207,9 +190,6 @@ Page {
                 height: coverImage.paintedHeight
                 width: coverImage.paintedWidth
                 anchors.centerIn: parent
-                //                fillMode: Image.PreserveAspectFit
-                //                anchors.fill: parent
-                //                anchors.horizontalCenter: parent.horizontalCenter
                 opacity: 0.3
                 y: coverImageContainer.y
             }
@@ -579,9 +559,6 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         color: Theme.highlightColor
                         wrapMode: 'WrapAtWordBoundaryOrAnywhere'
-                        //                        anchors.bottom: parent.top
-                        //                        anchors.bottomMargin: 0-Theme.itemSizeSmall/3
-
                     }
 
                     Label {

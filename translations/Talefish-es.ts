@@ -130,7 +130,7 @@
     </message>
     <message>
         <source>Play next Track automatically</source>
-   <translation>Autoreproducir pistas </translation>
+        <translation>Autoreproducir pistas </translation>
     </message>
     <message>
         <source>Short Skip duration</source>
@@ -283,8 +283,6 @@
         <translation>Saltar anterior</translation>
     </message>
     <message>
-        <source>Long pressing Call/Hangup Button equals</source>
-        <translation>Sostener botón de llamar/colgar para</translation>
         <source>Do nothing</source>
         <translation>deshabilitar</translation>
     </message>
@@ -298,9 +296,19 @@
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>Puedes elegir la acción que prefiera ejecutar al pulsar el botón &quot;Llamar/Colgar&quot; botón, que aveces es el único botón en el auricular:</translation>
-        <source>Call/Hangup Button equals</source>
-        <translation>Botón Llamar/Colgar para:</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App-Cover Actions are external Commands, as well.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Secondary App-Cover Action</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

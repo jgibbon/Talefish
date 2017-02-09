@@ -133,6 +133,14 @@ Page {
                 ]
             }
 
+            property var secondaryCoverActionCommands : [{text: qsTr('Hidden'), value: ''}, {text:qsTr('Skip forward'), value: 'next'}, {text:qsTr('Skip backward'), value: 'prev'} ]
+            OptionComboBox {
+                description: qsTr('App-Cover Actions are external Commands, as well.')
+//                    visible: options.useHeadphoneCommands
+                optionname: 'secondaryCoverAction'
+                label:qsTr("Secondary App-Cover Action")
+                jsonData: parent.secondaryCoverActionCommands
+            }
 
 
             SectionHeader {

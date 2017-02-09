@@ -13,6 +13,7 @@ Item {
     property MprisPlayer mpris: mprisPlayer
     property bool isplaying: false
     property int initialSeekTo: 0
+    property alias externalCommand: externalCommand
     Timer {
         id: initialSeekTimer
         interval: 200

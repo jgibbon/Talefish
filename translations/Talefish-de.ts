@@ -298,6 +298,18 @@
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <translation>Du kannst auswählen, welche Aktion ausgeführt werden soll, wenn du den &quot;Anrufen/Annehmen&quot;-Knopf drückst, der oft der einzige Knopf an Headsets ist.</translation>
     </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Versteckt</translation>
+    </message>
+    <message>
+        <source>App-Cover Actions are external Commands, as well.</source>
+        <translation>App-Cover-Aktionen sind auch externe Befehle.</translation>
+    </message>
+    <message>
+        <source>Secondary App-Cover Action</source>
+        <translation>Zweite App-Cover-Aktion</translation>
+    </message>
 </context>
 <context>
     <name>PlayerPage</name>

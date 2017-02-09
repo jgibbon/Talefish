@@ -20,12 +20,6 @@ ApplicationWindow
     }
 
 
-    Item {
-        id: cmd
-        property string cover:''
-    }
-
-
     function formatMSeconds (duration) {
         var dur = duration / 1000,
                 hours =  Math.floor(dur /3600),

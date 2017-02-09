@@ -12,6 +12,7 @@ CoverBackground {
 
 
     property string coverActionCommand:''
+    property var externalCommand: appstate.tplayer.externalCommand
 
     Item {
         id: paddingcontainer
@@ -106,18 +107,51 @@ CoverBackground {
 
 
 
-
     CoverActionList {
-        id: coverAction
+        id: coverActionPrev
+        enabled: options.secondaryCoverAction === 'prev'
+
+        CoverAction {
+            iconSource: "image://theme/icon-cover-previous-song"
+
+            onTriggered: externalCommand.prev()
+        }
 
         CoverAction {
             iconSource:isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
-            onTriggered: {
-
-                cmd.cover = 'playpause'
-                cmd.cover = ''
-            }
+            onTriggered: externalCommand.playPause()
         }
     }
+
+    CoverActionList {
+        id: coverActionNext
+        enabled: options.secondaryCoverAction === 'next'
+
+        CoverAction {
+            iconSource:isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+
+            onTriggered: externalCommand.playPause()
+        }
+
+        CoverAction {
+            iconSource: "image://theme/icon-cover-next-song"
+
+            onTriggered: externalCommand.next()
+        }
+    }
+
+
+    CoverActionList {
+        id: coverAction
+        enabled: options.secondaryCoverAction === ''
+
+        CoverAction {
+            iconSource:isPlaying ? "image://theme/icon-m-previous" : "image://theme/icon-cover-play"
+
+            onTriggered: externalCommand.playPause()
+        }
+    }
+
+
 }

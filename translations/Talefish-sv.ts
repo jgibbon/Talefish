@@ -298,6 +298,18 @@
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App-Cover Actions are external Commands, as well.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Secondary App-Cover Action</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PlayerPage</name>
