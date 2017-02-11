@@ -81,7 +81,7 @@ Rectangle {
 
         Image {
             id: cassetteWheelImage
-            source: "../assets/wheel_1.png"
+            source: "../assets/wheel_1.svg"
             width: parent.width
             height:width
             rotation: rotationOffset
