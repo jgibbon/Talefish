@@ -284,31 +284,31 @@
     </message>
     <message>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Gör ingenting</translation>
     </message>
     <message>
         <source>Button Press:</source>
-        <translation type="unfinished"></translation>
+        <translation>Knapptryck:</translation>
     </message>
     <message>
         <source>Long press:</source>
-        <translation type="unfinished"></translation>
+        <translation>Långtryck:</translation>
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Du kan välja vilken åtgärd som skall utföras när du trycker på samtalsknappen, som ofta är den enda knappen på ett headset. </translation>
     </message>
     <message>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Dold</translation>
     </message>
     <message>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation type="unfinished"></translation>
+        <translation>Åtgärder från programminiatyren är också externa kommandon.</translation>
     </message>
     <message>
         <source>Secondary App-Cover Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Sekundär miniatyråtgärd</translation>
     </message>
 </context>
 <context>

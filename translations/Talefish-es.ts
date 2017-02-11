@@ -27,28 +27,28 @@
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>Usted puede enviar traducciones por Transifex, si no te&apos;gusta por GitHub:</translation>
+        <translation>También puedes enviar las traducciones por Transifex, si no te gusta GitHub:</translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation>página Transifex</translation>
+        <translation>Página Transifex</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>Comprame una cerveza si realmente te gusta es:</translation>
+        <translation>O invítame a una cerveza si realmente te gusta:</translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation>PayPal donación</translation>
+        <translation>Donación por PayPal</translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation>Gracias!</translation>
+        <translation>¡Gracias!</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation>Gracias a todos los usuarios que me sugeriron cosas, y me ayudaron!</translation>
+        <translation>¡Gracias a todos los usuarios que me sugirieron cosas, y me ayudaron!</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -57,15 +57,15 @@
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation>Gracias a todos los traductores:</translation>
+        <translation>Muchísimas gracias a los traductores:</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish es un directorio basado en un reproductor de libros de audio escrito en QML. Es&apos;licenciado bajo GPLv2 y hecho por John Gibbon con la ayuda de la comunidad.</translation>
+        <translation>Talefish es un reproductor de audiolibros basado en directorios escrito principalmente en QML. Est&apos; licenciado bajo GPLv2 y hecho por John Gibbon con la ayuda de la comunidad.</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>Estrellas pal proyecto, tirar peticiones o informes de errores son bienvenidos en GitHub:</translation>
+        <translation>Marcar el proyecto como favorito, solicitar modificaciones o informar de errores son bienvenidos en GitHub:</translation>
     </message>
 </context>
 <context>
@@ -90,8 +90,8 @@
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
-            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+            <numerusform>Haz clic en el fichero para abrirlo o acepta el diálogo para abrir %1 fichero</numerusform>
+            <numerusform>Haz clic en el fichero para abrirlo o acepta el diálogo para abrir %1 ficheros</numerusform>
         </translation>
     </message>
     <message>
@@ -102,13 +102,13 @@
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
-            <numerusform>Click en el archivo para abrirlo o aceptar el diálogo para abrir %1 fichero(s)</numerusform>
+            <numerusform>Haz clic en el fichero para ponerlo en cola o acepta el diálogo para poner en cola %1 fichero</numerusform>
+            <numerusform>Haz clic en el fichero para ponerlo en cola o acepta el diálogo para poner en cola %1 ficheros</numerusform>
         </translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
-        <translation>Progreso no se guardará para reabrir archivos en cola.</translation>
+        <translation>El progreso no se guardará al reabrir ficheros en cola.</translation>
     </message>
 </context>
 <context>
@@ -116,7 +116,7 @@
     <message>
         <source>Options</source>
         <comment>header</comment>
-        <translation>Configuración</translation>
+        <translation>Opciones</translation>
     </message>
     <message>
         <source>Playback</source>
@@ -126,32 +126,32 @@
     <message>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
-        <translation>Reproducir velocidad: %1%</translation>
+        <translation>Velocidad de reproducción: %1%</translation>
     </message>
     <message>
         <source>Play next Track automatically</source>
-        <translation>Autoreproducir pistas </translation>
+        <translation>Reproducir la siguiente pista automáticamente</translation>
     </message>
     <message>
         <source>Short Skip duration</source>
-        <translation>Duración de salto corto</translation>
+        <translation>Duración del salto corto</translation>
     </message>
     <message>
         <source>Long Skip duration</source>
-        <translation>Duración de salto largo</translation>
+        <translation>Duración del salto largo</translation>
     </message>
     <message>
         <source>Search best cover image for each file</source>
-        <translation>Buscar mejor portada por archivo</translation>
+        <translation>Buscar la mejor imagen de portada para cada fichero</translation>
     </message>
     <message>
         <source>Do Animations</source>
-        <translation>Hacer animaciones</translation>
+        <translation>Activar animaciones</translation>
     </message>
     <message>
         <source>Player Page</source>
         <comment>section header</comment>
-        <translation>Zona del reproductor</translation>
+        <translation>Página del reproductor</translation>
     </message>
     <message>
         <source>Display directory name</source>
@@ -159,15 +159,15 @@
     </message>
     <message>
         <source>Display playlist progress</source>
-        <translation>Mostrar avance de lista restante</translation>
+        <translation>Mostrar progreso de la lista de reproducción</translation>
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>Deslizar la portada para saltar pistas</translation>
+        <translation>Deslizar la portada (o sobre el título) para saltar pistas</translation>
     </message>
     <message>
         <source>Cassette shows progress of</source>
-        <translation>Casete muestra el progreso de:</translation>
+        <translation>El casete muestra el progreso de</translation>
     </message>
     <message>
         <source>track</source>
@@ -184,11 +184,11 @@
     </message>
     <message>
         <source>Player Page Animation</source>
-        <translation>Animación en zona del reproductor</translation>
+        <translation>Animación en la página del reproductor</translation>
     </message>
     <message>
         <source>App-Cover Animation</source>
-        <translation>Animación de portada de la aplicación</translation>
+        <translation>Animación en la cubierta de la aplicación</translation>
     </message>
     <message>
         <source>Open Files</source>
@@ -197,20 +197,20 @@
     </message>
     <message>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>Mostrar &quot;en cola&quot; en la polea</translation>
+        <translation>Mostrar &quot;En cola&quot; en el menú deslizante</translation>
     </message>
     <message>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation>Diversos</translation>
+        <translation>Varios</translation>
     </message>
     <message>
         <source>Save progress periodically</source>
-        <translation>guardar progreso periodicamente</translation>
+        <translation>Guardar progreso periódicamente</translation>
     </message>
     <message>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
-        <translation>Si está deshabilitado, el estado de reproducción actual sólo guardará cuando la aplicación esté limpia. en contrario, guardará el progreso cada pocos segundos</translation>
+        <translation>Si está deshabilitado, la posición actual de la reproducción se guardará sólo cuando salga correctamente de la aplicación. En caso contrario, el progreso se guardará cada pocos segundos.</translation>
     </message>
     <message>
         <source>Verbose logging enabled</source>
@@ -218,7 +218,7 @@
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
-        <translation>Salidas de un monton cosas de fondo, puede estar poco lento. Ver salida abriendo Talefish por Terminal</translation>
+        <translation>Se registran muchas cosas en segundo plano, puede ser un poco lento. Consulta la salida abriendo Talefish por Terminal.</translation>
     </message>
     <message>
         <source>Sort directory naturally while scanning</source>
@@ -226,11 +226,11 @@
     </message>
     <message>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Activar si tiene archivos numerados sin ceros a la izquierda. Sólo aplicable cuando se clasifica por nombre.</translation>
+        <translation>Activar si tienes ficheros numerados sin ceros a la izquierda. Sólo se aplica cuando se ordena por nombre.</translation>
     </message>
     <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
-        <translation>Utilice los botones del auricular/Bluetooth para controlar Talefish</translation>
+        <translation>Utilizar los botones del auricular/Bluetooth para controlar Talefish</translation>
     </message>
     <message>
         <source>About</source>
@@ -244,9 +244,9 @@
     <message numerus="yes">
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform>para %1 día</numerusform>
-            <numerusform>por %1 días</numerusform>
+        <translation>
+            <numerusform>durante %1 día</numerusform>
+            <numerusform>durante %1 días</numerusform>
         </translation>
     </message>
     <message>
@@ -256,47 +256,47 @@
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation>Para evitar datos almacenados en caché por directorios antiguos o borrados se acumulen con el tiempo, Talefish comprobará si hay entradas antiguas en el inicio de la aplicación. No afectará al directorio actualmente cargado.</translation>
+        <translation>Para evitar que los datos almacenados en caché por directorios antiguos o eliminados se acumulen con el tiempo, Talefish comprobará las entradas antiguas al iniciar la aplicación. No afectará al directorio cargado actualmente.</translation>
     </message>
     <message>
         <source>to track beginning</source>
-        <translation>Para rastrear el comienzo</translation>
+        <translation>al principio de la pista</translation>
     </message>
     <message>
         <source>External Commands skip</source>
-        <translation>Saltar comandos externos</translation>
+        <translation>Comandos externos de salto</translation>
     </message>
     <message>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation>Comandos externos son ejecutados desde la pantalla de bloqueo o mediante auriculares/bluetooth</translation>
+        <translation>Los comandos externos son los ejecutados desde la pantalla de bloqueo o a través de auriculares/bluetooth.</translation>
     </message>
     <message>
         <source>Play/Pause</source>
-        <translation>Tocar/Pausa</translation>
+        <translation>Reproducir/Detener</translation>
     </message>
     <message>
         <source>Skip forward</source>
-        <translation>Saltar siguiente</translation>
+        <translation>Saltar hacia adelante</translation>
     </message>
     <message>
         <source>Skip backward</source>
-        <translation>Saltar anterior</translation>
+        <translation>Saltar hacia atrás</translation>
     </message>
     <message>
         <source>Do nothing</source>
-        <translation>deshabilitar</translation>
+        <translation>No hacer nada</translation>
     </message>
     <message>
         <source>Button Press:</source>
-        <translation>Presionar botón:</translation>
+        <translation>Pulsación del botón:</translation>
     </message>
     <message>
         <source>Long press:</source>
-        <translation>Mantener presionar:</translation>
+        <translation>Pulsación larga:</translation>
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>Puede elegir la acción que prefiera ejecutar al pulsar el botón &quot;Llamar/Colgar&quot; botón, que aveces es el único botón en un auricular:</translation>
+        <translation>Puedes elegir la acción que se ejecutará cuando presiones el botón de &quot;Llamar/Colgar&quot;, que a menudo es un sólo botón en los auriculares:</translation>
     </message>
     <message>
         <source>Hidden</source>
@@ -304,11 +304,11 @@
     </message>
     <message>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation>Portada-App son acciones de comandos externos, así como</translation>
+        <translation>Las acciones en la cubierta de la aplicación también son comandos externos.</translation>
     </message>
     <message>
         <source>Secondary App-Cover Action</source>
-        <translation>Accion de Portada-App secundaria</translation>
+        <translation>Acción de Portada-App secundaria</translation>
     </message>
 </context>
 <context>
@@ -339,7 +339,7 @@
     </message>
     <message>
         <source>Open Files by pulling down.</source>
-        <translation>Abrir ficheros tirando hacia abajo</translation>
+        <translation>Abrir ficheros deslizando hacia abajo.</translation>
     </message>
     <message>
         <source>Rewind Track</source>
@@ -356,19 +356,19 @@
     <message>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation>%1 / %2 (File %L3 of %L4)</translation>
+        <translation>%1 / %2 (Fichero %L3 de %L4)</translation>
     </message>
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
         <translation>
-            <numerusform>%1% Reproducido en total</numerusform>
-            <numerusform>%1% Reproducido en total</numerusform>
+            <numerusform>%1% reproducido en total</numerusform>
+            <numerusform>%1% reproducido en total</numerusform>
         </translation>
     </message>
     <message>
         <source>[No Cover]</source>
-        <translation>[No portada]</translation>
+        <translation>[No hay portada]</translation>
     </message>
 </context>
 <context>
@@ -376,13 +376,13 @@
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
         <translation>
-            <numerusform>%L1 archivo abierto</numerusform>
-            <numerusform>abrir archivos %L1</numerusform>
+            <numerusform>%L1 fichero abierto</numerusform>
+            <numerusform>%L1 ficheros abiertos</numerusform>
         </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
-        <translation>%1 de %2 reproducidos (track %3)</translation>
+        <translation>%1 de %2 reproducidos (pista %3)</translation>
     </message>
 </context>
 <context>
@@ -402,14 +402,14 @@
         <source>%1 Files</source>
         <comment>header</comment>
         <translation>
-            <numerusform>%1 Ficheros</numerusform>
+            <numerusform>%1 Fichero</numerusform>
             <numerusform>%1 Ficheros</numerusform>
         </translation>
     </message>
     <message>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>No duración</translation>
+        <translation>Sin duración</translation>
     </message>
     <message>
         <source>Reading Durations</source>
