@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es" sourcelanguage="en">
+<TS version="2.1" language="es">
 <context>
     <name>AboutPage</name>
     <message>
@@ -15,7 +15,7 @@
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>Discutir o dar &quot;gracias&quot; en talk.maemo.org:</translation>
+        <translation>Comenta o haz clic en &quot;gracias&quot; en talk.maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
@@ -61,7 +61,7 @@
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish es un reproductor de audiolibros basado en directorios escrito principalmente en QML. Est&apos; licenciado bajo GPLv2 y hecho por John Gibbon con la ayuda de la comunidad.</translation>
+        <translation>Talefish es un reproductor de audiolibros basado en directorios escrito principalmente en QML. Está licenciado bajo GPLv2 y hecho por John Gibbon con la ayuda de la comunidad.</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
@@ -171,11 +171,11 @@
     </message>
     <message>
         <source>track</source>
-        <translation>Pista</translation>
+        <translation>pista</translation>
     </message>
     <message>
         <source>directory</source>
-        <translation>Directorio</translation>
+        <translation>directorio</translation>
     </message>
     <message>
         <source>Tape Animations</source>
@@ -308,7 +308,7 @@
     </message>
     <message>
         <source>Secondary App-Cover Action</source>
-        <translation>Acción de Portada-App secundaria</translation>
+        <translation>Acción secundaria en la cubierta de la aplicación</translation>
     </message>
 </context>
 <context>

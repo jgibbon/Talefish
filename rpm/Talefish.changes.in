@@ -11,11 +11,13 @@
 
 # * date Author's Name <author's email> version-release
 # - Summary of changes
+
 * Sun Feb 12 2017 velox 0.0-8
 - user request: second app cover button
 - user request: .opus file support
 - enhancement: cassette indicator now looks nice on hi-res screens
 - packaging: reduce size dramatically
+- translation updates
 
 * Sun Jan 22 2017 velox 0.0-7
 - new (EXPERIMENTAL/UNTESTED) feature/options: configure hang up button press + long press
