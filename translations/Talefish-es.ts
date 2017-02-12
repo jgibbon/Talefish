@@ -188,7 +188,7 @@
     </message>
     <message>
         <source>App-Cover Animation</source>
-        <translation>Animación en la cubierta de la aplicación</translation>
+        <translation>Animación en la cubierta</translation>
     </message>
     <message>
         <source>Open Files</source>
@@ -308,7 +308,7 @@
     </message>
     <message>
         <source>Secondary App-Cover Action</source>
-        <translation>Acción secundaria en la cubierta de la aplicación</translation>
+        <translation>Acción secundaria en la cubierta</translation>
     </message>
 </context>
 <context>
