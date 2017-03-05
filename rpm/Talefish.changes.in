@@ -12,6 +12,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sun Mar 05 2017 velox 0.0-9
+- new translation: Dutch (thanks pljmn!)
+
 * Sun Feb 12 2017 velox 0.0-8
 - user request: second app cover button
 - user request: .opus file support

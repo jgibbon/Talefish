@@ -44,7 +44,8 @@ TRANSLATIONS += \
     translations/Talefish-sv.ts \
     translations/Talefish-es.ts \
     translations/Talefish-ru.ts \
-    translations/Talefish-pl.ts
+    translations/Talefish-pl.ts \
+    translations/Talefish-nl.ts
 
 DISTFILES += \
     qml/lib/FolderSelector.qml \
