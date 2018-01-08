@@ -12,6 +12,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Tue Jan 09 2018 velox 0.0-10
+- allow opening of .aac (thanks jakibaki!)
+
 * Sun Mar 05 2017 velox 0.0-9
 - new translation: Dutch (thanks pljmn!)
 
