@@ -307,7 +307,7 @@ Dialog {
             FolderListModel {
                 id: folderModel
                 showOnlyReadable: true
-                nameFilters: getFileSuffixesCaseInsensitive(["mp3", "m4a", "m4b", "flac", "ogg", "wav", "opus", "aac"])
+                nameFilters: getFileSuffixesCaseInsensitive(["mp3", "m4a", "m4b", "flac", "ogg", "wav", "opus", "aac", "mka"])
                 property int useableFiles: 0
                 property int lastCount: 0
                 folder: appstate.lastDirectory
