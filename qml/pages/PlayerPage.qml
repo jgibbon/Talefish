@@ -312,18 +312,18 @@ Page {
             clip:true
         }
 
-        Label {
-            anchors.fill: coverImageContainer
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            text:'No Cover'
-            font.pixelSize: Theme.fontSizeLarge
-            color: Theme.secondaryColor
-            opacity: coverImage.source ? 0 : 1
+//        Label {
+//            anchors.fill: coverImageContainer
+//            horizontalAlignment: Text.AlignHCenter
+//            verticalAlignment: Text.AlignVCenter
+//            text:'No Cover'
+//            font.pixelSize: Theme.fontSizeLarge
+//            color: Theme.secondaryColor
+//            opacity: coverImage.source ? 1 : 1
 
-            visible:appstate.playlistIndex > -1
-            Behavior on opacity { NumberAnimation { easing.type: Easing.OutCubic ; duration: 500 }}
-        }
+//            visible:appstate.playlistIndex > -1
+//            Behavior on opacity { NumberAnimation { easing.type: Easing.OutCubic ; duration: 500 }}
+//        }
 
         Label {
             anchors.fill: coverImageContainer
@@ -415,6 +415,17 @@ Page {
                     }
                 }
             }
+            onSideTriggerActiveChanged: {
+                if(_ngfEffect) {
+                    _ngfEffect.play()
+                }
+            }
+            property QtObject _ngfEffect
+            Component.onCompleted: {
+                _ngfEffect = Qt.createQmlObject("import org.nemomobile.ngf 1.0; NonGraphicalFeedback { event: 'pulldown_highlight' }",
+                                   coverMouseArea, 'NonGraphicalFeedback');
+            }
+
             property int dragValue: Math.abs(target.x)
             property real dragFactor: maxDrag / dragValue
             Item {
@@ -548,10 +559,6 @@ Page {
                         width: parent.width - Theme.paddingSmall * 2
                         x: Theme.paddingSmall
                         id: fileNameLabel
-                        //readOnly: true
-                        //maximumLineCount: 3
-                        //height: Theme.itemSizeNormal * 3
-                        //elide: Text.ElideRight
                         text: appstate.playlistActive ? appstate.playlistActive.baseName :''
                         //StandardPaths.data + ' - ' + StandardPaths.documents + ' - ' + StandardPaths.genericData + ' - ' + StandardPaths.music + ' - ' + StandardPaths.pictures + ' - ' + StandardPaths.videos + ' - '
                         //  options.directory
@@ -605,35 +612,42 @@ Page {
                         }
                     }
 
-
-                    Slider {
-                        id: totalPosition
-                        property int previousDuration: appstate.playlistActive.playlistOffset
-                        value: (appstate.playlistActive ? appstate.playlistActive.playlistOffset:0) + currentPositionSlider.value
-                        visible: options.playerDisplayDirectoryProgress && appstate.playlistIndex > -1 && appstate.playlist.count > 1// options.directoryFiles && options.directoryFiles.length > 1// && appstate.playlistIndex !== -1
-                        opacity: 0.5
-                        minimumValue: 0
-                        height: Theme.itemSizeExtraSmall
-                        Label {
-                            color: Theme.secondaryColor
-                            width: parent.width
-                            height: Theme.itemSizeSmall
-                            opacity: 0.8
-                            horizontalAlignment: Text.AlignHCenter
-                            anchors.bottom: parent.bottom
-                            verticalAlignment: Text.AlignBottom
-                            font.pixelSize: Theme.fontSizeExtraSmall
-                            visible: appstate.playlistIndex > -1 && appstate.playlist.count > 1
-                            text:  qsTr('%1 / %2 (File %L3 of %L4)', 'formatted file/directory durations, then file number/count )').arg(formatMSeconds( totalPosition.value)).arg(formatMSeconds(totalPosition.maximumValue)).arg(appstate.playlistIndex+1).arg(appstate.playlist.count)
-                        }
-                        maximumValue: appstate.playlist.duration
-                        enabled: false
+                    Item {
+                        id: totalPositionWrapper
                         width: parent.width
-                        handleVisible: false
+                        height: totalPosition.height
+//                        visible: totalPosition.visible
 
+                        Slider {
+                            id: totalPosition
+                            property int previousDuration: appstate.playlistActive.playlistOffset
+                            value: (appstate.playlistActive ? appstate.playlistActive.playlistOffset:0) + currentPositionSlider.value
+                            visible: options.playerDisplayDirectoryProgress && appstate.playlistIndex > -1 && appstate.playlist.count > 1// options.directoryFiles && options.directoryFiles.length > 1// && appstate.playlistIndex !== -1
+                            opacity: totalDurationNotification.isvisible ? 0 : 0.5
+                            minimumValue: 0
+                            height: Theme.itemSizeExtraSmall
+                            Label {
+                                color: Theme.secondaryColor
+                                width: parent.width
+                                height: Theme.itemSizeSmall
+                                opacity: 0.8
+                                horizontalAlignment: Text.AlignHCenter
+                                anchors.bottom: parent.bottom
+                                verticalAlignment: Text.AlignBottom
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                visible: appstate.playlistIndex > -1 && appstate.playlist.count > 1
+                                text:  qsTr('%1 / %2 (File %L3 of %L4)', 'formatted file/directory durations, then file number/count )').arg(formatMSeconds( totalPosition.value)).arg(formatMSeconds(totalPosition.maximumValue)).arg(appstate.playlistIndex+1).arg(appstate.playlist.count)
+                            }
+                            maximumValue: appstate.playlist.duration
+                            enabled: false
+                            width: parent.width
+                            handleVisible: false
+                            Behavior on opacity { NumberAnimation { easing.type: Easing.OutCubic ; duration: 500 }}
+                        }
 
                         MouseArea {
                             anchors.fill: totalPosition
+                            anchors.topMargin: Theme.paddingLarge
                             onClicked: {
 
                                 totalDurationNotification.show(2000)
@@ -641,7 +655,6 @@ Page {
 
                             InlineNotification {
                                 id: totalDurationNotification
-                                //isvisible: true
                                 anchors.centerIn: parent
                                 height:isvisible ? parent.height : 0
                                 width: totalPosition.width
@@ -650,6 +663,7 @@ Page {
                             }
                         }
                     }
+
 
                 }
 
@@ -671,9 +685,10 @@ Page {
             anchors.right: parent.right
 
             Flow {
-                height: page.isLandscape ? sizeOfEntries : Theme.itemSizeLarge
+                height: page.isLandscape ? sizeOfEntries : (Theme.itemSizeLarge - Theme.paddingLarge)
                 width: page.isPortrait ? sizeOfEntries : Theme.itemSizeLarge
                 anchors.centerIn: parent
+
                 spacing: 20
                 id:iconButtons
 
@@ -683,14 +698,14 @@ Page {
 
                 property bool isPlaying: appstate.tplayer.isplaying
 
-                IconButton {
+                ColorIconButton {
                     icon.source: "../icon-l-frwd.png"
                     enabled: totalPosition.value > options.skipDurationNormal
                     onClicked: {
                         appstate.tplayer.seek(0 - options.skipDurationNormal)
                     }
                 }
-                IconButton {
+                ColorIconButton {
                     enabled: totalPosition.value > options.skipDurationSmall
                     icon.source: "../icon-l-rwd.png"
                     onClicked: {
@@ -703,14 +718,14 @@ Page {
                     icon.source: playback.playbackState == Audio.PlayingState ? "image://theme/icon-l-pause": "image://theme/icon-l-play"
                     onClicked: appstate.tplayer.playPause()
                 }
-                IconButton {
+                ColorIconButton {
                     icon.source: "../icon-l-fwd.png"
                     enabled: totalPosition.maximumValue - totalPosition.value > options.skipDurationSmall
                     onClicked: {
                         appstate.tplayer.seek(options.skipDurationSmall)
                     }
                 }
-                IconButton {
+                ColorIconButton {
                     icon.source: "../icon-l-ffwd.png"
                     enabled: totalPosition.maximumValue - totalPosition.value > options.skipDurationNormal
                     onClicked: {

@@ -12,6 +12,13 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Thu Nov 08 2018 velox 0.0-11
+- allow opening of .mka (thanks rrunner64!)
+- enhancement: SF3 light ambience button colour fixes + cassette shade
+- performance: huge performance increase while opening lots of files (when mediainfo is installed)
+- enhancement: minor layout changes
+- enhancement: haptic feedback when swiping cover area to change tracks
+
 * Tue Jan 09 2018 velox 0.0-10
 - allow opening of .aac (thanks jakibaki!)
 

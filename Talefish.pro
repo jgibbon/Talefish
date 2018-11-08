@@ -17,7 +17,8 @@ CONFIG += sailfishapp
 SOURCES += src/Talefish.cpp \
     lib/folderlistmodel/qquickfolderlistmodel.cpp \
     lib/folderlistmodel/plugin.cpp \
-    lib/folderlistmodel/fileinfothread.cpp
+    lib/folderlistmodel/fileinfothread.cpp \
+    src/launcher.cpp
 
 OTHER_FILES += qml/Talefish.qml \
     qml/cover/CoverPage.qml \
@@ -72,7 +73,8 @@ DISTFILES += \
     qml/lib/OpenDirectoryDialog.qml \
     qml/lib/OptionComboBox.qml \
     qml/lib/StringScore.js \
-    qml/pages/AboutPage.qml
+    qml/pages/AboutPage.qml \
+    qml/lib/ColorIconButton.qml
 
 SUBDIRS += \
     lib/folderlistmodel/folderlistmodel.pro
@@ -80,4 +82,5 @@ SUBDIRS += \
 HEADERS += \
     lib/folderlistmodel/qquickfolderlistmodel.h \
     lib/folderlistmodel/fileproperty_p.h \
-    lib/folderlistmodel/fileinfothread_p.h
+    lib/folderlistmodel/fileinfothread_p.h \
+    src/launcher.h

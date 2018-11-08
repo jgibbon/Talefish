@@ -35,6 +35,7 @@
 #include <sailfishapp.h>
 
 #include "lib/folderlistmodel/qquickfolderlistmodel.h"
+#include "launcher.h"
 //#include "lib/qtmpris/Mpris"
 //#include "lib/qtmpris/MprisPlayer"
 
@@ -49,7 +50,7 @@ int main(int argc, char *argv[])
     //   - SailfishApp::pathTo(QString) to get a QUrl to a resource file
     //
     // To display the view, call "show()" (will show fullscreen on device).
-
+    qmlRegisterType<Launcher>("Launcher", 1 , 0 , "Launcher");
     qmlRegisterType<QQuickFolderListModel>("harbour.talefish.folderlistmodel", 1, 0, "FolderListModel");
 
 //    qmlRegisterSingletonType<Mpris>("harbour.talefish.qtmpris", 1, 0, "Mpris", Mpris::api_factory);

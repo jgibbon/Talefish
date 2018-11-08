@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtMultimedia 5.0
+import Launcher 1.0
 import "./StringScore.js" as Score
 
 
@@ -13,10 +14,15 @@ Dialog {
     property bool scanCoverForFilenames: false
     property var activateQueue:[]
     property var coverArray:[]
-
+    property bool tryToUseMediaInfo: true
+    Launcher {
+        id: program
+    }
+    property var startDate: null
     Component.onCompleted: {
         var i = 0
         activateQueue = [];
+        startDate = new Date();
         while(i < playlist.count){
 
             activateQueue.push(function(i){
@@ -40,9 +46,33 @@ Dialog {
                         }
 
                     }
+                    var mediainfo = null
+                    var mediainfoduration = null
+                    if(tryToUseMediaInfo) {
+                        var info = program.launch('mediainfo --Output=JSON "'+playlist.get(i).path+'"')
+                        if(info !== '') {
+                            try {
+                                mediainfo = JSON.parse(info);
+                                mediainfoduration = parseFloat(mediainfo.media.track[0].Duration) * 1000;
+                            } catch (error) {
+                                log('error getting values from mediainfo, trying slow way')
+                            }
+                        }
+                    }
+
+
                     //then add media to continue
                     mediaData.index = i;
-                    mediaData.source = playlist.get(i).path+'';
+                    if(mediainfoduration !== null) {
+                        playlist.setProperty(i, 'duration', mediainfoduration);
+                        scanTimer.interval = 0;
+                        scanTimer.start()
+
+                    } else {
+                        scanTimer.interval = 5;
+                        mediaData.source = playlist.get(i).path+'';
+                    }
+
 
                 }
 
@@ -54,7 +84,7 @@ Dialog {
 
 
     onAccepted: {
-        console.log('accept scanner!');
+        log('accept scanner!');
 
     }
 
@@ -160,7 +190,7 @@ Dialog {
             onDurationChanged: {
                 pause()
                 log('scanned file duration', duration);
-                playlist.setProperty(index, 'duration', duration)
+                playlist.setProperty(index, 'duration', duration);
                 lastActiveFile = playlist.get(index)
                 scanTimer.start()
             }
@@ -238,7 +268,7 @@ Dialog {
                     Label {
                         id: sizeItem
                         height: Theme.itemSizeSmall
-                        text: model.duration > 0 ? bgItem.formatted: qsTr('Error')
+                        text: scanned > index + 1 ? (model.duration > 0 ? bgItem.formatted: qsTr('Error')) :'-'
                         font.pixelSize: Theme.fontSizeTiny
                         verticalAlignment: Text.AlignVCenter
                         anchors.right: parent.right

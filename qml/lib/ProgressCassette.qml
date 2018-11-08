@@ -26,7 +26,7 @@ Rectangle {
 
 
     property alias tapeWidth: tape.width
-
+    clip: true
 
 
 
@@ -38,13 +38,7 @@ Rectangle {
 
 
         property int maxReelBorder: parent.width / 4
-
         property int reelWidthBase: parent.width / 2
-
-        //property int reelWidth: reelWidthBase + reelWidthBorder *2
-
-
-
         property int reelWidthBorder: maxReelBorder * valuefactor
         property int reelWidthBorderNegative: maxReelBorder * (1-valuefactor)
 
@@ -56,7 +50,7 @@ Rectangle {
         radius: width / 2
 
 
-        border.width: reelWidthBorder // appstate.playlist[appstate.playlistIndex] ? (( appstate.currentPosition / appstate.playlist[appstate.playlistIndex].duration) * parent.width / 2)||0 : 0
+        border.width: reelWidthBorder
         border.color: progressComponent.tapeColor
     }
 
