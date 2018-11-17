@@ -616,7 +616,7 @@ Page {
                         id: totalPositionWrapper
                         width: parent.width
                         height: totalPosition.height
-//                        visible: totalPosition.visible
+                        visible: totalPosition.visible
 
                         Slider {
                             id: totalPosition
