@@ -12,6 +12,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Sat Nov 17 2018 velox 0.0-12
+- enhancement: headset "call accept button" now keeps triggering long press action until released
+- bugfix: completely hide total progress area with only one track loaded
+
 * Thu Nov 08 2018 velox 0.0-11
 - allow opening of .mka (thanks rrunner64!)
 - enhancement: SF3 light ambience button colour fixes + cassette shade

@@ -64,7 +64,6 @@ Item {
                     playIndex(0, {isPlaying: !!playback.isPlaying});
                 }
             }
-
         }
         function stop() {app.log('external command: stop');
             playback.pause()
@@ -475,6 +474,7 @@ onMetaDataChanged: {
             onTriggered: {
                 parent.isLongPressed = true
                 externalCommand[options.headphoneCallButtonLongpressDoes]()
+                start()
             }
         }
     }
