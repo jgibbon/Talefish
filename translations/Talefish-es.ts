@@ -368,7 +368,7 @@
     </message>
     <message>
         <source>[No Cover]</source>
-        <translation>[No hay portada]</translation>
+        <translation>[Sin portada]</translation>
     </message>
 </context>
 <context>

@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>AboutPage</name>
     <message>
         <source>About Talefish</source>
         <comment>header</comment>
-        <translation>About Talefish</translation>
+        <translation>O programu</translation>
     </message>
     <message>
         <source>Contribute</source>
         <comment>section header</comment>
-        <translation>Contribute</translation>
+        <translation>Prispevaj</translation>
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>Discuss or click &quot;thanks&quot; at talk.maemo.org:</translation>
+        <translation>Sodeluj v pogovoru ali klikni &quot;thanks&quot; @talk.maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
-        <translation>TMO thread</translation>
+        <translation>Pogovor na TMO</translation>
     </message>
     <message>
         <source>GitHub page</source>
-        <translation>GitHub page</translation>
+        <translation>GitHub</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>You can also submit translations at Transifex, if you don&apos;t like GitHub:</translation>
+        <translation>Če vam GitHub ne ustreza, lahko prevode prispevate tudi na Transifex:</translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation>Transifex page</translation>
+        <translation>Transifex</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>Or buy me a beer if you really feel like it:</translation>
+        <translation>Ali pa mi kupite pivo :)</translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation>PayPal donation</translation>
+        <translation>PayPal</translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation>Thanks!</translation>
+        <translation>Hvala!</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation>Thanks to all users suggesting things and everyone helping me out!</translation>
+        <translation>Hvala za vse predloge in pomoč!</translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation>Translators</translation>
+        <translation>Prevajalci</translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation>A big thank you to the translators:</translation>
+        <translation>Hvala vsem prevajalcem:</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</translation>
+        <translation>Talefish - &quot;directory based audio book player&quot;, spisan večinoma v QML. S pomočjo skupnosti ga je ustvaril John Gibbon. Licenca GPL2.</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
@@ -72,43 +72,47 @@
     <name>FolderSelector</name>
     <message>
         <source>Sort by Name</source>
-        <translation>Sort by Name</translation>
+        <translation>Uredi po imenu</translation>
     </message>
     <message>
         <source>Sort by Type</source>
-        <translation>Sort by Type</translation>
+        <translation>Uredi po tipu</translation>
     </message>
     <message>
         <source>Sort by Last Modified</source>
-        <translation>Sort by Last Modified</translation>
+        <translation>Uredi po datumu zadnje spremembe</translation>
     </message>
     <message>
         <source>Open Directory</source>
-        <translation>Open Directory</translation>
+        <translation>Odpri mapo</translation>
     </message>
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Click file to open it or accept dialog to open %1 file</numerusform>
-            <numerusform>Click file to open it or accept dialog to open %1 files</numerusform>
+            <numerusform>Klikni datoteko ali izberi Odpri mapo da odpreš %1 datoteko.</numerusform>
+            <numerusform>Klikni datoteko ali izberi Odpri mapo da odpreš %1 datoteki.</numerusform>
+            <numerusform>Klikni datoteko ali izberi Odpri mapo da odpreš %1 datoteke.</numerusform>
+            <numerusform>Klikni datoteko ali izberi Odpri mapo da odpreš %1 datotek.</numerusform>
         </translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
-        <translation>Enqueue Directory</translation>
+        <translation>Dodaj mapo</translation>
     </message>
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Click file to enqueue or accept dialog to enqueue %1 file</numerusform>
-            <numerusform>Click file to enqueue or accept dialog to enqueue %1 files</numerusform>
+            <numerusform>Klikni datoteko ali izberi Dodaj mapo za dodajanje %1 datoteke na seznam predvajanja</numerusform>
+            <numerusform>Klikni datoteko ali izberi Dodaj mapo za dodajanje %1 datotek na seznam predvajanja</numerusform>
+            <numerusform>Klikni datoteko ali izberi Dodaj mapo za dodajanje %1 datotek na seznam predvajanja</numerusform>
+            <numerusform>Klikni datoteko ali izberi Dodaj mapo za dodajanje %1 datotek na seznam predvajanja</numerusform>
         </translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
-        <translation>Progress will not be saved for reopening enqueued files.</translation>
+        <translation>Napredek za obstoječe datoteke ne bo shranjen.</translation>
     </message>
 </context>
 <context>
@@ -116,199 +120,201 @@
     <message>
         <source>Options</source>
         <comment>header</comment>
-        <translation>Options</translation>
+        <translation>Možnosti</translation>
     </message>
     <message>
         <source>Playback</source>
         <comment>section header</comment>
-        <translation>Playback</translation>
+        <translation>Predvajanje</translation>
     </message>
     <message>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
-        <translation>Playback Speed: %1%</translation>
+        <translation>Hitrost predvajanja: %1%</translation>
     </message>
     <message>
         <source>Play next Track automatically</source>
-        <translation>Play next Track automatically</translation>
+        <translation>Samodejno predvajaj naslednji posnetek</translation>
     </message>
     <message>
         <source>Short Skip duration</source>
-        <translation>Short Skip duration</translation>
+        <translation>Nastavitev za kratek preskok</translation>
     </message>
     <message>
         <source>Long Skip duration</source>
-        <translation>Long Skip duration</translation>
+        <translation>Nastavitev za dolg preskok</translation>
     </message>
     <message>
         <source>Search best cover image for each file</source>
-        <translation>Search best cover image for each file</translation>
+        <translation>Za vsako datoteko poišči najboljšo sliko naslovnice</translation>
     </message>
     <message>
         <source>Do Animations</source>
-        <translation>Do Animations</translation>
+        <translation>Prikaži animacije</translation>
     </message>
     <message>
         <source>Player Page</source>
         <comment>section header</comment>
-        <translation>Player Page</translation>
+        <translation>Predvajalnik</translation>
     </message>
     <message>
         <source>Display directory name</source>
-        <translation>Display directory name</translation>
+        <translation>Prikaži ime mape</translation>
     </message>
     <message>
         <source>Display playlist progress</source>
-        <translation>Display playlist progress</translation>
+        <translation>Prikaži napredovanje seznama predvajanja</translation>
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>Swipe Cover (or above Title) to skip Tracks</translation>
+        <translation>Podrsaj naslovnico (ali zgornji naslov) za preskok posnetka</translation>
     </message>
     <message>
         <source>Cassette shows progress of</source>
-        <translation>Cassette shows progress of</translation>
+        <translation>Kaseta prikazuje napredovanje</translation>
     </message>
     <message>
         <source>track</source>
-        <translation>track</translation>
+        <translation>posnetka</translation>
     </message>
     <message>
         <source>directory</source>
-        <translation>directory</translation>
+        <translation>mape</translation>
     </message>
     <message>
         <source>Tape Animations</source>
         <comment>section header</comment>
-        <translation>Tape Animations</translation>
+        <translation>Animacije predvajalnika</translation>
     </message>
     <message>
         <source>Player Page Animation</source>
-        <translation>Player Page Animation</translation>
+        <translation>V predvajalniku</translation>
     </message>
     <message>
         <source>App-Cover Animation</source>
-        <translation>App-Cover Animation</translation>
+        <translation>Na naslovnici</translation>
     </message>
     <message>
         <source>Open Files</source>
         <comment>section header</comment>
-        <translation>Open Files</translation>
+        <translation>Odpri datoteke</translation>
     </message>
     <message>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>Show &quot;Enqueue&quot; Pulley</translation>
+        <translation>Omogoči &quot;Dodaj na seznam predvajanja&quot;</translation>
     </message>
     <message>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation>Miscellaneous</translation>
+        <translation>Razno</translation>
     </message>
     <message>
         <source>Save progress periodically</source>
-        <translation>Save progress periodically</translation>
+        <translation>Občasno shrani napredek</translation>
     </message>
     <message>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
-        <translation>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</translation>
+        <translation>Ko je omogočeno se stanje shrani vsakih nekaj sekund. V nasprotnem primeru se bo stanje trenutnega predvajanje shranilo le v primeru, da za izhod iz aplikacije uporabite ukaz. </translation>
     </message>
     <message>
         <source>Verbose logging enabled</source>
-        <translation>Verbose logging enabled</translation>
+        <translation>Vključeno podrobno beleženje</translation>
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
-        <translation>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</translation>
+        <translation>V ozadju se beleži precej stvari kar lahko upočasni delovanje aplikacije. Beležke se lahko prebere/prikaže, če poženete Talefish z aplikacijo Terminal.</translation>
     </message>
     <message>
         <source>Sort directory naturally while scanning</source>
-        <translation>Sort directory naturally while scanning</translation>
+        <translation>Med pregledovanjem vsebine omogoči &quot;naravno&quot; razvrščanje</translation>
     </message>
     <message>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</translation>
+        <translation>Omogočite če so imena datotek brez začetnih ničel. Velja le za primer, ko je sortirano po imenu.</translation>
     </message>
     <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
-        <translation>Use head phone buttons/Bluetooth to control Talefish</translation>
+        <translation>Za nadzor programa uporabi gumbe na slušalkah</translation>
     </message>
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation>About</translation>
+        <translation>O programu</translation>
     </message>
     <message>
         <source>Keep directory progress</source>
-        <translation>Keep directory progress</translation>
+        <translation>Ohrani podatke o vsebini map</translation>
     </message>
     <message numerus="yes">
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation>
-            <numerusform>for %1 day</numerusform>
-            <numerusform>for %1 days</numerusform>
+            <numerusform>za %1 dan</numerusform>
+            <numerusform>za %1 dni</numerusform>
+            <numerusform>za %1 dni</numerusform>
+            <numerusform>za %1 dni</numerusform>
         </translation>
     </message>
     <message>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation>forever</translation>
+        <translation>neskončno</translation>
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</translation>
+        <translation>Da se prepreči kopičenje starih in neveljavnih map bo program  ob zagonu preveril dejansko stanje in osvežil bazo. Izjema je trenutno predvajana mapa - ta podatek ne bo posodobljen.</translation>
     </message>
     <message>
         <source>to track beginning</source>
-        <translation>to track beginning</translation>
+        <translation>na začetek posnetka</translation>
     </message>
     <message>
         <source>External Commands skip</source>
-        <translation>External Commands skip</translation>
+        <translation>Zunanji ukaz za preskok</translation>
     </message>
     <message>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation>External Commands are those executed from the lock screen or via headsets/bluetooth.</translation>
+        <translation>Zunanji ukaz je ukazi, izvršen preko zaklenjenega zaslona ali s tipkami na slušalkah</translation>
     </message>
     <message>
         <source>Play/Pause</source>
-        <translation>Play/Pause</translation>
+        <translation>Predvajaj / Premor</translation>
     </message>
     <message>
         <source>Skip forward</source>
-        <translation>Skip forward</translation>
+        <translation>Preskoči naprej</translation>
     </message>
     <message>
         <source>Skip backward</source>
-        <translation>Skip backward</translation>
+        <translation>Preskoči nazaj</translation>
     </message>
     <message>
         <source>Do nothing</source>
-        <translation>Do nothing</translation>
+        <translation>Brez dejanja</translation>
     </message>
     <message>
         <source>Button Press:</source>
-        <translation>Button Press:</translation>
+        <translation>Prisitk na gumb:</translation>
     </message>
     <message>
         <source>Long press:</source>
-        <translation>Long press:</translation>
+        <translation>Dolgi pritisk:</translation>
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</translation>
+        <translation>Tu nastavite katero dejanje naj se izvede pri pritisku na gumb za &quot;sprejem / prekinitev klica&quot; na slušalkah. Pogosto je to edini gumb na slušalki.</translation>
     </message>
     <message>
         <source>Hidden</source>
-        <translation>Hidden</translation>
+        <translation>Skrito</translation>
     </message>
     <message>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation>App-Cover Actions are external Commands, as well.</translation>
+        <translation>Dejanja na naslovnici so prav tako zunanji ukaz</translation>
     </message>
     <message>
         <source>Secondary App-Cover Action</source>
-        <translation>Secondary App-Cover Action</translation>
+        <translation>Sekundarno dejanje na naslovnici</translation>
     </message>
 </context>
 <context>
@@ -316,59 +322,61 @@
     <message>
         <source>Options</source>
         <comment>pulley</comment>
-        <translation>Options</translation>
+        <translation>Možnosti</translation>
     </message>
     <message>
         <source>Playlist</source>
         <comment>pulley</comment>
-        <translation>Playlist</translation>
+        <translation>Seznam predvajanja</translation>
     </message>
     <message>
         <source>Enqueue</source>
         <comment>pulley</comment>
-        <translation>Enqueue</translation>
+        <translation>Dodaj na seznam</translation>
     </message>
     <message>
         <source>Open</source>
         <comment>pulley</comment>
-        <translation>Open</translation>
+        <translation>Odpri</translation>
     </message>
     <message>
         <source>Nothing to play</source>
-        <translation>Nothing to play</translation>
+        <translation>Ni datotek za predvajanje</translation>
     </message>
     <message>
         <source>Open Files by pulling down.</source>
-        <translation>Open Files by pulling down.</translation>
+        <translation>Za odpiranje datotek potegni navzdol</translation>
     </message>
     <message>
         <source>Rewind Track</source>
-        <translation>Rewind Track</translation>
+        <translation>Previj posnetek</translation>
     </message>
     <message>
         <source>Previous Track</source>
-        <translation>Previous Track</translation>
+        <translation>Prejšnji posnetek</translation>
     </message>
     <message>
         <source>Next Track</source>
-        <translation>Next Track</translation>
+        <translation>Naslednji posnetek</translation>
     </message>
     <message>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation>%1 / %2 (File %L3 of %L4)</translation>
+        <translation>%1 / %2 (datoteka %L3 od %L4)</translation>
     </message>
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
         <translation>
-            <numerusform>%1% played in Total</numerusform>
-            <numerusform>%1% played in Total</numerusform>
+            <numerusform>%1% predvajana datoteka</numerusform>
+            <numerusform>%1% predvajani datoteki</numerusform>
+            <numerusform>%1% predvajane datoteke</numerusform>
+            <numerusform>%1% predvajanih datotek</numerusform>
         </translation>
     </message>
     <message>
         <source>[No Cover]</source>
-        <translation>[No Cover]</translation>
+        <translation>[Ni naslovnice]</translation>
     </message>
 </context>
 <context>
@@ -376,48 +384,52 @@
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
         <translation>
-            <numerusform>%L1 file opened</numerusform>
-            <numerusform>%L1 files opened</numerusform>
+            <numerusform>%L1 odprta datoteka</numerusform>
+            <numerusform>%L1 odprti datoteki</numerusform>
+            <numerusform>%L1 odprte datoteke</numerusform>
+            <numerusform>%L1 odprtih datotek</numerusform>
         </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
-        <translation>%1 of %2 played (track %3)</translation>
+        <translation>%1 od %2 predvajanih (posnetek %3)</translation>
     </message>
 </context>
 <context>
     <name>PlaylistView</name>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>Napaka</translation>
     </message>
 </context>
 <context>
     <name>scanDialog</name>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation>Napaka</translation>
     </message>
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
         <translation>
-            <numerusform>%1 File</numerusform>
-            <numerusform>%1 Files</numerusform>
+            <numerusform>%1 datoteka</numerusform>
+            <numerusform>%1 datoteki</numerusform>
+            <numerusform>%1 datoteke</numerusform>
+            <numerusform>%1 datotek</numerusform>
         </translation>
     </message>
     <message>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>no Duration</translation>
+        <translation>ni dolžine</translation>
     </message>
     <message>
         <source>Reading Durations</source>
-        <translation>Reading Durations</translation>
+        <translation>Branje dolžine posnetkov</translation>
     </message>
     <message>
         <source>Reading Durations and matching Cover files</source>
-        <translation>Reading Durations and matching Cover files</translation>
+        <translation>Branje dolžine posnetkov in iskanje naslovnic</translation>
     </message>
 </context>
 </TS>

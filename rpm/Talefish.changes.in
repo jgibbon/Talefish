@@ -12,9 +12,10 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Sat Nov 17 2018 velox 0.0-12
+* Sun Nov 18 2018 velox 0.0-12
 - enhancement: headset "call accept button" now keeps triggering long press action until released
-- bugfix: completely hide total progress area with only one track loaded
+- bugfix: hide empty total progress area with only one track loaded
+- new translations: hu (thanks leoka), nl_BE (thanks pljmn), sl (thanks sponka), zh_CN (thanks rui kon)
 
 * Thu Nov 08 2018 velox 0.0-11
 - allow opening of .mka (thanks rrunner64!)
