@@ -123,6 +123,10 @@ Page {
                       + '<br />Caballlero / carmenfdezb (es)'
                       + '<br />Ancelad (ru)'
                       + '<br />marmistrz (pl)'
+                      + '<br />pljmn (nl + nl_BE)'
+                      + '<br />leoka (hu)'
+                      + '<br />sponka (sl)'
+                      + '<br />rui kon (zh_CN)'
                 width: parent.width
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
 

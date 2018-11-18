@@ -49,7 +49,6 @@ TRANSLATIONS += \
     translations/Talefish-nl.ts \
     translations/Talefish-nl_BE.ts \
     translations/Talefish-hu_HU.ts \
-    translations/Talefish-sl_S.ts \
     translations/Talefish-sl_SI.ts \
     translations/Talefish-zh_CN.ts
 
