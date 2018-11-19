@@ -239,7 +239,7 @@
     </message>
     <message>
         <source>Keep directory progress</source>
-        <translation>保持目录进程</translation>
+        <translation>阻止目录进度</translation>
     </message>
     <message numerus="yes">
         <source>for %1 day(s)</source>
@@ -308,7 +308,7 @@
     </message>
     <message>
         <source>Secondary App-Cover Action</source>
-        <translation>第二个软件封面操作</translation>
+        <translation>间接软件封面操作</translation>
     </message>
 </context>
 <context>
