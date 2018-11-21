@@ -14,7 +14,7 @@ Name:       Talefish
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Talefish
 Version:    0.0
-Release:    12
+Release:    13
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://example.org/
