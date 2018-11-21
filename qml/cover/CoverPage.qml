@@ -147,7 +147,7 @@ CoverBackground {
         enabled: options.secondaryCoverAction === ''
 
         CoverAction {
-            iconSource:isPlaying ? "image://theme/icon-m-previous" : "image://theme/icon-cover-play"
+            iconSource:isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
             onTriggered: externalCommand.playPause()
         }
