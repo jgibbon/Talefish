@@ -257,7 +257,6 @@ Page {
                     to: 0.8
                     duration: 500
                 }
-                //Rectangle { anchors.fill: parent; color: "red"; opacity: 1; z:-1;}
             }
 
             Image {
@@ -288,8 +287,6 @@ Page {
 
         OpacityRampEffect {
             id: effect
-            //            slope: 3 //the more, the shorter
-            //            offset: 0.6
             slope: 1 //the more, the shorter
             offset: 0
             sourceItem: coverImageContainer
@@ -311,19 +308,6 @@ Page {
 
             clip:true
         }
-
-//        Label {
-//            anchors.fill: coverImageContainer
-//            horizontalAlignment: Text.AlignHCenter
-//            verticalAlignment: Text.AlignVCenter
-//            text:'No Cover'
-//            font.pixelSize: Theme.fontSizeLarge
-//            color: Theme.secondaryColor
-//            opacity: coverImage.source ? 1 : 1
-
-//            visible:appstate.playlistIndex > -1
-//            Behavior on opacity { NumberAnimation { easing.type: Easing.OutCubic ; duration: 500 }}
-//        }
 
         Label {
             anchors.fill: coverImageContainer
@@ -546,22 +530,14 @@ Page {
                 width: parent.width
 
 
-                spacing: Theme.paddingLarge
+//                spacing: Theme.paddingLarge
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: page.isPortrait? controlPanel.height : Theme.paddingMedium
-
-
-
-                Column {
-                    width:parent.width
-
                     Label {
                         width: parent.width - Theme.paddingSmall * 2
                         x: Theme.paddingSmall
                         id: fileNameLabel
                         text: appstate.playlistActive ? appstate.playlistActive.baseName :''
-                        //StandardPaths.data + ' - ' + StandardPaths.documents + ' - ' + StandardPaths.genericData + ' - ' + StandardPaths.music + ' - ' + StandardPaths.pictures + ' - ' + StandardPaths.videos + ' - '
-                        //  options.directory
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                         color: Theme.highlightColor
@@ -574,8 +550,6 @@ Page {
                         id: fileFolderLabel
                         property string displayPath:appstate.playlistActive && appstate.playlistActive.folderName ? appstate.playlistActive.folderName:''
                         visible: displayPath !== '' && options.playerDisplayDirectoryName
-                        //maximumLineCount: 3
-                        //elide: Text.ElideRight
                         text: displayPath
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
@@ -589,17 +563,14 @@ Page {
                         value: Math.max( realvalue, appstate.currentPosition)
                         property real realvalue: playback.position
                         onRealvalueChanged: {
-
                             value = Math.max( realvalue, appstate.currentPosition)
                         }
-
+                        height: totalPositionWrapper.visible ? Theme.itemSizeExtraSmall : implicitHeight
                         minimumValue: 0
                         maximumValue: appstate.playlistActive && appstate.playlistActive.duration > 0? appstate.playlistActive.duration:0.0001
                         width: parent.width
-                        height: Theme.itemSizeExtraSmall
                         visible: appstate.playlistIndex != -1
                         label: formatMSeconds( value)+" / "+formatMSeconds(maximumValue) +' ('+ (Math.floor(( currentPositionSlider.value / currentPositionSlider.maximumValue) * 1000 ) / 10)+'%)'
-                        //Rectangle { anchors.fill: parent; color: "red"; opacity: 0.3; z:-1;}
 
                         onClicked: {
                             //                            if(sleepTimer.running) {sleepTimer.restart();}
@@ -616,7 +587,7 @@ Page {
                         id: totalPositionWrapper
                         width: parent.width
                         height: totalPosition.height
-                        visible: totalPosition.visible
+                        visible: appstate.playlistIndex > -1 && appstate.playlist.count > 1
 
                         Slider {
                             id: totalPosition
@@ -625,24 +596,26 @@ Page {
                             visible: options.playerDisplayDirectoryProgress && appstate.playlistIndex > -1 && appstate.playlist.count > 1// options.directoryFiles && options.directoryFiles.length > 1// && appstate.playlistIndex !== -1
                             opacity: totalDurationNotification.isvisible ? 0 : 0.5
                             minimumValue: 0
-                            height: Theme.itemSizeExtraSmall
-                            Label {
-                                color: Theme.secondaryColor
-                                width: parent.width
-                                height: Theme.itemSizeSmall
-                                opacity: 0.8
-                                horizontalAlignment: Text.AlignHCenter
-                                anchors.bottom: parent.bottom
-                                verticalAlignment: Text.AlignBottom
-                                font.pixelSize: Theme.fontSizeExtraSmall
-                                visible: appstate.playlistIndex > -1 && appstate.playlist.count > 1
-                                text:  qsTr('%1 / %2 (File %L3 of %L4)', 'formatted file/directory durations, then file number/count )').arg(formatMSeconds( totalPosition.value)).arg(formatMSeconds(totalPosition.maximumValue)).arg(appstate.playlistIndex+1).arg(appstate.playlist.count)
-                            }
+                            height: Theme.itemSizeSmall
+
                             maximumValue: appstate.playlist.duration
                             enabled: false
                             width: parent.width
                             handleVisible: false
                             Behavior on opacity { NumberAnimation { easing.type: Easing.OutCubic ; duration: 500 }}
+
+                            Label {
+                                color: Theme.secondaryColor
+                                width: parent.width
+                                height: Theme.itemSizeSmall  - Theme.paddingLarge
+                                opacity: 0.8
+                                horizontalAlignment: Text.AlignHCenter
+                                anchors.bottom: parent.bottom
+                                verticalAlignment: Text.AlignBottom
+                                font.pixelSize: Theme.fontSizeExtraSmall
+                                text:  qsTr('%1 / %2 (File %L3 of %L4)', 'formatted file/directory durations, then file number/count )').arg(formatMSeconds( totalPosition.value)).arg(formatMSeconds(totalPosition.maximumValue)).arg(appstate.playlistIndex+1).arg(appstate.playlist.count)
+                            }
+
                         }
 
                         MouseArea {
@@ -665,7 +638,7 @@ Page {
                     }
 
 
-                }
+//                }
 
 
 
