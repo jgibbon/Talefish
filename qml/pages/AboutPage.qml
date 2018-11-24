@@ -120,7 +120,7 @@ Page {
             Label {
                 text: qsTr("A big thank you to the translators:")
                       + '<br />eson (sv)'
-                      + '<br />Caballlero / carmenfdezb (es)'
+                      + '<br />carmenfdezb (es)'
                       + '<br />Ancelad (ru)'
                       + '<br />marmistrz (pl)'
                       + '<br />pljmn (nl + nl_BE)'
