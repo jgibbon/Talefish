@@ -12,10 +12,13 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
-* Thu Nov 22 2018 velox 0.0-13
+* Sun Nov 25 2018 velox 0.0-13
 - bugfix: show correct pause cover action icon if secondary action is hidden
 - bugfix: further layout fixes: total progress area + tablet layout
-- translation update zh_CN
+- bugfix: re-enable "progress slider swiping"; previously only click really worked
+- bugfix: prevent not updating ("zeroing") progress when opening new files
+- enhancement: readability enhancement for title in landscape with light ambiences
+- translation updates: zh_CN; ru (thanks all!)
 
 * Sun Nov 18 2018 velox 0.0-12
 - enhancement: headset "call accept button" now keeps triggering long press action until released
