@@ -562,9 +562,25 @@ Page {
                         id: currentPositionSlider
                         value: Math.max( realvalue, appstate.currentPosition)
                         property real realvalue: playback.position
-                        onRealvalueChanged: {
-                            value = Math.max( realvalue, appstate.currentPosition)
+                        function applyValue(){
+
+                            if(value + 100 >= appstate.playlistActive.duration){//does not quite set it at the end, so skipping gets confused.
+                                value = appstate.playlistActive.duration - 100;
+                            }
+                            appstate.currentPosition = value;
+                            //also does not update state?!
+                            playback.seek(value);
                         }
+
+                        onRealvalueChanged: {
+                            if(!down) {
+                                value = Math.max( realvalue, appstate.currentPosition)
+                            }
+                        }
+                        onDownChanged: {
+                            if(!down) applyValue()
+                        }
+
                         height: totalPositionWrapper.visible ? Theme.itemSizeExtraSmall : implicitHeight
                         minimumValue: 0
                         maximumValue: appstate.playlistActive && appstate.playlistActive.duration > 0? appstate.playlistActive.duration:0.0001
@@ -573,13 +589,7 @@ Page {
                         label: formatMSeconds( value)+" / "+formatMSeconds(maximumValue) +' ('+ (Math.floor(( currentPositionSlider.value / currentPositionSlider.maximumValue) * 1000 ) / 10)+'%)'
 
                         onClicked: {
-                            //                            if(sleepTimer.running) {sleepTimer.restart();}
-                            if(value + 100 >= appstate.playlistActive.duration){//does not quite set it at the end, so skipping gets confused.
-                                value = appstate.playlistActive.duration - 100;
-                            }
-                            appstate.currentPosition = value;
-                            //also does not update state?!
-                            playback.seek(value);
+
                         }
                     }
 
