@@ -89,10 +89,10 @@
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Нажмите на файл для открытия или примите предложение для открытия %1 файла</numerusform>
+            <numerusform>Нажмите на файл для открытия или примите предложение для открытия %1 файлов</numerusform>
+            <numerusform>Нажмите на файл для открытия или примите предложение для открытия %1 файлов</numerusform>
         </translation>
     </message>
     <message>
@@ -102,10 +102,10 @@
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Нажмите на файл или примите предложение для отправки %1 файла в очередь</numerusform>
+            <numerusform>Нажмите на файл или примите предложение для отправки %1 файлов в очередь</numerusform>
+            <numerusform>Нажмите на файл или примите предложение для отправки %1 файлов в очередь</numerusform>
         </translation>
     </message>
     <message>
@@ -241,77 +241,77 @@
     </message>
     <message>
         <source>Keep directory progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранять прогресс директории</translation>
     </message>
     <message numerus="yes">
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>на %1 день</numerusform>
+            <numerusform>на %1 дня</numerusform>
+            <numerusform>на %1 дней</numerusform>
         </translation>
     </message>
     <message>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation type="unfinished"></translation>
+        <translation>навсегда</translation>
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Для предотвращения кэширования старых или удаленных папок, Talefish будет выполнять проверку при запуске приложения. Это не повлияет на текущую активную папку.</translation>
     </message>
     <message>
         <source>to track beginning</source>
-        <translation type="unfinished"></translation>
+        <translation>к началу трека</translation>
     </message>
     <message>
         <source>External Commands skip</source>
-        <translation type="unfinished"></translation>
+        <translation>Пропуск встроенных команд</translation>
     </message>
     <message>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation type="unfinished"></translation>
+        <translation>Встроенные команды запускаются с экрана блокировки или при помощи наушников/Bluetooth</translation>
     </message>
     <message>
         <source>Play/Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Воспр./Пауза</translation>
     </message>
     <message>
         <source>Skip forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Перемотать вперед</translation>
     </message>
     <message>
         <source>Skip backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Перемотать назад</translation>
     </message>
     <message>
         <source>Do nothing</source>
-        <translation type="unfinished"></translation>
+        <translation>Ничего не делать</translation>
     </message>
     <message>
         <source>Button Press:</source>
-        <translation type="unfinished"></translation>
+        <translation>Нажатие кнопки:</translation>
     </message>
     <message>
         <source>Long press:</source>
-        <translation type="unfinished"></translation>
+        <translation>Длинное нажатие:</translation>
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы можете выбрать предпочитаемое действие, запускаемое по нажатию кнопки принятия/отклонения вызова, которая часто является единственной кнопкой на пульте управления наушниками:</translation>
     </message>
     <message>
         <source>Hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Скрыто</translation>
     </message>
     <message>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation type="unfinished"></translation>
+        <translation>Действия обложки приложения также являются внешними командами</translation>
     </message>
     <message>
         <source>Secondary App-Cover Action</source>
-        <translation type="unfinished"></translation>
+        <translation>Второе действие обложки приложения</translation>
     </message>
 </context>
 <context>
@@ -364,10 +364,10 @@
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1%1 воспроизведен в итоге</numerusform>
+            <numerusform>%1%1 воспроизведено в итоге</numerusform>
+            <numerusform>%1%1 воспроизведено в итоге</numerusform>
         </translation>
     </message>
     <message>
@@ -379,10 +379,10 @@
     <name>PlaylistPage</name>
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1L1 файл открыт</numerusform>
+            <numerusform>%1L1 файла открыто</numerusform>
+            <numerusform>%1L1 файлов открыто</numerusform>
         </translation>
     </message>
     <message>
@@ -406,10 +406,10 @@
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1 файл</numerusform>
+            <numerusform>%1 файла</numerusform>
+            <numerusform>%1 файлов</numerusform>
         </translation>
     </message>
     <message>
