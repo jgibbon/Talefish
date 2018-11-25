@@ -24,6 +24,7 @@ TODO:
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import QtMultimedia 5.0
+import QtGraphicalEffects 1.0
 //import QtSystemInfo 5.0
 
 
@@ -542,6 +543,10 @@ Page {
                         verticalAlignment: Text.AlignVCenter
                         color: Theme.highlightColor
                         wrapMode: 'WrapAtWordBoundaryOrAnywhere'
+                        layer.enabled: Theme.colorScheme //is it light?
+                        layer.effect: DropShadow {
+                            color: '#ffffff33'
+                        }
                     }
 
                     Label {
@@ -556,6 +561,10 @@ Page {
                         color: Theme.secondaryHighlightColor
                         font.pixelSize: Theme.fontSizeExtraSmall
                         wrapMode: 'WrapAtWordBoundaryOrAnywhere'
+                        layer.enabled: Theme.colorScheme //is it light?
+                        layer.effect: DropShadow {
+                            color: '#ffffff33'
+                        }
                     }
 
                     Slider {
