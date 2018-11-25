@@ -88,18 +88,20 @@ Button {
                 appstate.playlist.fromJSON(playlist.toJSON(), scanButton.enqueue);
 
                 if(appstate.playlist.count > 0){
-                    if(currentProgress && currentProgress.index > -1 && currentProgress.position > 0){
 
+                    app.log('current progress', currentProgress.index, currentProgress.position)
+                    if(currentProgress && currentProgress.index > -1 && currentProgress.position > 0){
+                        app.log('setting progress to saved')
                         appstate.playlistIndex = currentProgress.index;
                         appstate.currentPosition = currentProgress.position;
                         playOffset.start();
-
-
                     }else {
-                        appstate.currentPosition = 0;
-                        if(!currentProgress){
+                        if(!currentProgress ){
+                            app.log('currentprogress unset, setting to 0');
                             currentProgress = {percent:0, index:0, position:0};
                         }
+                        app.log('setting progress to 0')
+                        appstate.currentPosition = 0;
                         currentProgress.index = 0;
                         currentProgress.position = 0;
 
@@ -110,12 +112,14 @@ Button {
                         playOffset.start();
                     }
                 } else {
+                    app.log('empty pl');
                     appstate.playlistIndex = -1;
                     appstate.currentPosition = 0;
 
                     currentProgress.position = 0;
                     currentProgress.index = -1;
                 }
+                appstate.player.seek(currentProgress.position);
             });
             isDone = true;
         }
