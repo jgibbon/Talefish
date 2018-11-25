@@ -69,11 +69,9 @@ Page {
                 previousDuration = 0,
                 totalDuration = 0;
         log('readdurations', l);
-        //page.fileCount = l;
         while(i<l){
             if('file://'+appstate.playlist.get(i).path === playback.source.toString()){
                 currentIndex = i;
-                //console.log('currentIndex', i);
             }
             if(currentIndex === -1) {
                 previousDuration = previousDuration + appstate.playlist.get(i).duration;
@@ -111,7 +109,6 @@ Page {
                 }
             }
             MenuItem {
-                //                enabled: options.directoryDuration !== playback.duration
                 visible: appstate.playlist.count > 0
                 text: qsTr('Playlist', 'pulley')
                 onClicked: {
@@ -123,12 +120,12 @@ Page {
                 text: qsTr("Enqueue", 'pulley')
                 visible: appstate.playlist.count > 0 && options.showEnqueuePulley
                 onClicked:
-                    enqueueBtn.openDirectoryDialog() //pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                    enqueueBtn.openDirectoryDialog()
             }
             MenuItem {
                 text: qsTr("Open", 'pulley')
                 onClicked:
-                    opnBtn.openDirectoryDialog() //pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                    opnBtn.openDirectoryDialog()
             }
 
         }
@@ -156,8 +153,6 @@ Page {
         }
 
         PageHeader {
-            //title: 'Talefish'
-
             width: parent.width - ( page.isLandscape ? Theme.itemSizeLarge + Theme.paddingMedium : 0)
 
             id: mainPageHeader
@@ -165,13 +160,11 @@ Page {
                 id: headerText
                 // Don't allow the label to extend over the page stack indicator
                 width: Math.min(implicitWidth, parent.width - Theme.pageStackIndicatorWidth * _depth - 2*Theme.paddingLarge)
-                text: 'Talefish'//+appstate.currentPosition;
                 truncationMode: TruncationMode.Fade
                 color: Theme.highlightColor
                 anchors {
                     verticalCenter: parent.verticalCenter
                     right: parent.right
-                    //                        rightMargin: sleepTimerWidget.visible ? sleepTimerWidget.width + Theme.paddingMedium * 2 : Theme.paddingLarge
                     rightMargin: Theme.paddingLarge
                 }
                 font {
@@ -219,7 +212,6 @@ Page {
             maximumValue: options.cassetteUseDirectoryDurationProgress ? totalPosition.maximumValue: appstate.playlistIndex > -1 ? appstate.playlist.get(appstate.playlistIndex).duration: 0
             value: options.cassetteUseDirectoryDurationProgress ? totalPosition.value: appstate.currentPosition
             running: options.useAnimations && options.usePlayerAnimations && isPlaying
-            //tapeColor: Theme.highlightColor
 
         }
         Item {
@@ -334,17 +326,11 @@ Page {
         MouseArea {
             id: coverMouseArea
 
-
             visible: options.playerSwipeForNextPrev && (appstate.playlist.count > 1 || appstate.currentPosition > options.skipBackTrackThreshold)
             property bool sideTriggerActive: false
             property alias target: coverImageContainer
             anchors.fill: target
-            onClicked: {
-                //                    sleepTimer.restart();
-            }
-            onPressed: {
-                //                console.log('onpressed')
-            }
+
             onMouseXChanged: {
                 var m = mouse, act = sideTriggerActive;
                 act = false;
@@ -531,7 +517,6 @@ Page {
                 width: parent.width
 
 
-//                spacing: Theme.paddingLarge
                 anchors.bottom: parent.bottom
                 anchors.bottomMargin: page.isPortrait? controlPanel.height : Theme.paddingMedium
                     Label {
@@ -596,10 +581,6 @@ Page {
                         width: parent.width
                         visible: appstate.playlistIndex != -1
                         label: formatMSeconds( value)+" / "+formatMSeconds(maximumValue) +' ('+ (Math.floor(( currentPositionSlider.value / currentPositionSlider.maximumValue) * 1000 ) / 10)+'%)'
-
-                        onClicked: {
-
-                        }
                     }
 
                     Item {
@@ -670,7 +651,6 @@ Page {
 
         Item {
             id: controlPanel
-            // visibleSize: Theme.itemSizeLarge
             width: page.isPortrait ? parent.width : Theme.itemSizeLarge + Theme.paddingLarge
             height: page.isPortrait ? Theme.itemSizeLarge + Theme.paddingLarge : parent.height
             anchors.bottom: parent.bottom
