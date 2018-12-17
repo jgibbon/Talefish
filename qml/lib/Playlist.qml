@@ -25,41 +25,28 @@ ListModel {
     }
 
     function sortNaturally(){
-        function alphanum(a, b) {
-            function chunkify(t) {
-                var tz = new Array();
-                var x = 0, y = -1, n = 0, i, j;
-
-                while (i = (j = t.charAt(x++)).charCodeAt(0)) {
-                    var m = (i == 46 || (i >=48 && i <= 57));
-                    if (m !== n) {
-                        tz[++y] = "";
-                        n = m;
-                    }
-                    tz[y] += j;
-                }
-                return tz;
-            }
-
-            var aa = chunkify(a.name);
-            var bb = chunkify(b.name);
-
-            for (x = 0; aa[x] && bb[x]; x++) {
-                if (aa[x] !== bb[x]) {
-                    var c = Number(aa[x]), d = Number(bb[x]);
-                    if (c == aa[x] && d == bb[x]) {
-                        return c - d;
-                    } else return (aa[x] > bb[x]) ? 1 : -1;
-                }
-            }
-            return aa.length - bb.length;
-        }
-        var out = [], i = 0;
+        var out = [], i = 0, aMatch, bMatch, a1, b1, rda, rdb, regexall=/(\d+)|(\D+)/g, regexnum=/\d+/;
         while(i < playlist.count){
             out.push(playlist.get(i));
             i++;
         }
-        out.sort(alphanum);
+        out.sort(function(a, b){
+                    aMatch = String(a.name).toLowerCase().match(regexall);
+                    bMatch = String(b.name).toLowerCase().match(regexall);
+                    while(a.length && b.length){
+                        a1 = aMatch.shift();
+                        rda = regexnum.test(a1);
+                        b1 = bMatch.shift();
+                        rdb = regexnum.test(b1);
+                        if(rda || rdb){
+                            if(!rda) return 1;
+                            if(!rdb) return -1;
+                            if(a1 !== b1) return a1 - b1;
+                        }
+                        else if(a1 !== b1) return a1 > b1 ? 1 : -1;
+                    }
+                    return a.length - b.length;
+                });
 
         fromJSON(JSON.stringify(out));
 
