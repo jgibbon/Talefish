@@ -12,6 +12,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Mon Dec 17 2018 velox 0.0-14
+- bugfix: use regex based natural sorting
+
 * Sun Nov 25 2018 velox 0.0-13
 - bugfix: show correct pause cover action icon if secondary action is hidden
 - bugfix: further layout fixes: total progress area + tablet layout
