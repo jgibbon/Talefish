@@ -55,7 +55,6 @@ TRANSLATIONS += \
     translations/Talefish-zh_CN.ts
 
 DISTFILES += \
-    qml/lib/FolderSelector.qml \
     qml/lib/TalefishPlayer.qml \
     qml/pages/PlayerPage.qml \
     qml/lib/Options.qml \
@@ -64,7 +63,6 @@ DISTFILES += \
     qml/lib/Appstate.qml \
     qml/lib/Playlist.qml \
     qml/lib/PlaylistView.qml \
-    qml/lib/OpenPlaylistButton.qml \
     qml/lib/InlineNotification.qml \
     qml/lib/ProgressCassette.qml \
     qml/assets/wheel_1.png \
@@ -75,12 +73,10 @@ DISTFILES += \
     qml/icon-m-clock.png \
     qml/pages/PlaylistPage.qml \
     qml/pages/OptionsPage.qml \
-    qml/lib/OpenDirectoryDialog.qml \
     qml/lib/OptionComboBox.qml \
     qml/lib/StringScore.js \
     qml/pages/AboutPage.qml \
     qml/lib/ColorIconButton.qml \
-    qml/lib/ScanDialog.qml \
     qml/pages/OpenFileDialog.qml \
     qml/pages/OpenFileScanInfosDialog.qml \
     qml/lib/CoverImage.qml
