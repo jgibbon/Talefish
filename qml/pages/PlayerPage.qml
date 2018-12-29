@@ -199,10 +199,9 @@ Page {
             y: appstate.playlistActive && (appstate.playlistActive.coverImage != '') ? x : x/2
             z: -2
             opacity: 0.6
-            maximumValue: options.cassetteUseDirectoryDurationProgress ? totalPosition.maximumValue: appstate.playlistIndex > -1 ? appstate.playlist.get(appstate.playlistIndex).duration: 0
+            maximumValue: options.cassetteUseDirectoryDurationProgress ? totalPosition.maximumValue: appstate.playlistIndex > -1 ? appstate.playlistActive.duration: 0
             value: options.cassetteUseDirectoryDurationProgress ? totalPosition.value: appstate.currentPosition
             running: options.useAnimations && options.usePlayerAnimations && isPlaying
-
         }
         Item {
             id: coverImageContainer
