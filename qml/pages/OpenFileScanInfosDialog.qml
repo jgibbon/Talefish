@@ -399,9 +399,6 @@ Dialog {
                     }
                 }
 
-
-                Component.onCompleted: {
-                }
                 onClicked: {
 
                     app.log('start timer 666')

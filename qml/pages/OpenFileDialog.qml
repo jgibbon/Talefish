@@ -444,7 +444,7 @@ Dialog {
                 }
 
                 Rectangle {
-                    visible: fileIsDir && !!appstate.savedDirectoryProgress[String(filePath)]
+                    visible: !!appstate.savedDirectoryProgress[String(filePath)]
                     height: Theme.itemSizeSmall / 6
                     anchors.bottom: parent.bottom
                     color: Theme.highlightBackgroundColor
@@ -535,8 +535,11 @@ Dialog {
                         currentFolder = String(filePath).replace("file://", "");
                     } else {
                         canAccept = true;
-                        selectedFile.append(folderModel.getIndexInfo(index))//fileURL;
+                        var indexInfo = folderModel.getIndexInfo(index);
+                        indexInfo.folder = indexInfo.path;
+                        selectedFile.append(indexInfo);//fileURL;
 
+                        currentProgress = appstate.savedDirectoryProgress[indexInfo.folder] || {percent:0, index:0, position:0};
                         filePicker.accept();
                     }
                 }
