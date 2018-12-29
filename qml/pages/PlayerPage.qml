@@ -557,8 +557,7 @@ Page {
 
                     Slider {
                         id: currentPositionSlider
-                        value: appstate.currentPosition //Math.max( realvalue, appstate.currentPosition)
-//                        property real realvalue: playback.position
+                        value: appstate.currentPosition
                         function applyValue(){
 
                             if(value + 100 >= appstate.playlistActive.duration){//does not quite set it at the end, so skipping gets confused.
@@ -566,15 +565,16 @@ Page {
                             }
                             app.log('slider: apply value', value);
                             appstate.currentPosition = value;
-                            //also does not update state?!
                             playback.seek(value);
                         }
 
-//                        onRealvalueChanged: {
-//                            if(!down) {
-//                                value = Math.max( realvalue, appstate.currentPosition)
-//                            }
-//                        }
+                        Connections { //implicit connection gets lost for some time
+                            target: appstate
+                            onCurrentPositionChanged: {
+                                currentPositionSlider.value = appstate.currentPosition
+                            }
+                        }
+
                         onDownChanged: {
                             if(!down) applyValue()
                         }
