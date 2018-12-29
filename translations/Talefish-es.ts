@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>Ordenar por nombre</translation>
@@ -109,6 +109,34 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>El progreso no se guardará al reabrir ficheros en cola.</translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>Error</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation>
+            <numerusform>%1 Fichero</numerusform>
+            <numerusform>%1 Ficheros</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>Sin duración</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>Leyendo duraciones</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>Leyendo duraciones y comparando portada de ficheros</translation>
     </message>
 </context>
 <context>
@@ -390,34 +418,6 @@
     <message>
         <source>Error</source>
         <translation>Error</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>Error</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation>
-            <numerusform>%1 Fichero</numerusform>
-            <numerusform>%1 Ficheros</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>Sin duración</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>Leyendo duraciones</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>Leyendo duraciones y comparando portada de ficheros</translation>
     </message>
 </context>
 </TS>

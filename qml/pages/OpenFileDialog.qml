@@ -1,6 +1,8 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.talefish.folderlistmodel 1.0
+import TaglibPlugin 1.0
+import '../lib'
 
 Dialog {
 
@@ -10,7 +12,7 @@ Dialog {
     property bool enqueue: false
     canAccept: useableFiles.count > 0
     property alias useableFiles: useableFilesModel
-    property alias selectedFile: selectedFileModel
+    property alias selectedFile: selectedFileModel //for only one file
     property alias coverImages: coverImageFolderModel
     property var coverArray:[]
     property alias folderModel: folderModel
@@ -37,7 +39,7 @@ Dialog {
         return dirOnly || StandardPaths.documents;
     }
     //happens in OptionsPage, so it does not get called so often: onDirectory Changed should rescan for files, put path for audio component in there
-    property string home: '/home/nemo/'
+    property string home: getHome()
     onCurrentFolderChanged: {
         selectedFile.clear();
         checkCurrentPosition();
@@ -58,11 +60,30 @@ Dialog {
 
     }
 
+
+    /*
+
+      Make scanning step work:
+
+    */
+    acceptDestination: Qt.resolvedUrl("./OpenFileScanInfosDialog.qml")
+    acceptDestinationAction: PageStackAction.Replace
+    acceptDestinationProperties: ({
+//        defaultCoverUrl: coverUrl,
+//        coverArray: coverArray,
+//        currentProgress: currentProgress,
+        enqueue: enqueue
+    })
+
+    /*
+      /scanning step
+    */
+
+
     Component.onCompleted: {
 
 
         if(appstate.lastDirectory !== ''){
-
             folderModel.folder = appstate.lastDirectory;
             currentFolder = appstate.lastDirectory;
         } else {
@@ -71,14 +92,28 @@ Dialog {
             currentFolder = home;
         }
 
-        checkCurrentPosition();
+//        checkCurrentPosition();
 
     }
 
     onAccepted: {
-        filePicker.value = selectedFileModel.count ? selectedFileModel : useableFilesModel
-    }
 
+
+        appstate.lastDirectory = folderModel.folder;
+//        playlist gets garbage collected, so we need to populate the data:
+        var playlist = selectedFileModel.count ? selectedFileModel : useableFilesModel
+
+        if(sortByNameAsc && options.resortNaturally) {
+            playlist.sortNaturally();
+        }
+        acceptDestinationInstance.playlist.fromJSON(playlist.toJSON())
+        //these get killed, as well
+        acceptDestinationInstance.defaultCoverUrl = coverUrl;
+        acceptDestinationInstance.currentProgress = currentProgress;
+        acceptDestinationInstance.coverArray = JSON.parse(JSON.stringify(coverArray));
+
+        acceptDestinationInstance.scan();
+    }
     SilicaFlickable {
 
         id: flickable
@@ -261,12 +296,14 @@ Dialog {
             height: filePicker.height - headertext.height - parentFolder.height - selectLabel.height - Theme.paddingLarge * 2
             clip: true
 
-            ListModel {
+            Playlist {
                 id: useableFilesModel
+                durationScanActive: false
             }
 
-            ListModel {
+            Playlist {
                 id: selectedFileModel
+                durationScanActive: false
             }
             FolderListModel {
                 id: coverImageFolderModel
@@ -285,7 +322,7 @@ Dialog {
                             var lowerBase = get(ci, 'fileBaseName').toLowerCase();
                             if(!isFolder(ci) && get(ci, 'fileSize') > 0){
                                 var ex = {baseName: get(ci, 'fileBaseName'), path: get(ci, 'filePath')};
-                                //                                console.log('covercandidate:', lowerBase,  get(ci, 'fileSize'))
+                                //                                app.log('covercandidate:', lowerBase,  get(ci, 'fileSize'))
                                 if(lowerBase === 'cover' || (coverUrl === '' && lowerBase.indexOf('cover') > -1)){
                                     candidates[0] = get(ci, 'filePath');
                                 } else {
@@ -297,7 +334,6 @@ Dialog {
                         }
                         if(candidates.length){
                             coverUrl = candidates[0];
-
                         }
                         coverArray = exportArr;
                     }
@@ -342,10 +378,11 @@ Dialog {
                         folderName: folderName.replace(findDotRegex, ' '),
                         duration:0,
                         artist:'',
+                        album:'',
+                        track:-1,
                         playlistOffset:0,
                         title:'',
                         coverImage:''
-
                     }
 
                     return fileinfo
@@ -374,6 +411,38 @@ Dialog {
             }
 
             delegate: BackgroundItem {
+                TaglibPlugin {
+                    id: taglibplugin
+                    onTagInfos: {
+                        //update useableFiles with tag info
+                        var i = 0;
+                        var foundIndex = -1;
+                        while(i < useableFilesModel.count) {
+                            if(useableFilesModel.get(i).path === filePath) {
+                                foundIndex = i;
+                                break;
+                            }
+                            i++;
+                        }
+                        if(foundIndex > -1) {
+                            app.log('tag info found in useableFiles', path)
+                            useableFilesModel.setProperty(i, 'duration', duration);
+                            useableFilesModel.setProperty(i, 'artist', artist);
+                            useableFilesModel.setProperty(i, 'album', album);
+                            useableFilesModel.setProperty(i, 'track', track);
+                        } else {
+                            app.log('not found in useableFiles', path)
+                        }
+                    }
+                    Component.onCompleted: {
+                        if(!fileIsDir) {
+                            taglibplugin.getFileTagInfos(filePath);
+                        }
+
+
+                    }
+                }
+
                 Rectangle {
                     visible: fileIsDir && !!appstate.savedDirectoryProgress[String(filePath)]
                     height: Theme.itemSizeSmall / 6
@@ -389,13 +458,7 @@ Dialog {
                 height: Theme.itemSizeSmall
                 anchors.left: parent.left
                 anchors.right: parent.right
-                Component.onCompleted: {
-                    //                    if(appstate.savedDirectoryProgress[String(filePath)] && appstate.savedDirectoryProgress[String(filePath)].index === index){
-                    //                        highlighted = true;
-                    //                    }
 
-
-                }
 
                 Image {
                     fillMode: Image.Pad
@@ -409,6 +472,16 @@ Dialog {
                     visible: fileIsDir
 
                 }
+                Label {
+                    id: durationLabel
+                    visible: taglibplugin.loaded && !fileIsDir
+                    anchors {
+                        right: parent.right
+                        rightMargin: Theme.paddingLarge
+                        topMargin: 15
+                    }
+                    text: app.formatMSeconds(taglibplugin.duration)
+                }
 
                 Label {
                     id: namelabel
@@ -418,13 +491,18 @@ Dialog {
                               } else {
                                   parent.left
                               }
-                        right: parent.right
+                        right: if(durationLabel.visible) {
+                                   durationLabel.left
+                               } else {
+                                   parent.right
+                               }
                         leftMargin: Theme.paddingLarge
                         rightMargin: Theme.paddingLarge
                         topMargin: 15
                     }
+                    truncationMode: TruncationMode.Fade
                     textFormat: Text.RichText
-                    text: fileName// + ' ' + fileDelegate.highlighted
+                    text:  fileName
                 }
 
                 Label {
@@ -443,7 +521,9 @@ Dialog {
 
                     font.pixelSize: 20
                     textFormat: Text.RichText
-                    text: index + ': ' + parseInt(fileSize) / 1000 + " kB, " + fileModified
+                    text: durationLabel.visible
+                              ? taglibplugin.track + ' - ' + taglibplugin.artist + ' - ' + taglibplugin.title
+                              : parseInt(fileSize) / 1000 + " kB, " + fileModified// + ' - ' + tagDuration
                     color: Theme.rgba(Theme.secondaryColor, 0.5)
                 }
 

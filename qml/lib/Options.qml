@@ -17,7 +17,7 @@ PersistentObject {
     property bool playNextFile: true //automatically play next file
 
     //milliseconds:
-    property int skipBackTrackThreshold: 1000//1s has to be played to just skip to track beginning
+    property int skipBackTrackThreshold: 2000//1s has to be played to just skip to track beginning
     property int skipDurationSmall: 10000 //10s
     property int skipDurationNormal: 60000 //1m
     property string externalCommandSkipDuration: '0' // '0': skip to track beginning, 'small'/'normal': use set durations
@@ -51,6 +51,6 @@ PersistentObject {
     property int keepUnopenedDirectoryProgressDays: 30
 
     // LEGACY   ))
-    property bool appCoverAnimateEnabled: true
+//    property bool appCoverAnimateEnabled: true
 
 }

@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>Sorteren op naam</translation>
@@ -109,6 +109,34 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>Voortgang wordt niet opgeslagen bij het opnieuw openen van bestanden in de wachtrij</translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>Fout</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation>
+            <numerusform>%1 bestand</numerusform>
+            <numerusform>%1 bestanden</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>geen duur</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>Duur wordt gelezen</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>Duur en passende hoezen worden gelezen</translation>
     </message>
 </context>
 <context>
@@ -390,34 +418,6 @@
     <message>
         <source>Error</source>
         <translation>Fout</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>Fout</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation>
-            <numerusform>%1 bestand</numerusform>
-            <numerusform>%1 bestanden</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>geen duur</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>Duur wordt gelezen</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>Duur en passende hoezen worden gelezen</translation>
     </message>
 </context>
 </TS>

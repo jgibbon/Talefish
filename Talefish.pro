@@ -18,7 +18,9 @@ SOURCES += src/Talefish.cpp \
     lib/folderlistmodel/qquickfolderlistmodel.cpp \
     lib/folderlistmodel/plugin.cpp \
     lib/folderlistmodel/fileinfothread.cpp \
-    src/launcher.cpp
+    src/launcher.cpp \
+    src/taglibplugin.cpp \
+    src/taglibimageprovider.cpp
 
 OTHER_FILES += qml/Talefish.qml \
     qml/cover/CoverPage.qml \
@@ -54,7 +56,6 @@ TRANSLATIONS += \
 
 DISTFILES += \
     qml/lib/FolderSelector.qml \
-    qml/lib/scanDialog.qml \
     qml/lib/TalefishPlayer.qml \
     qml/pages/PlayerPage.qml \
     qml/lib/Options.qml \
@@ -78,7 +79,11 @@ DISTFILES += \
     qml/lib/OptionComboBox.qml \
     qml/lib/StringScore.js \
     qml/pages/AboutPage.qml \
-    qml/lib/ColorIconButton.qml
+    qml/lib/ColorIconButton.qml \
+    qml/lib/ScanDialog.qml \
+    qml/pages/OpenFileDialog.qml \
+    qml/pages/OpenFileScanInfosDialog.qml \
+    qml/lib/CoverImage.qml
 
 SUBDIRS += \
     lib/folderlistmodel/folderlistmodel.pro
@@ -87,4 +92,8 @@ HEADERS += \
     lib/folderlistmodel/qquickfolderlistmodel.h \
     lib/folderlistmodel/fileproperty_p.h \
     lib/folderlistmodel/fileinfothread_p.h \
-    src/launcher.h
+    src/launcher.h \
+    src/taglibplugin.h \
+    src/taglibimageprovider.h
+
+unix: PKGCONFIG += taglib

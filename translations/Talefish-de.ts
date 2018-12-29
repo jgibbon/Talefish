@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>Nach Dateinamen sortieren</translation>
@@ -109,6 +109,34 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>Fortschritt wird nicht gespeichert, falls du angehängte Dateien erneut öffnest.</translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>Fehler</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation>
+            <numerusform>%1 Datei</numerusform>
+            <numerusform>%1 Dateien</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>keine Länge</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>Lese Abspiellängen</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>Lese Abspiellängen und weise Bilder zu</translation>
     </message>
 </context>
 <context>
@@ -390,34 +418,6 @@
     <message>
         <source>Error</source>
         <translation>Fehler</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>Fehler</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation>
-            <numerusform>%1 Datei</numerusform>
-            <numerusform>%1 Dateien</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>keine Länge</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>Lese Abspiellängen</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>Lese Abspiellängen und weise Bilder zu</translation>
     </message>
 </context>
 </TS>

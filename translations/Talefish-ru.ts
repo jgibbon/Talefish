@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>Сортировать по названию</translation>
@@ -111,6 +111,35 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>Прогресс не сохранится для повторного открытия файлов в очереди.</translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>Ошибка</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation>
+            <numerusform>%1 файл</numerusform>
+            <numerusform>%1 файла</numerusform>
+            <numerusform>%1 файлов</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>Нет продолжительности</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>Оценка продолжительности</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>Оценка продолжительности и соотнесение обложек</translation>
     </message>
 </context>
 <context>
@@ -395,35 +424,6 @@
     <message>
         <source>Error</source>
         <translation>Ошибка</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>Ошибка</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation>
-            <numerusform>%1 файл</numerusform>
-            <numerusform>%1 файла</numerusform>
-            <numerusform>%1 файлов</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>Нет продолжительности</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>Оценка продолжительности</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>Оценка продолжительности и соотнесение обложек</translation>
     </message>
 </context>
 </TS>

@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>Uredi po imenu</translation>
@@ -113,6 +113,36 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>Napredek za obstoječe datoteke ne bo shranjen.</translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>Napaka</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation>
+            <numerusform>%1 datoteka</numerusform>
+            <numerusform>%1 datoteki</numerusform>
+            <numerusform>%1 datoteke</numerusform>
+            <numerusform>%1 datotek</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>ni dolžine</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>Branje dolžine posnetkov</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>Branje dolžine posnetkov in iskanje naslovnic</translation>
     </message>
 </context>
 <context>
@@ -400,36 +430,6 @@
     <message>
         <source>Error</source>
         <translation>Napaka</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>Napaka</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation>
-            <numerusform>%1 datoteka</numerusform>
-            <numerusform>%1 datoteki</numerusform>
-            <numerusform>%1 datoteke</numerusform>
-            <numerusform>%1 datotek</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>ni dolžine</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>Branje dolžine posnetkov</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>Branje dolžine posnetkov in iskanje naslovnic</translation>
     </message>
 </context>
 </TS>

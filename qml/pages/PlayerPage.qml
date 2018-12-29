@@ -91,16 +91,6 @@ Page {
         id: mainFlickable
         PullDownMenu {
             id: pulleyTop
-            OpenPlaylistButton {
-                id: opnBtn
-                visible: false
-            }
-
-            OpenPlaylistButton {
-                id: enqueueBtn
-                visible: false
-                enqueue: true
-            }
 
             MenuItem {
                 text: qsTr('Options', 'pulley')
@@ -120,12 +110,12 @@ Page {
                 text: qsTr("Enqueue", 'pulley')
                 visible: appstate.playlist.count > 0 && options.showEnqueuePulley
                 onClicked:
-                    enqueueBtn.openDirectoryDialog()
+                    pageStack.push(Qt.resolvedUrl("OpenFileDialog.qml"), {enqueue: true});
             }
             MenuItem {
                 text: qsTr("Open", 'pulley')
                 onClicked:
-                    opnBtn.openDirectoryDialog()
+                    pageStack.push(Qt.resolvedUrl("OpenFileDialog.qml"), {});
             }
 
         }
@@ -224,7 +214,20 @@ Page {
 
             Image {
                 id: coverImage
-                source: appstate.playlistActive && appstate.playlistIndex > -1 ? appstate.playlistActive.coverImage:''
+                source: {
+                    if(appstate.playlistIndex > -1 && appstate.playlistActive) {
+                        if(appstate.playlistActive.coverImage !== '') {
+                            return appstate.playlistActive.coverImage
+                        } else {
+                            return 'image://taglib-cover-art/'+appstate.playlistActive.path
+                        }
+
+                    } else {
+                        return '';
+                    }
+                }
+
+//                    appstate.playlistActive && appstate.playlistIndex > -1 ? appstate.playlistActive.coverImage:''
                 property string previousSource
                 anchors.fill: parent
 
@@ -554,23 +557,24 @@ Page {
 
                     Slider {
                         id: currentPositionSlider
-                        value: Math.max( realvalue, appstate.currentPosition)
-                        property real realvalue: playback.position
+                        value: appstate.currentPosition //Math.max( realvalue, appstate.currentPosition)
+//                        property real realvalue: playback.position
                         function applyValue(){
 
                             if(value + 100 >= appstate.playlistActive.duration){//does not quite set it at the end, so skipping gets confused.
                                 value = appstate.playlistActive.duration - 100;
                             }
+                            app.log('slider: apply value', value);
                             appstate.currentPosition = value;
                             //also does not update state?!
                             playback.seek(value);
                         }
 
-                        onRealvalueChanged: {
-                            if(!down) {
-                                value = Math.max( realvalue, appstate.currentPosition)
-                            }
-                        }
+//                        onRealvalueChanged: {
+//                            if(!down) {
+//                                value = Math.max( realvalue, appstate.currentPosition)
+//                            }
+//                        }
                         onDownChanged: {
                             if(!down) applyValue()
                         }

@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>Rendezés Név alapján</translation>
@@ -107,6 +107,33 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>A folyamat nem lesz elmentve a sorba állított fájlok megnyitásához.</translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>Hiba</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation>
+            <numerusform>%1 fájl</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>nincs Időtartam</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>Időtartamok beolvasása</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>Időtartamok beolvasása és borítóképek megfeleltetése</translation>
     </message>
 </context>
 <context>
@@ -385,33 +412,6 @@
     <message>
         <source>Error</source>
         <translation>Hiba</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>Hiba</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation>
-            <numerusform>%1 fájl</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>nincs Időtartam</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>Időtartamok beolvasása</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>Időtartamok beolvasása és borítóképek megfeleltetése</translation>
     </message>
 </context>
 </TS>

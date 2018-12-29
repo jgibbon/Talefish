@@ -3,19 +3,24 @@ import QtQuick 2.0
 ListModel {
     id: playlist
     property bool getDurationOnChange: true
+    property bool durationScanActive: true //to totally deactivate scanning
     property bool getActiveOnChange: true
     property real duration: getDuration()
 
     function getDuration(){
+        if(!durationScanActive) { return 0; }
         var i = 0, d = 0.0, tmp;
+//        console.log('GET DURATION');
         while(i < playlist.count){
             tmp = playlist.get(i);
             playlist.setProperty(i, 'playlistOffset', d);
             if(tmp.duration > 0){
                 d = d + tmp.duration;
             }
+//            console.log('+', tmp.duration)
             i++;
         }
+//        console.log('concrete duration', d);
         duration = d;
     }
     onCountChanged: {

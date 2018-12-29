@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>按名称分类</translation>
@@ -109,6 +109,33 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>操作将不会被保存，除非重新开启文件</translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>错误</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation>
+            <numerusform>%1文件</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>没有持续时间</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>读取期间</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>读取期间和匹配封面文件</translation>
     </message>
 </context>
 <context>
@@ -388,33 +415,6 @@
     <message>
         <source>Error</source>
         <translation>错误</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>错误</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation>
-            <numerusform>%1文件</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>没有持续时间</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>读取期间</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>读取期间和匹配封面文件</translation>
     </message>
 </context>
 </TS>

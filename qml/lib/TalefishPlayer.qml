@@ -323,6 +323,7 @@ onMetaDataChanged: {
             }
         }
         onPositionChanged: {
+            app.log('player position changed', position);
             if((position > 10 ) && (appstate.currentPosition < position)){
 
                 appstate.currentPosition = position

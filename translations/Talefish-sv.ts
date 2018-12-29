@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>Sortera efter namn</translation>
@@ -109,6 +109,34 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>Förloppet sparas inte för att återöppna köade filer.</translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>Fel</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation>
+            <numerusform>%1 fil</numerusform>
+            <numerusform>%1 filer</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>Ingen varaktighet</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>Läser varaktighet</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>Läser varaktighet och matchar omslagsfiler</translation>
     </message>
 </context>
 <context>
@@ -390,34 +418,6 @@
     <message>
         <source>Error</source>
         <translation>Fel</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>Fel</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation>
-            <numerusform>%1 fil</numerusform>
-            <numerusform>%1 filer</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>Ingen varaktighet</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>Läser varaktighet</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>Läser varaktighet och matchar omslagsfiler</translation>
     </message>
 </context>
 </TS>

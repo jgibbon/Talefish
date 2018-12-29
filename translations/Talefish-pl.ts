@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation>Sortuj według nazwy</translation>
@@ -111,6 +111,35 @@
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation>Błąd</translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation>Brak czasu trwania</translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation>Wczytywanie czasu trwania</translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
+        <translation>Wczytywanie czasu trwania oraz dopasowywanie plików okładek</translation>
     </message>
 </context>
 <context>
@@ -395,35 +424,6 @@
     <message>
         <source>Error</source>
         <translation>Błąd</translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation>Błąd</translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>Brak czasu trwania</translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation>Wczytywanie czasu trwania</translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
-        <translation>Wczytywanie czasu trwania oraz dopasowywanie plików okładek</translation>
     </message>
 </context>
 </TS>

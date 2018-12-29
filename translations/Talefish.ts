@@ -69,7 +69,7 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
         <translation type="unfinished"></translation>
@@ -106,6 +106,33 @@
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>OpenFileScanInfosDialog</name>
+    <message>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <source>%1 Files</source>
+        <comment>header</comment>
+        <translation type="unfinished">
+            <numerusform>%1 File</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>no Duration</source>
+        <comment>if file duration &lt; 1; instead of duration</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reading Durations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reading Durations and matching Cover files</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -384,33 +411,6 @@
     <name>PlaylistView</name>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>scanDialog</name>
-    <message>
-        <source>Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <source>%1 Files</source>
-        <comment>header</comment>
-        <translation type="unfinished">
-            <numerusform>%1 File</numerusform>
-        </translation>
-    </message>
-    <message>
-        <source>no Duration</source>
-        <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reading Durations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reading Durations and matching Cover files</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

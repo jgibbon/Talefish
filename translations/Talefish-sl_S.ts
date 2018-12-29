@@ -84,39 +84,39 @@
     </message>
 </context>
 <context>
-    <name>FolderSelector</name>
+    <name>OpenFileDialog</name>
     <message>
-        <location filename="../qml/lib/FolderSelector.qml" line="92"/>
+        <location filename="../qml/lib/OpenFileDialog.qml" line="92"/>
         <source>Sort by Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/FolderSelector.qml" line="100"/>
+        <location filename="../qml/lib/OpenFileDialog.qml" line="100"/>
         <source>Sort by Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/FolderSelector.qml" line="109"/>
+        <location filename="../qml/lib/OpenFileDialog.qml" line="109"/>
         <source>Sort by Last Modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/FolderSelector.qml" line="119"/>
+        <location filename="../qml/lib/OpenFileDialog.qml" line="119"/>
         <source>Enqueue Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/FolderSelector.qml" line="119"/>
+        <location filename="../qml/lib/OpenFileDialog.qml" line="119"/>
         <source>Open Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/FolderSelector.qml" line="149"/>
+        <location filename="../qml/lib/OpenFileDialog.qml" line="149"/>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/lib/FolderSelector.qml" line="222"/>
+        <location filename="../qml/lib/OpenFileDialog.qml" line="222"/>
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation type="unfinished">
@@ -124,7 +124,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/lib/FolderSelector.qml" line="223"/>
+        <location filename="../qml/lib/OpenFileDialog.qml" line="223"/>
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation type="unfinished">
@@ -480,9 +480,9 @@
     </message>
 </context>
 <context>
-    <name>scanDialog</name>
+    <name>OpenFileScanInfosDialog</name>
     <message numerus="yes">
-        <location filename="../qml/lib/scanDialog.qml" line="130"/>
+        <location filename="../qml/lib/OpenFileScanInfosDialog.qml" line="130"/>
         <source>%1 Files</source>
         <comment>header</comment>
         <translation type="unfinished">
@@ -490,23 +490,23 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/lib/scanDialog.qml" line="140"/>
+        <location filename="../qml/lib/OpenFileScanInfosDialog.qml" line="140"/>
         <source>Reading Durations and matching Cover files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/scanDialog.qml" line="140"/>
+        <location filename="../qml/lib/OpenFileScanInfosDialog.qml" line="140"/>
         <source>Reading Durations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/scanDialog.qml" line="232"/>
+        <location filename="../qml/lib/OpenFileScanInfosDialog.qml" line="232"/>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/scanDialog.qml" line="271"/>
+        <location filename="../qml/lib/OpenFileScanInfosDialog.qml" line="271"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
