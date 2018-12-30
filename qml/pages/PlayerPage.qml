@@ -198,7 +198,7 @@ Page {
             x: -width / 2
             y: appstate.playlistActive && (appstate.playlistActive.coverImage !== '') ? x : x/2
             z: -2
-            opacity: appstate.playlistActive && (appstate.playlistActive.path !== '') ? 0.6 : 0.2
+            opacity: appstate.playlistActive !== null && (appstate.playlistActive.path !== '') ? 0.6 : 0.2
             maximumValue: options.cassetteUseDirectoryDurationProgress
                           ? totalPosition.maximumValue
                           : appstate.playlistIndex > -1
