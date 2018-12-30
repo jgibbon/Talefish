@@ -333,7 +333,7 @@ Dialog {
 
                         }
                         if(candidates.length){
-                            console.log('set coverUrl', candidates[0]);
+//                            console.log('set coverUrl', candidates[0]);
                             coverUrl = candidates[0];
                         }
                         coverArray = exportArr;

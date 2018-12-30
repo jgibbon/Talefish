@@ -28,7 +28,18 @@ CoverBackground {
 
         Image {
             id: coverImage
-            source: appstate.playlistActive ? appstate.playlistActive.coverImage:''
+            source: {
+                if(appstate.playlistIndex > -1 && appstate.playlistActive) {
+                    if(appstate.playlistActive.coverImage !== '') {
+                        return appstate.playlistActive.coverImage
+                    } else {
+                        return 'image://taglib-cover-art/'+appstate.playlistActive.path
+                    }
+
+                } else {
+                    return '';
+                }
+            }
 
             anchors.fill: parent
 
