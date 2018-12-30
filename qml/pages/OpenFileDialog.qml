@@ -293,7 +293,7 @@ Dialog {
             anchors.top: selectLabel.bottom
             anchors.topMargin: Theme.paddingLarge
             model: folderModel
-            height: filePicker.height - headertext.height - parentFolder.height - selectLabel.height - Theme.paddingLarge * 2
+            height: filePicker.height - headertext.height - parentFolder.height - selectLabel.height - Theme.paddingLarge * 3
             clip: true
 
             Playlist {
@@ -333,6 +333,7 @@ Dialog {
 
                         }
                         if(candidates.length){
+                            console.log('set coverUrl', candidates[0]);
                             coverUrl = candidates[0];
                         }
                         coverArray = exportArr;
@@ -474,7 +475,7 @@ Dialog {
                 }
                 Label {
                     id: durationLabel
-                    visible: taglibplugin.loaded && !fileIsDir
+                    visible: taglibplugin.loaded && taglibplugin.duration > 0 && !fileIsDir
                     anchors {
                         right: parent.right
                         rightMargin: Theme.paddingLarge
