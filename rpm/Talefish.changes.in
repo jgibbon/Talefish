@@ -12,6 +12,14 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+
+* Sun Dec 30 2018 velox 0.1-1
+- enhancement: integrate taglib
+- performance: optimize file loading workflow
+- enhancement: add support for (some) cover images integrated in media files
+- enhancement: make "first start message" more readable
+- various small bugfixes
+
 * Mon Dec 17 2018 velox 0.0-14
 - bugfix: use regex based natural sorting
 
