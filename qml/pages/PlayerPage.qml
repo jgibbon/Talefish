@@ -529,7 +529,7 @@ Page {
                         width: parent.width - Theme.paddingSmall * 2
                         x: Theme.paddingSmall
                         id: fileNameLabel
-                        text: appstate.playlistActive ? appstate.playlistActive.baseName :''
+                        text: (appstate.playlistActive ? appstate.playlistActive.baseName :'') + (appstate.player.errorString !== '' ? '<br>['+appstate.player.errorString+']' : '')
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                         color: Theme.highlightColor

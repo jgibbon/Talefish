@@ -12,6 +12,8 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* Thu Jan 10 2019 velox 0.1-2
+- prevent taglib crash when starting with missing file
 
 * Sun Dec 30 2018 velox 0.1-1
 - enhancement: integrate taglib
