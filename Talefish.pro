@@ -79,7 +79,8 @@ DISTFILES += \
     qml/lib/ColorIconButton.qml \
     qml/pages/OpenFileDialog.qml \
     qml/pages/OpenFileScanInfosDialog.qml \
-    qml/lib/CoverImage.qml
+    qml/lib/CoverImage.qml \
+    qml/pages/OptionsPage_SleepTimer.qml
 
 SUBDIRS += \
     lib/folderlistmodel/folderlistmodel.pro

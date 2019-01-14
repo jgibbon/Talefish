@@ -262,6 +262,15 @@ Page {
                 text: qsTr("Miscellaneous", 'section header')
             }
 
+            Button {
+                text: qsTr('External sleep timer integration')
+                width: parent.width - Theme.horizontalPageMargin*2
+                x: Theme.horizontalPageMargin
+                onClicked: {
+                    pageStack.push(Qt.resolvedUrl("OptionsPage_SleepTimer.qml"), {options:options,appstate:appstate, firstPage:page, log: log});
+                }
+            }
+
             TextSwitch {
                 id:useHeadphoneCommandsSwitch
                 text: qsTr('Use head phone buttons/Bluetooth to control Talefish')
@@ -323,20 +332,7 @@ Page {
                 }
 
             }
-            TextSwitch {
-                id:autoStartSlumberSwitch
-                enabled: app.launcher.fileExists('/usr/bin/harbour-slumber')
 
-                text: qsTr('Start sleep timer automatically')
-
-                checked: options.autoStartSlumber
-                onClicked: {
-                    options.autoStartSlumber = checked
-                }
-                description: enabled ? qsTr('Starts slumber sleep timer automatically when Talefish is started.')
-                                     : qsTr('Install slumber sleep timer to enable this option')
-
-            }
             TextSwitch {
                 id:doLogSwitch
                 text: qsTr('Verbose logging enabled')

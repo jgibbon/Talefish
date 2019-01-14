@@ -360,8 +360,8 @@ Page {
 
             drag.target: target
             drag.axis: Drag.XAxis
-            drag.threshold: 15
-            property int maxDrag: 100
+            drag.threshold: 30
+            property int maxDrag: Theme.itemSizeLarge
             drag.minimumX: appstate.playlistIndex < appstate.playlist.count-1 ? maxDrag*-1 : 0 //next
             drag.maximumX: appstate.playlistIndex > 0 || appstate.currentPosition > options.skipBackTrackThreshold ? maxDrag:0 //prev
 

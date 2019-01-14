@@ -52,6 +52,10 @@ PersistentObject {
 
     //slumber integration
     property bool autoStartSlumber: false
+    property bool autoStartSlumberInTimeframe: false
+    property bool autoStartSlumberAndRefocusTalefish: true
+    property date autoStartSlumberAfterTime: new Date(1970,0,1,21,0)
+    property date autoStartSlumberBeforeTime: new Date(1970,0,1,6,0)
 
     // LEGACY   ))
 //    property bool appCoverAnimateEnabled: true

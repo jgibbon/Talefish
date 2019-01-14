@@ -339,16 +339,49 @@
         <translation>Zweite App-Cover-Aktion</translation>
     </message>
     <message>
-        <source>Start sleep timer automatically</source>
-        <translation type="unfinished"></translation>
+        <source>External sleep timer integration</source>
+        <translation>Externe Sleeptimerintegration</translation>
+    </message>
+</context>
+<context>
+    <name>OptionsPage_SleepTimer</name>
+    <message>
+        <source>About</source>
+        <comment>pulley</comment>
+        <translation>Über</translation>
     </message>
     <message>
-        <source>Starts slumber sleep timer automatically when Talefish is started.</source>
-        <translation type="unfinished"></translation>
+        <source>Install the slumber sleep timer application to enable these options</source>
+        <translation>Installiere den slumber Sleeptimer, um diese Optionen zu aktivieren</translation>
     </message>
     <message>
-        <source>Install slumber sleep timer to enable this option</source>
-        <translation type="unfinished"></translation>
+        <source>Launch sleep timer automatically</source>
+        <translation>Starte Sleeptimer automatisch</translation>
+    </message>
+    <message>
+        <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
+        <translation>Starte die Sleeptimeranwendung slumber automatisch mit Talefish</translation>
+    </message>
+    <message>
+        <source>Bring Talefish to foreground again after launching slumber</source>
+        <translation>Bringe nach dem Start von slumber wieder Talefish in den Vordergrund</translation>
+    </message>
+    <message>
+        <source>Only launch slumber at certain times</source>
+        <translation>Starte slumber nur zu bestimmten Zeiten</translation>
+    </message>
+    <message>
+        <source>Launch slumber after</source>
+        <translation>Starte slumber nach</translation>
+    </message>
+    <message>
+        <source>Launch slumber before</source>
+        <translation>Starte slumber vor</translation>
+    </message>
+    <message>
+        <source>Sleep Timer</source>
+        <comment>header</comment>
+        <translation>Sleeptimer</translation>
     </message>
 </context>
 <context>

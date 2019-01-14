@@ -335,15 +335,48 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Start sleep timer automatically</source>
+        <source>External sleep timer integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>OptionsPage_SleepTimer</name>
+    <message>
+        <source>About</source>
+        <comment>pulley</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Starts slumber sleep timer automatically when Talefish is started.</source>
+        <source>Install the slumber sleep timer application to enable these options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Install slumber sleep timer to enable this option</source>
+        <source>Launch sleep timer automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bring Talefish to foreground again after launching slumber</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Only launch slumber at certain times</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Launch slumber after</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Launch slumber before</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sleep Timer</source>
+        <comment>header</comment>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -339,16 +339,49 @@
         <translation>Secondary App-Cover Action</translation>
     </message>
     <message>
-        <source>Start sleep timer automatically</source>
-        <translation type="unfinished"></translation>
+        <source>External sleep timer integration</source>
+        <translation>External sleep timer integration</translation>
+    </message>
+</context>
+<context>
+    <name>OptionsPage_SleepTimer</name>
+    <message>
+        <source>About</source>
+        <comment>pulley</comment>
+        <translation>About</translation>
     </message>
     <message>
-        <source>Starts slumber sleep timer automatically when Talefish is started.</source>
-        <translation type="unfinished"></translation>
+        <source>Install the slumber sleep timer application to enable these options</source>
+        <translation>Install the slumber sleep timer application to enable these options</translation>
     </message>
     <message>
-        <source>Install slumber sleep timer to enable this option</source>
-        <translation type="unfinished"></translation>
+        <source>Launch sleep timer automatically</source>
+        <translation>Launch sleep timer automatically</translation>
+    </message>
+    <message>
+        <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
+        <translation>Launch the slumber sleep timer application automatically when starting Talefish.</translation>
+    </message>
+    <message>
+        <source>Bring Talefish to foreground again after launching slumber</source>
+        <translation>Bring Talefish to foreground again after launching slumber</translation>
+    </message>
+    <message>
+        <source>Only launch slumber at certain times</source>
+        <translation>Only launch slumber at certain times</translation>
+    </message>
+    <message>
+        <source>Launch slumber after</source>
+        <translation>Launch slumber after</translation>
+    </message>
+    <message>
+        <source>Launch slumber before</source>
+        <translation>Launch slumber before</translation>
+    </message>
+    <message>
+        <source>Sleep Timer</source>
+        <comment>header</comment>
+        <translation>Sleep Timer</translation>
     </message>
 </context>
 <context>

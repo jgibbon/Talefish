@@ -296,13 +296,8 @@ Item {
                     }
 
                 }
-            } else {
+            } else if(status !== Audio.Loaded)  {
                 app.log('player error or file not loaded yet: not seekable, not at end of playlist')
-            }
-
-            if(status == Audio.Loaded) {
-                app.log('well, it is loaded allright.')
-
             }
         }
 

@@ -12,6 +12,9 @@
 # * date Author's Name <author's email> version-release
 # - Summary of changes
 
+* 0.1-3
+- new options: automatically start slumber sleep timer
+
 * Thu Jan 10 2019 velox 0.1-2
 - prevent taglib crash when starting with missing file
 
