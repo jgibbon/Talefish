@@ -27,7 +27,6 @@ OTHER_FILES += qml/Talefish.qml \
     rpm/Talefish.changes.in \
     rpm/Talefish.spec \
     rpm/Talefish.yaml \
-    translations/*.ts \
     Talefish.desktop
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
@@ -42,19 +41,7 @@ QT += dbus
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += \
-    translations/talefishts_de.ts \
-    translations/talefishts_en.ts \
-    translations/talefishts_es.ts \
-    translations/talefishts_fi.ts \
-    translations/talefishts_hu_HU.ts \
-    translations/talefishts_it.ts \
-    translations/talefishts_nl.ts \
-    translations/talefishts_nl_BE.ts \
-    translations/talefishts_pl.ts \
-    translations/talefishts_ru.ts \
-    translations/talefishts_sl_SI.ts \
-    translations/talefishts_sv.ts \
-    translations/talefishts_zh_CN.ts
+    translations/*.ts
 
 DISTFILES += \
     qml/assets/wheel_1.png \
