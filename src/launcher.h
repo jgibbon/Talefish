@@ -13,6 +13,10 @@ public:
     ~Launcher();
     Q_INVOKABLE QString launch(const QString &program);
 
+    Q_INVOKABLE bool fileExists(const QString &path);
+    Q_INVOKABLE void launchAndForget(const QString &program, const QStringList &arguments);
+public slots:
+
 protected:
     QProcess *m_process;
 };

@@ -337,6 +337,18 @@
         <source>Secondary App-Cover Action</source>
         <translation>间接软件封面操作</translation>
     </message>
+    <message>
+        <source>Start sleep timer automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Starts slumber sleep timer automatically when Talefish is started.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Install slumber sleep timer to enable this option</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>PlayerPage</name>

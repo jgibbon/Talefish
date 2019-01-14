@@ -324,6 +324,20 @@ Page {
 
             }
             TextSwitch {
+                id:autoStartSlumberSwitch
+                enabled: app.launcher.fileExists('/usr/bin/harbour-slumber')
+
+                text: qsTr('Start sleep timer automatically')
+
+                checked: options.autoStartSlumber
+                onClicked: {
+                    options.autoStartSlumber = checked
+                }
+                description: enabled ? qsTr('Starts slumber sleep timer automatically when Talefish is started.')
+                                     : qsTr('Install slumber sleep timer to enable this option')
+
+            }
+            TextSwitch {
                 id:doLogSwitch
                 text: qsTr('Verbose logging enabled')
                 description: qsTr('Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.')

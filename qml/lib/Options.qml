@@ -50,6 +50,9 @@ PersistentObject {
     property bool doLog: false
     property int keepUnopenedDirectoryProgressDays: 30
 
+    //slumber integration
+    property bool autoStartSlumber: false
+
     // LEGACY   ))
 //    property bool appCoverAnimateEnabled: true
 

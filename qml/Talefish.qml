@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Launcher 1.0
 import "pages"
 import "lib"
 
@@ -10,11 +11,40 @@ ApplicationWindow
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
+    property Launcher launcher: launcher
     property var log: (options.doLog ? console.log : function(){})
 
     Options {
         id: options
+        Component.onCompleted: {
+            console.log('oh, options', autoStartSlumber);
+            if(autoStartSlumber && launcher.fileExists('/usr/bin/harbour-slumber')) {
+                if(launcher.launch('ps -C harbour-slumber').indexOf('harbour-slumber') === -1) {
+                    console.log('slumber does not seem to be running');
+
+                    launcher.launchAndForget('/usr/bin/harbour-slumber', []);
+                    reactivateTimer.start();
+
+                } else {
+                    console.log('slumber already running');
+                }
+
+            }
+        }
     }
+
+    Timer {
+        id: reactivateTimer
+        interval: 50
+        onTriggered: {
+            if(Qt.application.state == Qt.ApplicationActive) {
+                reactivateTimer.restart()
+            } else {
+                app.activate()
+            }
+        }
+    }
+
     Appstate {
         id: appstate
     }
@@ -28,6 +58,10 @@ ApplicationWindow
 
         return (hours?(hours+':'):'')+ ("0"+minutes).slice(-2) + ':' + ("0"+seconds).slice(-2);
     }
+    Launcher {
+        id: launcher
+    }
+
 }
 
 
