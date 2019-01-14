@@ -57,32 +57,32 @@ TRANSLATIONS += \
     translations/talefishts_zh_CN.ts
 
 DISTFILES += \
-    qml/lib/TalefishPlayer.qml \
-    qml/pages/PlayerPage.qml \
-    qml/lib/Options.qml \
-    qml/lib/PersistentObjectStore.js \
-    qml/lib/PersistentObject.qml \
-    qml/lib/Appstate.qml \
-    qml/lib/Playlist.qml \
-    qml/lib/PlaylistView.qml \
-    qml/lib/InlineNotification.qml \
-    qml/lib/ProgressCassette.qml \
     qml/assets/wheel_1.png \
     qml/icon-l-ffwd.png \
     qml/icon-l-frwd.png \
     qml/icon-l-fwd.png \
     qml/icon-l-rwd.png \
     qml/icon-m-clock.png \
-    qml/pages/PlaylistPage.qml \
-    qml/pages/OptionsPage.qml \
-    qml/lib/OptionComboBox.qml \
-    qml/lib/StringScore.js \
-    qml/pages/AboutPage.qml \
+    qml/lib/Appstate.qml \
     qml/lib/ColorIconButton.qml \
+    qml/lib/CoverImage.qml \
+    qml/lib/InlineNotification.qml \
+    qml/lib/OptionComboBox.qml \
+    qml/lib/Options.qml \
+    qml/lib/PersistentObject.qml \
+    qml/lib/PersistentObjectStore.js \
+    qml/lib/Playlist.qml \
+    qml/lib/PlaylistView.qml \
+    qml/lib/ProgressCassette.qml \
+    qml/lib/StringScore.js \
+    qml/lib/TalefishPlayer.qml \
+    qml/pages/AboutPage.qml \
     qml/pages/OpenFileDialog.qml \
     qml/pages/OpenFileScanInfosDialog.qml \
-    qml/lib/CoverImage.qml \
-    qml/pages/OptionsPage_SleepTimer.qml
+    qml/pages/OptionsPage_SleepTimer.qml \
+    qml/pages/OptionsPage.qml \
+    qml/pages/PlayerPage.qml \
+    qml/pages/PlaylistPage.qml
 
 SUBDIRS += \
     lib/folderlistmodel/folderlistmodel.pro
