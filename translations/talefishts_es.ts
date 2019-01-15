@@ -340,7 +340,7 @@
     </message>
     <message>
         <source>External sleep timer integration</source>
-        <translation type="unfinished"></translation>
+        <translation>Integración con temporizador externo</translation>
     </message>
 </context>
 <context>
@@ -348,40 +348,40 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished">Acerca de</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Install the slumber sleep timer application to enable these options</source>
-        <translation type="unfinished"></translation>
+        <translation>Instalar el temporizador slumber para habilitar estas opciones</translation>
     </message>
     <message>
         <source>Launch sleep timer automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar temporizador automáticamente</translation>
     </message>
     <message>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniciar el temporizador slumber automáticamente al iniciar Talefish.</translation>
     </message>
     <message>
         <source>Bring Talefish to foreground again after launching slumber</source>
-        <translation type="unfinished"></translation>
+        <translation>Poner Talefish en primer plano tras lanzar slumber</translation>
     </message>
     <message>
         <source>Only launch slumber at certain times</source>
-        <translation type="unfinished"></translation>
+        <translation>Lanzar sólo slumber en ciertos momentos</translation>
     </message>
     <message>
         <source>Launch slumber after</source>
-        <translation type="unfinished"></translation>
+        <translation>Lanzar slumber después de</translation>
     </message>
     <message>
         <source>Launch slumber before</source>
-        <translation type="unfinished"></translation>
+        <translation>Lanzar slumber después de</translation>
     </message>
     <message>
         <source>Sleep Timer</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Temporizador</translation>
     </message>
 </context>
 <context>

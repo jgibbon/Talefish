@@ -23,7 +23,7 @@
     </message>
     <message>
         <source>GitHub page</source>
-        <translation>GitHub页</translation>
+        <translation>GitHub专页</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
@@ -31,11 +31,11 @@
     </message>
     <message>
         <source>Transifex page</source>
-        <translation>Transifex 页</translation>
+        <translation>Transifex专页</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>如果你真的喜欢它，可以给我买杯啤酒</translation>
+        <translation>如果你真的喜欢它，可以给我买瓶啤酒</translation>
     </message>
     <message>
         <source>PayPal donation</source>
@@ -57,15 +57,15 @@
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation>非常感谢翻译者们</translation>
+        <translation>非常感谢各位译者</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish是一个直接基于主要用QML编写的有声读物播放器。它得到了GPL2 许可，由John Gibbon在社区成员的协助下完成。</translation>
+        <translation>Talefish是一个直接基于主要用QML编写的有声读物播放器。它在GPL2 许可证下开发，由John Gibbon在社区成员的协助下完成。</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>欢迎在GitHub标星，表达请求或报告问题</translation>
+        <translation>欢迎在GitHub打分，张贴请求或报告问题</translation>
     </message>
 </context>
 <context>
@@ -80,7 +80,7 @@
     </message>
     <message>
         <source>Sort by Last Modified</source>
-        <translation>按最新编辑分类</translation>
+        <translation>按最近编辑分类</translation>
     </message>
     <message>
         <source>Open Directory</source>
@@ -127,7 +127,7 @@
     <message>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>没有持续时间</translation>
+        <translation>无期间</translation>
     </message>
     <message>
         <source>Reading Durations</source>
@@ -148,12 +148,12 @@
     <message>
         <source>Playback</source>
         <comment>section header</comment>
-        <translation>重放</translation>
+        <translation>播放</translation>
     </message>
     <message>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
-        <translation>重放速率%1%</translation>
+        <translation>播放速率%1%</translation>
     </message>
     <message>
         <source>Play next Track automatically</source>
@@ -190,11 +190,11 @@
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>滑动封面（或超过标题）以跳到下一首歌</translation>
+        <translation>滑动封面（或越过标题）以跳到下一首歌</translation>
     </message>
     <message>
         <source>Cassette shows progress of</source>
-        <translation>放音机展示进展情况</translation>
+        <translation>放音机展示进度</translation>
     </message>
     <message>
         <source>track</source>
@@ -233,11 +233,11 @@
     </message>
     <message>
         <source>Save progress periodically</source>
-        <translation>定期储存进程</translation>
+        <translation>定期保存进度</translation>
     </message>
     <message>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
-        <translation>如果禁用，目前的重放状态仅仅会在应用完全保持运行时被储存。否则，将会每隔一段时间保存进度。</translation>
+        <translation>如果禁用，目前的播放状态仅仅会在应用完全保持运行时被储存。否则，将会每隔一段时间保存进度。</translation>
     </message>
     <message>
         <source>Verbose logging enabled</source>
@@ -339,7 +339,7 @@
     </message>
     <message>
         <source>External sleep timer integration</source>
-        <translation type="unfinished"></translation>
+        <translation>外部睡眠计时器整合</translation>
     </message>
 </context>
 <context>
@@ -347,40 +347,40 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished">关于</translation>
+        <translation>关于</translation>
     </message>
     <message>
         <source>Install the slumber sleep timer application to enable these options</source>
-        <translation type="unfinished"></translation>
+        <translation>安装Slumber 睡眠计时器应用以启用此操作。</translation>
     </message>
     <message>
         <source>Launch sleep timer automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>自动开启睡眠计时器</translation>
     </message>
     <message>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
-        <translation type="unfinished"></translation>
+        <translation>当启动Talefish时自动打开Slumber 睡眠计时器。</translation>
     </message>
     <message>
         <source>Bring Talefish to foreground again after launching slumber</source>
-        <translation type="unfinished"></translation>
+        <translation>当打开Talefish 之后将Talefish 转到前台运行。</translation>
     </message>
     <message>
         <source>Only launch slumber at certain times</source>
-        <translation type="unfinished"></translation>
+        <translation>仅特定时间打开Slumber </translation>
     </message>
     <message>
         <source>Launch slumber after</source>
-        <translation type="unfinished"></translation>
+        <translation>Launch slumber after</translation>
     </message>
     <message>
         <source>Launch slumber before</source>
-        <translation type="unfinished"></translation>
+        <translation>Launch slumber before</translation>
     </message>
     <message>
         <source>Sleep Timer</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>睡眠计时器</translation>
     </message>
 </context>
 <context>
@@ -415,7 +415,7 @@
     </message>
     <message>
         <source>Rewind Track</source>
-        <translation>.倒带</translation>
+        <translation>倒带</translation>
     </message>
     <message>
         <source>Previous Track</source>
@@ -452,7 +452,7 @@
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
-        <translation>%1 of %2 played  (音乐 %3)</translation>
+        <translation>已播放 %2 的 %1 (%3 音乐)</translation>
     </message>
 </context>
 <context>

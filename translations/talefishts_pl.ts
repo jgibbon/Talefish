@@ -61,11 +61,11 @@
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish jest katalogowym odtwarzaczem książek audio napisanym głównie w QML. Jest on objęty licencją GPL2 i został stworzony przez Johna Gibbona z pomocą społeczności.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>Gwiazdy projektu, PRy lub zgłoszenia błędów są mile widziane na GitHub:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
