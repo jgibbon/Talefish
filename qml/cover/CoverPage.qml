@@ -152,6 +152,28 @@ CoverBackground {
         }
     }
 
+    CoverActionList {
+        id: coverActionBoth
+        enabled: options.secondaryCoverAction === 'both'
+
+        CoverAction {
+            iconSource: "image://theme/icon-cover-previous-song"
+
+            onTriggered: externalCommand.prev()
+        }
+
+        CoverAction {
+            iconSource:isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+
+            onTriggered: externalCommand.playPause()
+        }
+
+        CoverAction {
+            iconSource: "image://theme/icon-cover-next-song"
+
+            onTriggered: externalCommand.next()
+        }
+    }
 
     CoverActionList {
         id: coverAction
