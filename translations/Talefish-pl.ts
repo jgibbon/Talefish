@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<TS version="2.1" language="pl">
 <context>
     <name>AboutPage</name>
     <message>
         <source>About Talefish</source>
         <comment>header</comment>
-        <translation>Talefish-tietoa</translation>
+        <translation>O Talefish</translation>
     </message>
     <message>
         <source>Contribute</source>
@@ -15,49 +15,49 @@
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dyskutuj lub kliknij &quot;dzięki&quot; na talk.maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
-        <translation type="unfinished"></translation>
+        <translation>Wątek na TMO</translation>
     </message>
     <message>
         <source>GitHub page</source>
-        <translation type="unfinished"></translation>
+        <translation>Strona GitHub</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation type="unfinished"></translation>
+        <translation>Możesz także dodać tłumaczenie na Transifex, jeśli nie lubisz GitHub&apos;a:</translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation>Transifex-sivu</translation>
+        <translation>Strona Transifex</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation type="unfinished"></translation>
+        <translation>Albo kup mi piwo jeśli masz ochotę:</translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation type="unfinished"></translation>
+        <translation>Darowizna za pośrednictwem PayPal</translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Dzięki!</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation type="unfinished"></translation>
+        <translation>Dzięki dla wszystkich użytkowników za sugestie i każdemu kto pomaga!</translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tłumacze</translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation type="unfinished"></translation>
+        <translation>Wielkie dzięki dla tłumaczy:</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
@@ -72,19 +72,19 @@
     <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortuj według nazwy</translation>
     </message>
     <message>
         <source>Sort by Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortuj według typu</translation>
     </message>
     <message>
         <source>Sort by Last Modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortuj według daty modyfikacji</translation>
     </message>
     <message>
         <source>Open Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz katalog</translation>
     </message>
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
@@ -92,16 +92,18 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj katalog do kolejki</translation>
     </message>
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation type="unfinished">
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -115,7 +117,7 @@
     <name>OpenFileScanInfosDialog</name>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd</translation>
     </message>
     <message numerus="yes">
         <source>%1 Files</source>
@@ -123,20 +125,21 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation type="unfinished"></translation>
+        <translation>Brak czasu trwania</translation>
     </message>
     <message>
         <source>Reading Durations</source>
-        <translation type="unfinished"></translation>
+        <translation>Wczytywanie czasu trwania</translation>
     </message>
     <message>
         <source>Reading Durations and matching Cover files</source>
-        <translation type="unfinished"></translation>
+        <translation>Wczytywanie czasu trwania oraz dopasowywanie plików okładek</translation>
     </message>
 </context>
 <context>
@@ -144,21 +147,21 @@
     <message>
         <source>Options</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <source>Playback</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Odtwarzanie</translation>
     </message>
     <message>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
-        <translation type="unfinished"></translation>
+        <translation>Prędkość odtwarzania: %1%</translation>
     </message>
     <message>
         <source>Play next Track automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Odtwórz następny utwór automatycznie</translation>
     </message>
     <message>
         <source>Short Skip duration</source>
@@ -174,20 +177,20 @@
     </message>
     <message>
         <source>Do Animations</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlaj animacje</translation>
     </message>
     <message>
         <source>Player Page</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Strona odtwarzacza</translation>
     </message>
     <message>
         <source>Display directory name</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlaj nazwę katalogu</translation>
     </message>
     <message>
         <source>Display playlist progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetl postęp listy odtwarzania</translation>
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
@@ -195,20 +198,20 @@
     </message>
     <message>
         <source>Cassette shows progress of</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaseta pokazuje postęp</translation>
     </message>
     <message>
         <source>track</source>
-        <translation type="unfinished"></translation>
+        <translation>utwór</translation>
     </message>
     <message>
         <source>directory</source>
-        <translation type="unfinished"></translation>
+        <translation>katalog</translation>
     </message>
     <message>
         <source>Tape Animations</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Animacje kasety</translation>
     </message>
     <message>
         <source>Player Page Animation</source>
@@ -216,12 +219,12 @@
     </message>
     <message>
         <source>App-Cover Animation</source>
-        <translation type="unfinished"></translation>
+        <translation>Animacja okładki aplikacji</translation>
     </message>
     <message>
         <source>Open Files</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz pliki</translation>
     </message>
     <message>
         <source>Show &quot;Enqueue&quot; Pulley</source>
@@ -230,11 +233,11 @@
     <message>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation type="unfinished"></translation>
+        <translation>Różne</translation>
     </message>
     <message>
         <source>Save progress periodically</source>
-        <translation type="unfinished"></translation>
+        <translation>Zapisz postęp cyklicznie</translation>
     </message>
     <message>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
@@ -242,7 +245,7 @@
     </message>
     <message>
         <source>Verbose logging enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Pełne rejestrowanie włączone</translation>
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
@@ -250,7 +253,7 @@
     </message>
     <message>
         <source>Sort directory naturally while scanning</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortuj katalog naturalnie podczas skanowania</translation>
     </message>
     <message>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
@@ -258,12 +261,12 @@
     </message>
     <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
-        <translation type="unfinished"></translation>
+        <translation>Użyj przycisków na słuchawkach/Bluetooth do kontrolowania Talefish</translation>
     </message>
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <source>Keep directory progress</source>
@@ -273,6 +276,7 @@
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation type="unfinished">
+            <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
@@ -335,11 +339,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Secondary App-Cover Action</source>
+        <source>External sleep timer integration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>External sleep timer integration</source>
+        <source>Skip backward and forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Additional App-Cover Actions</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -348,7 +356,7 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O</translation>
     </message>
     <message>
         <source>Install the slumber sleep timer application to enable these options</source>
@@ -389,47 +397,47 @@
     <message>
         <source>Options</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ustawienia</translation>
     </message>
     <message>
         <source>Playlist</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Lista odtwarzania</translation>
     </message>
     <message>
         <source>Enqueue</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj do kolejki</translation>
     </message>
     <message>
         <source>Open</source>
         <comment>pulley</comment>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz</translation>
     </message>
     <message>
         <source>Nothing to play</source>
-        <translation type="unfinished"></translation>
+        <translation>Brak utworów do odtworzenia</translation>
     </message>
     <message>
         <source>Open Files by pulling down.</source>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz pliki przez pociągnięcie w dół.</translation>
     </message>
     <message>
         <source>Rewind Track</source>
-        <translation type="unfinished"></translation>
+        <translation>Przewiń do początku</translation>
     </message>
     <message>
         <source>Previous Track</source>
-        <translation type="unfinished"></translation>
+        <translation>Poprzedni utwór</translation>
     </message>
     <message>
         <source>Next Track</source>
-        <translation type="unfinished"></translation>
+        <translation>Następny utwór</translation>
     </message>
     <message>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation type="unfinished"></translation>
+        <translation>%1 / %2 (Plik %L3 z %L4)</translation>
     </message>
     <message numerus="yes">
         <source>%1% played in Total</source>
@@ -437,11 +445,12 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>[No Cover]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Brak okładki]</translation>
     </message>
 </context>
 <context>
@@ -451,18 +460,19 @@
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 z %2 odtworzony (utwór %3)</translation>
     </message>
 </context>
 <context>
     <name>PlaylistView</name>
     <message>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Błąd</translation>
     </message>
 </context>
 </TS>

@@ -331,11 +331,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Secondary App-Cover Action</source>
+        <source>External sleep timer integration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>External sleep timer integration</source>
+        <source>Skip backward and forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Additional App-Cover Actions</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

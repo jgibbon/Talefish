@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_BE">
+<TS version="2.1" language="nl">
 <context>
     <name>AboutPage</name>
     <message>
@@ -15,7 +15,7 @@
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>Bespreek of klik op ‘Thanks’ op talk.maemo.org:</translation>
+        <translation>Bespreek of klik op &quot;Thanks&quot; op talk.maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
@@ -27,7 +27,7 @@
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>Als ge geen fan zijt van GitHub kunt ge ook vertalingen indienen op Transifex:</translation>
+        <translation>Als je geen fan bent van GitHub kan je ook vertalingen indienen op Transifex:</translation>
     </message>
     <message>
         <source>Transifex page</source>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>Of bestel mij een pintje als ge het echt wilt:</translation>
+        <translation>Of koop me een biertje als je echt wil:</translation>
     </message>
     <message>
         <source>PayPal donation</source>
@@ -44,24 +44,24 @@
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation>Merci!</translation>
+        <translation>Bedankt!</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation>Merci aan alle gebruikers voor hun voorstellen en aan iedereen die mij heeft geholpen!</translation>
+        <translation>Bedankt aan alle gebruikers voor hun voorstellen en aan iedereen die me heeft geholpen!</translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation>Vertalers</translation>
+        <translation>Vertalers!</translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation>Nen dikke merci aan de vertalers:</translation>
+        <translation>Dankjewel aan de vertalers:</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish is ne mapstructuurgebaseerden audioboeklezer, voornamelijk geschreven in QML. Hij is gelicenseerd onder de GPLv2 en gemaakt door John Gibbon met hulp van de gemeenschap.</translation>
+        <translation>Talefish is een mapstructuurgebaseerde audioboeklezer, voornamelijk geschreven in QML. Het is gelicenseerd onder de GPLv2 en gemaakt door John Gibbon met hulp van de gemeenschap.</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
@@ -90,8 +90,8 @@
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Tik op een bestand voor het te openen of op den aanvaarddialoog voor %1 bestand te openen</numerusform>
-            <numerusform>Tik op een bestand voor het te openen of op den aanvaarddialoog voor %1 bestanden te openen</numerusform>
+            <numerusform>Tik op een bestand om het te openen of op de aanvaarddialoog om %1 bestand te openen</numerusform>
+            <numerusform>Tik op een bestand om het te openen of op de aanvaarddialoog om %1 bestanden te openen</numerusform>
         </translation>
     </message>
     <message>
@@ -102,8 +102,8 @@
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Tik op een bestand voor het in de wachtrij te plaatsen of op den aanvaarddialoog voor %1 bestand in de wachtrij te plaatsen</numerusform>
-            <numerusform>Tik op een bestand voor het in de wachtrij te plaatsen of op den aanvaarddialoog voor %1 bestanden in de wachtrij te plaatsen</numerusform>
+            <numerusform>Tik op een bestand om het in de wachtrij te plaatsen of op de aanvaarddialoog om %1 bestand in de wachtrij te plaatsen</numerusform>
+            <numerusform>Tik op een bestand om het in de wachtrij te plaatsen of op de aanvaarddialoog om %1 bestanden in de wachtrij te plaatsen</numerusform>
         </translation>
     </message>
     <message>
@@ -170,7 +170,7 @@
     </message>
     <message>
         <source>Search best cover image for each file</source>
-        <translation>Zoek naar beste albumhoes voor ieder bestand</translation>
+        <translation>Zoek naar beste albumhoes voor elk bestand</translation>
     </message>
     <message>
         <source>Do Animations</source>
@@ -191,7 +191,7 @@
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>Veeg over de albumhoes (of den titel bovenaan) voor nummers over te slaan</translation>
+        <translation>Veeg over de albumhoes (of de titel bovenaan) om nummers over te slaan</translation>
     </message>
     <message>
         <source>Cassette shows progress of</source>
@@ -216,7 +216,7 @@
     </message>
     <message>
         <source>App-Cover Animation</source>
-        <translation>Toepassingshoesanimatie</translation>
+        <translation>Apphoesanimatie</translation>
     </message>
     <message>
         <source>Open Files</source>
@@ -225,7 +225,7 @@
     </message>
     <message>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>Toon optie ‘in wachtrij plaatsen’</translation>
+        <translation>Toon optie &quot;in wachtrij plaatsen&quot;</translation>
     </message>
     <message>
         <source>Miscellaneous</source>
@@ -238,7 +238,7 @@
     </message>
     <message>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
-        <translation>Indien uitgeschakeld wordt de huidige voortgang pas opgeslagen wanneer dat de toepassing juist wordt afgesloten. Anders wordt de voorgang om de paar seconden opgeslagen.</translation>
+        <translation>Indien uitgeschakeld wordt de huidige voortgaang pas opgeslagen wanneer de app juist wordt afgesloten. Anders wordt de voorgang om de paar seconden opgeslagen.</translation>
     </message>
     <message>
         <source>Verbose logging enabled</source>
@@ -246,7 +246,7 @@
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
-        <translation>Genereert uitvoer over veel dingen in de achtergrond, waardoor dat der een kleine vertraging kan optreden. Ge kunt den uitvoer bekijken door Talefish te openen via den terminal.</translation>
+        <translation>Genereert uitvoer over veel dingen in de achtergrond, waardoor er een kleine vertraging kan optreden. Je kan de uitvoer bekijken door Talefish te openen via de terminal.</translation>
     </message>
     <message>
         <source>Sort directory naturally while scanning</source>
@@ -254,11 +254,11 @@
     </message>
     <message>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Schakel dit in als ge uw bestanden hebt genummerd zonder nullen vooraan. Enkel toepasbaar bij sorteren op naam.</translation>
+        <translation>Schakel dit in als je je bestanden hebt genummerd zonder nullen vooraan. Enkel toepasbaar bij sorteren op naam.</translation>
     </message>
     <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
-        <translation>Gebruik koptelefoonknoppen/Bluetooth voor Talefish te besturen</translation>
+        <translation>Gebruik hoofdtelefoonknoppen/Bluetooth om Talefish te besturen</translation>
     </message>
     <message>
         <source>About</source>
@@ -284,7 +284,7 @@
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation>Voor te voorkomen dat gecachete gegevens of zelfs verwijderde mappen zich na verloop van tijd opstapelen zal Talefish bij het opstarten van de toepassing controleren op oude items. Dit heeft geen effect op de huidig geladen map.</translation>
+        <translation>Om te verhinderen dat gecachete gegevens of zelfs verwijderde mappen zich met verloop van tijd opstapelen zal Talefish bij het opstarten van de applicatie controleren op oude items. Dit heeft geen effect op het huidig geladen map.</translation>
     </message>
     <message>
         <source>to track beginning</source>
@@ -292,11 +292,11 @@
     </message>
     <message>
         <source>External Commands skip</source>
-        <translation>Externe opdrachten overslaan</translation>
+        <translation>Externe commando&apos;s overslaan</translation>
     </message>
     <message>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation>Externe opdrachten zijn de opdrachten die gegeven worden vanuit het vergrendelscherm of via koptelefoons/Bluetooth.</translation>
+        <translation>Externe commando&apos;s zijn de commando&apos;s die gegeven worden vanuit het vergrendelscherm of via hoofdtelefoons/Bluetooth.</translation>
     </message>
     <message>
         <source>Play/Pause</source>
@@ -312,7 +312,7 @@
     </message>
     <message>
         <source>Do nothing</source>
-        <translation>Niks doen</translation>
+        <translation>Niets doen</translation>
     </message>
     <message>
         <source>Button Press:</source>
@@ -324,7 +324,7 @@
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>Ge kunt kiezen welke actie ge wilt uitvoeren bij het drukken op de knop ‘bellen/ophangen’, dikwijls den enige knop op ne koptelefoon:</translation>
+        <translation>Je kan kiezen welke actie je wil uitvoeren bij het drukken op de knop &quot;bellen/ophangen&quot;, vaak de enige knop op een hoofdtelefoon:</translation>
     </message>
     <message>
         <source>Hidden</source>
@@ -332,14 +332,18 @@
     </message>
     <message>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation>Toepassingshoesacties zijn ook externe opdrachten.</translation>
-    </message>
-    <message>
-        <source>Secondary App-Cover Action</source>
-        <translation>Secundaire toepassingshoesactie</translation>
+        <translation>Apphoesacties zijn ook externe commando&apos;s.</translation>
     </message>
     <message>
         <source>External sleep timer integration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Skip backward and forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Additional App-Cover Actions</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -408,7 +412,7 @@
     </message>
     <message>
         <source>Nothing to play</source>
-        <translation>Niks voor af te spelen</translation>
+        <translation>Niets om af te spelen</translation>
     </message>
     <message>
         <source>Open Files by pulling down.</source>

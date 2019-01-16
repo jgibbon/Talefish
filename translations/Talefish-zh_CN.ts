@@ -1,142 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<TS version="2.1" language="zh_CN">
 <context>
     <name>AboutPage</name>
     <message>
         <source>About Talefish</source>
         <comment>header</comment>
-        <translation>Over Talefish</translation>
+        <translation>关于Talefish</translation>
     </message>
     <message>
         <source>Contribute</source>
         <comment>section header</comment>
-        <translation>Bijdragen</translation>
+        <translation>贡献</translation>
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>Bespreek of klik op &quot;Thanks&quot; op talk.maemo.org:</translation>
+        <translation>在talk.maemo.org讨论或点击感激</translation>
     </message>
     <message>
         <source>TMO thread</source>
-        <translation>TMO-draad</translation>
+        <translation>TMO 帖子</translation>
     </message>
     <message>
         <source>GitHub page</source>
-        <translation>GitHub-pagina</translation>
+        <translation>GitHub专页</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>Als je geen fan bent van GitHub kan je ook vertalingen indienen op Transifex:</translation>
+        <translation>如果你不喜欢GitHub，也可以在Transifex递交翻译</translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation>Transifex-pagina</translation>
+        <translation>Transifex专页</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>Of koop me een biertje als je echt wil:</translation>
+        <translation>如果你真的喜欢它，可以给我买瓶啤酒</translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation>PayPal-donatie</translation>
+        <translation>PayPal 捐赠</translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation>Bedankt!</translation>
+        <translation>感谢！</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation>Bedankt aan alle gebruikers voor hun voorstellen en aan iedereen die me heeft geholpen!</translation>
+        <translation>感谢所有用户的建议和每个帮助过我的人。</translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation>Vertalers!</translation>
+        <translation>翻译者</translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation>Dankjewel aan de vertalers:</translation>
+        <translation>非常感谢各位译者</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish is een mapstructuurgebaseerde audioboeklezer, voornamelijk geschreven in QML. Het is gelicenseerd onder de GPLv2 en gemaakt door John Gibbon met hulp van de gemeenschap.</translation>
+        <translation>Talefish是一个直接基于主要用QML编写的有声读物播放器。它在GPL2 许可证下开发，由John Gibbon在社区成员的协助下完成。</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>Sterren, pull requests of foutmeldingen zijn welkom op GitHub:</translation>
+        <translation>欢迎在GitHub打分，张贴请求或报告问题</translation>
     </message>
 </context>
 <context>
     <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
-        <translation>Sorteren op naam</translation>
+        <translation>按名称分类</translation>
     </message>
     <message>
         <source>Sort by Type</source>
-        <translation>Sorteren op type</translation>
+        <translation>按类型分类</translation>
     </message>
     <message>
         <source>Sort by Last Modified</source>
-        <translation>Sorteren op laatst gewijzigd</translation>
+        <translation>按最近编辑分类</translation>
     </message>
     <message>
         <source>Open Directory</source>
-        <translation>Map openen</translation>
+        <translation>打开目录</translation>
     </message>
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Tik op een bestand om het te openen of op de aanvaarddialoog om %1 bestand te openen</numerusform>
-            <numerusform>Tik op een bestand om het te openen of op de aanvaarddialoog om %1 bestanden te openen</numerusform>
+            <numerusform>点击文件以打开或接受对话框以打开%1的文件</numerusform>
         </translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
-        <translation>Map in wachtrij plaatsen</translation>
+        <translation>队列目录
+</translation>
     </message>
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Tik op een bestand om het in de wachtrij te plaatsen of op de aanvaarddialoog om %1 bestand in de wachtrij te plaatsen</numerusform>
-            <numerusform>Tik op een bestand om het in de wachtrij te plaatsen of op de aanvaarddialoog om %1 bestanden in de wachtrij te plaatsen</numerusform>
+            <numerusform>点击文件或接受对话框以排队%1的文件
+</numerusform>
         </translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
-        <translation>Voortgang wordt niet opgeslagen bij het opnieuw openen van bestanden in de wachtrij</translation>
+        <translation>操作将不会被保存，除非重新开启文件</translation>
     </message>
 </context>
 <context>
     <name>OpenFileScanInfosDialog</name>
     <message>
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation>错误</translation>
     </message>
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
         <translation>
-            <numerusform>%1 bestand</numerusform>
-            <numerusform>%1 bestanden</numerusform>
+            <numerusform>%1文件</numerusform>
         </translation>
     </message>
     <message>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>geen duur</translation>
+        <translation>无期间</translation>
     </message>
     <message>
         <source>Reading Durations</source>
-        <translation>Duur wordt gelezen</translation>
+        <translation>读取期间</translation>
     </message>
     <message>
         <source>Reading Durations and matching Cover files</source>
-        <translation>Duur en passende hoezen worden gelezen</translation>
+        <translation>读取期间和匹配封面文件</translation>
     </message>
 </context>
 <context>
@@ -144,202 +143,206 @@
     <message>
         <source>Options</source>
         <comment>header</comment>
-        <translation>Opties</translation>
+        <translation>操作</translation>
     </message>
     <message>
         <source>Playback</source>
         <comment>section header</comment>
-        <translation>Afspelen</translation>
+        <translation>播放</translation>
     </message>
     <message>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
-        <translation>Afspeelsnelheid: %1%</translation>
+        <translation>播放速率%1%</translation>
     </message>
     <message>
         <source>Play next Track automatically</source>
-        <translation>Volgend nummer automatisch afspelen</translation>
+        <translation>自动播放下一首歌</translation>
     </message>
     <message>
         <source>Short Skip duration</source>
-        <translation>Duur voor kort overslaan</translation>
+        <translation>短跳持续时间</translation>
     </message>
     <message>
         <source>Long Skip duration</source>
-        <translation>Duur voor lang overslaan</translation>
+        <translation>长跳持续时间</translation>
     </message>
     <message>
         <source>Search best cover image for each file</source>
-        <translation>Zoek naar beste albumhoes voor elk bestand</translation>
+        <translation>为每个文件搜索最佳封面</translation>
     </message>
     <message>
         <source>Do Animations</source>
-        <translation>Animaties weergeven</translation>
+        <translation>制作动画</translation>
     </message>
     <message>
         <source>Player Page</source>
         <comment>section header</comment>
-        <translation>Afspeelpagina</translation>
+        <translation>播放器页面</translation>
     </message>
     <message>
         <source>Display directory name</source>
-        <translation>Mapnaam weergeven</translation>
+        <translation>显示目录名称</translation>
     </message>
     <message>
         <source>Display playlist progress</source>
-        <translation>Voortgang in afspeellijst weergeven</translation>
+        <translation>显示播放列表进程</translation>
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>Veeg over de albumhoes (of de titel bovenaan) om nummers over te slaan</translation>
+        <translation>滑动封面（或越过标题）以跳到下一首歌</translation>
     </message>
     <message>
         <source>Cassette shows progress of</source>
-        <translation>Cassette geeft voortgang weer van</translation>
+        <translation>放音机展示进度</translation>
     </message>
     <message>
         <source>track</source>
-        <translation>nummer</translation>
+        <translation>歌曲</translation>
     </message>
     <message>
         <source>directory</source>
-        <translation>map</translation>
+        <translation>目录</translation>
     </message>
     <message>
         <source>Tape Animations</source>
         <comment>section header</comment>
-        <translation>Tape-animaties</translation>
+        <translation>磁带动画</translation>
     </message>
     <message>
         <source>Player Page Animation</source>
-        <translation>Afspeelpagina-animatie</translation>
+        <translation>播放器页面动画</translation>
     </message>
     <message>
         <source>App-Cover Animation</source>
-        <translation>Apphoesanimatie</translation>
+        <translation>软件封面动画</translation>
     </message>
     <message>
         <source>Open Files</source>
         <comment>section header</comment>
-        <translation>Bestanden openen</translation>
+        <translation>打开文件</translation>
     </message>
     <message>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>Toon optie &quot;in wachtrij plaatsen&quot;</translation>
+        <translation>显示队列滚轮</translation>
     </message>
     <message>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation>Diverse</translation>
+        <translation>五花八门</translation>
     </message>
     <message>
         <source>Save progress periodically</source>
-        <translation>Voortgang periodiek opslaan</translation>
+        <translation>定期保存进度</translation>
     </message>
     <message>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
-        <translation>Indien uitgeschakeld wordt de huidige voortgaang pas opgeslagen wanneer de app juist wordt afgesloten. Anders wordt de voorgang om de paar seconden opgeslagen.</translation>
+        <translation>如果禁用，目前的播放状态仅仅会在应用完全保持运行时被储存。否则，将会每隔一段时间保存进度。</translation>
     </message>
     <message>
         <source>Verbose logging enabled</source>
-        <translation>Gedetailleerd loggen ingeschakeld</translation>
+        <translation>启用详细记录</translation>
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
-        <translation>Genereert uitvoer over veel dingen in de achtergrond, waardoor er een kleine vertraging kan optreden. Je kan de uitvoer bekijken door Talefish te openen via de terminal.</translation>
+        <translation>在后台输出一些东西会有一些慢。通过Terminal打开 Talefish以查看输出。</translation>
     </message>
     <message>
         <source>Sort directory naturally while scanning</source>
-        <translation>Map natuurlijk sorteren bij scannen</translation>
+        <translation>当扫描的时候自动分类目录</translation>
     </message>
     <message>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Schakel dit in als je je bestanden hebt genummerd zonder nullen vooraan. Enkel toepasbaar bij sorteren op naam.</translation>
+        <translation>如果你编号文件没有前置零时激活。仅当按照名称分类时应用。</translation>
     </message>
     <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
-        <translation>Gebruik hoofdtelefoonknoppen/Bluetooth om Talefish te besturen</translation>
+        <translation>使用耳机按钮/蓝牙控制Talefish</translation>
     </message>
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation>Over</translation>
+        <translation>关于</translation>
     </message>
     <message>
         <source>Keep directory progress</source>
-        <translation>Bewaar voortgang in map</translation>
+        <translation>阻止目录进度</translation>
     </message>
     <message numerus="yes">
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation>
-            <numerusform>voor %1 dag</numerusform>
-            <numerusform>voor %1 dagen</numerusform>
+            <numerusform> %1天</numerusform>
         </translation>
     </message>
     <message>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation>voor altijd</translation>
+        <translation>永久</translation>
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation>Om te verhinderen dat gecachete gegevens of zelfs verwijderde mappen zich met verloop van tijd opstapelen zal Talefish bij het opstarten van de applicatie controleren op oude items. Dit heeft geen effect op het huidig geladen map.</translation>
+        <translation>为了防止旧的缓存数据甚至已删除的目录随着时间推移不断堆积。Talefish会在应用启动之时检查旧的项。这不会影响现在加载的目录。</translation>
     </message>
     <message>
         <source>to track beginning</source>
-        <translation>naar begin van nummer</translation>
+        <translation>播放歌曲</translation>
     </message>
     <message>
         <source>External Commands skip</source>
-        <translation>Externe commando&apos;s overslaan</translation>
+        <translation>外部命令跳跃</translation>
     </message>
     <message>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation>Externe commando&apos;s zijn de commando&apos;s die gegeven worden vanuit het vergrendelscherm of via hoofdtelefoons/Bluetooth.</translation>
+        <translation>外部命令是来自锁屏或通过耳机或蓝牙的操作。</translation>
     </message>
     <message>
         <source>Play/Pause</source>
-        <translation>Afspelen/pauzeren</translation>
+        <translation>播放/暂停</translation>
     </message>
     <message>
         <source>Skip forward</source>
-        <translation>Doorspoelen</translation>
+        <translation>向前跳跃</translation>
     </message>
     <message>
         <source>Skip backward</source>
-        <translation>Terugspoelen</translation>
+        <translation>向后跳跃</translation>
     </message>
     <message>
         <source>Do nothing</source>
-        <translation>Niets doen</translation>
+        <translation>什么也不做</translation>
     </message>
     <message>
         <source>Button Press:</source>
-        <translation>Druk op knop:</translation>
+        <translation>按键按压</translation>
     </message>
     <message>
         <source>Long press:</source>
-        <translation>Lange druk:</translation>
+        <translation>长按</translation>
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>Je kan kiezen welke actie je wil uitvoeren bij het drukken op de knop &quot;bellen/ophangen&quot;, vaak de enige knop op een hoofdtelefoon:</translation>
+        <translation>
+当按压“接听/挂断”键时你可以选择更喜欢的操作，当耳机上的按钮仅有一个时。</translation>
     </message>
     <message>
         <source>Hidden</source>
-        <translation>Verborgen</translation>
+        <translation>隐藏</translation>
     </message>
     <message>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation>Apphoesacties zijn ook externe commando&apos;s.</translation>
-    </message>
-    <message>
-        <source>Secondary App-Cover Action</source>
-        <translation>Bijkomende apphoesactie</translation>
+        <translation>软件封面操作也是外部命令。</translation>
     </message>
     <message>
         <source>External sleep timer integration</source>
+        <translation>外部睡眠计时器整合</translation>
+    </message>
+    <message>
+        <source>Skip backward and forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Additional App-Cover Actions</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -348,40 +351,40 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation type="unfinished">Over</translation>
+        <translation>关于</translation>
     </message>
     <message>
         <source>Install the slumber sleep timer application to enable these options</source>
-        <translation type="unfinished"></translation>
+        <translation>安装Slumber 睡眠计时器应用以启用此操作。</translation>
     </message>
     <message>
         <source>Launch sleep timer automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>自动开启睡眠计时器</translation>
     </message>
     <message>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
-        <translation type="unfinished"></translation>
+        <translation>当启动Talefish时自动打开Slumber 睡眠计时器。</translation>
     </message>
     <message>
         <source>Bring Talefish to foreground again after launching slumber</source>
-        <translation type="unfinished"></translation>
+        <translation>当打开Talefish 之后将Talefish 转到前台运行。</translation>
     </message>
     <message>
         <source>Only launch slumber at certain times</source>
-        <translation type="unfinished"></translation>
+        <translation>仅特定时间打开Slumber </translation>
     </message>
     <message>
         <source>Launch slumber after</source>
-        <translation type="unfinished"></translation>
+        <translation>Launch slumber after</translation>
     </message>
     <message>
         <source>Launch slumber before</source>
-        <translation type="unfinished"></translation>
+        <translation>Launch slumber before</translation>
     </message>
     <message>
         <source>Sleep Timer</source>
         <comment>header</comment>
-        <translation type="unfinished"></translation>
+        <translation>睡眠计时器</translation>
     </message>
 </context>
 <context>
@@ -389,59 +392,58 @@
     <message>
         <source>Options</source>
         <comment>pulley</comment>
-        <translation>Opties</translation>
+        <translation>操作</translation>
     </message>
     <message>
         <source>Playlist</source>
         <comment>pulley</comment>
-        <translation>Afspeellijst</translation>
+        <translation>播放列表</translation>
     </message>
     <message>
         <source>Enqueue</source>
         <comment>pulley</comment>
-        <translation>In wachtrij plaatsen</translation>
+        <translation>队列</translation>
     </message>
     <message>
         <source>Open</source>
         <comment>pulley</comment>
-        <translation>Openen</translation>
+        <translation>打开</translation>
     </message>
     <message>
         <source>Nothing to play</source>
-        <translation>Niets om af te spelen</translation>
+        <translation>没有可播放的音乐</translation>
     </message>
     <message>
         <source>Open Files by pulling down.</source>
-        <translation>Open bestanden door omlaag te trekken.</translation>
+        <translation>通过滚轮菜单打开文件</translation>
     </message>
     <message>
         <source>Rewind Track</source>
-        <translation>Nummer terugspoelen</translation>
+        <translation>倒带</translation>
     </message>
     <message>
         <source>Previous Track</source>
-        <translation>Vorig nummer</translation>
+        <translation>前一首歌</translation>
     </message>
     <message>
         <source>Next Track</source>
-        <translation>Volgend nummer</translation>
+        <translation>下一首歌</translation>
     </message>
     <message>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation>%1 / %2 (bestand %L3 van %L4)</translation>
+        <translation>%1 / %2 (文件%L3 of %L4)</translation>
     </message>
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
         <translation>
-            <numerusform>%1% afgespeeld in totaal</numerusform>
-            <numerusform>%1% afgespeeld in totaal</numerusform>
+            <numerusform>总共已经播放%1%</numerusform>
         </translation>
     </message>
     <message>
         <source>[No Cover]</source>
-        <translation>[geen hoes]</translation>
+        <translation>[无封面]</translation>
     </message>
 </context>
 <context>
@@ -449,20 +451,19 @@
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
         <translation>
-            <numerusform>%L1 bestand geopend</numerusform>
-            <numerusform>%L1 bestanden geopend</numerusform>
+            <numerusform>已打开 %L 文件</numerusform>
         </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
-        <translation>%1 van %2 afgespeeld (%3e nummer)</translation>
+        <translation>已播放 %2 的 %1 (%3 音乐)</translation>
     </message>
 </context>
 <context>
     <name>PlaylistView</name>
     <message>
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation>错误</translation>
     </message>
 </context>
 </TS>

@@ -27,7 +27,8 @@ OTHER_FILES += qml/Talefish.qml \
     rpm/Talefish.changes.in \
     rpm/Talefish.spec \
     rpm/Talefish.yaml \
-    Talefish.desktop
+    Talefish.desktop \
+    translations/*
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 256x256
 

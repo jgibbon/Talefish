@@ -1,142 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<TS version="2.1" language="es">
 <context>
     <name>AboutPage</name>
     <message>
         <source>About Talefish</source>
         <comment>header</comment>
-        <translation>Om Talefish</translation>
+        <translation>Acerca de Talefish</translation>
     </message>
     <message>
         <source>Contribute</source>
         <comment>section header</comment>
-        <translation>Medverka</translation>
+        <translation>Contribuir</translation>
     </message>
     <message>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>Diskutera eller klicka &quot;Thanks!&quot; på maemo.org:</translation>
+        <translation>Comenta o haz clic en &quot;gracias&quot; en talk.maemo.org:</translation>
     </message>
     <message>
         <source>TMO thread</source>
-        <translation>TMO-tråd</translation>
+        <translation>Hilo TMO</translation>
     </message>
     <message>
         <source>GitHub page</source>
-        <translation>GitHub-sida</translation>
+        <translation>Página GitHub</translation>
     </message>
     <message>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>Du kan också bidra med översättningar på Transifex, om du inte gillar GitHub:</translation>
+        <translation>También puedes enviar las traducciones por Transifex, si no te gusta GitHub:</translation>
     </message>
     <message>
         <source>Transifex page</source>
-        <translation>Transifex-sida</translation>
+        <translation>Página Transifex</translation>
     </message>
     <message>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>Eller bjuda mig på en öl, om du verkligen känner för det:</translation>
+        <translation>O invítame a una cerveza si realmente te gusta:</translation>
     </message>
     <message>
         <source>PayPal donation</source>
-        <translation>PayPal-donation</translation>
+        <translation>Donación por PayPal</translation>
     </message>
     <message>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation>Tack!</translation>
+        <translation>¡Gracias!</translation>
     </message>
     <message>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation>Tack till alla användare för förslag och till alla som hjälper mig!</translation>
+        <translation>¡Gracias a todos los usuarios que me sugirieron cosas, y me ayudaron!</translation>
     </message>
     <message>
         <source>Translators</source>
         <comment>header</comment>
-        <translation>Översättare</translation>
+        <translation>Traductores</translation>
     </message>
     <message>
         <source>A big thank you to the translators:</source>
-        <translation>Stort tack till översättarna:</translation>
+        <translation>Muchísimas gracias a los traductores:</translation>
     </message>
     <message>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish är en mappbaserad ljudboksspelare, skriven huvudsakligen i QML. Den är licensierad under GPL2 av John Gibbon med hjälp av gemenskapen.</translation>
+        <translation>Talefish es un reproductor de audiolibros basado en directorios escrito principalmente en QML. Está licenciado bajo GPLv2 y hecho por John Gibbon con la ayuda de la comunidad.</translation>
     </message>
     <message>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>Projektstjärnor, kodbidrag och felrapporter är välkomna på GitHub:</translation>
+        <translation>Marcar el proyecto como favorito, solicitar modificaciones o informar de errores son bienvenidos en GitHub:</translation>
     </message>
 </context>
 <context>
     <name>OpenFileDialog</name>
     <message>
         <source>Sort by Name</source>
-        <translation>Sortera efter namn</translation>
+        <translation>Ordenar por nombre</translation>
     </message>
     <message>
         <source>Sort by Type</source>
-        <translation>Sortera efter typ</translation>
+        <translation>Ordenar por tipo</translation>
     </message>
     <message>
         <source>Sort by Last Modified</source>
-        <translation>Sortera efter &quot;Senast ändrad&quot;</translation>
+        <translation>Ordenar por últimas modificadas</translation>
     </message>
     <message>
         <source>Open Directory</source>
-        <translation>Öppna mappen</translation>
+        <translation>Abrir directorio</translation>
     </message>
     <message numerus="yes">
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Tryck på en fil för att öppna den, eller &quot;Öppna mappen&quot; för att öppna %1 fil</numerusform>
-            <numerusform>Tryck på en fil för att öppna den, eller &quot;Öppna mappen&quot; för att öppna %1 filer</numerusform>
+            <numerusform>Haz clic en el fichero para abrirlo o acepta el diálogo para abrir %1 fichero</numerusform>
+            <numerusform>Haz clic en el fichero para abrirlo o acepta el diálogo para abrir %1 ficheros</numerusform>
         </translation>
     </message>
     <message>
         <source>Enqueue Directory</source>
-        <translation>Köa mapp</translation>
+        <translation>Directorio en cola</translation>
     </message>
     <message numerus="yes">
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Tryck på en fil för att köa den, eller &quot;Köa mapp&quot; för att köa %1 fil</numerusform>
-            <numerusform>Tryck på en fil för att köa den, eller &quot;Köa mapp&quot; för att köa %1 filer</numerusform>
+            <numerusform>Haz clic en el fichero para ponerlo en cola o acepta el diálogo para poner en cola %1 fichero</numerusform>
+            <numerusform>Haz clic en el fichero para ponerlo en cola o acepta el diálogo para poner en cola %1 ficheros</numerusform>
         </translation>
     </message>
     <message>
         <source>Progress will not be saved for reopening enqueued files.</source>
-        <translation>Förloppet sparas inte för att återöppna köade filer.</translation>
+        <translation>El progreso no se guardará al reabrir ficheros en cola.</translation>
     </message>
 </context>
 <context>
     <name>OpenFileScanInfosDialog</name>
     <message>
         <source>Error</source>
-        <translation>Fel</translation>
+        <translation>Error</translation>
     </message>
     <message numerus="yes">
         <source>%1 Files</source>
         <comment>header</comment>
         <translation>
-            <numerusform>%1 fil</numerusform>
-            <numerusform>%1 filer</numerusform>
+            <numerusform>%1 Fichero</numerusform>
+            <numerusform>%1 Ficheros</numerusform>
         </translation>
     </message>
     <message>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>Ingen varaktighet</translation>
+        <translation>Sin duración</translation>
     </message>
     <message>
         <source>Reading Durations</source>
-        <translation>Läser varaktighet</translation>
+        <translation>Leyendo duraciones</translation>
     </message>
     <message>
         <source>Reading Durations and matching Cover files</source>
-        <translation>Läser varaktighet och matchar omslagsfiler</translation>
+        <translation>Leyendo duraciones y comparando portada de ficheros</translation>
     </message>
 </context>
 <context>
@@ -144,203 +144,207 @@
     <message>
         <source>Options</source>
         <comment>header</comment>
-        <translation>Alternativ</translation>
+        <translation>Opciones</translation>
     </message>
     <message>
         <source>Playback</source>
         <comment>section header</comment>
-        <translation>Uppspelning</translation>
+        <translation>Reproducir</translation>
     </message>
     <message>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
-        <translation>Uppspelningshastighet: %1%</translation>
+        <translation>Velocidad de reproducción: %1%</translation>
     </message>
     <message>
         <source>Play next Track automatically</source>
-        <translation>Spela upp nästa spår automatiskt</translation>
+        <translation>Reproducir la siguiente pista automáticamente</translation>
     </message>
     <message>
         <source>Short Skip duration</source>
-        <translation>Kort snabbspolning</translation>
+        <translation>Duración del salto corto</translation>
     </message>
     <message>
         <source>Long Skip duration</source>
-        <translation>Lång snabbspolning</translation>
+        <translation>Duración del salto largo</translation>
     </message>
     <message>
         <source>Search best cover image for each file</source>
-        <translation>Sök efter bästa omslagsbilden för varje fil</translation>
+        <translation>Buscar la mejor imagen de portada para cada fichero</translation>
     </message>
     <message>
         <source>Do Animations</source>
-        <translation>Visa animeringar</translation>
+        <translation>Activar animaciones</translation>
     </message>
     <message>
         <source>Player Page</source>
         <comment>section header</comment>
-        <translation>Spelarsida</translation>
+        <translation>Página del reproductor</translation>
     </message>
     <message>
         <source>Display directory name</source>
-        <translation>Visa mappnamn</translation>
+        <translation>Mostrar nombre del directorio</translation>
     </message>
     <message>
         <source>Display playlist progress</source>
-        <translation>Visa spellistans förlopp</translation>
+        <translation>Mostrar progreso de la lista de reproducción</translation>
     </message>
     <message>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>Svep på omslaget (eller över titeln) för att hoppa över spår</translation>
+        <translation>Deslizar la portada (o sobre el título) para saltar pistas</translation>
     </message>
     <message>
         <source>Cassette shows progress of</source>
-        <translation>Kassetten visar förloppet för</translation>
+        <translation>El casete muestra el progreso de</translation>
     </message>
     <message>
         <source>track</source>
-        <translation>spår</translation>
+        <translation>pista</translation>
     </message>
     <message>
         <source>directory</source>
-        <translation>mapp</translation>
+        <translation>directorio</translation>
     </message>
     <message>
         <source>Tape Animations</source>
         <comment>section header</comment>
-        <translation>Animering</translation>
+        <translation>Animaciones de cinta</translation>
     </message>
     <message>
         <source>Player Page Animation</source>
-        <translation>Animering på spelarsidan</translation>
+        <translation>Animación en la página del reproductor</translation>
     </message>
     <message>
         <source>App-Cover Animation</source>
-        <translation>Animering på programminiatyr</translation>
+        <translation>Animación en la cubierta</translation>
     </message>
     <message>
         <source>Open Files</source>
         <comment>section header</comment>
-        <translation>Öppna filer</translation>
+        <translation>Abrir ficheros</translation>
     </message>
     <message>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>Visa &quot;Köa&quot; i toppmenyn</translation>
+        <translation>Mostrar &quot;En cola&quot; en el menú deslizante</translation>
     </message>
     <message>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation>Diverse</translation>
+        <translation>Varios</translation>
     </message>
     <message>
         <source>Save progress periodically</source>
-        <translation>Spara förloppet med jämna mellanrum</translation>
+        <translation>Guardar progreso periódicamente</translation>
     </message>
     <message>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
-        <translation>Vid inaktivering, kommer aktuell uppspelningsstatus bara att sparas, när appen stängs. Annars sparas förloppet med några sekunders mellanrum.</translation>
+        <translation>Si está deshabilitado, la posición actual de la reproducción se guardará sólo cuando salga correctamente de la aplicación. En caso contrario, el progreso se guardará cada pocos segundos.</translation>
     </message>
     <message>
         <source>Verbose logging enabled</source>
-        <translation>Detaljerad loggning aktiverad</translation>
+        <translation>Activar registro detallado</translation>
     </message>
     <message>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
-        <translation>Loggar en massa saker i bakgrunden. Kan bli lite långsammare. Visa utdata genom att starta Talefish från terminal.</translation>
+        <translation>Se registran muchas cosas en segundo plano, puede ser un poco lento. Consulta la salida abriendo Talefish por Terminal.</translation>
     </message>
     <message>
         <source>Sort directory naturally while scanning</source>
-        <translation>Sortera mappen naturligt vid inläsning</translation>
+        <translation>Ordenar directorio de forma natural durante el escaneo</translation>
     </message>
     <message>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Aktiveras om du har filer numrerade utan inledande nolla. Fungerar endast vid &quot;Sortera efter namn&quot;.</translation>
+        <translation>Activar si tienes ficheros numerados sin ceros a la izquierda. Sólo se aplica cuando se ordena por nombre.</translation>
     </message>
     <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
-        <translation>Använd hörlursknappar/Bluetooth för att styra Talefish</translation>
+        <translation>Utilizar los botones del auricular/Bluetooth para controlar Talefish</translation>
     </message>
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation>Om</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Keep directory progress</source>
-        <translation>Behåll mappförloppet</translation>
+        <translation>Mantener progreso del directorio</translation>
     </message>
     <message numerus="yes">
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation>
-            <numerusform>i %1 dag</numerusform>
-            <numerusform>i %1 dagar</numerusform>
+            <numerusform>durante %1 día</numerusform>
+            <numerusform>durante %1 días</numerusform>
         </translation>
     </message>
     <message>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation>för alltid</translation>
+        <translation>siempre</translation>
     </message>
     <message>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation>För att förhindra cache-lagrad data, för gamla och borttagna mappar, att växa över tid, kommer Talefish att söka efter gamla poster vid programstart. Detta påverkar inte den aktuella inlästa mappen.</translation>
+        <translation>Para evitar que los datos almacenados en caché por directorios antiguos o eliminados se acumulen con el tiempo, Talefish comprobará las entradas antiguas al iniciar la aplicación. No afectará al directorio cargado actualmente.</translation>
     </message>
     <message>
         <source>to track beginning</source>
-        <translation>Till spårets början</translation>
+        <translation>al principio de la pista</translation>
     </message>
     <message>
         <source>External Commands skip</source>
-        <translation>Externa snabbspolningskommandon</translation>
+        <translation>Comandos externos de salto</translation>
     </message>
     <message>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation>Externa kommandon är de som körs från låsskärmen, eller från hörlurar/bluetooth.</translation>
+        <translation>Los comandos externos son los ejecutados desde la pantalla de bloqueo o a través de auriculares/bluetooth.</translation>
     </message>
     <message>
         <source>Play/Pause</source>
-        <translation>Spela/Pausa</translation>
+        <translation>Reproducir/Detener</translation>
     </message>
     <message>
         <source>Skip forward</source>
-        <translation>Snabbspola framåt</translation>
+        <translation>Saltar hacia adelante</translation>
     </message>
     <message>
         <source>Skip backward</source>
-        <translation>Snabbspola bakåt</translation>
+        <translation>Saltar hacia atrás</translation>
     </message>
     <message>
         <source>Do nothing</source>
-        <translation>Gör ingenting</translation>
+        <translation>No hacer nada</translation>
     </message>
     <message>
         <source>Button Press:</source>
-        <translation>Knapptryck:</translation>
+        <translation>Pulsación del botón:</translation>
     </message>
     <message>
         <source>Long press:</source>
-        <translation>Långtryck:</translation>
+        <translation>Pulsación larga:</translation>
     </message>
     <message>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>Du kan välja vilken åtgärd som skall utföras när du trycker på samtalsknappen, som ofta är den enda knappen på ett headset. </translation>
+        <translation>Puedes elegir la acción que se ejecutará cuando presiones el botón de &quot;Llamar/Colgar&quot;, que a menudo es un sólo botón en los auriculares:</translation>
     </message>
     <message>
         <source>Hidden</source>
-        <translation>Dold</translation>
+        <translation>Oculto</translation>
     </message>
     <message>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation>Åtgärder från programminiatyren är också externa kommandon.</translation>
-    </message>
-    <message>
-        <source>Secondary App-Cover Action</source>
-        <translation>Sekundär miniatyråtgärd</translation>
+        <translation>Las acciones en la cubierta de la aplicación también son comandos externos.</translation>
     </message>
     <message>
         <source>External sleep timer integration</source>
-        <translation>Integration av extern insomningstimer</translation>
+        <translation>Integración con temporizador externo</translation>
+    </message>
+    <message>
+        <source>Skip backward and forward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Additional App-Cover Actions</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -348,40 +352,40 @@
     <message>
         <source>About</source>
         <comment>pulley</comment>
-        <translation>Om</translation>
+        <translation>Acerca de</translation>
     </message>
     <message>
         <source>Install the slumber sleep timer application to enable these options</source>
-        <translation>Installera &quot;slumber&quot; insomningstimer för att aktivera dessa alternativ</translation>
+        <translation>Instalar el temporizador slumber para habilitar estas opciones</translation>
     </message>
     <message>
         <source>Launch sleep timer automatically</source>
-        <translation>Starta insomningstimern automatiskt</translation>
+        <translation>Iniciar temporizador automáticamente</translation>
     </message>
     <message>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
-        <translation>Starta slumber-appen automatiskt när Talefish startas.</translation>
+        <translation>Iniciar el temporizador slumber automáticamente al iniciar Talefish.</translation>
     </message>
     <message>
         <source>Bring Talefish to foreground again after launching slumber</source>
-        <translation>Visa Talefish i förgrunden igen, efter att slumber har startats</translation>
+        <translation>Poner Talefish en primer plano tras lanzar slumber</translation>
     </message>
     <message>
         <source>Only launch slumber at certain times</source>
-        <translation>Starta slumber endast vid vissa tider</translation>
+        <translation>Lanzar sólo slumber en ciertos momentos</translation>
     </message>
     <message>
         <source>Launch slumber after</source>
-        <translation>Starta slumber efter</translation>
+        <translation>Lanzar slumber después de</translation>
     </message>
     <message>
         <source>Launch slumber before</source>
-        <translation>Starta slumber före</translation>
+        <translation>Lanzar slumber después de</translation>
     </message>
     <message>
         <source>Sleep Timer</source>
         <comment>header</comment>
-        <translation>Insomningstimer</translation>
+        <translation>Temporizador</translation>
     </message>
 </context>
 <context>
@@ -389,59 +393,59 @@
     <message>
         <source>Options</source>
         <comment>pulley</comment>
-        <translation>Inställningar</translation>
+        <translation>Opciones</translation>
     </message>
     <message>
         <source>Playlist</source>
         <comment>pulley</comment>
-        <translation>Spellista</translation>
+        <translation>Lista de reproducción</translation>
     </message>
     <message>
         <source>Enqueue</source>
         <comment>pulley</comment>
-        <translation>Köa</translation>
+        <translation>En cola</translation>
     </message>
     <message>
         <source>Open</source>
         <comment>pulley</comment>
-        <translation>Öppna</translation>
+        <translation>Abrir</translation>
     </message>
     <message>
         <source>Nothing to play</source>
-        <translation>Inget att spela upp</translation>
+        <translation>Nada para reproducir</translation>
     </message>
     <message>
         <source>Open Files by pulling down.</source>
-        <translation>Öppna filer genom att dra neråt</translation>
+        <translation>Abrir ficheros deslizando hacia abajo.</translation>
     </message>
     <message>
         <source>Rewind Track</source>
-        <translation>Spola tillbaka spåret</translation>
+        <translation>Pista anterior</translation>
     </message>
     <message>
         <source>Previous Track</source>
-        <translation>Föregående spår</translation>
+        <translation>Pista previa</translation>
     </message>
     <message>
         <source>Next Track</source>
-        <translation>Nästa spår</translation>
+        <translation>Pista siguiente</translation>
     </message>
     <message>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation>%1 / %2 (fil %L3 av %L4)</translation>
+        <translation>%1 / %2 (Fichero %L3 de %L4)</translation>
     </message>
     <message numerus="yes">
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
         <translation>
-            <numerusform>%1% uppspelad totalt</numerusform>
-            <numerusform>%1% uppspelade totalt</numerusform>
+            <numerusform>%1% reproducido en total</numerusform>
+            <numerusform>%1% reproducido en total</numerusform>
         </translation>
     </message>
     <message>
         <source>[No Cover]</source>
-        <translation>[Inget omslag]</translation>
+        <translation>[Sin portada]</translation>
     </message>
 </context>
 <context>
@@ -449,20 +453,20 @@
     <message numerus="yes">
         <source>%L1 file(s) opened</source>
         <translation>
-            <numerusform>%L1 fil öppnad</numerusform>
-            <numerusform>%L1 filer öppnade</numerusform>
+            <numerusform>%L1 fichero abierto</numerusform>
+            <numerusform>%L1 ficheros abiertos</numerusform>
         </translation>
     </message>
     <message>
         <source>%1 of %2 played (track %3)</source>
-        <translation>%1 av %2 spelat (spår %3)</translation>
+        <translation>%1 de %2 reproducidos (pista %3)</translation>
     </message>
 </context>
 <context>
     <name>PlaylistView</name>
     <message>
         <source>Error</source>
-        <translation>Fel</translation>
+        <translation>Error</translation>
     </message>
 </context>
 </TS>

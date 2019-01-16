@@ -1,0 +1,10 @@
+[main]
+host = https://www.transifex.com
+
+[talefish.talefishts]
+file_filter = translations/Talefish-<lang>.ts
+minimum_perc = 0
+source_file = translations/Talefish-en.ts
+source_lang = en
+type = QT
+
