@@ -1,5 +1,6 @@
 #include "launcher.h"
 #include <QFile>
+#include <QDir>
 
 Launcher::Launcher(QObject *parent) :
     QObject(parent),
@@ -27,6 +28,12 @@ bool Launcher::fileExists(const QString &path)
 {
     QFile file(path);
     return file.exists();
+}
+
+bool Launcher::folderExists(const QString &path)
+{
+    QDir folder(path);
+    return folder.exists();
 }
 Launcher::~Launcher() {
 

@@ -69,9 +69,6 @@ Dialog {
     acceptDestination: Qt.resolvedUrl("./OpenFileScanInfosDialog.qml")
     acceptDestinationAction: PageStackAction.Replace
     acceptDestinationProperties: ({
-//        defaultCoverUrl: coverUrl,
-//        coverArray: coverArray,
-//        currentProgress: currentProgress,
         enqueue: enqueue
     })
 
@@ -84,8 +81,14 @@ Dialog {
 
 
         if(appstate.lastDirectory !== ''){
-            folderModel.folder = appstate.lastDirectory;
-            currentFolder = appstate.lastDirectory;
+            var folder = appstate.lastDirectory;
+            while(!app.launcher.folderExists(folder.replace('file://', '')) && folder.indexOf('/') > -1) {
+                app.log(folder, 'does not exist!');
+                folder = folder.substring(0, folder.lastIndexOf('/'))
+            }
+
+            folderModel.folder = folder;
+            currentFolder = folder;
         } else {
 
             folderModel.folder = home;
