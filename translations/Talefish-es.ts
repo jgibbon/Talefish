@@ -86,37 +86,37 @@
 <context>
     <name>OpenFileDialog</name>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="133"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="130"/>
         <source>Sort by Name</source>
         <translation>Ordenar por nombre</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="141"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="138"/>
         <source>Sort by Type</source>
         <translation>Ordenar por tipo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="150"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="147"/>
         <source>Sort by Last Modified</source>
         <translation>Ordenar por últimas modificadas</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="160"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Enqueue Directory</source>
         <translation>Directorio en cola</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="160"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Open Directory</source>
         <translation>Abrir directorio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="190"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="187"/>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation>El progreso no se guardará al reabrir archivos en cola.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenFileDialog.qml" line="263"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="260"/>
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
@@ -125,7 +125,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenFileDialog.qml" line="264"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="261"/>
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
@@ -297,12 +297,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="195"/>
         <source>Player Page Animation</source>
-        <translation>Animación en la página del reproductor</translation>
+        <translation>Animación en página del reproductor</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="207"/>
         <source>App-Cover Animation</source>
-        <translation>Animación en la cubierta</translation>
+        <translation>Animación en cubierta</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="218"/>
@@ -354,7 +354,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="275"/>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
-        <translation>Utilizar los botones del auricular/Bluetooth para controlar Talefish</translation>
+        <translation>Usar botones del auricular/Bluetooth para controlar Talefish</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="305"/>
@@ -374,12 +374,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="312"/>
         <source>Button Press:</source>
-        <translation>Pulsar botón:</translation>
+        <translation>Toque corto:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="319"/>
         <source>Long press:</source>
-        <translation>Pulsación larga:</translation>
+        <translation>Toque largo:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="325"/>
@@ -463,7 +463,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="76"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
-        <translation>Poner Talefish en primer plano tras lanzar slumber</translation>
+        <translation>Poner Talefish en primer plano tras iniciar slumber</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="86"/>
@@ -478,7 +478,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="134"/>
         <source>Launch slumber before</source>
-        <translation>Iniciar slumber después de</translation>
+        <translation>Iniciar slumber antes de</translation>
     </message>
 </context>
 <context>

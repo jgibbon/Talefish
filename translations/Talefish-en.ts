@@ -86,37 +86,37 @@
 <context>
     <name>OpenFileDialog</name>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="133"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="130"/>
         <source>Sort by Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="141"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="138"/>
         <source>Sort by Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="150"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="147"/>
         <source>Sort by Last Modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="160"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Enqueue Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="160"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Open Directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenFileDialog.qml" line="190"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="187"/>
         <source>Progress will not be saved for reopening enqueued files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenFileDialog.qml" line="263"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="260"/>
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation type="unfinished">
@@ -125,7 +125,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenFileDialog.qml" line="264"/>
+        <location filename="../qml/pages/OpenFileDialog.qml" line="261"/>
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation type="unfinished">
