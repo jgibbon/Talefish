@@ -120,8 +120,8 @@
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Haz clic en el fichero para ponerlo en cola o acepta el diálogo para poner en cola %1 fichero</numerusform>
             <numerusform>Haz clic en el archivo para ponerlo en cola o acepta el diálogo para poner en cola %1 archivo</numerusform>
+            <numerusform>Haz clic en el archivo para ponerlo en cola o acepta el diálogo para poner en cola %1 archivos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -129,7 +129,7 @@
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>Haz clic en el fichero para abrirlo o acepta el diálogo para abrir %1 fichero</numerusform>
+            <numerusform>Haz clic en el archivo para abrirlo o acepta el diálogo para abrir %1 archivo</numerusform>
             <numerusform>Haz clic en el archivo para abrirlo o acepta el diálogo para abrir %1 archivos</numerusform>
         </translation>
     </message>
@@ -141,7 +141,7 @@
         <source>%1 Files</source>
         <comment>header</comment>
         <translation>
-            <numerusform>%1 Fichero</numerusform>
+            <numerusform>%1 Archivo</numerusform>
             <numerusform>%1 Archivos</numerusform>
         </translation>
     </message>
@@ -549,7 +549,7 @@
         <comment>directory progress</comment>
         <translation>
             <numerusform>%1% reproducido en total</numerusform>
-            <numerusform>%1% reproducido en total</numerusform>
+            <numerusform>%1% reproducidos en total</numerusform>
         </translation>
     </message>
 </context>
@@ -559,7 +559,7 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="59"/>
         <source>%L1 file(s) opened</source>
         <translation>
-            <numerusform>%L1 fichero abierto</numerusform>
+            <numerusform>%L1 archivo abierto</numerusform>
             <numerusform>%L1 archivos abiertos</numerusform>
         </translation>
     </message>

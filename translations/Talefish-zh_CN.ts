@@ -12,7 +12,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="51"/>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish是一个直接基于主要用QML编写的有声读物播放器。它在GPL2 许可证下开发，由John Gibbon在社区成员的协助下完成。</translation>
+        <translation>Talefish是一个主要以QML编写基于目录的有声读物播放器。它在GPL2 许可证下，由John Gibbon在社区成员的协助下开发制作。</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="59"/>
@@ -23,7 +23,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>在talk.maemo.org讨论或点击感激</translation>
+        <translation>在 talk.maemo.org 讨论或点击“感谢”</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="69"/>
@@ -38,7 +38,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="80"/>
         <source>GitHub page</source>
-        <translation>GitHub专页</translation>
+        <translation>GitHub 页面</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="86"/>
@@ -48,7 +48,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="91"/>
         <source>Transifex page</source>
-        <translation>Transifex专页</translation>
+        <translation>Transifex 页面</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
@@ -75,7 +75,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="117"/>
         <source>Translators</source>
         <comment>header</comment>
-        <translation>翻译者</translation>
+        <translation>译者</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="121"/>
@@ -103,7 +103,7 @@
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Enqueue Directory</source>
-        <translation>队列目录</translation>
+        <translation>入队目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
@@ -113,14 +113,14 @@
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="187"/>
         <source>Progress will not be saved for reopening enqueued files.</source>
-        <translation>操作将不会被保存，除非重新开启文件</translation>
+        <translation>不会保存进度，除非重新开启入队文件</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OpenFileDialog.qml" line="260"/>
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>点击文件以打开或接受对话框以排队 %1 文件</numerusform>
+            <numerusform>点击文件以打开或接受对话框以批量添加 %1 文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -128,7 +128,7 @@
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>点击文件以打开或接受对话框以打开 %1 文件</numerusform>
+            <numerusform>批量点击文件以打开或接受对话框以批量添加 %1 文件</numerusform>
         </translation>
     </message>
 </context>
@@ -199,13 +199,13 @@
         <location filename="../qml/pages/OptionsPage.qml" line="113"/>
         <location filename="../qml/pages/OptionsPage.qml" line="131"/>
         <source>Short Skip duration</source>
-        <translation>短跳持续时间</translation>
+        <translation>短跳音长</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="120"/>
         <location filename="../qml/pages/OptionsPage.qml" line="132"/>
         <source>Long Skip duration</source>
-        <translation>长跳持续时间</translation>
+        <translation>长跳音长</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="127"/>
@@ -273,12 +273,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="161"/>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>如果你编号文件没有前置零时激活。仅当按照名称分类时应用。</translation>
+        <translation>如果要打开没有前导零的编号文件, 请激活此选项。只有在按名称排序时才有效。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>显示队列滚轮</translation>
+        <translation>显示&quot;队列&quot; 滚轮</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="180"/>
@@ -289,7 +289,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="186"/>
         <source>Do Animations</source>
-        <translation>制作动画</translation>
+        <translation>显示动画</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="195"/>
@@ -299,7 +299,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="207"/>
         <source>App-Cover Animation</source>
-        <translation>软件封面动画</translation>
+        <translation>应用封面动画</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="218"/>
@@ -320,7 +320,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="244"/>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>滑动封面（或越过标题）以跳到下一首歌</translation>
+        <translation>轻扫封面（或上方标题）以跳到下一首歌</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="255"/>
@@ -341,7 +341,7 @@
         <location filename="../qml/pages/OptionsPage.qml" line="261"/>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation>五花八门</translation>
+        <translation>杂项操作</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="265"/>
@@ -356,8 +356,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="305"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>
-当按压“接听/挂断”键时你可以选择更喜欢的操作，当耳机上的按钮仅有一个时。</translation>
+        <translation>当耳机仅有一个按钮时，你可以选择按压“接听/挂断”键时想要执行的操作</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="308"/>
@@ -387,12 +386,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="326"/>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
-        <translation>如果禁用，目前的播放状态仅仅会在应用完全保持运行时被储存。否则，将会每隔一段时间保存进度。</translation>
+        <translation>如果禁用, 则只有当应用完全退出时, 才会保存当前播放状态。否则, 将每隔几秒钟保存一次进度。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="337"/>
         <source>Verbose logging enabled</source>
-        <translation>启用详细记录</translation>
+        <translation>启用详细日志记录</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="338"/>
@@ -402,7 +401,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="349"/>
         <source>Keep directory progress</source>
-        <translation>阻止目录进度</translation>
+        <translation>保存目录进度</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="350"/>
@@ -465,17 +464,17 @@
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="86"/>
         <source>Only launch slumber at certain times</source>
-        <translation>仅特定时间打开Slumber </translation>
+        <translation>仅在特定时间启用Slumber </translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="117"/>
         <source>Launch slumber after</source>
-        <translation>Launch slumber after</translation>
+        <translation>何时之后启用Slumber</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="134"/>
         <source>Launch slumber before</source>
-        <translation>Launch slumber before</translation>
+        <translation>何时之前启用Slumber</translation>
     </message>
 </context>
 <context>
@@ -538,14 +537,14 @@
         <location filename="../qml/pages/PlayerPage.qml" line="623"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation>%1 / %2 (文件%L3 of %L4)</translation>
+        <translation>%1 / %2 (文件 %L3 of %L4)</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/PlayerPage.qml" line="642"/>
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
         <translation>
-            <numerusform>总共已经播放%1%</numerusform>
+            <numerusform>总计已播放 %1%</numerusform>
         </translation>
     </message>
 </context>
@@ -555,13 +554,13 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="59"/>
         <source>%L1 file(s) opened</source>
         <translation>
-            <numerusform>已打开 %L 文件</numerusform>
+            <numerusform>已打开 %L1 文件</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="64"/>
         <source>%1 of %2 played (track %3)</source>
-        <translation>已播放 %2 的 %1 (%3 音乐)</translation>
+        <translation>%1 of %2 已播放 (音乐 %3)</translation>
     </message>
 </context>
 <context>
@@ -569,7 +568,7 @@
     <message>
         <location filename="../qml/lib/PlaylistView.qml" line="57"/>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation>出错</translation>
     </message>
 </context>
 </TS>
