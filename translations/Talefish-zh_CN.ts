@@ -28,12 +28,12 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="69"/>
         <source>TMO thread</source>
-        <translation>TMO 帖子</translation>
+        <translation>TMO 地址</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="74"/>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>欢迎在GitHub打分，张贴请求或报告问题</translation>
+        <translation>欢迎在GitHub上Star本项目、Pull requests及报告问题（Github网站为英语，故而使用英语词汇以避免误会，并非译者故意中英混杂）</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="80"/>
@@ -43,7 +43,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="86"/>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>如果你不喜欢GitHub，也可以在Transifex提交翻译</translation>
+        <translation>如果你不愿使用GitHub，也可以在Transifex提交翻译</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="91"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>如果你真的喜欢它，可以给我买瓶啤酒</translation>
+        <translation>如果你真心喜欢本应用，可以给我买瓶啤酒</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="102"/>
@@ -88,22 +88,22 @@
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="130"/>
         <source>Sort by Name</source>
-        <translation>按名称分类</translation>
+        <translation>按名称排序</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="138"/>
         <source>Sort by Type</source>
-        <translation>按类型分类</translation>
+        <translation>按类型排序</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="147"/>
         <source>Sort by Last Modified</source>
-        <translation>按最近编辑分类</translation>
+        <translation>按最近编辑排序</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Enqueue Directory</source>
-        <translation>入队目录</translation>
+        <translation>追加整个目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
@@ -113,14 +113,14 @@
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="187"/>
         <source>Progress will not be saved for reopening enqueued files.</source>
-        <translation>不会保存进度，除非重新开启入队文件</translation>
+        <translation>对于重新开启的追加文件，播放进度不会被保存</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OpenFileDialog.qml" line="260"/>
         <source>Click file to enqueue or accept dialog to enqueue %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>点击文件以打开或接受对话框以批量添加 %1 文件</numerusform>
+            <numerusform>点击文件以追加到播放列表或接受对话框以追加 %1 个文件</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -145,18 +145,18 @@
     <message>
         <location filename="../qml/pages/OpenFileScanInfosDialog.qml" line="317"/>
         <source>Reading Durations and matching Cover files</source>
-        <translation>读取期间和匹配封面文件</translation>
+        <translation>正在读取播放时长以及匹配封面文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileScanInfosDialog.qml" line="317"/>
         <source>Reading Durations</source>
-        <translation>读取期间</translation>
+        <translation>正在读取播放时长</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileScanInfosDialog.qml" line="356"/>
         <source>no Duration</source>
         <comment>if file duration &lt; 1; instead of duration</comment>
-        <translation>无期间</translation>
+        <translation>无播放时长</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileScanInfosDialog.qml" line="395"/>
@@ -176,7 +176,7 @@
         <location filename="../qml/pages/OptionsPage.qml" line="52"/>
         <source>Options</source>
         <comment>header</comment>
-        <translation>操作</translation>
+        <translation>选项</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="55"/>
@@ -278,7 +278,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>显示&quot;队列&quot; 滚轮</translation>
+        <translation>在滚轮菜单中显示&quot;追加到播放列表&quot; </translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="180"/>
@@ -294,7 +294,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="195"/>
         <source>Player Page Animation</source>
-        <translation>播放器页面动画</translation>
+        <translation>播放页面动画</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="207"/>
@@ -361,7 +361,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="308"/>
         <source>Do nothing</source>
-        <translation>什么也不做</translation>
+        <translation>无操作</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="308"/>
@@ -495,7 +495,7 @@
         <location filename="../qml/pages/PlayerPage.qml" line="110"/>
         <source>Enqueue</source>
         <comment>pulley</comment>
-        <translation>队列</translation>
+        <translation>追加到播放列表</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlayerPage.qml" line="116"/>
@@ -516,7 +516,7 @@
     <message>
         <location filename="../qml/pages/PlayerPage.qml" line="320"/>
         <source>Open Files by pulling down.</source>
-        <translation>通过滚轮菜单打开文件</translation>
+        <translation>下拉以打开文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlayerPage.qml" line="436"/>
