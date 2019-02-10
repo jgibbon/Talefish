@@ -242,13 +242,9 @@ Item {
 
         property bool fixingPlaybackRate: false // might be obsolete
         function fixPlaybackRate(){
-            if(!fixingPlaybackRate) {
-                fixingPlaybackRate = true
-
-                if(seekable) {
-
-                    seek(appstate.currentPosition); //also fixes playbackRate
-                }
+            fixingPlaybackRate = true
+            if(seekable) {
+                seek(appstate.currentPosition); //also fixes playbackRate
                 fixingPlaybackRate = false
             }
         }
@@ -259,9 +255,6 @@ Item {
                 app.log('player: statefile changed')
                 playback.stop()
                 playback.source = 'file://'+statefile;
-                //                if(stateposition > 0){
-                ////                    initialSeekTo = appstate.currentPosition
-                //                }
                 if(isplaying) {
                     playback.play();
                 }
@@ -325,10 +318,9 @@ onMetaDataChanged: {
             }
         }
         onSeekableChanged: {
-            app.log('player: seekable changed', seekable);
-            if(seekable) {
-
-                seek(appstate.currentPosition); //also fixes playbackRate
+            app.log('player: seekable changed', seekable, appstate.currentPosition);
+            if(seekable && fixingPlaybackRate) {
+                fixPlaybackRate();
             }
 
         }
