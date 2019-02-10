@@ -23,17 +23,17 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>在 talk.maemo.org 讨论或点击“感谢”</translation>
+        <translation>在 talk.maemo.org 讨论或点击“感谢（thanks）”</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="69"/>
         <source>TMO thread</source>
-        <translation>TMO 地址</translation>
+        <translation>TMO 帖子消息</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="74"/>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>欢迎在GitHub上Star本项目、Pull requests及报告问题（Github网站为英语，故而使用英语词汇以避免误会，并非译者故意中英混杂）</translation>
+        <translation>欢迎在GitHub上给本应用打分(Star)、张贴请求(Pull requests)以及报告问题（注释:Star和pull request均为GitHub操作术语）</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="80"/>
@@ -43,7 +43,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="86"/>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>如果你不愿使用GitHub，也可以在Transifex提交翻译</translation>
+        <translation>如果你不愿意使用GitHub，也可以在Transifex提交翻译</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="91"/>
@@ -53,7 +53,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>Or buy me a beer if you really feel like it:</source>
-        <translation>如果你真心喜欢本应用，可以给我买瓶啤酒</translation>
+        <translation>如果你的确喜欢本软件，不妨考虑给我买瓶啤酒:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="102"/>
@@ -69,7 +69,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="112"/>
         <source>Thanks to all users suggesting things and everyone helping me out!</source>
-        <translation>感谢所有用户的建议和每个帮助过我的人。</translation>
+        <translation>感谢所有用户的建议以及每个帮助过我的人！</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="117"/>
@@ -80,7 +80,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="121"/>
         <source>A big thank you to the translators:</source>
-        <translation>非常感谢各位译者</translation>
+        <translation>在此由衷感谢各位译者:</translation>
     </message>
 </context>
 <context>
@@ -103,17 +103,17 @@
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Enqueue Directory</source>
-        <translation>追加整个目录</translation>
+        <translation>追加目录中的文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Open Directory</source>
-        <translation>打开目录</translation>
+        <translation>打开目录中的文件</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="187"/>
         <source>Progress will not be saved for reopening enqueued files.</source>
-        <translation>对于重新开启的追加文件，播放进度不会被保存</translation>
+        <translation>如果重新开始追加文件，则先前的播放进度不会被保存</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OpenFileDialog.qml" line="260"/>
@@ -128,7 +128,7 @@
         <source>click file to open it or accept dialog to open %1 file(s)</source>
         <comment>only shown when there are files</comment>
         <translation>
-            <numerusform>批量点击文件以打开或接受对话框以批量添加 %1 文件</numerusform>
+            <numerusform>点击文件以打开或接受对话框以批量添加 %1 个文件</numerusform>
         </translation>
     </message>
 </context>
@@ -139,7 +139,7 @@
         <source>%1 Files</source>
         <comment>header</comment>
         <translation>
-            <numerusform>%1 文件</numerusform>
+            <numerusform>%1 个文件</numerusform>
         </translation>
     </message>
     <message>
@@ -161,7 +161,7 @@
     <message>
         <location filename="../qml/pages/OpenFileScanInfosDialog.qml" line="395"/>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation>出错</translation>
     </message>
 </context>
 <context>
@@ -199,28 +199,28 @@
         <location filename="../qml/pages/OptionsPage.qml" line="113"/>
         <location filename="../qml/pages/OptionsPage.qml" line="131"/>
         <source>Short Skip duration</source>
-        <translation>短跳音长</translation>
+        <translation>较短的快进操作时长</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="120"/>
         <location filename="../qml/pages/OptionsPage.qml" line="132"/>
         <source>Long Skip duration</source>
-        <translation>长跳音长</translation>
+        <translation>较长的快进操作时长</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="127"/>
         <source>External Commands skip</source>
-        <translation>外部命令跳跃</translation>
+        <translation>外部跳过指令</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="128"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation>外部命令是来自锁屏或通过耳机或蓝牙的操作。</translation>
+        <translation>外部指令是来自锁屏或通过耳机或蓝牙的操作。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="130"/>
         <source>to track beginning</source>
-        <translation>播放歌曲</translation>
+        <translation>返回音乐开头</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="136"/>
@@ -231,28 +231,28 @@
         <location filename="../qml/pages/OptionsPage.qml" line="136"/>
         <location filename="../qml/pages/OptionsPage.qml" line="308"/>
         <source>Skip forward</source>
-        <translation>向前跳跃</translation>
+        <translation>快进</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="136"/>
         <location filename="../qml/pages/OptionsPage.qml" line="308"/>
         <source>Skip backward</source>
-        <translation>向后跳跃</translation>
+        <translation>快退</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="136"/>
         <source>Skip backward and forward</source>
-        <translation>向前或向后跳跃</translation>
+        <translation>快进与快退</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="138"/>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation>软件封面操作也是外部命令。</translation>
+        <translation>软件封面操作也是外部指令</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="140"/>
         <source>Additional App-Cover Actions</source>
-        <translation>附加应用封面操作</translation>
+        <translation>另一项应用封面操作</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="146"/>
@@ -263,22 +263,22 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="151"/>
         <source>Search best cover image for each file</source>
-        <translation>为每个文件搜索最佳封面</translation>
+        <translation>为每个文件搜寻最佳封面</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="160"/>
         <source>Sort directory naturally while scanning</source>
-        <translation>当扫描的时候自动分类目录</translation>
+        <translation>扫描时自动排序目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="161"/>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>如果要打开没有前导零的编号文件, 请激活此选项。只有在按名称排序时才有效。</translation>
+        <translation>当你有文件以非零开头的数字编号时启用此选项。仅当按名称排序时生效。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>在滚轮菜单中显示&quot;追加到播放列表&quot; </translation>
+        <translation>在滚轮菜单显示&quot;追加到播放列表&quot; 选项</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="180"/>
@@ -315,7 +315,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="234"/>
         <source>Display playlist progress</source>
-        <translation>显示播放列表进程</translation>
+        <translation>显示播放列表进度</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="244"/>
@@ -325,12 +325,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="255"/>
         <source>Cassette shows progress of</source>
-        <translation>放音机展示进度</translation>
+        <translation>在磁带动画展示播放进度</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="256"/>
         <source>track</source>
-        <translation>歌曲</translation>
+        <translation>音乐</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="256"/>
@@ -341,7 +341,7 @@
         <location filename="../qml/pages/OptionsPage.qml" line="261"/>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation>杂项操作</translation>
+        <translation>其它选项</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="265"/>
@@ -356,7 +356,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="305"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>当耳机仅有一个按钮时，你可以选择按压“接听/挂断”键时想要执行的操作</translation>
+        <translation>你可以选择点击“接听/挂断”键时想要执行的操作。接听键往往是耳机上的唯一按键</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="308"/>
@@ -371,12 +371,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="312"/>
         <source>Button Press:</source>
-        <translation>按键按压</translation>
+        <translation>按一次按键:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="319"/>
         <source>Long press:</source>
-        <translation>长按</translation>
+        <translation>长按按键:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="325"/>
@@ -396,17 +396,17 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="338"/>
         <source>Outputs a lot of things in the Background, can get a bit slower. View output by opening Talefish via Terminal.</source>
-        <translation>在后台输出一些东西会有一些慢。通过Terminal打开 Talefish以查看输出。</translation>
+        <translation>在后台输出大量日志，这会稍稍降低运行速度。在Terminal中打开Talefish以查看输出。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="349"/>
         <source>Keep directory progress</source>
-        <translation>保存目录进度</translation>
+        <translation>目录进度保留时间</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="350"/>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <translation>为了防止旧的缓存数据甚至已删除的目录随着时间推移不断堆积。Talefish会在应用启动之时检查旧的项。这不会影响现在加载的目录。</translation>
+        <translation>为了防止旧的缓存数据甚至已删除的目录随着时间推移不断累积，Talefish会在应用启动之时检查旧项目。这并不会影响当前加载的目录。</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OptionsPage.qml" line="352"/>
@@ -444,7 +444,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="53"/>
         <source>Install the slumber sleep timer application to enable these options</source>
-        <translation>安装Slumber 睡眠计时器应用以启用此操作。</translation>
+        <translation>安装Slumber 睡眠计时器应用以激活此选项。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="64"/>
@@ -459,7 +459,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="76"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
-        <translation>当打开Talefish 之后将Talefish 转到前台运行。</translation>
+        <translation>当开启slumber后将Talefish转到前台运行。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="86"/>
@@ -483,7 +483,7 @@
         <location filename="../qml/pages/PlayerPage.qml" line="96"/>
         <source>Options</source>
         <comment>pulley</comment>
-        <translation>操作</translation>
+        <translation>选项</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlayerPage.qml" line="103"/>
@@ -526,7 +526,7 @@
     <message>
         <location filename="../qml/pages/PlayerPage.qml" line="436"/>
         <source>Previous Track</source>
-        <translation>前一首歌</translation>
+        <translation>上一首歌</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlayerPage.qml" line="436"/>
@@ -554,7 +554,7 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="59"/>
         <source>%L1 file(s) opened</source>
         <translation>
-            <numerusform>已打开 %L1 文件</numerusform>
+            <numerusform>已打开 %L1 个文件</numerusform>
         </translation>
     </message>
     <message>
