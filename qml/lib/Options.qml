@@ -17,7 +17,7 @@ PersistentObject {
     property bool playNextFile: true //automatically play next file
 
     //milliseconds:
-    property int skipBackTrackThreshold: 2000//1s has to be played to just skip to track beginning
+    property int skipBackTrackThreshold: 2000//2s has to be played to just skip to track beginning
     property int skipDurationSmall: 10000 //10s
     property int skipDurationNormal: 60000 //1m
     property string externalCommandSkipDuration: '0' // '0': skip to track beginning, 'small'/'normal': use set durations
@@ -59,5 +59,8 @@ PersistentObject {
 
     // LEGACY   ))
 //    property bool appCoverAnimateEnabled: true
-
+    Component.onCompleted: {
+        // update old default:
+        skipBackTrackThreshold = 2000
+    }
 }
