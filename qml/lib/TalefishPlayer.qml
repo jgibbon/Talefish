@@ -133,7 +133,7 @@ Item {
             playback.stop();
             playback.play();
 
-            if(appstate.currentPosition)playback.seek(appstate.currentPosition);
+            if(appstate.currentPosition) playback.seek(appstate.currentPosition);
             app.log('seek:',appstate.currentPosition);
 
 
@@ -244,7 +244,7 @@ Item {
         function fixPlaybackRate(){
             fixingPlaybackRate = true
             if(seekable) {
-                seek(appstate.currentPosition); //also fixes playbackRate
+                seek(position - 0.01); //we have to seek to fix playback rate – but this keeps stuttering to a minimum
                 fixingPlaybackRate = false
             }
         }
