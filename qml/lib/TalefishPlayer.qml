@@ -319,7 +319,7 @@ onMetaDataChanged: {
         }
         onSeekableChanged: {
             app.log('player: seekable changed', seekable, appstate.currentPosition);
-            if(seekable && fixingPlaybackRate) {
+            if(seekable && fixingPlaybackRate && playbackRate !== 1.0) {
                 fixPlaybackRate();
             }
 
