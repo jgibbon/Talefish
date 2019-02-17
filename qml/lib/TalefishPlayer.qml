@@ -294,12 +294,6 @@ Item {
             }
         }
 
-        /*
-onMetaDataChanged: {
-//    console.log('metadata changed', JSON.stringify(metaData));
-
-}*/
-
         onDurationChanged: {
             app.log('player: duration changed. ', stateposition, ' - ', duration, 'recalc playlist length')
             if(duration > -1) {
@@ -319,8 +313,13 @@ onMetaDataChanged: {
         }
         onSeekableChanged: {
             app.log('player: seekable changed', seekable, appstate.currentPosition);
-            if(seekable && fixingPlaybackRate && playbackRate !== 1.0) {
-                fixPlaybackRate();
+            if(seekable) {
+                if(appstate.currentPosition > position) { // open previously played file, setting app state position…
+                    seek(appstate.currentPosition);
+                }
+                if(fixingPlaybackRate && playbackRate !== 1.0) {
+                    fixPlaybackRate();
+                }
             }
 
         }
