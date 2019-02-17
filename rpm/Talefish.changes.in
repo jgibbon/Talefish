@@ -11,6 +11,11 @@
 
 # * date Author's Name <author's email> version-release
 # - Summary of changes
+* Sun Feb 17 2019 velox 0.1-4
+ - bugfix: prevent stuttering on track change at 100% speed
+ - enhancement: skip to track beginning after 2s (instead of 1)
+ - translation updates: it, es, pl, zh, nl, nl_be
+
 
 * Mon Jan 14 2019 velox 0.1-3
 - new options: automatically start slumber sleep timer
