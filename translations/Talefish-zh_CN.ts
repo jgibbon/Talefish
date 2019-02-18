@@ -12,7 +12,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="51"/>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish是一个主要以QML编写基于目录的有声读物播放器。它在GPL2 许可证下，由John Gibbon在社区成员的协助下开发制作。</translation>
+        <translation>Talefish是一个主要以QML编写基于目录的有声读物播放器。它在GPL2 许可证下，由John Gibbon在社区成员的协助下开发制作</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="59"/>
@@ -23,17 +23,17 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
-        <translation>在 talk.maemo.org 讨论或点击“感谢（thanks）”</translation>
+        <translation>在 talk.maemo.org 讨论或点击感谢</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="69"/>
         <source>TMO thread</source>
-        <translation>TMO 帖子消息</translation>
+        <translation>TMO 帖子</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="74"/>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
-        <translation>欢迎在GitHub上给本应用打分(Star)、张贴请求(Pull requests)以及报告问题（注释:Star和pull request均为GitHub操作术语）</translation>
+        <translation>欢迎在GitHub上给本应用打分(Star)、表达诉求(Pull requests)以及报告问题</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="80"/>
@@ -43,7 +43,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="86"/>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>如果你不愿意使用GitHub，也可以在Transifex提交翻译</translation>
+        <translation>如果不愿使用GitHub，也可以在Transifex提交翻译</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="91"/>
@@ -103,12 +103,12 @@
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Enqueue Directory</source>
-        <translation>追加目录中的文件</translation>
+        <translation>追加整个目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="157"/>
         <source>Open Directory</source>
-        <translation>打开目录中的文件</translation>
+        <translation>打开整个目录</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenFileDialog.qml" line="187"/>
@@ -199,23 +199,23 @@
         <location filename="../qml/pages/OptionsPage.qml" line="113"/>
         <location filename="../qml/pages/OptionsPage.qml" line="131"/>
         <source>Short Skip duration</source>
-        <translation>较短的快进操作时长</translation>
+        <translation>短快进</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="120"/>
         <location filename="../qml/pages/OptionsPage.qml" line="132"/>
         <source>Long Skip duration</source>
-        <translation>较长的快进操作时长</translation>
+        <translation>长快进</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="127"/>
         <source>External Commands skip</source>
-        <translation>外部跳过指令</translation>
+        <translation>外部跳跃命令</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="128"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation>外部指令是来自锁屏或通过耳机或蓝牙的操作。</translation>
+        <translation>外部命令是来自锁屏或通过耳机或蓝牙的操作。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="130"/>
@@ -273,12 +273,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="161"/>
         <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>当你有文件以非零开头的数字编号时启用此选项。仅当按名称排序时生效。</translation>
+        <translation>当你有文件以非零开头的数字编号时启用此选项，仅当按名称排序时生效</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
-        <translation>在滚轮菜单显示&quot;追加到播放列表&quot; 选项</translation>
+        <translation>在滚轮菜单显示&quot;追加到播放列表&quot;</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="180"/>
@@ -299,7 +299,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="207"/>
         <source>App-Cover Animation</source>
-        <translation>应用封面动画</translation>
+        <translation>应用程序封面动画</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="218"/>
@@ -325,7 +325,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="255"/>
         <source>Cassette shows progress of</source>
-        <translation>在磁带动画展示播放进度</translation>
+        <translation>在磁带动画显示播放进度</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="256"/>
@@ -341,7 +341,7 @@
         <location filename="../qml/pages/OptionsPage.qml" line="261"/>
         <source>Miscellaneous</source>
         <comment>section header</comment>
-        <translation>其它选项</translation>
+        <translation>杂项</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="265"/>
@@ -371,7 +371,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="312"/>
         <source>Button Press:</source>
-        <translation>按一次按键:</translation>
+        <translation>按下按键:</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="319"/>
