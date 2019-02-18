@@ -14,14 +14,9 @@ Item {
     property bool isplaying: false
     property int initialSeekTo: 0
     property alias externalCommand: externalCommand
-    Timer {
-        id: initialSeekTimer
-        interval: 200
-        onTriggered: {
-            seekToInitial();
-        }
+     //if this is the first file, we want
+    property bool firstFile: true
 
-    }
     Item {
         id: externalCommand
         function play() { app.log('external command: play'); playback.play();}
@@ -69,16 +64,6 @@ Item {
             playback.pause()
         }
         function nothing(){} //for call button setting.
-    }
-
-    function seekToInitial(){
-        if(playback.stateposition > 0 && playback.position < playback.stateposition) {
-            playback.seek(playback.stateposition);
-        }
-        else{
-            initialSeekTo = 0;
-        }
-
     }
 
     function updatePlaybackStatus (){
@@ -257,6 +242,10 @@ Item {
                 playback.source = 'file://'+statefile;
                 if(isplaying) {
                     playback.play();
+                } else if(cachedStatePosition > 0 && playback.position < cachedStatePosition) {
+                    // trigger "seekable"
+                    playback.play();
+                    playback.pause();
                 }
 
 
