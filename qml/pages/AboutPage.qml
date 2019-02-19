@@ -126,7 +126,7 @@ Page {
                       + '<br />pljmn (nl + nl_BE)'
                       + '<br />leoka (hu)'
                       + '<br />sponka (sl)'
-                      + '<br />rui kon (zh_CN)'
+                      + '<br />rui kon + 天苯 (zh_CN)'
                 width: parent.width
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
 
