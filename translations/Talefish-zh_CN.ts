@@ -12,7 +12,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="51"/>
         <source>Talefish is a directory based audio book player written mainly in QML. It&apos;s licensed under GPL2 and made by John Gibbon with the help of the community.</source>
-        <translation>Talefish是一个主要以QML编写基于目录的有声读物播放器。它在GPL2 许可证下，由John Gibbon在社区成员的协助下开发制作</translation>
+        <translation>Talefish 是一个主要以QML编写基于目录的有声读物播放器。在GPL2 协议下，由 John Gibbon 在社区成员的协助下开发制作。</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="59"/>
@@ -43,7 +43,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="86"/>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
-        <translation>如果不愿使用GitHub，也可以在Transifex提交翻译</translation>
+        <translation>如果不愿使用GitHub，也可以在 Transifex 提交翻译</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="91"/>
@@ -64,7 +64,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="108"/>
         <source>Thanks!</source>
         <comment>header</comment>
-        <translation>感谢！</translation>
+        <translation>感谢!</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="112"/>
@@ -193,7 +193,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="96"/>
         <source>Play next Track automatically</source>
-        <translation>自动播放下一首歌</translation>
+        <translation>自动播放下一则</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="113"/>
@@ -215,12 +215,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="128"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <translation>外部命令是来自锁屏或通过耳机或蓝牙的操作。</translation>
+        <translation>外部命令是从锁屏或通过耳机/蓝牙执行的操作</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="130"/>
         <source>to track beginning</source>
-        <translation>返回音乐开头</translation>
+        <translation>返回音频开头</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="136"/>
@@ -247,12 +247,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="138"/>
         <source>App-Cover Actions are external Commands, as well.</source>
-        <translation>软件封面操作也是外部指令</translation>
+        <translation>应用程序封面操作也是外部指令</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="140"/>
         <source>Additional App-Cover Actions</source>
-        <translation>另一项应用封面操作</translation>
+        <translation>另一项应用程序封面操作</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="146"/>
@@ -320,17 +320,17 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="244"/>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
-        <translation>轻扫封面（或上方标题）以跳到下一首歌</translation>
+        <translation>轻扫封面（或上方标题）以跳到下一则音频</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="255"/>
         <source>Cassette shows progress of</source>
-        <translation>在磁带动画显示播放进度</translation>
+        <translation>在磁带动画展示播放进度</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="256"/>
         <source>track</source>
-        <translation>音乐</translation>
+        <translation>音频</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="256"/>
@@ -356,7 +356,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="305"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
-        <translation>你可以选择点击“接听/挂断”键时想要执行的操作。接听键往往是耳机上的唯一按键</translation>
+        <translation>你可以选择按压“接听/挂断”键时想要执行的操作，此时极可能耳机上仅有唯一按键。</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage.qml" line="308"/>
@@ -444,7 +444,7 @@
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="53"/>
         <source>Install the slumber sleep timer application to enable these options</source>
-        <translation>安装Slumber 睡眠计时器应用以激活此选项。</translation>
+        <translation>安装 Slumber 睡眠计时器应用以激活此选项</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="64"/>
@@ -454,12 +454,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="70"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
-        <translation>当启动Talefish时自动打开Slumber 睡眠计时器。</translation>
+        <translation>当启动 Talefish 时自动打开 Slumber 睡眠计时器</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="76"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
-        <translation>当开启slumber后将Talefish转到前台运行。</translation>
+        <translation>当开启 Slumber 后将 Talefish 转到前台运行</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="86"/>
@@ -469,12 +469,12 @@
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="117"/>
         <source>Launch slumber after</source>
-        <translation>何时之后启用Slumber</translation>
+        <translation>何时之后启用 Slumber</translation>
     </message>
     <message>
         <location filename="../qml/pages/OptionsPage_SleepTimer.qml" line="134"/>
         <source>Launch slumber before</source>
-        <translation>何时之前启用Slumber</translation>
+        <translation>何时之前启用 Slumber</translation>
     </message>
 </context>
 <context>
@@ -504,43 +504,43 @@
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="302"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="301"/>
         <source>[No Cover]</source>
         <translation>[无封面]</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="315"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="314"/>
         <source>Nothing to play</source>
-        <translation>没有可播放的音乐</translation>
+        <translation>没有可播放的音频</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="320"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="319"/>
         <source>Open Files by pulling down.</source>
         <translation>下拉以打开文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="436"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="435"/>
         <source>Rewind Track</source>
         <translation>倒带</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="436"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="435"/>
         <source>Previous Track</source>
-        <translation>上一首歌</translation>
+        <translation>上一则音频</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="436"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="435"/>
         <source>Next Track</source>
-        <translation>下一首歌</translation>
+        <translation>下一则音频</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="623"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="622"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation>%1 / %2 (文件 %L3 of %L4)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PlayerPage.qml" line="642"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="641"/>
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
         <translation>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="64"/>
         <source>%1 of %2 played (track %3)</source>
-        <translation>%1 of %2 已播放 (音乐 %3)</translation>
+        <translation>%1 of %2 已播放 (音频 %3)</translation>
     </message>
 </context>
 <context>

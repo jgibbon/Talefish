@@ -6,13 +6,14 @@ Item {
     property Playlist playlist: pl
     property alias player: tplayer.player
     property alias tplayer: tplayer
+    property bool doingInitialSeeking: false
 
     property alias lastDirectory: persistentObj.lastDirectory
     property alias currentPosition: persistentObj.currentPosition
     onCurrentPositionChanged: {
         if(currentPosition>0 && tplayer.isplaying && playlistActive && player.source != ''){
-            if(playlistActive.folder === playlist.get(0).folder)  {
-            var dirprogress = savedDirectoryProgress;
+            if(playlistActive.folder && playlistActive.folder === playlist.get(0).folder)  {
+            var dirprogress = savedDirectoryProgress || [];
 
             dirprogress[playlistActive.folder.replace('file://', '')] = {
                 percent: ((currentPosition + playlistActive.playlistOffset) * 100)/playlist.duration,

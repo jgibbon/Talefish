@@ -236,6 +236,7 @@ Item {
 
         onStatefileChanged: {
 
+            var cachedStatePosition = appstate.currentPosition;
             if(statefile !== '') {
                 app.log('player: statefile changed')
                 playback.stop()

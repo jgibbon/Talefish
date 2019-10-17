@@ -12,6 +12,7 @@ public:
     explicit Launcher(QObject *parent = 0);
     ~Launcher();
     Q_INVOKABLE QString launch(const QString &program);
+    Q_INVOKABLE QString fileAbsolutePath(const QString &path);
 
     Q_INVOKABLE bool fileExists(const QString &path);
     Q_INVOKABLE bool folderExists(const QString &path);

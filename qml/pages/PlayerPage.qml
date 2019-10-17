@@ -54,7 +54,7 @@ Page {
     property Audio playback: appstate.player
     property int directoryDuration : appstate.playlistDuration
     property bool isplaying: false //should i be playing? (regardless of actual playback state)
-    property bool isPlaying: playback.isPlaying
+    property bool isPlaying: playback.isPlaying && !appstate.doingInitialSeeking
 
     onDirectoryDurationChanged: {
         page.readDurations();
@@ -189,7 +189,6 @@ Page {
             }
 
         }
-
 
         ProgressCassette {
             id:cassette
@@ -598,7 +597,7 @@ Page {
 
                         Slider {
                             id: totalPosition
-                            property int previousDuration: appstate.playlistActive.playlistOffset
+                            property int previousDuration: appstate.playlistActive ? appstate.playlistActive.playlistOffset: 0
                             value: (appstate.playlistActive ? appstate.playlistActive.playlistOffset:0) + currentPositionSlider.value
                             visible: options.playerDisplayDirectoryProgress && appstate.playlistIndex > -1 && appstate.playlist.count > 1// options.directoryFiles && options.directoryFiles.length > 1// && appstate.playlistIndex !== -1
                             opacity: totalDurationNotification.isvisible ? 0 : 0.5

@@ -24,7 +24,6 @@ SOURCES += src/Talefish.cpp \
 
 OTHER_FILES += qml/Talefish.qml \
     qml/cover/CoverPage.qml \
-    rpm/Talefish.changes.in \
     rpm/Talefish.spec \
     rpm/Talefish.yaml \
     Talefish.desktop \
@@ -70,7 +69,8 @@ DISTFILES += \
     qml/pages/OptionsPage_SleepTimer.qml \
     qml/pages/OptionsPage.qml \
     qml/pages/PlayerPage.qml \
-    qml/pages/PlaylistPage.qml
+    qml/pages/PlaylistPage.qml \
+    rpm/Talefish.changes
 
 SUBDIRS += \
     lib/folderlistmodel/folderlistmodel.pro

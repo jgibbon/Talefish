@@ -86,7 +86,7 @@ Dialog {
                         return;
                     }
 
-                    //fallback one: try c++ taglib again (directory dialog accepted too fast)
+                    //fallback one: try c++ taglib again (directory dialog accepted too fast or opened via argument)
                     if(!taglibplugin.hadError) {
                         taglibplugin.i = i;
                         app.log('get via taglibplugin!', i, scanned);

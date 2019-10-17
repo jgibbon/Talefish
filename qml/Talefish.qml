@@ -1,12 +1,16 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Nemo.DBus 2.0
+
 import Launcher 1.0
+import TaglibPlugin 1.0
 import "pages"
 import "lib"
 
 ApplicationWindow
 {
     id: app
+    property string cwd:''
     initialPage: Component { PlayerPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
@@ -80,7 +84,109 @@ ApplicationWindow
     Launcher {
         id: launcher
     }
+    property var baseNameRegex: /(.*)\.[^.]+$/
+    property var findDotRegex: /\./g
+    property var arguments: Qt.application.arguments;
+    function openFilesOnStartup(cwdOverride){
+        var workingDir = cwdOverride || cwd;
+        var arguments = app.arguments;
+        var playlistJSON = [];
+        var enqueue = false;
+        if(arguments.length < 2){
+            console.log('no files to open.');
+            return;
+        }
+        console.log('ARGS', workingDir, arguments.length, JSON.stringify(arguments));
+        for(var i = 1; i<arguments.length;i++){
+                var arg = arguments[i];
+                if(arg === "-e") {
+                    enqueue = true;
+                    console.log('enqueue!', arguments.length - 1);
+                    continue;
+                }
+//
+                var abs = launcher.fileAbsolutePath(arg);
+                console.log('abs:',abs)
+                if(!launcher.fileExists((abs))){
+                    // try with cwd…
+                    // TODO make relative paths work for command line use if time permits
+                    console.log('file not found', abs, ' with cwd:', workingDir+'/'+arg);
+                    var cwdpath = launcher.fileAbsolutePath(workingDir+'/'+arg);
+                    if(launcher.fileExists(cwdpath)) {
+                        abs = cwdpath;
+                        console.log('but with cwd!', arg);
+                    } else {
+                        console.log('also not ', cwdpath);
+                        continue;
+                    }
+                } else {
+                }
 
+                var fileName = abs.slice(abs.lastIndexOf("/")+1);
+                var folder = abs.slice(0, abs.length-fileName.length-1);
+
+                var based = fileName.replace(baseNameRegex, '$1');
+                var basedFolder = folder.slice(folder.lastIndexOf("/")+1)
+
+                console.log('file found!', fileName)
+                  playlistJSON.push({
+                    name:based,
+                    path:abs,
+                    url:Qt.resolvedUrl(abs),
+                    baseName:based.replace(findDotRegex, ' '),
+                    suffix:'.sfx',
+                    size:0, //does that matter?
+                    //folder: folder+'',
+                    folderName: basedFolder.replace(findDotRegex, ' '),//folderName.replace(findDotRegex, ' '),
+                    title:'',
+                    playlistOffset:0,
+                    duration:0,
+                    artist:'',
+                    album:'',
+                    track:0,
+                    coverImage:''
+                })
+            }
+        console.log('tried: ', enqueue, JSON.stringify(playlistJSON));
+            if(playlistJSON.length > 0) {
+                var currentProgress = {percent:0, index:0, position:0};
+                if(playlistJSON.length === 1 && appstate.savedDirectoryProgress[playlistJSON[0].path]) {
+                    currentProgress = appstate.savedDirectoryProgress[playlistJSON[0].path];
+                }
+
+                var scanDialog = pageStack.push(Qt.resolvedUrl("./pages/OpenFileScanInfosDialog.qml", {enqueue: enqueue,
+                                                                   currentProgress: currentProgress}))
+                scanDialog.playlist.fromJSON(playlistJSON, enqueue);
+                scanDialog.scan();
+
+            }
+
+    }
+    onCwdChanged: { // cwd gets set from c++ anyway, so we don't need onCompleted
+        openFilesOnStartup();
+    }
+
+    DBusAdaptor {
+        id: dbus
+
+        service: 'de.gibbon.talefish'
+        iface: 'de.gibbon.talefish'
+        path: '/de/gibbon/talefish'
+
+        xml: '  <interface name="de.gibbon.talefish">\n' +
+             '    <method name="setArguments" >\n' +
+             '      <arg name="args" direction="in" type="a(s)"/>' +
+             '      <arg name="cwd" direction="in" type="s"/>' +
+             '    </method>' +
+             '  </interface>\n'
+
+        function setArguments(args, cwd) {
+            console.log("SET ARGUMENTS", typeof args, JSON.stringify(args), args.length, cwd)
+            app.arguments = (args);
+            openFilesOnStartup(cwd);
+            app.activate();
+        }
+    }
 }
 
 

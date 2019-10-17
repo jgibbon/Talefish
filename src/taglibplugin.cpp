@@ -17,6 +17,13 @@ void taglibplugin::calculateFileTagInfos(QString filePath) {
         setAlbum(tag->album().toCString(true));
         setYear(tag->year());
         setTrack(tag->track());
+    } else {
+        setTitle("");
+        setArtist("");
+        setAlbum("");
+        setYear(0);
+        setTrack(0);
+
     }
 
     if(!f.isNull() && f.audioProperties()) {

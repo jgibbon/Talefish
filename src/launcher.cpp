@@ -1,6 +1,7 @@
 #include "launcher.h"
 #include <QFile>
 #include <QDir>
+#include <QFileInfo>
 
 Launcher::Launcher(QObject *parent) :
     QObject(parent),
@@ -22,6 +23,12 @@ void Launcher::launchAndForget(const QString &program, const QStringList &argume
     QProcess *forgettable = new QProcess(this);
 
     forgettable->startDetached(program, arguments);
+}
+
+QString Launcher::fileAbsolutePath(const QString &path)
+{
+    QFileInfo fileinfo(path);
+    return fileinfo.absoluteFilePath();
 }
 
 bool Launcher::fileExists(const QString &path)

@@ -508,43 +508,43 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="302"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="301"/>
         <source>[No Cover]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="315"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="314"/>
         <source>Nothing to play</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="320"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="319"/>
         <source>Open Files by pulling down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="436"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="435"/>
         <source>Rewind Track</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="436"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="435"/>
         <source>Previous Track</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="436"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="435"/>
         <source>Next Track</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="623"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="622"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/PlayerPage.qml" line="642"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="641"/>
         <source>%1% played in Total</source>
         <comment>directory progress</comment>
         <translation type="unfinished">
