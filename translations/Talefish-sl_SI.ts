@@ -275,16 +275,6 @@
         <translation>Za vsako datoteko poišči najboljšo sliko naslovnice</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation>Med pregledovanjem vsebine omogoči &quot;naravno&quot; razvrščanje</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Omogočite če so imena datotek brez začetnih ničel. Velja le za primer, ko je sortirano po imenu.</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation>Omogoči &quot;Dodaj na seznam predvajanja&quot;</translation>

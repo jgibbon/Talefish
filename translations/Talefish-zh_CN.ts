@@ -266,16 +266,6 @@
         <translation>为每个文件搜寻最佳封面</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation>扫描时自动排序目录</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>当你有文件以非零开头的数字编号时启用此选项，仅当按名称排序时生效</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation>在滚轮菜单显示&quot;追加到播放列表&quot;</translation>

@@ -155,15 +155,15 @@ Page {
                 }
             }
 
-            TextSwitch {
-                id:resortNaturallySwitch
-                text: qsTr('Sort directory naturally while scanning')
-                description: qsTr('Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.')
-                checked: options.resortNaturally
-                onClicked: {
-                    options.resortNaturally = checked
-                }
-            }
+//            TextSwitch {
+//                id:resortNaturallySwitch
+//                text: qsTr('Sort directory naturally while scanning')
+//                description: qsTr('Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.')
+//                checked: options.resortNaturally
+//                onClicked: {
+//                    options.resortNaturally = checked
+//                }
+//            }
 
 
             TextSwitch {

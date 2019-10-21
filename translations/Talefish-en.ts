@@ -269,16 +269,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation type="unfinished"></translation>

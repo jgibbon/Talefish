@@ -269,16 +269,6 @@
         <translation>Buscar la mejor portada para cada archivo</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation>Ordenar directorio de forma natural durante el escaneo</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Activar si tienes archivos numerados sin ceros a la izquierda. Sólo se aplica cuando se ordena por nombre.</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation>Mostrar &quot;En cola&quot; en menú deslizante</translation>

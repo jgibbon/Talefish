@@ -269,16 +269,6 @@
         <translation>Sök efter bästa omslagsbilden för varje fil</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation>Sortera mappen naturligt vid inläsning</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Aktiveras om du har filer numrerade utan inledande nolla. Fungerar endast vid &quot;Sortera efter namn&quot;.</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation>Visa &quot;Köa&quot; i toppmenyn</translation>

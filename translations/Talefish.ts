@@ -246,14 +246,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sort directory naturally while scanning</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
         <translation type="unfinished"></translation>
     </message>

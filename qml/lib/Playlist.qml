@@ -29,40 +29,40 @@ ListModel {
         }
     }
 
-    function sortNaturally(){
-        var out = [], i = 0, aMatch, bMatch, a1, b1, rda, rdb, regexall=/(\d+)|(\D+)/g, regexnum=/\d+/;
-        while(i < playlist.count){
-            out.push(playlist.get(i));
-            i++;
-        }
-        out.sort(function(a, b){
-                    aMatch = String(a.name).toLowerCase().match(regexall);
-                    bMatch = String(b.name).toLowerCase().match(regexall);
-                    while(aMatch.length && bMatch.length){
-                        a1 = aMatch.shift();
-                        rda = regexnum.test(a1);
-                        b1 = bMatch.shift();
-                        rdb = regexnum.test(b1);
-                        if(rda || rdb){
-                            if(!rda) {
-                                return 1;
-                            }
-                            if(!rdb) {
-                                return -1;
-                            }
-                            if(a1 !== b1) {
-                                return a1 - b1;
-                            }
-                        }
-                        else if(a1 !== b1) {
-                            return a1 > b1 ? 1 : -1;
-                        }
-                    }
-                    return aMatch.length - bMatch.length;
-                });
+//    function sortNaturally(){
+//        var out = [], i = 0, aMatch, bMatch, a1, b1, rda, rdb, regexall=/(\d+)|(\D+)/g, regexnum=/\d+/;
+//        while(i < playlist.count){
+//            out.push(playlist.get(i));
+//            i++;
+//        }
+//        out.sort(function(a, b){
+//                    aMatch = String(a.name).toLowerCase().match(regexall);
+//                    bMatch = String(b.name).toLowerCase().match(regexall);
+//                    while(aMatch.length && bMatch.length){
+//                        a1 = aMatch.shift();
+//                        rda = regexnum.test(a1);
+//                        b1 = bMatch.shift();
+//                        rdb = regexnum.test(b1);
+//                        if(rda || rdb){
+//                            if(!rda) {
+//                                return 1;
+//                            }
+//                            if(!rdb) {
+//                                return -1;
+//                            }
+//                            if(a1 !== b1) {
+//                                return a1 - b1;
+//                            }
+//                        }
+//                        else if(a1 !== b1) {
+//                            return a1 > b1 ? 1 : -1;
+//                        }
+//                    }
+//                    return aMatch.length - bMatch.length;
+//                });
 
-        fromJSON(JSON.stringify(out));
-    }
+//        fromJSON(JSON.stringify(out));
+//    }
     function toJSON(){
         var out = [], i = 0;
         while(i < playlist.count){

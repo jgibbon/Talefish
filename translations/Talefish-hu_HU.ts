@@ -266,16 +266,6 @@
         <translation>Keresse meg minden fájlnak a legjobb borítóképet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation>Mappák természetes rendezése kereséskor</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Engedélyezd, ha vezető nulla nélkül kezdődő számozott fájljaid vannak. Csak név alapján rendezéskor alkalmazandó.</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation>Sorbaállítás pulley megjelenítése</translation>

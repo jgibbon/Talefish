@@ -272,16 +272,6 @@
         <translation>Поиск наилучшей обложки для каждого файла</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation>Непосредственная сортировка директорий во время сканирования</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Включение требуется, если номера ваших файлов не начинаются с нуля. Применяется только при сортировке по названию.</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation>Показывать &quot;Очередь&quot; в вытягиваемом меню</translation>

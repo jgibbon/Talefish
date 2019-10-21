@@ -43,6 +43,7 @@
 #include <qdiriterator.h>
 
 #include <QDebug>
+#include <QCollator>
 
 
 FileInfoThread::FileInfoThread(QObject *parent)
@@ -230,7 +231,7 @@ void FileInfoThread::getFileInfos(const QString &path)
         filter = filter | QDir::NoDotDot;
     if (showOnlyReadable)
         filter = filter | QDir::Readable;
-    if (showDirsFirst)
+    if (showDirsFirst && !sortFlags.testFlag(QDir::Name))
         sortFlags = sortFlags | QDir::DirsFirst;
 
     QDir currentDir(path, QString(), sortFlags);
@@ -238,7 +239,62 @@ void FileInfoThread::getFileInfos(const QString &path)
     QList<FileProperty> filePropertyList;
 
     fileInfoList = currentDir.entryInfoList(nameFilters, filter, sortFlags);
+    if(sortFlags.testFlag(QDir::Name)) { // hack to allow natural sorting
+        QCollator c;
+        c.setNumericMode(true);
+        bool isReversed = sortFlags.testFlag(QDir::Reversed);
+        if(showDirsFirst) {
+            if(!isReversed) {
+                std::sort(fileInfoList.begin(), fileInfoList.end(), [&c](QFileInfo lhs, QFileInfo rhs) {
+                    if(lhs.isDir() && !rhs.isDir()) {
+                        return true;
+                    } else if(!lhs.isDir() && rhs.isDir()) {
+                        return false;
+                    }
 
+                    if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                        return true;
+                    }
+                    return false;
+                });
+            } else {
+                std::sort(fileInfoList.begin(), fileInfoList.end(), [&c](QFileInfo lhs, QFileInfo rhs) {
+                    if(lhs.isDir() && !rhs.isDir()) {
+                        return true;
+                    } else if(!lhs.isDir() && rhs.isDir()) {
+                        return false;
+                    }
+
+                    if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                        return false;
+                    }
+                    return true;
+                });
+            }
+
+
+        } else {
+            if(!isReversed) {
+
+                std::sort(fileInfoList.begin(), fileInfoList.end(), [&c](QFileInfo lhs, QFileInfo rhs) {
+                    if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                        return true;
+                    }
+                    return false;
+                });
+
+            } else {
+
+                std::sort(fileInfoList.begin(), fileInfoList.end(), [&c](QFileInfo lhs, QFileInfo rhs) {
+                    if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                        return false;
+                    }
+                    return true;
+                });
+            }
+        }
+
+    }
     if (!fileInfoList.isEmpty()) {
         foreach (QFileInfo info, fileInfoList) {
             //qDebug() << "Adding file : " << info.fileName() << "to list ";

@@ -106,9 +106,9 @@ Dialog {
 //        playlist gets garbage collected, so we need to populate the data:
         var playlist = selectedFileModel.count ? selectedFileModel : useableFilesModel
 
-        if(sortByNameAsc && options.resortNaturally) {
-            playlist.sortNaturally();
-        }
+//        if(sortByNameAsc && options.resortNaturally) {
+//            playlist.sortNaturally();
+//        }
         acceptDestinationInstance.playlist.fromJSON(playlist.toJSON())
         //these get killed, as well
         acceptDestinationInstance.defaultCoverUrl = coverUrl;
@@ -347,6 +347,7 @@ Dialog {
             FolderListModel {
                 id: folderModel
                 showOnlyReadable: true
+                showDirsFirst: true
                 nameFilters: getFileSuffixesCaseInsensitive(["mp3", "m4a", "m4b", "flac", "ogg", "wav", "opus", "aac", "mka"])
                 property int useableFiles: 0
                 property int lastCount: 0

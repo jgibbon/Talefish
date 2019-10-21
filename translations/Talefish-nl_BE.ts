@@ -269,16 +269,6 @@
         <translation>Beste albumhoes zoeken voor ieder bestand</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation>Map natuurlijk sorteren bij scannen</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Schakelt dit in als ge uw bestanden hebt genummerd zonder nullen vooraan. Enkel toepasbaar bij sorteren op naam.</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation>Optie ‘in wachtrij plaatsen’ weergeven</translation>

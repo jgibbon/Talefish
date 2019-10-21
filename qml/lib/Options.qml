@@ -27,7 +27,7 @@ PersistentObject {
     //open files
     property bool scanCoverForFilenames: true
     property bool showEnqueuePulley: false
-    property bool resortNaturally: false
+//    property bool resortNaturally: false
 
     //playback page options
 

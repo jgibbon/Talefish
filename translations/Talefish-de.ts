@@ -269,16 +269,6 @@
         <translation>Suche das beste Bild im Ordner für jede Datei</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="160"/>
-        <source>Sort directory naturally while scanning</source>
-        <translation>Sortiere natürlich beim Scannen</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="161"/>
-        <source>Enable if you have files numbered without leading zeroes. Only applicable when sorted by name.</source>
-        <translation>Aktiviere dies, wenn du nummerierte Dateien ohne führende Nullen öffnen willst. Funktioniert nur, wenn nach Name sortiert wird.</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/OptionsPage.qml" line="171"/>
         <source>Show &quot;Enqueue&quot; Pulley</source>
         <translation>Zeige &quot;Einreihen&quot;-Menüpunkt</translation>
