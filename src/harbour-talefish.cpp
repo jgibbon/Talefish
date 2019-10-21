@@ -1,7 +1,7 @@
 //#ifdef QT_QML_DEBUG
 //#include <QtQuick>
 //#endif
-
+#include <QDebug>
 #include <QtQuick>
 
 #include <QQmlEngine>
@@ -26,6 +26,10 @@ int main(int argc, char *argv[])
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
 
+    //workaround to access pre-harbour-rename settings
+    QCoreApplication::setOrganizationName("Talefish");
+    QCoreApplication::setOrganizationDomain("Talefish");
+    QCoreApplication::setApplicationName("Talefish");
     // if there is a previous instance: do not run at all, instead pass arguments via dbus:
     if(QDBusConnection::sessionBus().interface()->isServiceRegistered(TALEFISH_SERVICE))
     {

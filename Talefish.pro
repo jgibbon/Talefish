@@ -10,23 +10,21 @@
 #   - translation filenames have to be changed 
 
 # The name of your application
-TARGET = Talefish
+TARGET = harbour-talefish
 
 CONFIG += sailfishapp
 
-SOURCES += src/Talefish.cpp \
+SOURCES += \
     lib/folderlistmodel/qquickfolderlistmodel.cpp \
     lib/folderlistmodel/plugin.cpp \
     lib/folderlistmodel/fileinfothread.cpp \
+    src/harbour-talefish.cpp \
     src/launcher.cpp \
     src/taglibplugin.cpp \
     src/taglibimageprovider.cpp
 
-OTHER_FILES += qml/Talefish.qml \
+OTHER_FILES += \
     qml/cover/CoverPage.qml \
-    rpm/Talefish.spec \
-    rpm/Talefish.yaml \
-    Talefish.desktop \
     translations/*
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256
@@ -44,7 +42,9 @@ TRANSLATIONS += \
     translations/*.ts
 
 DISTFILES += \
+    harbour-talefish.desktop \
     qml/assets/wheel_1.png \
+    qml/harbour-talefish.qml \
     qml/icon-l-ffwd.png \
     qml/icon-l-frwd.png \
     qml/icon-l-fwd.png \
@@ -70,7 +70,9 @@ DISTFILES += \
     qml/pages/OptionsPage.qml \
     qml/pages/PlayerPage.qml \
     qml/pages/PlaylistPage.qml \
-    rpm/Talefish.changes
+    rpm/harbour-talefish.changes \
+    rpm/harbour-talefish.spec \
+    rpm/harbour-talefish.yaml
 
 SUBDIRS += \
     lib/folderlistmodel/folderlistmodel.pro
