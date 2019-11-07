@@ -1,3 +1,23 @@
+/*
+
+Talefish Audiobook Player
+Copyright (C) 2016-2019  John Gibbon
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+*/
 #ifndef MEDIAINFO_H
 #define MEDIAINFO_H
 
@@ -6,9 +26,12 @@
 #include <QtConcurrent/QtConcurrent>
 #include <QImage>
 
-#include <taglib/fileref.h>
-#include <taglib/tag.h>
-#include <taglib/tpropertymap.h>
+//#include <taglib/fileref.h>
+//#include <taglib/tag.h>
+//#include <taglib/tpropertymap.h>
+#include "fileref.h"
+#include "tag.h"
+#include "tpropertymap.h"
 //#include <taglib/id3v2tag.h>
 //#include <taglib/mpegfile.h>
 //#include <taglib/attachedpictureframe.h>
@@ -123,7 +146,8 @@ public:
 //    }
 
 signals:
-    void tagInfos(QString title, QString artist, QString album, qint64 year, qint64 track, qint64 duration);
+    void tagInfos(QString title, QString artist, QString album, qint64 year, qint64 track, qint64 duration, qint64 queryIndex, QString filePath);
+    void incompleteDuration(QString title, QString artist, QString album, qint64 year, qint64 track, qint64 duration, qint64 queryIndex, QString filePath, bool setActive);
 
     void pathChanged();
     void titleChanged();
@@ -136,14 +160,15 @@ signals:
 //    void coverChanged();
 
 public slots:
+    void getFileTagInfos(QString filePath, qint64 queryIndex, bool setActive);
     void getFileTagInfos(QString filePath);
 //    void getFileCoverArt(QString filePath);
-
+private slots:
+    void fixIncompleteDuration(QString title, QString artist, QString album, qint64 year, qint64 track, qint64 duration, qint64 queryIndex, QString filePath, bool setActive);
 private:
     QFutureWatcher<void> mFutureWatcher;
-    void calculateFileTagInfos(QString filePath);
+    void calculateFileTagInfos(QString filePath, qint64 queryIndex, bool setActive);
 //    void extractFileCoverArt(QString filePath);
-
     bool mLoaded;
     QString mFilePath;
     QString mTagTitle;

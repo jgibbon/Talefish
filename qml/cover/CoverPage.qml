@@ -1,4 +1,24 @@
-import QtQuick 2.0
+/*
+
+Talefish Audiobook Player
+Copyright (C) 2016-2019  John Gibbon
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+*/
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 
 import '../lib'
@@ -7,12 +27,9 @@ CoverBackground {
     id:mainCoverBackground
     property bool active: status === Cover.Active
 
-    property bool isPlaying: appstate.player.isPlaying
-    property bool cassetteAnimationRunning: options.useAnimations && options.useCoverAnimations && active && isPlaying
-
 
     property string coverActionCommand:''
-    property var externalCommand: appstate.tplayer.externalCommand
+    property var playerCommands: app.playlist.commands
 
     Item {
         id: paddingcontainer
@@ -28,18 +45,7 @@ CoverBackground {
 
         Image {
             id: coverImage
-            source: {
-                if(appstate.playlistIndex > -1 && appstate.playlistActive) {
-                    if(appstate.playlistActive.coverImage !== '') {
-                        return appstate.playlistActive.coverImage
-                    } else {
-                        return 'image://taglib-cover-art/'+appstate.playlistActive.path
-                    }
-
-                } else {
-                    return '';
-                }
-            }
+            source: 'image://taglib-cover-art/'+app.playlist.currentMetaData.path
 
             anchors.fill: parent
 
@@ -58,18 +64,30 @@ CoverBackground {
         height: width
         x: (-width) / 2
         y: parent.height - (height / 2)
+        maximumValue: app.options.cassetteUseDirectoryDurationProgress
+           ? app.playlist.totalDuration
+           : app.audio.duration
+        value: app.options.cassetteUseDirectoryDurationProgress ? app.playlist.totalPosition: app.audio.displayPosition
+        running: app.options.useAnimations && app.options.usePlayerAnimations && app.audio.isPlaying
 
-        //                z: -2
-
-        maximumValue: options.cassetteUseDirectoryDurationProgress ? appstate.playlist.duration: (appstate.playlistIndex > -1 ? appstate.playlist.get(appstate.playlistIndex).duration: 0) //appstate.playlistActive.duration
-        value: (appstate.currentPosition || (maximumValue - minimumValue) * 0.01 ) + (options.cassetteUseDirectoryDurationProgress ? appstate.playlist.get(appstate.playlistIndex).playlistOffset :0)
-        running: cassetteAnimationRunning
         rotationOffset: -45
     }
 
+    InteractionHintLabel {
+        anchors.bottom: parent.bottom
+        opacity: (app.playlist.metadata.count > 0) ? 0.0 : 1.0
+        Behavior on opacity { FadeAnimation {} }
+        InfoLabel {
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            text:qsTr('Nothing to play')
+            visible: app.playlist.metadata.count === 0
+        }
+    }
     Column {
         id: centeredItem
 
+        opacity: app.playlist.metadata.count > 0 ? 1 : 0
         anchors.centerIn: parent
 
         anchors.bottomMargin: coverCassette.tapeWidth / 3
@@ -80,7 +98,7 @@ CoverBackground {
             width: parent.width
             id: fileNameLabel
 
-            text: appstate.playlistActive ? appstate.playlistActive.baseName : ''
+            text: (app.playlist.currentMetaData.title || app.audio.source) + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -91,7 +109,7 @@ CoverBackground {
         Label {
             width: parent.width
             id: progressLabel
-            text: formatMSeconds( appstate.currentPosition)+" / "+formatMSeconds (appstate.playlistActive ? appstate.playlistActive.duration : 0)
+            text: app.js.formatMSeconds( app.audio.position )+" / "+app.js.formatMSeconds (app.audio.displayPosition)
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -102,7 +120,9 @@ CoverBackground {
         Label {
             width: parent.width
             id: folderNameLabel3
-            text: appstate.playlistActive && appstate.playlistActive.folderName || ''
+            property string displayPath:(app.playlist.currentMetaData.album || app.audio.source)
+            visible: displayPath !== '' //&& options.playerDisplayDirectoryName
+            text: displayPath
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -125,13 +145,13 @@ CoverBackground {
         CoverAction {
             iconSource: "image://theme/icon-cover-previous-song"
 
-            onTriggered: externalCommand.prev()
+            onTriggered: playerCommands.prev()
         }
 
         CoverAction {
-            iconSource:isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+            iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
-            onTriggered: externalCommand.playPause()
+            onTriggered: playerCommands.playPause()
         }
     }
 
@@ -140,15 +160,15 @@ CoverBackground {
         enabled: options.secondaryCoverAction === 'next'
 
         CoverAction {
-            iconSource:isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+            iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
-            onTriggered: externalCommand.playPause()
+            onTriggered: playerCommands.playPause()
         }
 
         CoverAction {
             iconSource: "image://theme/icon-cover-next-song"
 
-            onTriggered: externalCommand.next()
+            onTriggered: playerCommands.next()
         }
     }
 
@@ -159,19 +179,19 @@ CoverBackground {
         CoverAction {
             iconSource: "image://theme/icon-cover-previous-song"
 
-            onTriggered: externalCommand.prev()
+            onTriggered: playerCommands.prev()
         }
 
         CoverAction {
-            iconSource:isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+            iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
-            onTriggered: externalCommand.playPause()
+            onTriggered: playerCommands.playPause()
         }
 
         CoverAction {
             iconSource: "image://theme/icon-cover-next-song"
 
-            onTriggered: externalCommand.next()
+            onTriggered: playerCommands.next()
         }
     }
 
@@ -180,9 +200,9 @@ CoverBackground {
         enabled: options.secondaryCoverAction === ''
 
         CoverAction {
-            iconSource:isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+            iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
-            onTriggered: externalCommand.playPause()
+            onTriggered: playerCommands.playPause()
         }
     }
 

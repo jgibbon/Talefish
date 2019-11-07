@@ -26,8 +26,18 @@ function initialize(sttngs, ls) {
                 );
     console.log('DB initialized', settings[3]);
 }
+function reset() {
+    var db = getDatabase();
+    db.transaction(
+                function(tx) {
+                    // Create the settings table if it doesn't already exist
+                    // If the table exists, this is skipped
+                    tx.executeSql('DROP TABLE IF EXISTS settings');
+                }
+                );
+}
 
-function save(obj) {
+function save(obj, keys) {
     var db = getDatabase();
     db.transaction(
                 function (tx) {
@@ -35,8 +45,8 @@ function save(obj) {
                     tx.executeSql('DELETE FROM settings WHERE settingsName=?;', [obj.objectName]);
 
                     // Save all fields
-                    var skippedAttributes = ['objectName', 'doPersist', 'storeSettings', '_loaded'];
-                    for (var fieldName in obj) {
+                    var skippedAttributes = ['objectName', 'doPersist', 'storeSettings', '_loaded', 'reset'];
+                    for (var fieldName in (keys || obj)) {
                         var value = JSON.stringify(obj[fieldName]);
                         //values starting with 'on' should be blatantly ignored.
                         if (typeof value === 'undefined' || skippedAttributes.indexOf(fieldName) > -1 || fieldName.lastIndexOf('on', 0) === 0) {

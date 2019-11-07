@@ -39,6 +39,10 @@
 **
 ****************************************************************************/
 
+/*
+    MODIFIED BY JGIBBON Sat Nov 9 2019 to allow for natural sorting
+*/
+
 #include "fileinfothread_p.h"
 #include <qdiriterator.h>
 
@@ -239,7 +243,7 @@ void FileInfoThread::getFileInfos(const QString &path)
     QList<FileProperty> filePropertyList;
 
     fileInfoList = currentDir.entryInfoList(nameFilters, filter, sortFlags);
-    if(sortFlags.testFlag(QDir::Name)) { // hack to allow natural sorting
+    if(sortFlags.testFlag(QDir::Name)) { // hack to allow natural sorting;
         QCollator c;
         c.setNumericMode(true);
         bool isReversed = sortFlags.testFlag(QDir::Reversed);

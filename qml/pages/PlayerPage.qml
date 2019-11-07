@@ -1,89 +1,38 @@
-
-
 /*
-TODO:
-    - make options page awesome
-        - use indexer and directorychooserdialog
-        - move 'skip to file' to FirstPage pulley menu
-        - sub page for timer
-            - disable screen blank option
-        - sub page for playback
-            - pause between tracks
-            - playbackspeed
-            - skip ranges
-            - show total progress
-        - clear all settings
-    - cover image
-        - fallback?
-    - app cover
-        - durations, positions, basenames, cover image
 
+Talefish Audiobook Player
+Copyright (C) 2016-2019  John Gibbon
 
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 import QtMultimedia 5.0
 import QtGraphicalEffects 1.0
+import QtFeedback 5.0
 //import QtSystemInfo 5.0
 
 
 import '../lib'
+import '../components'
 
 Page {
     id: page
 
     allowedOrientations: Orientation.All
-
-    function formatMSeconds (duration, debug) {
-        var dur = duration / 1000,
-                hours =  Math.floor(dur /3600),
-                minutes =  Math.floor((dur - hours * 3600) / 60),
-                seconds = Math.floor(dur - (hours * 3600) - minutes * 60);
-        if(debug) {
-            console.log('formatting duration', duration);
-            console.log(dur);
-            console.log(hours + 'h');
-            console.log(minutes, ' -> ', ("0"+minutes).slice(-2));
-            console.log(seconds, ' -> ', ("0"+seconds).slice(-2));
-        }
-        return (hours?(hours+':'):'')+ ("0"+minutes).slice(-2) + ':' + ("0"+seconds).slice(-2);
-        //return;
-    }
-
-    property Audio playback: appstate.player
-    property int directoryDuration : appstate.playlistDuration
-    property bool isplaying: false //should i be playing? (regardless of actual playback state)
-    property bool isPlaying: playback.isPlaying && !appstate.doingInitialSeeking
-
-    onDirectoryDurationChanged: {
-        page.readDurations();
-    }
-
-
-    function readDurations (){
-        //        return;
-        var l = appstate.playlist.count,
-                i = 0,
-                currentIndex = -1,
-                previousDuration = 0,
-                totalDuration = 0;
-        log('readdurations', l);
-        while(i<l){
-            if('file://'+appstate.playlist.get(i).path === playback.source.toString()){
-                currentIndex = i;
-            }
-            if(currentIndex === -1) {
-                previousDuration = previousDuration + appstate.playlist.get(i).duration;
-            }
-            totalDuration = totalDuration + appstate.playlist.get(i).duration;
-
-            i++;
-        }
-
-        totalPosition.previousDuration = previousDuration;
-    }
-
 
 
     SilicaFlickable {
@@ -91,187 +40,119 @@ Page {
         id: mainFlickable
         PullDownMenu {
             id: pulleyTop
-
             MenuItem {
+                //: MenuItem: Go to Options Page
                 text: qsTr('Options', 'pulley')
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl("OptionsPage.qml"), {options:options,appstate:appstate, firstPage:page, log: log});
+                    pageStack.push(Qt.resolvedUrl("OptionsPage.qml"), {});
                 }
             }
             MenuItem {
-                visible: appstate.playlist.count > 0
+                visible: app.playlist.metadata.count > 0
+                //: MenuItem: Go to Playlist Page
                 text: qsTr('Playlist', 'pulley')
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl("PlaylistPage.qml"), {options:options,appstate:appstate, firstPage:page, log: log});
+                    pageStack.push(Qt.resolvedUrl("PlaylistPage.qml"), {});
                 }
             }
 
             MenuItem {
-                text: qsTr("Enqueue", 'pulley')
-                visible: appstate.playlist.count > 0 && options.showEnqueuePulley
-                onClicked:
-                    pageStack.push(Qt.resolvedUrl("OpenFileDialog.qml"), {enqueue: true});
-            }
-            MenuItem {
+                //: MenuItem: Go to "Open Files" (Places) Page
                 text: qsTr("Open", 'pulley')
                 onClicked:
-                    pageStack.push(Qt.resolvedUrl("OpenFileDialog.qml"), {});
-            }
-
-        }
-        Item {
-
-            width: parent.width // + parent.maxDrag*2
-            anchors.top: pulleyTop.top
-            anchors.bottom: cassette.verticalCenter // mainPageHeader.bottom
-            z:-3
-            opacity: 0.15
-            Rectangle{
-                id: cassetteBgRect
-                anchors.fill: parent
-                color: Qt.rgba(Theme.highlightBackgroundColor.r, Theme.highlightBackgroundColor.g, Theme.highlightBackgroundColor.b, coverMouseArea.sideTriggerActive ? 1 : 1)
-            }
-
-            OpacityRampEffect {
-                sourceItem: cassetteBgRect
-                offset: 0.5//-0.5 * coverMouseArea.dragFactor
-                slope: 2 //coverMouseArea.sideTriggerActive ? 1.0 : 1.0
-
-                direction: OpacityRamp.TopToBottom
+                    pageStack.push(Qt.resolvedUrl("OpenPage.qml"), {});
             }
 
         }
 
         PageHeader {
-            width: parent.width - ( page.isLandscape ? Theme.itemSizeLarge + Theme.paddingMedium : 0)
-
             id: mainPageHeader
-            Label {
-                id: headerText
-                // Don't allow the label to extend over the page stack indicator
-                width: Math.min(implicitWidth, parent.width - Theme.pageStackIndicatorWidth * _depth - 2*Theme.paddingLarge)
-                truncationMode: TruncationMode.Fade
-                color: Theme.highlightColor
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    right: parent.right
-                    rightMargin: Theme.paddingLarge
-                }
-                font {
-                    pixelSize: Theme.fontSizeLarge
-                    family: Theme.fontFamilyHeading
+            //align right in portrait or when the page is high enough
+            width: parent.width - ( page.isLandscape && ((page.height - iconButtons.height)/2 < mainPageHeader.height - Theme.paddingMedium) ? controlPanel.width + Theme.paddingLarge : 0)
+            title: 'Talefish'
+        }
+        PageHeader { // Overlay white PageHeader where it's hidden by cassette progress
+            id: mainPageHeaderMasked
+            anchors.fill: mainPageHeader
+            title: mainPageHeader.title
+            visible: false
+
+
+            Component.onCompleted: { // titleColor was added in SFOS 3.1, everyone else get's a custom shader below
+                if('titleColor' in mainPageHeaderMasked) {
+                    titleColor = 'white'
                 }
             }
         }
 
         Item {
-            id: backgroundCoverContainer
-            anchors.fill: coverImageContainer
-            z:-3
-            Image {
-                id: coverDisplayImage
-                source: coverImage.source
-                height: coverImage.paintedHeight
-                width: coverImage.paintedWidth
-                anchors.centerIn: parent
-                opacity: 0.3
-                y: coverImageContainer.y
-            }
+            id: headerMask
+            anchors.fill: mainPageHeader
 
-            OpacityRampEffect {
-                id: effectBackground
-                slope: 3 //the more, the shorter
-                offset: 0.55
-                sourceItem: coverDisplayImage
-                direction: OpacityRamp.TopToBottom
-                clampMax: 0.9
-                clampMin: 0.0
-            }
+            ProgressCassette {
+                id:cassette
+                width: Math.min( page.width, page.height) * 2
+                height: width
+                x: -width / 2
+                y: coverImage.sourceSize.width > 1 ? x : x/2
+                opacity: page.status === PageStatus.Active ? (app.playlist.metadata.count > 0 && mainFlickable.contentY > -Theme.itemSizeSmall ? 0.8 : 0.2) : 0
+                maximumValue: (app.options.cassetteUseDirectoryDurationProgress
+                              ? app.playlist.totalDuration
+                              : app.playlist.currentMetaData.duration) || 0.5 //nothing loaded
+                value: app.options.cassetteUseDirectoryDurationProgress ? app.playlist.totalPosition: app.audio.displayPosition
+                running: app.active && page.status !== PageStatus.Inactive && app.options.useAnimations && app.options.usePlayerAnimations && app.audio.isPlaying
 
+                Behavior on opacity { NumberAnimation {duration: 500; easing.type: Easing.InOutCubic}}
+
+            }
+        }
+        Loader {
+            sourceComponent: Component {
+                id: titleMaskComponent
+                OpacityMask {
+                    width: mainPageHeaderMasked.width
+                    height: mainPageHeaderMasked.height
+                    source: mainPageHeaderMasked
+                    maskSource: headerMask
+
+                    // fallback for SFOS < 3.1 (no titleColor in PageHeader)
+                    layer.enabled: !('titleColor' in mainPageHeaderMasked)
+                    layer.effect: ShaderEffect {
+                        property color color:  "white"
+
+                        fragmentShader: "
+                                    varying mediump vec2 qt_TexCoord0;
+                                    uniform highp float qt_Opacity;
+                                    uniform lowp sampler2D source;
+                                    uniform highp vec4 color;
+                                    void main() {
+                                        highp vec4 pixelColor = texture2D(source, qt_TexCoord0);
+                                        gl_FragColor = vec4(mix(pixelColor.rgb/max(pixelColor.a, 0.00390625), color.rgb/max(color.a, 0.00390625), color.a) * pixelColor.a, pixelColor.a) * qt_Opacity;
+                                    }
+                                "
+                    }
+                    layer.samplerName: "source"
+                }
+            }
+            active: app.active
         }
 
-        ProgressCassette {
-            id:cassette
-            width: Math.min( page.width, page.height) * 2
-            height: width
-            x: -width / 2
-            y: appstate.playlistActive && (appstate.playlistActive.coverImage !== '') ? x : x/2
-            z: -2
-            opacity: appstate.playlistActive !== null && (appstate.playlistActive.path !== '') ? 0.6 : 0.2
-            maximumValue: options.cassetteUseDirectoryDurationProgress
-                          ? totalPosition.maximumValue
-                          : appstate.playlistIndex > -1
-                              ? appstate.playlistActive ? appstate.playlistActive.duration : 0
-                              : 0
-            value: options.cassetteUseDirectoryDurationProgress ? totalPosition.value: appstate.currentPosition
-            running: options.useAnimations && options.usePlayerAnimations && isPlaying
-        }
+
         Item {
             id: coverImageContainer
 
-            width: parent.width - (page.isLandscape ? Theme.itemSizeLarge + Theme.paddingMedium : 0)
-
+            width: parent.width - (page.isLandscape ? controlPanel.width + controlPanel.anchors.rightMargin : 0)
             y:page.isPortrait ? mainPageHeader.height : 0
-            height: parent.height - infoColumn.height - (page.isPortrait ? controlPanel.height + mainPageHeader.height : 0) + fileNameLabel.height + fileFolderLabel.height//Theme.itemSizeSmall / 3
+            height: parent.height - progressArea.height - primaryLabel.height - (page.isPortrait ? controlPanel.height + mainPageHeader.height : 0)
 
-            Image {
+            FadeImage {
                 id: coverImage
-                source: {
-                    if(appstate.playlistIndex > -1 && appstate.playlistActive) {
-                        if(appstate.playlistActive.coverImage !== '') {
-                            return appstate.playlistActive.coverImage
-                        } else {
-                            return 'image://taglib-cover-art/'+appstate.playlistActive.path
-                        }
-
-                    } else {
-                        return '';
-                    }
-                }
-
-//                    appstate.playlistActive && appstate.playlistIndex > -1 ? appstate.playlistActive.coverImage:''
-                property string previousSource
+                source: 'image://taglib-cover-art/'+app.playlist.currentMetaData.path
                 anchors.fill: parent
 
-                onSourceChanged: {
-                    if(previousSource){
-                        coverImageFadeout.source = previousSource;
-                        coverImageFadeout.opacity = coverImage.opacity;
-                        opacity = 0;
-                        createAnimation.start();
-                        destroyAnimation.start();
-                    }
-
-                    previousSource = source
-                }
-
                 fillMode: Image.PreserveAspectFit
-                opacity: 0.8
-                z:-1
-
-                NumberAnimation on opacity {
-                    id: createAnimation
-                    from: 0
-                    to: 0.8
-                    duration: 500
-                }
-            }
-
-            Image {
-                id: coverImageFadeout
-                anchors.fill: parent
-                fillMode: Image.PreserveAspectFit
-                opacity: 0
-                z:-1
-
-                visible:appstate.playlistIndex > -1
-                NumberAnimation on opacity {
-                    id: destroyAnimation
-                    to: 0
-                    duration: 500
-                }
-
-
+                verticalAlignment: Image.AlignTop
+                horizontalAlignment: Image.AlignHCenter
             }
 
             NumberAnimation on x {
@@ -285,56 +166,68 @@ Page {
 
         OpacityRampEffect {
             id: effect
-            slope: 1 //the more, the shorter
-            offset: 0
-            sourceItem: coverImageContainer
+            property double factor: 0.6 * (coverImageContainer.height) / (infoColumn.height - progressArea.height)
+            clampMax: 0.7
+            clampMin: 0.2
             direction: OpacityRamp.TopToBottom
-            clampMax: 0.9
-            clampMin: 0.15
+            offset: 1-(1/factor)
+            slope: factor * 1.3 //* 0.9//1 //the more, the shorter
+            sourceItem: coverImageContainer
         }
 
-        Label {
-            anchors.fill: coverImageContainer
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            color: Theme.highlightColor
-            text:qsTr('[No Cover]')
-            font.pixelSize: Theme.fontSizeLarge
-            opacity: coverImage.source ? 0 : 0.6
-            visible:appstate.playlistIndex > -1
-            Behavior on opacity { NumberAnimation { easing.type: Easing.OutCubic ; duration: 500 }}
 
-            clip:true
+
+        TouchInteractionHint {
+            id: hint
+            property bool shouldBeRunning: app.playlist.metadata.count === 0
+            onShouldBeRunningChanged: check()
+            function check() {
+                if(shouldBeRunning) {
+                    start()
+                } else {
+                    stop()
+                }
+            }
+            direction: TouchInteraction.Down
+            interactionMode: TouchInteraction.Pull
+            Component.onCompleted: check()
         }
-
-        Label {
-            anchors.fill: coverImageContainer
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            text:qsTr('Nothing to play')
-            font.pixelSize: Theme.fontSizeLarge
-            color: Theme.highlightColor
-            visible:appstate.playlistIndex == -1 || !appstate.playlist.count
-            Text {
-                text: qsTr('Open Files by pulling down.')
+        InteractionHintLabel {
+            opacity: (app.playlist.metadata.count > 0) ? 0.0 : 1.0
+            Behavior on opacity { FadeAnimation {} }
+            anchors.bottom: parent.bottom
+            InfoLabel {
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                font.pixelSize: Theme.fontSizeSmall
-                anchors.fill: parent
-                anchors.topMargin: Theme.itemSizeSmall
-                color: Theme.secondaryColor
+                text:qsTr('Nothing to play')
+                visible: app.playlist.metadata.count === 0
+
+                Text {
+                    text: qsTr('Open Files by pulling down.')
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    color: Theme.secondaryColor
+                    anchors.fill: parent
+                    anchors.topMargin: Theme.itemSizeSmall
+                    font.pixelSize: Theme.fontSizeSmall
+                }
             }
         }
-
 
 
         MouseArea {
             id: coverMouseArea
 
-            visible: options.playerSwipeForNextPrev && (appstate.playlist.count > 1 || appstate.currentPosition > options.skipBackTrackThreshold)
+            property int maxDrag: Theme.itemSizeLarge
+            visible: options.playerSwipeForNextPrev && (app.playlist.metadata.count > 1 || app.audio.position > options.skipBackTrackThreshold)
             property bool sideTriggerActive: false
             property alias target: coverImageContainer
             anchors.fill: target
+            drag.target: target
+            drag.axis: Drag.XAxis
+            drag.threshold: 30
+            drag.minimumX: app.playlist.currentIndex < app.playlist.metadata.count-1 ? maxDrag*-1 : 0 //next
+            drag.maximumX: app.playlist.currentIndex > 0 || app.audio.position > options.skipBackTrackThreshold ? maxDrag:0 //prev
 
             onMouseXChanged: {
                 var m = mouse, act = sideTriggerActive;
@@ -357,13 +250,6 @@ Page {
                 }
             }
 
-            drag.target: target
-            drag.axis: Drag.XAxis
-            drag.threshold: 30
-            property int maxDrag: Theme.itemSizeLarge
-            drag.minimumX: appstate.playlistIndex < appstate.playlist.count-1 ? maxDrag*-1 : 0 //next
-            drag.maximumX: appstate.playlistIndex > 0 || appstate.currentPosition > options.skipBackTrackThreshold ? maxDrag:0 //prev
-
             onReleased: {
                 animateCoverContainerXBack0.duration =  (dragValue / maxDrag) * 400
                 animateCoverContainerXBack0.start()
@@ -373,30 +259,23 @@ Page {
 
                     sideTriggerActive = false;
                     if(target.x < 0){//next
-                        if(appstate.playlistIndex < appstate.playlist.count - 1){
-                            appstate.tplayer.playIndex(appstate.playlistIndex + 1, {isPlaying: appstate.tplayer.isplaying});
-
-                        } else {
-
-                            appstate.tplayer.playIndex(0, {isPlaying: appstate.tplayer.isplaying});
-                        }
-
+                        app.playlist.currentIndex = app.playlist.currentIndex + 1;
                     } else if(target.x > 0) {//prev
-                        if(appstate.currentPosition > options.skipBackTrackThreshold) {
-                            appstate.currentPosition = 0;
-                            appstate.player.seek(0)
+                        if(app.audio.position > options.skipBackTrackThreshold) {
+                            app.audio.seek(0)
                         } else {
-                            appstate.tplayer.playIndex(appstate.playlistIndex - 1, {isPlaying: appstate.tplayer.isplaying});
+                            app.playlist.currentIndex = app.playlist.currentIndex - 1;
                         }
                     }
                 }
             }
             onSideTriggerActiveChanged: {
-                if(_ngfEffect) {
+                if(sideTriggerActive && _ngfEffect) {
                     _ngfEffect.play()
                 }
             }
-            property QtObject _ngfEffect
+
+            property QtObject _ngfEffect //qt feedback won't run if
             Component.onCompleted: {
                 _ngfEffect = Qt.createQmlObject("import org.nemomobile.ngf 1.0; NonGraphicalFeedback { event: 'pulldown_highlight' }",
                                    coverMouseArea, 'NonGraphicalFeedback');
@@ -408,7 +287,6 @@ Page {
                 id: coverDraggedLabelContainer
                 height: parent.height
                 width: parent.width
-
                 visible: coverMouseArea.dragValue > coverMouseArea.maxDrag * 0.5
                 opacity: coverMouseArea.sideTriggerActive ? 1.0:0.0
 
@@ -424,22 +302,21 @@ Page {
 
                 OpacityRampEffect {
                     sourceItem: coverDragRect
+                    direction: coverMouseArea.target.x > 0 ? OpacityRamp.RightToLeft: OpacityRamp.LeftToRight
                     offset: 0.0//-0.5 * coverMouseArea.dragFactor
                     slope: parent.opacity * 0.8//coverMouseArea.sideTriggerActive ? 1.0 : 1.0
-
-                    direction: coverMouseArea.target.x > 0 ? OpacityRamp.RightToLeft: OpacityRamp.LeftToRight
                 }
 
 
                 Label {
-                    text: coverMouseArea.target.x > 0 ? (appstate.currentPosition > options.skipBackTrackThreshold? qsTr('Rewind Track'): qsTr('Previous Track')): qsTr('Next Track')
-                    wrapMode: 'WrapAtWordBoundaryOrAnywhere'
-                    horizontalAlignment: coverMouseArea.target.x > 0 ? Text.AlignRight: Text.AlignLeft // Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    color: Theme.highlightColor
-                    x:( -coverMouseArea.target.x ) + Theme.paddingSmall
-                    width: parent.width - (Theme.paddingSmall * 2)
+                    color: Theme.primaryColor//Theme.highlightColor
                     height: parent.height
+                    width: parent.width - (Theme.paddingSmall * 2)
+                    horizontalAlignment: coverMouseArea.target.x > 0 ? Text.AlignRight: Text.AlignLeft // Text.AlignHCenter
+                    text: coverMouseArea.target.x > 0 ? (app.audio.position > options.skipBackTrackThreshold? qsTr('Rewind Track'): qsTr('Previous Track')): qsTr('Next Track')
+                    verticalAlignment: Text.AlignVCenter
+                    wrapMode: 'WrapAtWordBoundaryOrAnywhere'
+                    x: (-coverMouseArea.target.x ) + Theme.paddingSmall
                 }
             }
             Item {
@@ -464,47 +341,43 @@ Page {
                     }
                     OpacityRampEffect {
                         sourceItem: maxBg
-                        offset: 0//-0.5 * coverMouseArea.dragFactor
+                        offset: 0
                         slope: coverMouseArea.sideTriggerActive ? 1.0 : 1.0
 
                         direction: OpacityRamp.RightToLeft
                     }
                     Image {
                         anchors.verticalCenter: parent.verticalCenter
-                        //                        anchors.right: parent.right
                         x: parent.width-width + (coverMouseArea.maxDrag - coverMouseArea.dragValue) *2
-                        opacity: coverMouseArea.sideTriggerActive ? 1.0 : 0.3
-                        source: 'image://theme/icon-m-next?'+(coverMouseArea.sideTriggerActive ? Theme.highlightColor : Theme.primaryColor)
+                        opacity: coverMouseArea.sideTriggerActive ? 1.0 : 0.8
+                        source: 'image://theme/icon-m-next?'+(coverMouseArea.sideTriggerActive ? Theme.primaryColor : Theme.highlightColor)
                     }
                 }
 
                 Item {
                     id: minItem
+                    visible: coverMouseArea.target.x > 0
                     height: parent.height
                     width:  coverMouseArea.dragValue*2 + coverMouseArea.maxDrag * 0.1
-                    visible: coverMouseArea.target.x > 0
                     anchors.left: parent.left
                     Rectangle{
                         id: minBg
                         color: Qt.rgba(Theme.highlightBackgroundColor.r, Theme.highlightBackgroundColor.g, Theme.highlightBackgroundColor.b, coverMouseArea.sideTriggerActive ? 0.7 : 0.4)
-                        width: parent.width
                         height: parent.height
+                        width: parent.width
                         anchors.right: parent.right
                     }
                     OpacityRampEffect {
-                        sourceItem: minBg
-                        offset: 0//-0.5 * coverMouseArea.dragFactor
-                        slope: coverMouseArea.sideTriggerActive ? 1.0 : 1.0
-
                         direction: OpacityRamp.LeftToRight
+                        offset: 0
+                        slope: coverMouseArea.sideTriggerActive ? 1.0 : 1.0
+                        sourceItem: minBg
                     }
                     Image {
-                        anchors.verticalCenter: parent.verticalCenter
-
+                        opacity: coverMouseArea.sideTriggerActive ? 1.0 : 0.8
+                        source: 'image://theme/icon-m-previous?'+(coverMouseArea.sideTriggerActive ? Theme.primaryColor : Theme.highlightColor)
                         x: -(coverMouseArea.maxDrag - coverMouseArea.dragValue) *2
-                        //                        anchors.right: parent.right
-                        opacity: coverMouseArea.sideTriggerActive ? 1.0 : 0.3
-                        source: 'image://theme/icon-m-previous?'+(coverMouseArea.sideTriggerActive ? Theme.highlightColor : Theme.primaryColor)
+                        anchors.verticalCenter: parent.verticalCenter
                     }
                 }
             }
@@ -514,140 +387,61 @@ Page {
         Item {
             id: column
             anchors.fill: parent
+            anchors.rightMargin: page.isLandscape ? Theme.iconSizeLarge + Theme.horizontalPageMargin : 0
 
-            anchors.rightMargin: page.isLandscape ? Theme.itemSizeLarge + Theme.paddingMedium : 0
 
             Column {
                 id: infoColumn
+                opacity: app.playlist.metadata.count > 0 ? 1 : 0
                 width: parent.width
 
-
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: page.isPortrait? controlPanel.height : Theme.paddingMedium
+                anchors.bottomMargin: page.isPortrait? controlPanel.height + controlPanel.anchors.bottomMargin : 0//Theme.paddingMedium
                     Label {
-                        width: parent.width - Theme.paddingSmall * 2
-                        x: Theme.paddingSmall
-                        id: fileNameLabel
-                        text: (appstate.playlistActive ? appstate.playlistActive.baseName :'') + (appstate.player.errorString !== '' ? '<br>['+appstate.player.errorString+']' : '')
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
+                        id: primaryLabel
                         color: Theme.highlightColor
-                        wrapMode: 'WrapAtWordBoundaryOrAnywhere'
-                        layer.enabled: Theme.colorScheme //is it light?
-                        layer.effect: DropShadow {
-                            color: '#ffffff33'
-                        }
+                        fontSizeMode: Text.HorizontalFit
+                        horizontalAlignment: Text.AlignHCenter
+                        minimumPixelSize: Theme.fontSizeMedium
+                        style: Theme.colorScheme ? Text.Raised : Text.Normal
+                        styleColor: '#FFFFFF'
+                        text: app.playlist.currentTitle + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
+                        verticalAlignment: Text.AlignBottom//Text.AlignVCenter
+                        width: parent.width - Theme.horizontalPageMargin * 2 // does not account for landscape, but that's acceptable
+                        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                        x: Theme.horizontalPageMargin
+                        font.pixelSize: Theme.fontSizeLarge
                     }
 
                     Label {
-                        width: parent.width - Theme.paddingSmall * 2
-                        x: Theme.paddingSmall
-                        id: fileFolderLabel
-                        property string displayPath:appstate.playlistActive && appstate.playlistActive.folderName ? appstate.playlistActive.folderName:''
-                        visible: displayPath !== '' && options.playerDisplayDirectoryName
-                        text: displayPath
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
+                        property string displayPath: app.playlist.currentAlbum
                         color: Theme.secondaryHighlightColor
+                        horizontalAlignment: Text.AlignHCenter
+                        style: Theme.colorScheme ? Text.Raised : Text.Normal
+                        styleColor: '#FFFFFF'
+                        text: displayPath
+                        visible: displayPath !== '' //&& options.playerDisplayDirectoryName
+                        width: parent.width - Theme.paddingSmall * 2
+                        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                        x: Theme.paddingSmall
+                        font.pixelSize: Theme.fontSizeSmall
+                    }
+                    Label {
+                        property string displayPath: app.playlist.currentArtist
+                        color: Theme.secondaryHighlightColor
+                        horizontalAlignment: Text.AlignHCenter
+                        text: displayPath
+                        verticalAlignment: Text.AlignVCenter
+                        visible: displayPath !== ''
+                        width: parent.width - Theme.paddingSmall * 2
+                        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                        x: Theme.paddingSmall
                         font.pixelSize: Theme.fontSizeExtraSmall
-                        wrapMode: 'WrapAtWordBoundaryOrAnywhere'
-                        layer.enabled: Theme.colorScheme //is it light?
-                        layer.effect: DropShadow {
-                            color: '#ffffff33'
-                        }
                     }
 
-                    Slider {
-                        id: currentPositionSlider
-                        value: appstate.currentPosition
-                        function applyValue(){
-
-                            if(value + 100 >= appstate.playlistActive.duration){//does not quite set it at the end, so skipping gets confused.
-                                value = appstate.playlistActive.duration - 100;
-                            }
-                            app.log('slider: apply value', value);
-                            appstate.currentPosition = value;
-                            playback.seek(value);
-                        }
-
-                        Connections { //implicit connection gets lost for some time
-                            target: appstate
-                            onCurrentPositionChanged: {
-                                currentPositionSlider.value = appstate.currentPosition
-                            }
-                        }
-
-                        onDownChanged: {
-                            if(!down) applyValue()
-                        }
-
-                        height: totalPositionWrapper.visible ? Theme.itemSizeExtraSmall : implicitHeight
-                        minimumValue: 0
-                        maximumValue: appstate.playlistActive && appstate.playlistActive.duration > 0? appstate.playlistActive.duration:0.0001
-                        width: parent.width
-                        visible: appstate.playlistIndex != -1
-                        label: formatMSeconds( value)+" / "+formatMSeconds(maximumValue) +' ('+ (Math.floor(( currentPositionSlider.value / currentPositionSlider.maximumValue) * 1000 ) / 10)+'%)'
+                    PlayerPageProgressArea {
+                        id: progressArea
                     }
-
-                    Item {
-                        id: totalPositionWrapper
-                        width: parent.width
-                        height: totalPosition.height
-                        visible: appstate.playlistIndex > -1 && appstate.playlist.count > 1
-
-                        Slider {
-                            id: totalPosition
-                            property int previousDuration: appstate.playlistActive ? appstate.playlistActive.playlistOffset: 0
-                            value: (appstate.playlistActive ? appstate.playlistActive.playlistOffset:0) + currentPositionSlider.value
-                            visible: options.playerDisplayDirectoryProgress && appstate.playlistIndex > -1 && appstate.playlist.count > 1// options.directoryFiles && options.directoryFiles.length > 1// && appstate.playlistIndex !== -1
-                            opacity: totalDurationNotification.isvisible ? 0 : 0.5
-                            minimumValue: 0
-                            height: Theme.itemSizeSmall
-
-                            maximumValue: appstate.playlist.duration
-                            enabled: false
-                            width: parent.width
-                            handleVisible: false
-                            Behavior on opacity { NumberAnimation { easing.type: Easing.OutCubic ; duration: 500 }}
-
-                            Label {
-                                color: Theme.secondaryColor
-                                width: parent.width
-                                height: Theme.itemSizeSmall  - Theme.paddingLarge
-                                opacity: 0.8
-                                horizontalAlignment: Text.AlignHCenter
-                                anchors.bottom: parent.bottom
-                                verticalAlignment: Text.AlignBottom
-                                font.pixelSize: Theme.fontSizeExtraSmall
-                                text:  qsTr('%1 / %2 (File %L3 of %L4)', 'formatted file/directory durations, then file number/count )').arg(formatMSeconds( totalPosition.value)).arg(formatMSeconds(totalPosition.maximumValue)).arg(appstate.playlistIndex+1).arg(appstate.playlist.count)
-                            }
-
-                        }
-
-                        MouseArea {
-                            anchors.fill: totalPosition
-                            anchors.topMargin: Theme.paddingLarge
-                            onClicked: {
-
-                                totalDurationNotification.show(2000)
-                            }
-
-                            InlineNotification {
-                                id: totalDurationNotification
-                                anchors.centerIn: parent
-                                height:isvisible ? parent.height : 0
-                                width: totalPosition.width
-                                property int totalperc: totalPosition.maximumValue ? (Math.floor(( totalPosition.value / totalPosition.maximumValue) * 1000 ) / 10) : 0
-                                text: qsTr('%1% played in Total', 'directory progress', totalperc).arg(totalperc)
-                            }
-                        }
-                    }
-
-
-//                }
-
-
-
             }
 
 
@@ -657,58 +451,58 @@ Page {
 
         Item {
             id: controlPanel
-            width: page.isPortrait ? parent.width : Theme.itemSizeLarge + Theme.paddingLarge
-            height: page.isPortrait ? Theme.itemSizeLarge + Theme.paddingLarge : parent.height
+            height: page.isPortrait ? Theme.iconSizeLarge : parent.height
+            width: page.isPortrait ? parent.width : Theme.iconSizeLarge
             anchors.bottom: parent.bottom
+            anchors.bottomMargin: page.isPortrait ? Theme.paddingLarge : 0
             anchors.right: parent.right
+            anchors.rightMargin: page.isLandscape ? Theme.horizontalPageMargin : 0
+
 
             Flow {
-                height: page.isLandscape ? sizeOfEntries : (Theme.itemSizeLarge - Theme.paddingLarge)
-                width: page.isPortrait ? sizeOfEntries : Theme.itemSizeLarge
+                id:iconButtons
+                property int numberOfEntries: 5
+                property int sizeOfEntries: (Theme.iconSizeLarge + spacing) * numberOfEntries - spacing;
+                height: page.isLandscape ? sizeOfEntries : (Theme.iconSizeLarge)
+                width: page.isPortrait ? sizeOfEntries : Theme.iconSizeLarge
+                spacing: Screen.widthRatio === 1 ? Theme.paddingSmall : 0 // jolla phone: same size, but spaced
                 anchors.centerIn: parent
 
-                spacing: 20
-                id:iconButtons
-
-
-                property int numberOfEntries: 5 //todo: make model/repeater with json
-                property int sizeOfEntries: (Theme.itemSizeSmall + spacing) * numberOfEntries - spacing;
-
-                property bool isPlaying: appstate.tplayer.isplaying
-
-                ColorIconButton {
-                    icon.source: "../icon-l-frwd.png"
-                    enabled: totalPosition.value > options.skipDurationNormal
-                    onClicked: {
-                        appstate.tplayer.seek(0 - options.skipDurationNormal)
-                    }
+                PlayerPageSeekButton {
+                    enabled: play.enabled
+                    opacity: play.enabled && app.playlist.totalPosition > options.skipDurationNormal ? 1 : 0.4
+                    rotation: 180
+                    seekBy: -options.skipDurationNormal
+                    icon.source: "../assets/icon-l-ffwd.svg"
                 }
-                ColorIconButton {
-                    enabled: totalPosition.value > options.skipDurationSmall
-                    icon.source: "../icon-l-rwd.png"
-                    onClicked: {
-                        appstate.tplayer.seek(0 - options.skipDurationSmall)
-                    }
+                PlayerPageSeekButton {
+                    enabled: play.enabled
+                    opacity: play.enabled && app.playlist.totalPosition > options.skipDurationSmall ? 1 : 0.4
+                    rotation: 180
+                    seekBy: -options.skipDurationSmall
+                    icon.source: "../assets/icon-l-fwd.svg"
                 }
+
                 IconButton {
                     id: play
-                    enabled: appstate.playlistIndex > -1 && appstate.playlist.count > 0
-                    icon.source: playback.playbackState == Audio.PlayingState ? "image://theme/icon-l-pause": "image://theme/icon-l-play"
-                    onClicked: appstate.tplayer.playPause()
+                    onClicked: app.audio.playPause()
+                    enabled: app.playlist.metadata.count > 0
+                    height: width
+                    width: Theme.iconSizeLarge
+                    icon.source: app.audio.isPlaying ? "image://theme/icon-l-pause": "image://theme/icon-l-play"
                 }
-                ColorIconButton {
-                    icon.source: "../icon-l-fwd.png"
-                    enabled: totalPosition.maximumValue - totalPosition.value > options.skipDurationSmall
-                    onClicked: {
-                        appstate.tplayer.seek(options.skipDurationSmall)
-                    }
+
+                PlayerPageSeekButton {
+                    enabled: play.enabled
+                    opacity: play.enabled && app.playlist.totalDuration - app.playlist.totalPosition > options.skipDurationSmall ? 1 : 0.4
+                    seekBy: options.skipDurationSmall
+                    icon.source: "../assets/icon-l-fwd.svg"
                 }
-                ColorIconButton {
-                    icon.source: "../icon-l-ffwd.png"
-                    enabled: totalPosition.maximumValue - totalPosition.value > options.skipDurationNormal
-                    onClicked: {
-                        appstate.tplayer.seek( options.skipDurationNormal)
-                    }
+                PlayerPageSeekButton {
+                    enabled: play.enabled
+                    opacity: play.enabled && app.playlist.totalDuration - app.playlist.totalPosition > options.skipDurationNormal ? 1 : 0.4
+                    seekBy: options.skipDurationNormal
+                    icon.source: "../assets/icon-l-ffwd.svg"
                 }
             }
         }
