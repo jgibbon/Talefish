@@ -80,7 +80,7 @@ Item {
             id: content
             width: parent.width
             anchors.top: button.bottom
-            height: parent.expanded ? implicitHeight + Theme.paddingMedium : 0
+            height: parent.expanded ? implicitHeight + Theme.paddingLarge : 0
             opacity: parent.expanded ? 1.0 : 0
             clip: true
             Behavior on height {NumberAnimation {duration: 300; easing.type: Easing.InOutCubic}}

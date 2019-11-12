@@ -66,6 +66,17 @@ OptionArea {
             {text:qsTr('Skip backward and forward'), value: 'both'} ]
         jsonData: secondaryCoverActionCommands
     }
+    TextSwitch {
+        id:displayAlbumCoverInListsSwitch
+        //: Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist
+        text: qsTr('Display album cover images in directory list and playlist view')
+        //: Option Entry description
+        description: qsTr('Extracting a lot of Images at once can be really slow.')
+        checked: app.options.displayAlbumCoverInLists
+        onClicked: {
+            app.options.displayAlbumCoverInLists = checked
+        }
+    }
 
     SectionHeader {
         //: Section Header: 'Cassette tape' options (visible on player page and App-Cover)

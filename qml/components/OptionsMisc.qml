@@ -28,6 +28,7 @@ OptionArea {
 
     Label {
         width: parent.width - Theme.horizontalPageMargin * 2
+        height: implicitHeight + Theme.paddingMedium
         x: Theme.horizontalPageMargin
         font.pixelSize: Theme.fontSizeSmall
         color: Theme.highlightColor

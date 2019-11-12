@@ -74,10 +74,12 @@ Item {
         }
         if(app.audio.seekable) {
             console.log('seekable')
+            app.playlist.applyingSavedPosition = false;
+            app.playlist.applyThisTrackPosition = -1;
             app.audio.seek(position);
         } else { // handle in audio.onSeekableChanged
 
-            console.log('applying')
+            console.log('applying later', position)
             applyingSavedPosition = true
             applyThisTrackPosition = position;
         }
@@ -85,8 +87,9 @@ Item {
 
     function seekBy(mseconds) {
         var totalMilliSeconds = app.playlist.totalPosition + mseconds;
-        console.log('seekby',mseconds, 'from', app.playlist.totalPosition, 'to', totalMilliSeconds)
-        if(totalPosition < 0) {
+//        console.log('seekby',mseconds, 'from', app.playlist.totalPosition, 'to', totalMilliSeconds)
+        if(totalMilliSeconds < 0) {
+            app.playlist.totalPosition = 0;
             seek(0,0);
             return;
         }
@@ -94,6 +97,7 @@ Item {
         // same track:
         if((mseconds < 0 && totalMilliSeconds >= app.playlist.currentMetaData.previousDurations)
                 || mseconds > 0 && totalMilliSeconds <= app.playlist.currentMetaData.previousDurations + app.playlist.currentMetaData.duration) {
+            app.playlist.totalPosition = totalMilliSeconds;
             seek(totalMilliSeconds - app.playlist.currentMetaData.previousDurations, app.playlist.currentIndex);
             return;
         }
@@ -103,7 +107,8 @@ Item {
             cur = app.playlist.metadata.get(i);
             curMin = cur.previousDurations;
             if(curMin <= totalMilliSeconds && (cur.previousDurations + cur.duration) >= totalMilliSeconds) {
-                console.log('matched other track #', i, totalMilliSeconds - curMin, 'of total', cur.duration)
+//                console.log('matched other track #', i, totalMilliSeconds - curMin, 'of total', cur.duration)
+                app.playlist.totalPosition = totalMilliSeconds;
                 seek(totalMilliSeconds - curMin, i);
                 return;
             }

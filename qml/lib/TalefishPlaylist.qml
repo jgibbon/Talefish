@@ -37,6 +37,7 @@ Playlist {
     }
     property PlayerCommands commands: PlayerCommands {}
     onCurrentIndexChanged: {
+//        console.log('currentIndex', currentIndex)
         // when played through, we want to activate the first track again
        if(currentIndex === -1 && metadata.count > 0) {
            app.audio.pause();
@@ -193,18 +194,42 @@ Playlist {
             app.state.playlistProgressChanged()
         }
     }
+    property Timer reseekTimer: Timer {
+        id: reSeekTimer //when seeking multiple times abruptly, audio doesn't seem to do it
+        interval: 30
+        onTriggered: {
+            if(playlist.applyingSavedPosition) {
+                app.audio.seek(playlist.applyThisTrackPosition);
+                if(app.audio.position === playlist.applyThisTrackPosition) {
+                    playlist.applyingSavedPosition = false;
+                    playlist.applyThisTrackPosition = -1;
+                } else {
+                    reSeekTimer.start()
+                }
+                console.log('RESEEKED')
+            }
+        }
+
+    }
 
     property Connections audioConnections: Connections {
                     target: app.audio
                     onSeekableChanged: {
                         if(app.audio.seekable && playlist.applyingSavedPosition) {
                             app.audio.seek(playlist.applyThisTrackPosition);
-                            playlist.applyingSavedPosition = false;
-                            playlist.applyThisTrackPosition = -1;
+                            // normally, seeking should be applied now with local tracks
+                            if(app.audio.position === playlist.applyThisTrackPosition) {
+                                playlist.applyingSavedPosition = false;
+                                playlist.applyThisTrackPosition = -1;
+                            } else { // it it doesn't, we force seeking with brute force
+                                reSeekTimer.start()
+                            }
                         }
                     }
                     onPositionChanged: {
-                        app.playlist.saveCurrentPosition()
+                        if(!playlist.applyingSavedPosition) {
+                            app.playlist.saveCurrentPosition()
+                        }
                     }
                     onDurationChanged: {
                         if(playlist.currentIndex > -1

@@ -29,9 +29,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 #include <QFileInfo>
 #include <QDir>
-#include <QDebug>
 // levenshtein test
 #include <QVector>
+
+//#include <QElapsedTimer>
+//#include <QDebug>
 
 taglibImageprovider::taglibImageprovider() : QQuickImageProvider(QQuickImageProvider::Image) {}
 
@@ -39,17 +41,28 @@ taglibImageprovider::taglibImageprovider() : QQuickImageProvider(QQuickImageProv
 
 QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const QSize &requestedSize)
 {
+//    QElapsedTimer timer;
+//    timer.start();
+
     QImage img;
     QMimeDatabase db;
-
+    QString mediafilePath;
     bool imageFound = false;
 
-    QFile mediafile(id);
-    if (mediafile.exists()) {
+    // try to get implicit requestedSize height=width from id as url fragment
+    // because then we can still query for sourceSize.width === 1 in qml to check for "no image"
+    QUrl idUrl = QUrl(id);
+    if(idUrl.hasFragment()) {
+        mediafilePath = id.split("#")[0];
+    } else {
+        mediafilePath = id;
+    }
 
-        QMimeType type = db.mimeTypeForFile(id);
-        if(type.name() == "audio/mp4") {
-            TagLib::MP4::File f(id.toStdString().c_str());
+    QFile mediafile(mediafilePath);
+    if (mediafile.exists()) {
+        QString mimetype = db.mimeTypeForFile(mediafilePath).name();
+        if(mimetype == "audio/mp4" || mimetype == "audio/m4a" || mimetype == "audio/x-m4b" || mimetype == "audio/x-m4a") {
+            TagLib::MP4::File f(mediafilePath.toStdString().c_str());
             TagLib::MP4::Tag* tag = f.tag();
             TagLib::MP4::ItemListMap itemsListMap = tag->itemListMap();
             TagLib::MP4::Item coverItem = itemsListMap["covr"];
@@ -59,8 +72,8 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
                 TagLib::MP4::CoverArt coverArt = coverArtList.front();
                 img.loadFromData((const uchar *) coverArt.data().data(), coverArt.data().size());
             }
-        } else if(type.name() == "audio/mpeg"){
-            TagLib::MPEG::File mp3(id.toStdString().c_str(), true, TagLib::MPEG::Properties::Fast);
+        } else if(mimetype == "audio/mpeg" || mimetype == "audio/x-mp3" || mimetype == "audio/x-mpg" || mimetype == "audio/x-mpeg" || mimetype == "audio/mp3"){
+            TagLib::MPEG::File mp3(mediafilePath.toStdString().c_str(), true, TagLib::MPEG::Properties::Fast);
             TagLib::ID3v2::FrameList list = mp3.ID3v2Tag()->frameListMap()["APIC"];
 
             if(!list.isEmpty()) {
@@ -69,8 +82,8 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
                 img.loadFromData((const uchar *) Pic->picture().data(), Pic->picture().size());
                 //            img = img.scaled(45,45);
             }
-        } else if(type.name() == "audio/flac") {
-            TagLib::FLAC::File f(id.toStdString().c_str());
+        } else if(mimetype == "audio/flac" || mimetype == "audio/x-flac") {
+            TagLib::FLAC::File f(mediafilePath.toStdString().c_str());
             const TagLib::List<TagLib::FLAC::Picture*>& picList = f.pictureList();
             if(!picList.isEmpty()) {
                 TagLib::FLAC::Picture* pic = picList[0]; //we assume the first one is the cover, because it's much easier
@@ -82,8 +95,8 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
                     img.loadFromData( image_data );
                 }
             }
-        } else if(type.name() == "audio/ogg" || type.name() == "audio/x-vorbis+ogg" || type.name() == "audio/x-vorbis") {
-            TagLib::Ogg::Vorbis::File f(id.toStdString().c_str());
+        } else if(mimetype == "audio/ogg" || mimetype == "audio/x-vorbis+ogg" || mimetype == "audio/x-flac+ogg" || mimetype == "audio/x-ogg" || mimetype == "audio/x-vorbis") {
+            TagLib::Ogg::Vorbis::File f(mediafilePath.toStdString().c_str());
             TagLib::Ogg::XiphComment* tag = f.tag();
             const TagLib::List<TagLib::FLAC::Picture*>& picList = tag->pictureList();
             if(!picList.isEmpty()) {
@@ -114,16 +127,25 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
         img = QImage(1,1, QImage::Format_ARGB32);
         img.fill(qRgba(0, 0, 0, 0));
         if(size) {
-            *size = QSize(img.width(), img.height());
+            *size = QSize(1, 1);
         }
     } else {
+        if(requestedSize.width() > 0 && requestedSize.height() > 0) {
+//            qDebug() << "scaling " << requestedSize.width() << "x" << requestedSize.height() << "";
+            img = img.scaled(requestedSize, Qt::KeepAspectRatio);
+        } else {
+            if(idUrl.hasFragment()) {
+//                qDebug() << "image has fragment: " << idUrl.fragment().toInt();
+                QSize implicitRequestedSize(idUrl.fragment().toInt(), idUrl.fragment().toInt());
+                img = img.scaled(implicitRequestedSize, Qt::KeepAspectRatio);
+            }
+        }
         if(size) {
             *size = QSize(img.width(), img.height());
         }
-        if(requestedSize.width() > 0 && requestedSize.height() > 0) {
-            img = img.scaled(requestedSize, Qt::KeepAspectRatio);
-        }
     }
+
+//    qDebug() << "Image took" << timer.elapsed() << "milliseconds";
     return img;
 }
 

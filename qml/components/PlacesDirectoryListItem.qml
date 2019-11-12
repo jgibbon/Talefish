@@ -54,23 +54,28 @@ ListItem {
     }
     HighlightImage {
         id: fileIcon
-        fillMode: Image.PreserveAspectCrop
+        fillMode: Image.PreserveAspectFit
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
             leftMargin: Theme.horizontalPageMargin
         }
+        asynchronous: true
+//        sourceSize.width: width
+//        sourceSize.height: height
         width: Theme.iconSizeMedium
         height: Theme.iconSizeMedium
         property url folderUrl: "image://theme/icon-m-file-folder"
         property url fileUrl: 'image://theme/icon-m-file-audio'
-//        property url coverUrl: 'image://taglib-cover-art/'+model.filePath
-        source: model.fileIsDir ? folderUrl : fileUrl
-//        onStatusChanged: {
-//            if(!model.fileIsDir && fileIcon.source === fileIcon.coverUrl && fileIcon.status === Image.Ready && fileIcon.sourceSize.width === 1) {
-//                source = fileUrl
-//            }
-//        }
+        property url coverUrl: 'image://taglib-cover-art/'+model.filePath+'#'+Theme.iconSizeMedium
+        source: model.fileIsDir ? folderUrl : options.displayAlbumCoverInLists ? coverUrl : fileUrl
+        opacity: fileIcon.status === Image.Ready ? 1.0 : 0.0
+        Behavior on opacity {NumberAnimation {duration: fileIcon.source === fileIcon.coverUrl ? 500 : 0; easing.type: Easing.InOutQuad}}
+        onStatusChanged: {
+            if(!model.fileIsDir && fileIcon.source === fileIcon.coverUrl && fileIcon.status === Image.Ready && fileIcon.sourceSize.width === 1) {
+                source = fileUrl
+            }
+        }
 
     }
     Item {
@@ -133,7 +138,7 @@ ListItem {
 //            text: parent.url
 //        }
         PlacesDirectoryProgressBar {
-            path: model.filePath
+            path: (model.fileIsDir ? String(listView.sortMode) : '')+model.filePath
             highlighted: listItem.highlighted
             anchors {
                 left: mainLabel.left

@@ -97,17 +97,17 @@ SilicaListView {
                     truncationMode: TruncationMode.Fade
                     color: Theme.highlightColor
 
-                    PlacesDirectoryProgressBar {
-                        path: String(listView.sortMode)+listView.folderPath
-                        highlighted: true
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                            verticalCenter: parent.bottom
-                        }
-                        leftMargin: 0
-                        rightMargin: 0
+                }
+                PlacesDirectoryProgressBar {
+                    path: String(listView.sortMode)+listView.folderPath
+                    highlighted: true
+                    anchors {
+                        left: folderNameLabel.left
+                        right: folderNameLabel.right
+                        verticalCenter: folderNameLabel.bottom
                     }
+                    leftMargin: 0
+                    rightMargin: 0
                 }
                 Label {
                     id: folderPathLabel

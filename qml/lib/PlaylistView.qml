@@ -127,25 +127,29 @@ currentIndex: -1 // prevent inheriting the 'real' currentIndex; this would steal
 
             Image {
                 id: imgItem
+                asynchronous: true
                 width: Theme.iconSizeMedium
                 height: Theme.iconSizeMedium
                 fillMode: Image.PreserveAspectCrop
                 property url fileUrl: 'image://theme/icon-m-file-audio'
-//                property url coverUrl: 'image://taglib-cover-art/'+model.path
+                property url coverUrl: 'image://taglib-cover-art/'+model.path+'#'+Theme.iconSizeMedium
 
 //                sourceSize.width: Theme.iconSizeMedium
 //                sourceSize.height: Theme.iconSizeMedium
-//                onStatusChanged: {
-//                    if(imgItem.source === imgItem.coverUrl && imgItem.status === Image.Ready && imgItem.sourceSize.width === 1) {
-//                        source = fileUrl
-//                    }
-//                }
+
+                opacity: imgItem.status === Image.Ready ? 1.0 : 0.0
+                Behavior on opacity {NumberAnimation {duration: imgItem.source === imgItem.coverUrl ? 500 : 0; easing.type: Easing.InOutQuad}}
+                onStatusChanged: {
+                    if(imgItem.source === imgItem.coverUrl && imgItem.status === Image.Ready && imgItem.sourceSize.width === 1) {
+                        source = fileUrl
+                    }
+                }
                 anchors {
                     verticalCenter: parent.verticalCenter
                     left: parent.left
 //                    leftMargin: Theme.horizontalPageMargin
                 }
-                source: fileUrl
+                source: options.displayAlbumCoverInLists ? coverUrl : fileUrl
             }
 
             MarqueeLabel {

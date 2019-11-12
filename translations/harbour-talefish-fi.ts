@@ -234,46 +234,58 @@
         <translation type="unfinished">Kelaa eteenpäin ja taaksepäin</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
+        <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
         <source>Cassette tape</source>
         <comment>section header</comment>
         <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="78"/>
+        <location filename="../qml/components/OptionsAppearance.qml" line="89"/>
         <source>Cassette shows progress of</source>
         <extracomment>ComboBox label: Beginning of sentence</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="81"/>
+        <location filename="../qml/components/OptionsAppearance.qml" line="92"/>
         <source>track</source>
         <extracomment>ComboBox option: &quot;Track&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
+        <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
         <source>playlist</source>
         <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="88"/>
+        <location filename="../qml/components/OptionsAppearance.qml" line="99"/>
         <source>Do Animations</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations generally</extracomment>
         <translation type="unfinished">Näytä animaatiot</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="99"/>
+        <location filename="../qml/components/OptionsAppearance.qml" line="110"/>
         <source>Player Page Animation</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the player page</extracomment>
         <translation type="unfinished">Toistosivun animaatiot</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="113"/>
+        <location filename="../qml/components/OptionsAppearance.qml" line="124"/>
         <source>App-Cover Animation</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the App-Cover</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
+        <source>Display album cover images in directory list and playlist view</source>
+        <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="74"/>
+        <source>Extracting a lot of Images at once can be really slow.</source>
+        <extracomment>Option Entry description</extracomment>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -759,7 +771,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/lib/PlaylistView.qml" line="180"/>
+        <location filename="../qml/lib/PlaylistView.qml" line="184"/>
         <source>Error</source>
         <translation>Virhe</translation>
     </message>

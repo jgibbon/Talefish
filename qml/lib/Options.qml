@@ -66,6 +66,7 @@ PersistentObject {
     property bool useAnimations: true
     property bool usePlayerAnimations: true
     property bool useCoverAnimations: true
+    property bool displayAlbumCoverInLists: false
 
     //misc
     property bool useHeadphoneCommands: false

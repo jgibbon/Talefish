@@ -26,15 +26,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <QtConcurrent/QtConcurrent>
 #include <QImage>
 
-//#include <taglib/fileref.h>
-//#include <taglib/tag.h>
-//#include <taglib/tpropertymap.h>
 #include "fileref.h"
 #include "tag.h"
 #include "tpropertymap.h"
-//#include <taglib/id3v2tag.h>
-//#include <taglib/mpegfile.h>
-//#include <taglib/attachedpictureframe.h>
+
 
 class taglibplugin : public QObject
 {

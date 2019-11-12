@@ -34,10 +34,8 @@ taglibplugin::taglibplugin(QObject *parent) : QObject(parent) {
 // queryIndex just gets pushed out to ease matching for list operations
 // setActive=false if you don't need the actual component properties
 void taglibplugin::calculateFileTagInfos(QString filePath, qint64 queryIndex = -1, bool setActive=true) {
-//    qDebug() << "tl query" << queryIndex << filePath;
     QMimeDatabase db;
     QString mimetype = db.mimeTypeForFile(filePath).name();
-//    qDebug() << "mimetype:" << mimetype;
     TagLib::FileRef f(filePath.toLocal8Bit().data());
     QString ltitle = "";
     QString lartist = "";
@@ -54,6 +52,7 @@ void taglibplugin::calculateFileTagInfos(QString filePath, qint64 queryIndex = -
         lyear = tag->year();
         ltrack = tag->track();
     }
+
     // workaround: mka and aac not supported but without error… would not work for aac in other containers
     if(mimetype == "audio/x-matroska" || mimetype == "audio/aac") {
         lduration = 0;
@@ -90,16 +89,12 @@ void taglibplugin::fixIncompleteDuration(QString title, QString artist, QString 
         connect(player, &QMediaPlayer::durationChanged, this, [title,artist,album,year,track,duration,queryIndex, filePath, setActive, inst,player](qint64 dur) mutable {
 
             qDebug() << "duration = " << dur;
-//            if(dur > 0) {
                 player->stop();
                 if(setActive) {
                     inst->setDuration(dur);
                 }
                 emit inst->tagInfos(title,artist,album,year,track,dur,queryIndex, filePath);
                 player->deleteLater();
-//            } else {
-//                player->play();
-//            }
         });
         player->setMedia(QUrl::fromLocalFile(filePath));
         player->setVolume(0);
