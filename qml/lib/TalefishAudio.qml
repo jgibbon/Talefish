@@ -28,11 +28,6 @@ Audio {
     onPlaybackRateChanged: if(isPlaying) seek(position - 0.01);
     property bool isPlaying: playbackState === Audio.PlayingState
     property int displayPosition: Math.max(position, app.playlist.applyThisTrackPosition)
-//    onDurationChanged: {
-//        console.log('AUDIO: duration changed', duration);
-//        console.log('status is: ', status, 'loaded?', status === Audio.Loaded, 'buffered?', status === Audio.Buffered)
-//        console.log('playlist data', JSON.stringify(app.playlist.currentMetaData))
-//    }
 
     function playPause() {
         if(!isPlaying) {

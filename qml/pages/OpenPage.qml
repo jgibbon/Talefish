@@ -146,7 +146,12 @@ Dialog {
     }
     Component.onCompleted: {
         if(app.options.placesAutoShowRecentDirectory) {
-            displayDirectory(app.state.lastDirectory.replace('file://', ''), true)
+            var lastDir = app.state.lastDirectory.replace('file://', '');
+            if(lastDir !== '' && launcher.fileExists(lastDir)) {
+
+                displayDirectory(lastDir, true)
+            }
+
         }
     }
 }

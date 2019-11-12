@@ -458,13 +458,13 @@
         <translation type="unfinished">Varie</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsMisc.qml" line="36"/>
+        <location filename="../qml/components/OptionsMisc.qml" line="37"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsMisc.qml" line="41"/>
+        <location filename="../qml/components/OptionsMisc.qml" line="42"/>
         <source>Reset &amp; Quit</source>
         <extracomment>Button Text: Reset all options/application state and quit</extracomment>
         <translation type="unfinished"></translation>
@@ -608,7 +608,7 @@
 <context>
     <name>PlacesModelComponent</name>
     <message>
-        <location filename="../qml/components/PlacesModelComponent.qml" line="118"/>
+        <location filename="../qml/components/PlacesModelComponent.qml" line="124"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
         <translation type="unfinished"></translation>

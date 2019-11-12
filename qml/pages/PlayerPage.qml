@@ -441,6 +441,7 @@ Page {
 
                     PlayerPageProgressArea {
                         id: progressArea
+                        opacity: app.audio.error > 0 ? 0.0 : 1.0
                     }
             }
 

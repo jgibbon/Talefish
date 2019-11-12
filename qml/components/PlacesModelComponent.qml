@@ -48,17 +48,23 @@ Column {
                     height: Theme.itemSizeSmall
                     width: parent.width
                     property bool pathExists: modelData.path !== '' && launcher.folderExists(modelData.path)
-                    property string textColor: highlighted && pathExists ? Theme.highlightColor : Theme.primaryColor
+                    property string textColor: highlighted && (pathExists || removeFavouriteMenu.active) ? Theme.highlightColor : Theme.primaryColor
                     property string secondaryTextColor: highlighted && pathExists ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     enabled: pathExists || modelData.isFavourite
                     highlighted: down || removeFavouriteMenu.active
-                    opacity: pathExists ? 1 : 0.5
+                    opacity: pathExists || removeFavouriteMenu.active ? 1 : 0.5
                     onPressAndHold: {
                         if(modelData.isFavourite) {
                             removeFavouriteMenu.open(placeItem)
                         }
                     }
-                    onClicked: pathExists && placesModelComponent.placeClicked(modelData.path)
+                    onClicked: {
+                        if(pathExists) {
+                            placesModelComponent.placeClicked(modelData.path)
+                        } else if(modelData.isFavourite) {
+                            removeFavouriteMenu.open(placeItem)
+                        }
+                    }
 
                     HighlightImage {
                         id: placeImage

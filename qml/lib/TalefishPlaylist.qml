@@ -24,7 +24,8 @@ import TaglibPlugin 1.0
 
 Playlist {
     id: playlist
-    playbackMode: Playlist.Sequential
+    playbackMode: app.audio.error ? Playlist.CurrentItemOnce : Playlist.Sequential
+//    playbackMode: Playlist.Sequential
     property int totalDuration: 0
     property int totalPosition: 0
     property string pathsIdentifier // pathsIdentifier is for saving current progress
@@ -37,9 +38,9 @@ Playlist {
     }
     property PlayerCommands commands: PlayerCommands {}
     onCurrentIndexChanged: {
-//        console.log('currentIndex', currentIndex)
+        console.log('currentIndex', currentIndex, app.audio.error) //error: 1
         // when played through, we want to activate the first track again
-       if(currentIndex === -1 && metadata.count > 0) {
+       if(currentIndex === -1 && metadata.count > 0 && !app.audio.error) {
            app.audio.pause();
            currentIndex = 0;
            // total position stays at "100%" by default, which is nice and correct but may be seen as inconsistent
