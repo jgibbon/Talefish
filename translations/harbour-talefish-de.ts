@@ -11,12 +11,6 @@
         <translation>Über Talefish</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="64"/>
-        <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
-        <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation>Talefish Hörbuchplayer, Copyright (C) 2016-%1 John Gibbon</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
@@ -39,12 +33,6 @@
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
         <translation>Dieses Programm verwendet und beinhaltet unmodifizierte oder modifizierte Versionen der folgenden Softwarekomponenten unter den Bedingungen der LGPL-2.1-Lizenz:</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
-        <source>See the GNU Lesser General Public License for more details:</source>
-        <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
-        <translation>Details finden sie in der GNU Lesser General Public License:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
@@ -100,6 +88,18 @@
         <source>PayPal donation</source>
         <extracomment>Button: Linking to paypal donation page</extracomment>
         <translation>PayPal-Spende</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <source>See the GNU Lesser General Public License for more details:</source>
+        <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
+        <translation>Details finden sie in der GNU Lesser General Public License:</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="64"/>
+        <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
+        <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
+        <translation>Talefish Hörbuchplayer, Copyright (C) 2016-%1 John Gibbon</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="210"/>
@@ -198,18 +198,6 @@
         <translation>Bild (bzw oberhalb des Titels) links/rechts wischen zum Spulen von Tracks</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
-        <source>Additional App-Cover Actions</source>
-        <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
-        <translation>Zusätzliche App-Cover-Aktionen</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
-        <source>App-Cover Actions are external Commands, as well.</source>
-        <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
-        <translation>App-Cover-Aktionen sind auch externe Befehle.</translation>
-    </message>
-    <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="60"/>
         <source>Hidden</source>
         <extracomment>ComboBox option: No secondary App-Cover action</extracomment>
@@ -234,6 +222,36 @@
         <translation>Vor- und Zurückspulen</translation>
     </message>
     <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
+        <source>playlist</source>
+        <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
+        <translation>Playlist</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
+        <source>Display album cover images in directory list and playlist view</source>
+        <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
+        <translation>Zeige Albencover in Verzeichnis- und Playlistansicht</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="74"/>
+        <source>Extracting a lot of Images at once can be really slow.</source>
+        <extracomment>Option Entry description</extracomment>
+        <translation>Viele Bilder auf einmal zu extrahieren kann sehr langsam sein.</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
+        <source>App-Cover Actions are external Commands, as well.</source>
+        <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
+        <translation>App-Cover-Aktionen sind auch externe Befehle.</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
+        <source>Additional App-Cover Actions</source>
+        <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
+        <translation>Zusätzliche App-Cover-Aktionen</translation>
+    </message>
+    <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
         <source>Cassette tape</source>
         <comment>section header</comment>
@@ -253,12 +271,6 @@
         <translation>Titel</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
-        <source>playlist</source>
-        <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation>Playlist</translation>
-    </message>
-    <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="99"/>
         <source>Do Animations</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations generally</extracomment>
@@ -275,18 +287,6 @@
         <source>App-Cover Animation</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the App-Cover</extracomment>
         <translation>Animation auf Programmcover</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
-        <source>Display album cover images in directory list and playlist view</source>
-        <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
-        <translation>Zeige Albencover in Verzeichnis- und Playlistansicht</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="74"/>
-        <source>Extracting a lot of Images at once can be really slow.</source>
-        <extracomment>Option Entry description</extracomment>
-        <translation>Viele Bilder auf einmal zu extrahieren kann sehr langsam sein.</translation>
     </message>
 </context>
 <context>
@@ -305,6 +305,12 @@
         <translation>Externe Befehle springen</translation>
     </message>
     <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="43"/>
+        <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
+        <extracomment>ComboBox description</extracomment>
+        <translation>Externe Befehle sind die, die vom Sperrbildschirm oder von Kopfhörer-/Bluetoothbedienung ausgeführt werden.</translation>
+    </message>
+    <message>
         <location filename="../qml/components/OptionsCommands.qml" line="36"/>
         <source>to track beginning</source>
         <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
@@ -321,12 +327,6 @@
         <source>Long Skip duration</source>
         <extracomment>ComboBox option: &quot;Long Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
         <translation>Langes Spulen</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="43"/>
-        <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
-        <extracomment>ComboBox description</extracomment>
-        <translation>Externe Befehle sind die, die vom Sperrbildschirm oder von Kopfhörer-/Bluetoothbedienung ausgeführt werden.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="49"/>
@@ -422,6 +422,12 @@
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
         <translation>Behalte Ordnerfortschritt</translation>
     </message>
+    <message>
+        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
+        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
+        <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
+        <translation>Um zu verhindern, dass sich gespeicherte Daten für alte oder gar gelöschte Ordner ansammeln, sucht Talefish beim Programmstart nach alten Daten. Dies hat keinen Einfluss auf das geöffnete Verzeichnis.</translation>
+    </message>
     <message numerus="yes">
         <location filename="../qml/components/OptionsFiles.qml" line="75"/>
         <location filename="../qml/components/OptionsFiles.qml" line="76"/>
@@ -440,12 +446,6 @@
         <source>forever</source>
         <comment>keep progress forever</comment>
         <translation>für immer</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
-        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
-        <translation>Um zu verhindern, dass sich gespeicherte Daten für alte oder gar gelöschte Ordner ansammeln, sucht Talefish beim Programmstart nach alten Daten. Dies hat keinen Einfluss auf das geöffnete Verzeichnis.</translation>
     </message>
 </context>
 <context>
@@ -569,10 +569,10 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation>Öffnen</translation>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Nach Dateinamen sortieren</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="194"/>
@@ -581,10 +581,10 @@
         <translation>Einreihen</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation>Nach Dateinamen sortieren</translation>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Öffnen</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="226"/>

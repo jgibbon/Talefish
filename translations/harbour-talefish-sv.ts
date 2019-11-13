@@ -11,40 +11,28 @@
         <translation>Om Talefish</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="64"/>
-        <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
-        <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Visa licensinformation</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="73"/>
         <source>Hide license information</source>
         <extracomment>Button: Hide license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dölj licensinformation</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="89"/>
         <source>Talefish comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See the GNU General Public License for more details:</source>
         <extracomment>Longer License Line. If you&apos;re in the least unsure about translation, leave it in english. Below it will be a Link to the full license text.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Talefish distribueras med INGEN SOM HELST GARANTI. Detta är fri programvara, och du är välkommen att vidaredistribuera den och/eller modifiera den enligt villkoren i GNU General Public License som publicerats av Free Software Foundation; antingen version 2 av licensen eller (efter ditt val) någon senare version. Se GNU General Public License för mer information:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
-        <source>See the GNU Lesser General Public License for more details:</source>
-        <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Detta program använder och inkluderar omodifierade eller modifierade versioner av följande mjukvarukomponenter under villkoren för licensen LGPL 2.1:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
@@ -102,6 +90,18 @@
         <translation>PayPal-donation</translation>
     </message>
     <message>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <source>See the GNU Lesser General Public License for more details:</source>
+        <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
+        <translation>Se GNU Lesser General Public License för fler detaljer:</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="64"/>
+        <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
+        <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
+        <translation>Talefish ljudboksspelare, Copyright (C) 2016-%1 John Gibbon</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/AboutPage.qml" line="210"/>
         <source>Translators</source>
         <comment>header</comment>
@@ -120,7 +120,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="83"/>
         <source>Nothing to play</source>
-        <translation type="unfinished">Inget att spela upp</translation>
+        <translation>Inget att spela upp</translation>
     </message>
 </context>
 <context>
@@ -129,16 +129,16 @@
         <location filename="../qml/pages/OpenPage.qml" line="73"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Platser</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OpenPage.qml" line="112"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Öppna %L1 fil</numerusform>
+            <numerusform>Öppna %L1 filer</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -146,34 +146,34 @@
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Köa %L1 fil</numerusform>
+            <numerusform>Köa %L1 filer</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="119"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Öppna alla filer</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="122"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Köa alla filer</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="125"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Välj mapp</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="130"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>eller välj filer nedan</translation>
     </message>
 </context>
 <context>
@@ -183,110 +183,110 @@
         <source>Appearance</source>
         <comment>section header</comment>
         <extracomment>Section Header/Button Text for Options Section</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Utseende</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="32"/>
         <source>Display playlist progress</source>
         <extracomment>Option Entry: Display total progress on player page</extracomment>
-        <translation type="unfinished">Visa spellistans förlopp</translation>
+        <translation>Visa spellistans förlopp</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="43"/>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
         <extracomment>Option Entry (TextSwitch): Enable swiping album cover area (or if there is no cover, the area above track info) on player page</extracomment>
-        <translation type="unfinished">Svep på omslaget (eller över titeln) för att hoppa över spår</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
-        <source>Additional App-Cover Actions</source>
-        <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
-        <translation type="unfinished">Fler miniatyråtgärder</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
-        <source>App-Cover Actions are external Commands, as well.</source>
-        <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
-        <translation type="unfinished">Åtgärder från programminiatyren är också externa kommandon.</translation>
+        <translation>Svep på omslaget (eller över titeln) för att hoppa över spår</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="60"/>
         <source>Hidden</source>
         <extracomment>ComboBox option: No secondary App-Cover action</extracomment>
-        <translation type="unfinished">Dold</translation>
+        <translation>Dold</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="62"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Skip to next track as secondary App-Cover action</extracomment>
-        <translation type="unfinished">Snabbspola framåt</translation>
+        <translation>Snabbspola framåt</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="64"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Skip to previous track as secondary App-Cover action</extracomment>
-        <translation type="unfinished">Snabbspola bakåt</translation>
+        <translation>Snabbspola bakåt</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="66"/>
         <source>Skip backward and forward</source>
         <extracomment>ComboBox option: Skip to next and previous track as secondary/tertiary App-Cover action</extracomment>
-        <translation type="unfinished">Snabbspola bakåt och framåt</translation>
+        <translation>Snabbspola bakåt och framåt</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
+        <source>playlist</source>
+        <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
+        <translation>spellista</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
+        <source>Display album cover images in directory list and playlist view</source>
+        <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
+        <translation>Visa omslagsbilder i mapp- och spellistevy</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="74"/>
+        <source>Extracting a lot of Images at once can be really slow.</source>
+        <extracomment>Option Entry description</extracomment>
+        <translation>Extrahering av många bilder på en gång kan ta lång tid.</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
+        <source>App-Cover Actions are external Commands, as well.</source>
+        <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
+        <translation>Åtgärder från programminiatyren är också externa kommandon.</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
+        <source>Additional App-Cover Actions</source>
+        <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
+        <translation>Fler miniatyråtgärder</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
         <source>Cassette tape</source>
         <comment>section header</comment>
         <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kassettband</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="89"/>
         <source>Cassette shows progress of</source>
         <extracomment>ComboBox label: Beginning of sentence</extracomment>
-        <translation type="unfinished">Kassetten visar förloppet för</translation>
+        <translation>Kassetten visar förloppet för</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="92"/>
         <source>track</source>
         <extracomment>ComboBox option: &quot;Track&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished">spår</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
-        <source>playlist</source>
-        <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>spår</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="99"/>
         <source>Do Animations</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations generally</extracomment>
-        <translation type="unfinished">Visa animeringar</translation>
+        <translation>Visa animeringar</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="110"/>
         <source>Player Page Animation</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the player page</extracomment>
-        <translation type="unfinished">Animering på spelarsidan</translation>
+        <translation>Animering på spelarsidan</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="124"/>
         <source>App-Cover Animation</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the App-Cover</extracomment>
-        <translation type="unfinished">Animering på programminiatyr</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
-        <source>Display album cover images in directory list and playlist view</source>
-        <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="74"/>
-        <source>Extracting a lot of Images at once can be really slow.</source>
-        <extracomment>Option Entry description</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Animering på programminiatyr</translation>
     </message>
 </context>
 <context>
@@ -296,85 +296,85 @@
         <source>External control</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options to control Talefish &quot;externally&quot;: Headphone buttons, app cover etc</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Extern kontroll</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="33"/>
         <source>External Commands skip</source>
         <extracomment>ComboBox label: Beginning of sentence</extracomment>
-        <translation type="unfinished">Externa snabbspolningskommandon</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="36"/>
-        <source>to track beginning</source>
-        <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">Till spårets början</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="38"/>
-        <source>Short Skip duration</source>
-        <extracomment>ComboBox option: &quot;Short Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">Kort snabbspolning</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="40"/>
-        <source>Long Skip duration</source>
-        <extracomment>ComboBox option: &quot;Long Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">Lång snabbspolning</translation>
+        <translation>Externa snabbspolningskommandon</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="43"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
         <extracomment>ComboBox description</extracomment>
-        <translation type="unfinished">Externa kommandon är de som körs från låsskärmen, eller från hörlurar/bluetooth.</translation>
+        <translation>Externa kommandon är de som körs från låsskärmen, eller från hörlurar/bluetooth.</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="36"/>
+        <source>to track beginning</source>
+        <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>Till spårets början</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="38"/>
+        <source>Short Skip duration</source>
+        <extracomment>ComboBox option: &quot;Short Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>Kort snabbspolning</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="40"/>
+        <source>Long Skip duration</source>
+        <extracomment>ComboBox option: &quot;Long Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>Lång snabbspolning</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="49"/>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Använd hörlursknappar/Bluetooth för att styra Talefish</translation>
+        <translation>Använd hörlursknappar/Bluetooth för att styra Talefish</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="82"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <extracomment>Label</extracomment>
-        <translation type="unfinished">Du kan välja vilken åtgärd som skall utföras när du trycker på samtalsknappen, som ofta är den enda knappen på ett headset. </translation>
+        <translation>Du kan välja vilken åtgärd som skall utföras när du trycker på samtalsknappen, som ofta är den enda knappen på ett headset. </translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="87"/>
         <source>Do nothing</source>
         <extracomment>ComboBox option: Do nothing on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Gör ingenting</translation>
+        <translation>Gör ingenting</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="89"/>
         <source>Play/Pause</source>
         <extracomment>ComboBox option: Play/Pause on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Spela/Pausa</translation>
+        <translation>Spela/Pausa</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="91"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Next on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Snabbspola framåt</translation>
+        <translation>Snabbspola framåt</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="93"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Previous on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Snabbspola bakåt</translation>
+        <translation>Snabbspola bakåt</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="105"/>
         <source>Button Press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; short press</extracomment>
-        <translation type="unfinished">Knapptryck:</translation>
+        <translation>Knapptryck:</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="114"/>
         <source>Long press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; long press</extracomment>
-        <translation type="unfinished">Långtryck:</translation>
+        <translation>Långtryck:</translation>
     </message>
 </context>
 <context>
@@ -384,43 +384,49 @@
         <source>Open Files</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options for file handling and saved directory progress</extracomment>
-        <translation type="unfinished">Öppna filer</translation>
+        <translation>Öppna filer</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="32"/>
         <source>Automatically display most recent directory</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Visa senast använda mapp automatiskt</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="40"/>
         <source>Remember sort mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kom ihåg sorteringsläge</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="49"/>
         <source>Remember enqueue mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kom ihåg köläge</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="59"/>
         <source>Save progress periodically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Spara förloppet med jämna mellanrum</translation>
+        <translation>Spara förloppet med jämna mellanrum</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="61"/>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
         <extracomment>Option Entry (TextSwitch) description for &quot;Save progress periodically&quot;</extracomment>
-        <translation type="unfinished">Vid inaktivering, kommer aktuell uppspelningsstatus bara att sparas, när appen stängs. Annars sparas förloppet med några sekunders mellanrum.</translation>
+        <translation>Vid inaktivering, kommer aktuell uppspelningsstatus bara att sparas, när appen stängs. Annars sparas förloppet med några sekunders mellanrum.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="73"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
-        <translation type="unfinished">Behåll mappförloppet</translation>
+        <translation>Behåll mappförloppet</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
+        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
+        <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
+        <translation>För att förhindra cache-lagrad data, för gamla och borttagna mappar, att växa över tid, kommer Talefish att söka efter gamla poster vid programstart. Detta påverkar inte den aktuella inlästa mappen.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/OptionsFiles.qml" line="75"/>
@@ -430,8 +436,8 @@
         <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform>i %1 dag</numerusform>
+        <translation>
+            <numerusform>i %1 dagar</numerusform>
             <numerusform>i %1 dagar</numerusform>
         </translation>
     </message>
@@ -439,13 +445,7 @@
         <location filename="../qml/components/OptionsFiles.qml" line="80"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation type="unfinished">för alltid</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
-        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
-        <translation type="unfinished">För att förhindra cache-lagrad data, för gamla och borttagna mappar, att växa över tid, kommer Talefish att söka efter gamla poster vid programstart. Detta påverkar inte den aktuella inlästa mappen.</translation>
+        <translation>för alltid</translation>
     </message>
 </context>
 <context>
@@ -455,19 +455,19 @@
         <source>Miscellaneous</source>
         <comment>section header</comment>
         <extracomment>Section Header: Miscellaneous options</extracomment>
-        <translation type="unfinished">Diverse</translation>
+        <translation>Diverse</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsMisc.qml" line="37"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>I felsökningssyfte är det ibland praktiskt att återställa alla alternativ och programtillstånd till standardläget. Du kommer förhoppningsvis aldrig att behöva detta.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsMisc.qml" line="42"/>
         <source>Reset &amp; Quit</source>
         <extracomment>Button Text: Reset all options/application state and quit</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Återställ &amp; avsluta</translation>
     </message>
 </context>
 <context>
@@ -492,26 +492,26 @@
         <source>Playback</source>
         <comment>section header</comment>
         <extracomment>Section Header: Playback Options</extracomment>
-        <translation type="unfinished">Uppspelning</translation>
+        <translation>Uppspelning</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="38"/>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
         <extracomment>Slider Label: Playback Speed in percent, %1 is replaced with the value</extracomment>
-        <translation type="unfinished">Uppspelningshastighet: %1%</translation>
+        <translation>Uppspelningshastighet: %1%</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="70"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;short skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
-        <translation type="unfinished">Kort snabbspolning</translation>
+        <translation>Kort snabbspolning</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="77"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;long skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
-        <translation type="unfinished">Lång snabbspolning</translation>
+        <translation>Lång snabbspolning</translation>
     </message>
 </context>
 <context>
@@ -521,88 +521,88 @@
         <source>Sleep timer integration</source>
         <comment>section header</comment>
         <extracomment>Section Header: Sleep timer options (for starting &quot;slumber&quot; automatically)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Integration av insomningstimer</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="32"/>
         <source>Install the slumber sleep timer application to enable these options</source>
         <extracomment>Label: Shown if &quot;slumber&quot; isn&apos;t installed</extracomment>
-        <translation type="unfinished">Installera &quot;slumber&quot; insomningstimer för att aktivera dessa alternativ</translation>
+        <translation>Installera &quot;slumber&quot; insomningstimer för att aktivera dessa alternativ</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="42"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Starta insomningstimern automatiskt</translation>
+        <translation>Starta insomningstimern automatiskt</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="49"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
-        <translation type="unfinished">Starta slumber-appen automatiskt när Talefish startas.</translation>
+        <translation>Starta slumber-appen automatiskt när Talefish startas.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="56"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Visa Talefish i förgrunden igen, efter att slumber har startats</translation>
+        <translation>Visa Talefish i förgrunden igen, efter att slumber har startats</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="67"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Starta slumber endast vid vissa tider</translation>
+        <translation>Starta slumber endast vid vissa tider</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="105"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished">Starta slumber efter</translation>
+        <translation>Starta slumber efter</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="124"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished">Starta slumber före</translation>
+        <translation>Starta slumber före</translation>
     </message>
 </context>
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation type="unfinished">Öppna</translation>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Sortera efter namn</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="194"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
-        <translation type="unfinished">Köa</translation>
+        <translation>Köa</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation type="unfinished">Sortera efter namn</translation>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Öppna</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="226"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
-        <translation type="unfinished">Sortera efter &quot;Senast ändrad&quot;</translation>
+        <translation>Sortera efter &quot;Senast ändrad&quot;</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="247"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Fler alternativ</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="292"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Överordnad mapp</translation>
     </message>
 </context>
 <context>
@@ -611,7 +611,7 @@
         <location filename="../qml/components/PlacesModelComponent.qml" line="124"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ta bort från favoriter</translation>
     </message>
 </context>
 <context>
@@ -620,69 +620,69 @@
         <location filename="../qml/components/PlacesModels.qml" line="29"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Snabbåtkomst</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="34"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nyligen öppnade</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="55"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Enhet</translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="61"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Hem</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="70"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Musik</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="79"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nerladdningar</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="88"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Android-lagring</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="97"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Enhetsminne</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="107"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>SD-kort</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/components/PlacesModels.qml" line="110"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Extern lagring</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
 </context>
@@ -741,7 +741,7 @@
         <location filename="../qml/components/PlayerPageProgressArea.qml" line="161"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation type="unfinished">%1 / %2 (fil %L3 av %L4)</translation>
+        <translation>%1 / %2 (fil %L3 av %L4)</translation>
     </message>
 </context>
 <context>
@@ -768,7 +768,7 @@
     <message>
         <location filename="../qml/lib/PlaylistView.qml" line="41"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Sök</translation>
     </message>
     <message>
         <location filename="../qml/lib/PlaylistView.qml" line="184"/>

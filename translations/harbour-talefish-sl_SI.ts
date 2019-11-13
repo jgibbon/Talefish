@@ -11,12 +11,6 @@
         <translation>O programu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="64"/>
-        <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
-        <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
@@ -38,12 +32,6 @@
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
-        <source>See the GNU Lesser General Public License for more details:</source>
-        <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -102,6 +90,18 @@
         <translation>PayPal</translation>
     </message>
     <message>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <source>See the GNU Lesser General Public License for more details:</source>
+        <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="64"/>
+        <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
+        <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/pages/AboutPage.qml" line="210"/>
         <source>Translators</source>
         <comment>header</comment>
@@ -120,7 +120,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="83"/>
         <source>Nothing to play</source>
-        <translation type="unfinished">Ni datotek za predvajanje</translation>
+        <translation>Ni datotek za predvajanje</translation>
     </message>
 </context>
 <context>
@@ -193,92 +193,43 @@
         <location filename="../qml/components/OptionsAppearance.qml" line="32"/>
         <source>Display playlist progress</source>
         <extracomment>Option Entry: Display total progress on player page</extracomment>
-        <translation type="unfinished">Prikaži napredovanje seznama predvajanja</translation>
+        <translation>Prikaži napredovanje seznama predvajanja</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="43"/>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
         <extracomment>Option Entry (TextSwitch): Enable swiping album cover area (or if there is no cover, the area above track info) on player page</extracomment>
-        <translation type="unfinished">Podrsaj naslovnico (ali zgornji naslov) za preskok posnetka</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
-        <source>Additional App-Cover Actions</source>
-        <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
-        <translation type="unfinished">Dodatna dejanja naslovnice</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
-        <source>App-Cover Actions are external Commands, as well.</source>
-        <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
-        <translation type="unfinished">Dejanja na naslovnici so prav tako zunanji ukaz</translation>
+        <translation>Podrsaj naslovnico (ali zgornji naslov) za preskok posnetka</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="60"/>
         <source>Hidden</source>
         <extracomment>ComboBox option: No secondary App-Cover action</extracomment>
-        <translation type="unfinished">Skrito</translation>
+        <translation>Skrito</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="62"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Skip to next track as secondary App-Cover action</extracomment>
-        <translation type="unfinished">Preskoči naprej</translation>
+        <translation>Preskoči naprej</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="64"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Skip to previous track as secondary App-Cover action</extracomment>
-        <translation type="unfinished">Preskoči nazaj</translation>
+        <translation>Preskoči nazaj</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="66"/>
         <source>Skip backward and forward</source>
         <extracomment>ComboBox option: Skip to next and previous track as secondary/tertiary App-Cover action</extracomment>
-        <translation type="unfinished">Preskoči naprej in nazaj</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
-        <source>Cassette tape</source>
-        <comment>section header</comment>
-        <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="89"/>
-        <source>Cassette shows progress of</source>
-        <extracomment>ComboBox label: Beginning of sentence</extracomment>
-        <translation type="unfinished">Kaseta prikazuje napredovanje</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="92"/>
-        <source>track</source>
-        <extracomment>ComboBox option: &quot;Track&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished">posnetka</translation>
+        <translation>Preskoči naprej in nazaj</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
         <source>playlist</source>
         <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="99"/>
-        <source>Do Animations</source>
-        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations generally</extracomment>
-        <translation type="unfinished">Prikaži animacije</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="110"/>
-        <source>Player Page Animation</source>
-        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the player page</extracomment>
-        <translation type="unfinished">V predvajalniku</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="124"/>
-        <source>App-Cover Animation</source>
-        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the App-Cover</extracomment>
-        <translation type="unfinished">Na naslovnici</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
@@ -291,6 +242,55 @@
         <source>Extracting a lot of Images at once can be really slow.</source>
         <extracomment>Option Entry description</extracomment>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
+        <source>App-Cover Actions are external Commands, as well.</source>
+        <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
+        <translation>Dejanja na naslovnici so prav tako zunanji ukaz</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
+        <source>Additional App-Cover Actions</source>
+        <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
+        <translation>Dodatna dejanja naslovnice</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
+        <source>Cassette tape</source>
+        <comment>section header</comment>
+        <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="89"/>
+        <source>Cassette shows progress of</source>
+        <extracomment>ComboBox label: Beginning of sentence</extracomment>
+        <translation>Kaseta prikazuje napredovanje</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="92"/>
+        <source>track</source>
+        <extracomment>ComboBox option: &quot;Track&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
+        <translation>posnetka</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="99"/>
+        <source>Do Animations</source>
+        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations generally</extracomment>
+        <translation>Prikaži animacije</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="110"/>
+        <source>Player Page Animation</source>
+        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the player page</extracomment>
+        <translation>V predvajalniku</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="124"/>
+        <source>App-Cover Animation</source>
+        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the App-Cover</extracomment>
+        <translation>Na naslovnici</translation>
     </message>
 </context>
 <context>
@@ -306,79 +306,79 @@
         <location filename="../qml/components/OptionsCommands.qml" line="33"/>
         <source>External Commands skip</source>
         <extracomment>ComboBox label: Beginning of sentence</extracomment>
-        <translation type="unfinished">Zunanji ukaz za preskok</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="36"/>
-        <source>to track beginning</source>
-        <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">na začetek posnetka</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="38"/>
-        <source>Short Skip duration</source>
-        <extracomment>ComboBox option: &quot;Short Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">Nastavitev za kratek preskok</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="40"/>
-        <source>Long Skip duration</source>
-        <extracomment>ComboBox option: &quot;Long Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">Nastavitev za dolg preskok</translation>
+        <translation>Zunanji ukaz za preskok</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="43"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
         <extracomment>ComboBox description</extracomment>
-        <translation type="unfinished">Zunanji ukaz je ukazi, izvršen preko zaklenjenega zaslona ali s tipkami na slušalkah</translation>
+        <translation>Zunanji ukaz je ukazi, izvršen preko zaklenjenega zaslona ali s tipkami na slušalkah</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="36"/>
+        <source>to track beginning</source>
+        <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>na začetek posnetka</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="38"/>
+        <source>Short Skip duration</source>
+        <extracomment>ComboBox option: &quot;Short Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>Nastavitev za kratek preskok</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="40"/>
+        <source>Long Skip duration</source>
+        <extracomment>ComboBox option: &quot;Long Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>Nastavitev za dolg preskok</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="49"/>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Za nadzor programa uporabi gumbe na slušalkah</translation>
+        <translation>Za nadzor programa uporabi gumbe na slušalkah</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="82"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <extracomment>Label</extracomment>
-        <translation type="unfinished">Tu nastavite katero dejanje naj se izvede pri pritisku na gumb za &quot;sprejem / prekinitev klica&quot; na slušalkah. Pogosto je to edini gumb na slušalki.</translation>
+        <translation>Tu nastavite katero dejanje naj se izvede pri pritisku na gumb za &quot;sprejem / prekinitev klica&quot; na slušalkah. Pogosto je to edini gumb na slušalki.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="87"/>
         <source>Do nothing</source>
         <extracomment>ComboBox option: Do nothing on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Brez dejanja</translation>
+        <translation>Brez dejanja</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="89"/>
         <source>Play/Pause</source>
         <extracomment>ComboBox option: Play/Pause on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Predvajaj / Premor</translation>
+        <translation>Predvajaj / Premor</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="91"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Next on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Preskoči naprej</translation>
+        <translation>Preskoči naprej</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="93"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Previous on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Preskoči nazaj</translation>
+        <translation>Preskoči nazaj</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="105"/>
         <source>Button Press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; short press</extracomment>
-        <translation type="unfinished">Prisitk na gumb:</translation>
+        <translation>Prisitk na gumb:</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="114"/>
         <source>Long press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; long press</extracomment>
-        <translation type="unfinished">Dolgi pritisk:</translation>
+        <translation>Dolgi pritisk:</translation>
     </message>
 </context>
 <context>
@@ -388,7 +388,7 @@
         <source>Open Files</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options for file handling and saved directory progress</extracomment>
-        <translation type="unfinished">Odpri datoteke</translation>
+        <translation>Odpri datoteke</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="32"/>
@@ -412,19 +412,25 @@
         <location filename="../qml/components/OptionsFiles.qml" line="59"/>
         <source>Save progress periodically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Občasno shrani napredek</translation>
+        <translation>Občasno shrani napredek</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="61"/>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
         <extracomment>Option Entry (TextSwitch) description for &quot;Save progress periodically&quot;</extracomment>
-        <translation type="unfinished">Ko je omogočeno se stanje shrani vsakih nekaj sekund. V nasprotnem primeru se bo stanje trenutnega predvajanje shranilo le v primeru, da za izhod iz aplikacije uporabite ukaz. </translation>
+        <translation>Ko je omogočeno se stanje shrani vsakih nekaj sekund. V nasprotnem primeru se bo stanje trenutnega predvajanje shranilo le v primeru, da za izhod iz aplikacije uporabite ukaz. </translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="73"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
-        <translation type="unfinished">Ohrani podatke o vsebini map</translation>
+        <translation>Ohrani podatke o vsebini map</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
+        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
+        <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
+        <translation>Da se prepreči kopičenje starih in neveljavnih map bo program  ob zagonu preveril dejansko stanje in osvežil bazo. Izjema je trenutno predvajana mapa - ta podatek ne bo posodobljen.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/OptionsFiles.qml" line="75"/>
@@ -435,23 +441,17 @@
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation type="unfinished">
-            <numerusform>za %1 dan</numerusform>
-            <numerusform>za %1 dni</numerusform>
-            <numerusform>za %1 dni</numerusform>
-            <numerusform>za %1 dni</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="80"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation type="unfinished">neskončno</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
-        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
-        <translation type="unfinished">Da se prepreči kopičenje starih in neveljavnih map bo program  ob zagonu preveril dejansko stanje in osvežil bazo. Izjema je trenutno predvajana mapa - ta podatek ne bo posodobljen.</translation>
+        <translation>neskončno</translation>
     </message>
 </context>
 <context>
@@ -461,7 +461,7 @@
         <source>Miscellaneous</source>
         <comment>section header</comment>
         <extracomment>Section Header: Miscellaneous options</extracomment>
-        <translation type="unfinished">Razno</translation>
+        <translation>Razno</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsMisc.qml" line="37"/>
@@ -498,26 +498,26 @@
         <source>Playback</source>
         <comment>section header</comment>
         <extracomment>Section Header: Playback Options</extracomment>
-        <translation type="unfinished">Predvajanje</translation>
+        <translation>Predvajanje</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="38"/>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
         <extracomment>Slider Label: Playback Speed in percent, %1 is replaced with the value</extracomment>
-        <translation type="unfinished">Hitrost predvajanja: %1%</translation>
+        <translation>Hitrost predvajanja: %1%</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="70"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;short skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
-        <translation type="unfinished">Nastavitev za kratek preskok</translation>
+        <translation>Nastavitev za kratek preskok</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="77"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;long skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
-        <translation type="unfinished">Nastavitev za dolg preskok</translation>
+        <translation>Nastavitev za dolg preskok</translation>
     </message>
 </context>
 <context>
@@ -533,70 +533,70 @@
         <location filename="../qml/components/OptionsSleepTimer.qml" line="32"/>
         <source>Install the slumber sleep timer application to enable these options</source>
         <extracomment>Label: Shown if &quot;slumber&quot; isn&apos;t installed</extracomment>
-        <translation type="unfinished">Da omogočite te funkcije naprej namestite aplikacijo Slumber</translation>
+        <translation>Da omogočite te funkcije naprej namestite aplikacijo Slumber</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="42"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Samodejno zaženi časovnik spanja</translation>
+        <translation>Samodejno zaženi časovnik spanja</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="49"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
-        <translation type="unfinished">Ob zagonu Talefish samodejno zaženi tudi aplikacijo Slumber.</translation>
+        <translation>Ob zagonu Talefish samodejno zaženi tudi aplikacijo Slumber.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="56"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Po zagonu aplikacije Slumber prikaži Talefish v ospredju</translation>
+        <translation>Po zagonu aplikacije Slumber prikaži Talefish v ospredju</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="67"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Aplikacijo Slumber zaženi le ob določenem času</translation>
+        <translation>Aplikacijo Slumber zaženi le ob določenem času</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="105"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished">Zaženi aplikacijo Slumber po</translation>
+        <translation>Zaženi aplikacijo Slumber po</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="124"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished">Zaženi aplikacijo Slumber pred</translation>
+        <translation>Zaženi aplikacijo Slumber pred</translation>
     </message>
 </context>
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation type="unfinished">Odpri</translation>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Uredi po imenu</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="194"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
-        <translation type="unfinished">Dodaj na seznam</translation>
+        <translation>Dodaj na seznam</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation type="unfinished">Uredi po imenu</translation>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Odpri</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="226"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
-        <translation type="unfinished">Uredi po datumu zadnje spremembe</translation>
+        <translation>Uredi po datumu zadnje spremembe</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="247"/>
@@ -747,7 +747,7 @@
         <location filename="../qml/components/PlayerPageProgressArea.qml" line="161"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation type="unfinished">%1 / %2 (datoteka %L3 od %L4)</translation>
+        <translation>%1 / %2 (datoteka %L3 od %L4)</translation>
     </message>
 </context>
 <context>
@@ -756,11 +756,11 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="32"/>
         <source>%L1 file(s) opened</source>
         <extracomment>Playlist Page Header: Number of opened files</extracomment>
-        <translation>
-            <numerusform>%L1 odprta datoteka</numerusform>
-            <numerusform>%L1 odprti datoteki</numerusform>
-            <numerusform>%L1 odprte datoteke</numerusform>
-            <numerusform>%L1 odprtih datotek</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>

@@ -11,12 +11,6 @@
         <translation>Acerca de Talefish</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="64"/>
-        <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
-        <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
@@ -38,12 +32,6 @@
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="122"/>
-        <source>See the GNU Lesser General Public License for more details:</source>
-        <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -102,6 +90,18 @@
         <translation>Donación por PayPal</translation>
     </message>
     <message>
+        <location filename="../qml/pages/AboutPage.qml" line="122"/>
+        <source>See the GNU Lesser General Public License for more details:</source>
+        <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="64"/>
+        <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
+        <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/pages/AboutPage.qml" line="210"/>
         <source>Translators</source>
         <comment>header</comment>
@@ -120,7 +120,7 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="83"/>
         <source>Nothing to play</source>
-        <translation type="unfinished">Nada para reproducir</translation>
+        <translation>Nada para reproducir</translation>
     </message>
 </context>
 <context>
@@ -189,92 +189,43 @@
         <location filename="../qml/components/OptionsAppearance.qml" line="32"/>
         <source>Display playlist progress</source>
         <extracomment>Option Entry: Display total progress on player page</extracomment>
-        <translation type="unfinished">Mostrar progreso de la lista de reproducción</translation>
+        <translation>Mostrar progreso de la lista de reproducción</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="43"/>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
         <extracomment>Option Entry (TextSwitch): Enable swiping album cover area (or if there is no cover, the area above track info) on player page</extracomment>
-        <translation type="unfinished">Deslizar la portada (o título) para saltar pistas</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
-        <source>Additional App-Cover Actions</source>
-        <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
-        <translation type="unfinished">Acciones adicionales en cubierta</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
-        <source>App-Cover Actions are external Commands, as well.</source>
-        <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
-        <translation type="unfinished">Las acciones en la cubierta también son comandos externos.</translation>
+        <translation>Deslizar la portada (o título) para saltar pistas</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="60"/>
         <source>Hidden</source>
         <extracomment>ComboBox option: No secondary App-Cover action</extracomment>
-        <translation type="unfinished">Oculto</translation>
+        <translation>Oculto</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="62"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Skip to next track as secondary App-Cover action</extracomment>
-        <translation type="unfinished">Saltar hacia adelante</translation>
+        <translation>Saltar hacia adelante</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="64"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Skip to previous track as secondary App-Cover action</extracomment>
-        <translation type="unfinished">Saltar hacia atrás</translation>
+        <translation>Saltar hacia atrás</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="66"/>
         <source>Skip backward and forward</source>
         <extracomment>ComboBox option: Skip to next and previous track as secondary/tertiary App-Cover action</extracomment>
-        <translation type="unfinished">Saltar hacia atrás/adelante</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
-        <source>Cassette tape</source>
-        <comment>section header</comment>
-        <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="89"/>
-        <source>Cassette shows progress of</source>
-        <extracomment>ComboBox label: Beginning of sentence</extracomment>
-        <translation type="unfinished">El casete muestra el progreso de</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="92"/>
-        <source>track</source>
-        <extracomment>ComboBox option: &quot;Track&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished">pista</translation>
+        <translation>Saltar hacia atrás/adelante</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
         <source>playlist</source>
         <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="99"/>
-        <source>Do Animations</source>
-        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations generally</extracomment>
-        <translation type="unfinished">Activar animaciones</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="110"/>
-        <source>Player Page Animation</source>
-        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the player page</extracomment>
-        <translation type="unfinished">Animación en página del reproductor</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsAppearance.qml" line="124"/>
-        <source>App-Cover Animation</source>
-        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the App-Cover</extracomment>
-        <translation type="unfinished">Animación en cubierta</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
@@ -287,6 +238,55 @@
         <source>Extracting a lot of Images at once can be really slow.</source>
         <extracomment>Option Entry description</extracomment>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
+        <source>App-Cover Actions are external Commands, as well.</source>
+        <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
+        <translation>Las acciones en la cubierta también son comandos externos.</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
+        <source>Additional App-Cover Actions</source>
+        <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
+        <translation>Acciones adicionales en cubierta</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
+        <source>Cassette tape</source>
+        <comment>section header</comment>
+        <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="89"/>
+        <source>Cassette shows progress of</source>
+        <extracomment>ComboBox label: Beginning of sentence</extracomment>
+        <translation>El casete muestra el progreso de</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="92"/>
+        <source>track</source>
+        <extracomment>ComboBox option: &quot;Track&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
+        <translation>pista</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="99"/>
+        <source>Do Animations</source>
+        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations generally</extracomment>
+        <translation>Activar animaciones</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="110"/>
+        <source>Player Page Animation</source>
+        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the player page</extracomment>
+        <translation>Animación en página del reproductor</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsAppearance.qml" line="124"/>
+        <source>App-Cover Animation</source>
+        <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the App-Cover</extracomment>
+        <translation>Animación en cubierta</translation>
     </message>
 </context>
 <context>
@@ -302,79 +302,79 @@
         <location filename="../qml/components/OptionsCommands.qml" line="33"/>
         <source>External Commands skip</source>
         <extracomment>ComboBox label: Beginning of sentence</extracomment>
-        <translation type="unfinished">Comandos externos de salto</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="36"/>
-        <source>to track beginning</source>
-        <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">Ir al principio</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="38"/>
-        <source>Short Skip duration</source>
-        <extracomment>ComboBox option: &quot;Short Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">Salto corto</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsCommands.qml" line="40"/>
-        <source>Long Skip duration</source>
-        <extracomment>ComboBox option: &quot;Long Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished">Salto largo</translation>
+        <translation>Comandos externos de salto</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="43"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
         <extracomment>ComboBox description</extracomment>
-        <translation type="unfinished">Los comandos externos son los ejecutados desde la pantalla de bloqueo o a través de auriculares/bluetooth.</translation>
+        <translation>Los comandos externos son los ejecutados desde la pantalla de bloqueo o a través de auriculares/bluetooth.</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="36"/>
+        <source>to track beginning</source>
+        <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>Ir al principio</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="38"/>
+        <source>Short Skip duration</source>
+        <extracomment>ComboBox option: &quot;Short Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>Salto corto</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsCommands.qml" line="40"/>
+        <source>Long Skip duration</source>
+        <extracomment>ComboBox option: &quot;Long Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
+        <translation>Salto largo</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="49"/>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Usar botones del auricular/Bluetooth para controlar Talefish</translation>
+        <translation>Usar botones del auricular/Bluetooth para controlar Talefish</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="82"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <extracomment>Label</extracomment>
-        <translation type="unfinished">Puedes elegir la acción que se ejecutará cuando presiones el botón de &quot;Llamar/Colgar&quot;, que a menudo es un sólo botón en los auriculares:</translation>
+        <translation>Puedes elegir la acción que se ejecutará cuando presiones el botón de &quot;Llamar/Colgar&quot;, que a menudo es un sólo botón en los auriculares:</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="87"/>
         <source>Do nothing</source>
         <extracomment>ComboBox option: Do nothing on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">No hacer nada</translation>
+        <translation>No hacer nada</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="89"/>
         <source>Play/Pause</source>
         <extracomment>ComboBox option: Play/Pause on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Reproducir/Detener</translation>
+        <translation>Reproducir/Detener</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="91"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Next on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Saltar hacia adelante</translation>
+        <translation>Saltar hacia adelante</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="93"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Previous on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished">Saltar hacia atrás</translation>
+        <translation>Saltar hacia atrás</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="105"/>
         <source>Button Press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; short press</extracomment>
-        <translation type="unfinished">Toque corto:</translation>
+        <translation>Toque corto:</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="114"/>
         <source>Long press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; long press</extracomment>
-        <translation type="unfinished">Toque largo:</translation>
+        <translation>Toque largo:</translation>
     </message>
 </context>
 <context>
@@ -384,7 +384,7 @@
         <source>Open Files</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options for file handling and saved directory progress</extracomment>
-        <translation type="unfinished">Abrir archivos</translation>
+        <translation>Abrir archivos</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="32"/>
@@ -408,19 +408,25 @@
         <location filename="../qml/components/OptionsFiles.qml" line="59"/>
         <source>Save progress periodically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Guardar progreso periódicamente</translation>
+        <translation>Guardar progreso periódicamente</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="61"/>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
         <extracomment>Option Entry (TextSwitch) description for &quot;Save progress periodically&quot;</extracomment>
-        <translation type="unfinished">Si está deshabilitado, la posición actual de la reproducción se guardará sólo cuando salga correctamente de la aplicación. En caso contrario, el progreso se guardará cada pocos segundos.</translation>
+        <translation>Si está deshabilitado, la posición actual de la reproducción se guardará sólo cuando salga correctamente de la aplicación. En caso contrario, el progreso se guardará cada pocos segundos.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="73"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
-        <translation type="unfinished">Mantener progreso del directorio</translation>
+        <translation>Mantener progreso del directorio</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
+        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
+        <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
+        <translation>Para evitar que los datos almacenados en caché por directorios antiguos o eliminados se acumulen con el tiempo, Talefish comprobará las entradas antiguas al iniciar la aplicación. No afectará al directorio cargado actualmente.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/components/OptionsFiles.qml" line="75"/>
@@ -431,21 +437,15 @@
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation type="unfinished">
-            <numerusform>durante %1 día</numerusform>
-            <numerusform>durante %1 días</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="80"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation type="unfinished">siempre</translation>
-    </message>
-    <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
-        <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
-        <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
-        <translation type="unfinished">Para evitar que los datos almacenados en caché por directorios antiguos o eliminados se acumulen con el tiempo, Talefish comprobará las entradas antiguas al iniciar la aplicación. No afectará al directorio cargado actualmente.</translation>
+        <translation>siempre</translation>
     </message>
 </context>
 <context>
@@ -455,7 +455,7 @@
         <source>Miscellaneous</source>
         <comment>section header</comment>
         <extracomment>Section Header: Miscellaneous options</extracomment>
-        <translation type="unfinished">Varios</translation>
+        <translation>Varios</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsMisc.qml" line="37"/>
@@ -492,26 +492,26 @@
         <source>Playback</source>
         <comment>section header</comment>
         <extracomment>Section Header: Playback Options</extracomment>
-        <translation type="unfinished">Reproducir</translation>
+        <translation>Reproducir</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="38"/>
         <source>Playback Speed: %1%</source>
         <comment>percent</comment>
         <extracomment>Slider Label: Playback Speed in percent, %1 is replaced with the value</extracomment>
-        <translation type="unfinished">Velocidad de reproducción: %1%</translation>
+        <translation>Velocidad de reproducción: %1%</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="70"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;short skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
-        <translation type="unfinished">Salto corto</translation>
+        <translation>Salto corto</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsPlayback.qml" line="77"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;long skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
-        <translation type="unfinished">Salto largo</translation>
+        <translation>Salto largo</translation>
     </message>
 </context>
 <context>
@@ -527,70 +527,70 @@
         <location filename="../qml/components/OptionsSleepTimer.qml" line="32"/>
         <source>Install the slumber sleep timer application to enable these options</source>
         <extracomment>Label: Shown if &quot;slumber&quot; isn&apos;t installed</extracomment>
-        <translation type="unfinished">Instalar el temporizador slumber para habilitar estas opciones</translation>
+        <translation>Instalar el temporizador slumber para habilitar estas opciones</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="42"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Iniciar temporizador automáticamente</translation>
+        <translation>Iniciar temporizador automáticamente</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="49"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
-        <translation type="unfinished">Iniciar el temporizador slumber automáticamente al iniciar Talefish.</translation>
+        <translation>Iniciar el temporizador slumber automáticamente al iniciar Talefish.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="56"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Poner Talefish en primer plano tras iniciar slumber</translation>
+        <translation>Poner Talefish en primer plano tras iniciar slumber</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="67"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished">Iniciar slumber sólo en ciertos momentos</translation>
+        <translation>Iniciar slumber sólo en ciertos momentos</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="105"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished">Iniciar slumber después de</translation>
+        <translation>Iniciar slumber después de</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="124"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished">Iniciar slumber antes de</translation>
+        <translation>Iniciar slumber antes de</translation>
     </message>
 </context>
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation type="unfinished">Abrir</translation>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Ordenar por nombre</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="194"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
-        <translation type="unfinished">En cola</translation>
+        <translation>En cola</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation type="unfinished">Ordenar por nombre</translation>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="226"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
-        <translation type="unfinished">Ordenar por últimas modificadas</translation>
+        <translation>Ordenar por últimas modificadas</translation>
     </message>
     <message>
         <location filename="../qml/components/PlacesDirectoryListView.qml" line="247"/>
@@ -741,7 +741,7 @@
         <location filename="../qml/components/PlayerPageProgressArea.qml" line="161"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
-        <translation type="unfinished">%1 / %2 (Archivo %L3 de %L4)</translation>
+        <translation>%1 / %2 (Archivo %L3 de %L4)</translation>
     </message>
 </context>
 <context>
@@ -750,9 +750,9 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="32"/>
         <source>%L1 file(s) opened</source>
         <extracomment>Playlist Page Header: Number of opened files</extracomment>
-        <translation>
-            <numerusform>%L1 archivo abierto</numerusform>
-            <numerusform>%L1 archivos abiertos</numerusform>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
