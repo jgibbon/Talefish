@@ -98,7 +98,7 @@ CoverBackground {
             width: parent.width
             id: fileNameLabel
 
-            text: (app.playlist.currentMetaData.title || app.audio.source) + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
+            text: app.playlist.currentTitle + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -120,7 +120,7 @@ CoverBackground {
         Label {
             width: parent.width
             id: folderNameLabel3
-            property string displayPath:(app.playlist.currentMetaData.album || app.audio.source)
+            property string displayPath:app.playlist.currentAlbum
             visible: displayPath !== '' //&& options.playerDisplayDirectoryName
             text: displayPath
 

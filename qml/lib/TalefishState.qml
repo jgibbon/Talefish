@@ -88,19 +88,23 @@ PersistentObject {
             playlistProgress = progress;
         }
 //        console.log(JSON.stringify(playlistProgress));
+        if(!app.commandLineArgumentFilesToOpen || app.commandLineArgumentDoEnqueue) {
+            // load previous playlist:
+            app.playlist.fromJSON(app.state.currentPlaylist);
 
-        // load previous playlist:
-        app.playlist.fromJSON(app.state.currentPlaylist);
-
-        // legacy version state import
-        var legacyPlaylist = typeof playlistJS === 'string'
-                ? JSON.parse(playlistJS)
-                : playlistJS;
-        if(legacyPlaylist.length > 0) {
-            app.playlist.fromJSON(legacyPlaylist.map(function(el){return el.path;}));
-            app.playlist.commands.seek(currentPosition, playlistIndex);
-            //kill the old playlist data
-            playlistJS = [];
+            // legacy version state import
+            var legacyPlaylist = typeof playlistJS === 'string'
+                    ? JSON.parse(playlistJS)
+                    : playlistJS;
+            if(legacyPlaylist.length > 0) {
+                app.playlist.fromJSON(legacyPlaylist.map(function(el){return el.path;}));
+                app.playlist.commands.seek(currentPosition, playlistIndex);
+                //kill the old playlist data
+                playlistJS = [];
+            }
+        }
+        if(app.commandLineArgumentFilesToOpen) {
+            app.playlist.fromJSON(app.commandLineArgumentFilesToOpen,app.commandLineArgumentDoEnqueue);
         }
 
 

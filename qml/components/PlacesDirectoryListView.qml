@@ -301,8 +301,16 @@ SilicaListView {
         showOnlyReadable: true
         showDirsFirst: true
         sortField: listView.sortMode
-        nameFilters: ['*.mp3', '*.m4a', '*.m4b', '*.flac', '*.ogg', '*.wav', '*.opus', '*.aac', '*.mka',
-                      '*.MP3', '*.M4A', '*.M4B', '*.FLAC', '*.OGG', '*.WAV', '*.OPUS', '*.AAC', '*.MKA']
+        nameFilters: {
+            var cis=[];
+            app.allowedFileExtensions.forEach(function(ext){
+                cis.push('*.'+ext);
+                cis.push('*.'+ext.toUpperCase());
+            });
+            return cis;
+        }
+//            ['*.mp3', '*.m4a', '*.m4b', '*.flac', '*.ogg', '*.wav', '*.opus', '*.aac', '*.mka',
+//                      '*.MP3', '*.M4A', '*.M4B', '*.FLAC', '*.OGG', '*.WAV', '*.OPUS', '*.AAC', '*.MKA']
         property string path: String(folder).replace('file://', '')
         property string folderName: app.js.fileName(path)
 //        property var baseNameRegex: /(.*)\.[^.]+$/

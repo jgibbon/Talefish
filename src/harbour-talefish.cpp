@@ -38,12 +38,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include "launcher.h"
 #include "taglibplugin.h"
 #include "taglibimageprovider.h"
-//#include "resourcehandler.h"
-//#include "mpris/mprisobject.h"
-
-//#include "lib/qtmpris-1.0.0/src/Mpris"
-//#include "lib/qtmpris-1.0.0/src/MprisPlayer"
-//#include "lib/qtmpris-1.0.0/src/MprisManager"
 
 #define TALEFISH_SERVICE "de.gibbon.talefish"
 
@@ -56,16 +50,70 @@ int main(int argc, char *argv[])
     QCoreApplication::setOrganizationName("Talefish");
     QCoreApplication::setOrganizationDomain("Talefish");
     QCoreApplication::setApplicationName("Talefish");
+
+    // get files/directories to open/enqueue mode from arguments
+    QStringList allowedFileExtensions;
+    allowedFileExtensions << "mp3" << "m4a" << "m4b" << "flac" << "ogg" << "wav" << "opus" << "aac" << "mka";
+
+    bool doEnqueue = false;
+    // for nicer progress saving when opening just one folder:
+//    bool openingOneDirectory = false;
+    QStringList filesToOpen = QStringList();
+    QStringList realArguments = QCoreApplication::arguments();
+    realArguments.removeFirst();
+    // for directory arguments, we want natural sorting
+    QCollator c;
+    c.setNumericMode(true);
+
+    for (const QString argumentString : realArguments) {
+        if(argumentString == "-e") {
+            doEnqueue = true;
+        } else { // file handling
+            QFile argumentFile(argumentString);
+            if(argumentFile.exists()) { // TODO global allowed file extensions? directory?
+                QFileInfo argumentFileInfo(argumentFile);
+                if(argumentFileInfo.isFile()) {
+                    if(allowedFileExtensions.contains(argumentFileInfo.suffix(), Qt::CaseInsensitive)) {
+                        // qDebug() << "found valid file name" << argumentFileInfo.absoluteFilePath();
+                        filesToOpen << argumentFileInfo.absoluteFilePath();
+                    }
+                } else if(argumentFileInfo.isDir()) { // open directory contents just for fun
+//                    openingOneDirectory = realArguments.length() == 1;
+                    QDir argumentDir(argumentFileInfo.absoluteFilePath());
+                    argumentDir.setSorting(QDir::Name);
+                    QFileInfoList argumentDirContents = argumentDir.entryInfoList();
+                    // natural sort
+                    std::sort(argumentDirContents.begin(), argumentDirContents.end(), [&c](QFileInfo lhs, QFileInfo rhs) {
+                        if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    for(const QFileInfo dirContentFile : argumentDirContents) {
+                        if(dirContentFile.isFile()) {
+                            if(allowedFileExtensions.contains(dirContentFile.suffix(), Qt::CaseInsensitive)) {
+//                                qDebug() << "found valid file name in dir" << dirContentFile.absoluteFilePath();
+                                filesToOpen << dirContentFile.absoluteFilePath();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     // if there is a previous instance: do not run at all, instead pass arguments via dbus:
     if(QDBusConnection::sessionBus().interface()->isServiceRegistered(TALEFISH_SERVICE))
     {
-        QDBusInterface *previousInstance = new QDBusInterface( "de.gibbon.talefish", "/de/gibbon/talefish", "de.gibbon.talefish" );
-        previousInstance->call( "setArguments", QCoreApplication::arguments(), QDir::currentPath());
+        qDebug() << "Talefish seems to be running already";
+        if(!filesToOpen.isEmpty()) {
+            qDebug() << "Opening files with previous instance";
+            QDBusInterface *previousInstance = new QDBusInterface( "de.gibbon.talefish", "/de/gibbon/talefish", "de.gibbon.talefish" );
+            previousInstance->call( "openFiles", filesToOpen, doEnqueue);
+        }
+        qDebug() << "quitting";
         return 0;
     }
-
-//    ResourceHandler handler;
-//    handler.acquire();
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
     QQmlEngine *engine = view->engine();
@@ -74,15 +122,15 @@ int main(int argc, char *argv[])
     engine->addImageProvider(QLatin1String("taglib-cover-art"), new taglibImageprovider);
     qmlRegisterType<Launcher>("Launcher", 1 , 0 , "Launcher");
     qmlRegisterType<taglibplugin>("TaglibPlugin", 1, 0, "TaglibPlugin");
-//    qmlRegisterType<MprisPlayer>("MprisPlayer", 1, 0, "MprisPlayer");
     qmlRegisterType<QQuickFolderListModel>("harbour.talefish.folderlistmodel", 1, 0, "FolderListModel");
 
     view->setSource(SailfishApp::pathToMainQml());
-    view->rootObject()->setProperty("cwd", QDir::currentPath());
-//    view->rootObject()->setProperty("mprisplayer", mprisplayer);
-
-//    QObject::connect(view->rootObject(),SIGNAL(aquireResources()), &handler, SLOT(acquire()));
-//    QObject::connect(view->rootObject(),SIGNAL(releaseResources()), &handler, SLOT(release()));
+    view->rootObject()->setProperty("allowedFileExtensions", allowedFileExtensions);
+    if(!filesToOpen.isEmpty()) {
+        qDebug() << "c++ open files";
+        view->rootObject()->setProperty("commandLineArgumentDoEnqueue", doEnqueue);
+        view->rootObject()->setProperty("commandLineArgumentFilesToOpen", filesToOpen);
+    }
 
     view->showFullScreen();
 

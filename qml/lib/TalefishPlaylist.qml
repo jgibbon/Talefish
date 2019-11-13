@@ -128,7 +128,8 @@ Playlist {
         return json
     }
     function fromJSON(json, enqueue, directory) { //directory overrides pathsIdentifier to display progress in file selector
-        console.log('fromJSON', JSON.stringify(json))
+        console.log('playlist fromJSON')
+        // console.log('fromJSON', JSON.stringify(json))
         if (enqueue && playlist.metadata.count === 0) {
             enqueue = false;
         }
