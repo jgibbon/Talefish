@@ -29,6 +29,7 @@ Item {
     property QtObject _mpris
     property QtObject _keys
     property QtObject _policy
+    property bool tryToReaquire
 
     Component.onCompleted: {
         var mprisStr = 'import org.nemomobile.mpris 1.0
@@ -157,6 +158,21 @@ Item {
 
         try {
             _policy = Qt.createQmlObject(policyStr, remoteControl, 'dynamic-policy');
+            // Permission gets revoked on call or by another player…
+            // workaround: request again when app is put in foreground or background
+            _policy.granted.connect(function(){
+                remoteControl.tryToReaquire = false
+            });
+            _policy.lost.connect(function(){
+                remoteControl.tryToReaquire = true
+            });
+            app.activeChanged.connect(function(){
+                if(remoteControl.tryToReaquire) {
+                    _policy.enabled = false;
+                    _policy.enabled = Qt.binding(function(){return app.playlist.metadata.count > 0;})
+                }
+            });
+
         } catch (policyError) {
             console.warn('Compatibility: headphone control not possible');
         }
