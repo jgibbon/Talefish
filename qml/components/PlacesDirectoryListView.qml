@@ -46,6 +46,8 @@ SilicaListView {
 
         selectedPathsChanged();
     }
+
+    VerticalScrollDecorator { flickable: listView }
     footer: Component {
         Item {height: Theme.paddingLarge; width: parent.width}
     }

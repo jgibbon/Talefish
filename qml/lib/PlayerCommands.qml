@@ -19,6 +19,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
 import QtQuick 2.6
+import Nemo.DBus 2.0
 
 Item {
     id: playerCommands
@@ -39,10 +40,8 @@ Item {
         default:
             app.playlist.next()
         }
-
     }
     function prev() {app.log('external command: prev');
-
         switch(options.externalCommandSkipDuration){
         case 'small':
             playerCommands.seekBy(0 - options.skipDurationSmall)
@@ -64,7 +63,6 @@ Item {
     function stop() {app.log('external command: stop');
         playback.pause()
     }
-
 
     // standard internal commands
     function seek(position, index) {
@@ -115,8 +113,6 @@ Item {
         }
     }
 
-
-
     RemoteControl {
             parent: app //needed for MediaKey
             onCommand: {
@@ -139,4 +135,33 @@ Item {
                 }
             }
         }
+
+    DBusInterface {
+        id:slumberInterface
+        service: 'de.gibbon.slumber'
+        path: '/de/gibbon/slumber'
+        iface: 'de.gibbon.slumber'
+        signalsEnabled: true
+        function triggered(){
+            // '0': disabled, 'small'/'normal': use set durations, 'long': normal*2
+            if(options.slumberPauseRewindDuration !== '0' && app.audio.isPlaying) {
+                switch(options.slumberPauseRewindDuration){
+                case 'small':
+                    console.log('slumber triggered small');
+                    playerCommands.seekBy(0 - options.skipDurationSmall)
+                    break;
+
+                case 'normal':
+                    console.log('slumber triggered normal');
+                    playerCommands.seekBy(0 - options.skipDurationNormal)
+                    break;
+                case 'long':
+                    console.log('slumber triggered long');
+                    playerCommands.seekBy(0 - options.skipDurationNormal * 2)
+                    break;
+                }
+            }
+        }
+
+    }
 }

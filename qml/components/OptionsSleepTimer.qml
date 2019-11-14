@@ -35,6 +35,23 @@ OptionArea {
         x: Theme.horizontalPageMargin
     }
 
+    OptionComboBox {
+        enabled: autoStartSlumberSwitch.enabled
+        optionname: 'slumberPauseRewindDuration'
+
+        //: ComboBox label
+        label: qsTr('Rewind when paused by slumber:')
+        jsonData: [
+            //: ComboBox option: no, do not rewind when paused by slumber
+            {text: qsTr('no'), value: '0'},
+            //: ComboBox option: skip back the duration set as "short" when paused by slumber
+            {text: qsTr('Short Skip duration'), value: 'small'},
+            //: ComboBox option: skip back the duration set as "long" when paused by slumber
+            {text: qsTr('Long Skip duration'), value: 'normal'},
+            //: ComboBox option: skip back double the duration set as "long" when paused by slumber
+            {text: qsTr('Double Long Skip duration'), value: 'long'},
+        ]
+    }
     TextSwitch {
         id:autoStartSlumberSwitch
         enabled: app.launcher.fileExists('/usr/bin/harbour-slumber')
@@ -71,71 +88,66 @@ OptionArea {
             app.options.autoStartSlumberInTimeframe = checked
         }
     }
-    Column {
-        id: launchTimesColum
+
+    Flow {
+        id: launchTimesFlow
         width: parent.width
 
         states: [
             State {
                 name: 'visible'
                 when: autoStartSlumberInTimeframeSwitch.checked
-                PropertyChanges { target: launchTimesColum; height: launchAfterSwitch.height + launchBeforeSwitch.height ; opacity:1 }
+                PropertyChanges { target: launchTimesFlow; height: launchAfterSwitch.height + launchBeforeSwitch.height ; opacity:1 }
             },
             State {
                 name: 'hidden'
                 when: !autoStartSlumberInTimeframeSwitch.checked
-                PropertyChanges { target: launchTimesColum; height: 0; opacity:0 }
+                PropertyChanges { target: launchTimesFlow; height: 0; opacity:0 }
             }
-
         ]
         transitions: Transition {
             PropertyAnimation { properties: "height,opacity"; easing.type: Easing.InOutQuad }
         }
 
+        property bool halfWidth: (Screen.sizeCategory >= Screen.Large || page.isLandscape)
+        ValueButton {
+            id: launchAfterSwitch
 
-
-        Flow {
-            width: parent.width
-
-            property bool halfWidth: (Screen.sizeCategory >= Screen.Large || page.isLandscape)
-            ValueButton {
-                id: launchAfterSwitch
-
-                //: ComboBox/ValueButton label: Launch slumber application only after "X o'clock" (starts time picker after click)
-                label: qsTr("Launch slumber after")
-                enabled: autoStartSlumberSwitch.checked
-                value: Format.formatDate(app.options.autoStartSlumberAfterTime, Formatter.TimeValue)
-                width: parent.halfWidth ? parent.width / 2 : parent.width
-                onClicked: {
-                    console.log( app.options.autoStartSlumberAfterTime.getHours(), app.options.autoStartSlumberAfterTime.getMinutes());
-                    var dialog = pageStack.push("Sailfish.Silica.TimePickerDialog", {
-                                                    hour: app.options.autoStartSlumberAfterTime.getHours(),
-                                                    minute: app.options.autoStartSlumberAfterTime.getMinutes()
-                                                })
-                    dialog.accepted.connect(function() {
-                        app.options.autoStartSlumberAfterTime = dialog.time;
-                    })
-                }
-            }
-
-            ValueButton {
-                id: launchBeforeSwitch
-                //: ComboBox/ValueButton label: Launch slumber application only before "X o'clock" (starts time picker after click)
-                label: qsTr("Launch slumber before")
-                enabled: autoStartSlumberSwitch.checked
-                value: Format.formatDate(app.options.autoStartSlumberBeforeTime, Formatter.TimeValue)
-                width: parent.halfWidth ? parent.width / 2 : parent.width
-                onClicked: {
-                    var dialog = pageStack.push("Sailfish.Silica.TimePickerDialog", {
-                                                    hour: app.options.autoStartSlumberBeforeTime.getHours(),
-                                                    minute: app.options.autoStartSlumberBeforeTime.getMinutes()
-                                                })
-                    dialog.accepted.connect(function() {
-                        app.options.autoStartSlumberBeforeTime = dialog.time;
-                    })
-                }
+            //: ComboBox/ValueButton label: Launch slumber application only after "X o'clock" (starts time picker after click)
+            label: qsTr("Launch slumber after")
+            enabled: autoStartSlumberInTimeframeSwitch.checked
+            value: Format.formatDate(app.options.autoStartSlumberAfterTime, Formatter.TimeValue)
+            width: parent.halfWidth ? parent.width / 2 : parent.width
+            onClicked: {
+                console.log( app.options.autoStartSlumberAfterTime.getHours(), app.options.autoStartSlumberAfterTime.getMinutes());
+                var dialog = pageStack.push("Sailfish.Silica.TimePickerDialog", {
+                                                hour: app.options.autoStartSlumberAfterTime.getHours(),
+                                                minute: app.options.autoStartSlumberAfterTime.getMinutes()
+                                            })
+                dialog.accepted.connect(function() {
+                    app.options.autoStartSlumberAfterTime = dialog.time;
+                })
             }
         }
+
+        ValueButton {
+            id: launchBeforeSwitch
+            //: ComboBox/ValueButton label: Launch slumber application only before "X o'clock" (starts time picker after click)
+            label: qsTr("Launch slumber before")
+            enabled: autoStartSlumberInTimeframeSwitch.checked
+            value: Format.formatDate(app.options.autoStartSlumberBeforeTime, Formatter.TimeValue)
+            width: parent.halfWidth ? parent.width / 2 : parent.width
+            onClicked: {
+                var dialog = pageStack.push("Sailfish.Silica.TimePickerDialog", {
+                                                hour: app.options.autoStartSlumberBeforeTime.getHours(),
+                                                minute: app.options.autoStartSlumberBeforeTime.getMinutes()
+                                            })
+                dialog.accepted.connect(function() {
+                    app.options.autoStartSlumberBeforeTime = dialog.time;
+                })
+            }
+        }
+
     }
 
 }

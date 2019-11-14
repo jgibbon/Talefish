@@ -190,6 +190,6 @@ currentIndex: -1 // prevent inheriting the 'real' currentIndex; this would steal
 
         }
     }
-    VerticalScrollDecorator {}
+    VerticalScrollDecorator {flickable: root}
 }
 
