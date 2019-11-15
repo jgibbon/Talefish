@@ -13,11 +13,11 @@ Name:       harbour-talefish
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Talefish
-Version:    0.1
-Release:    5
+Version:    0.2
+Release:    1
 Group:      Qt/Qt
-License:    LICENSE
-URL:        http://example.org/
+License:    GPL2
+URL:        https://github.com/jgibbon/Talefish
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-talefish.yaml
 Requires:   sailfishsilica-qt5 >= 1.1.31
@@ -26,6 +26,9 @@ BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
+Provides:   Talefish
+Conflicts:   Talefish
+Obsoletes:   Talefish
 
 %description
 Short description of my SailfishOS Application

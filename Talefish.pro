@@ -39,10 +39,10 @@ QT += dbus
 QT += multimedia
 
 # using mimer works without this
-#opendesktopfile.files = harbour-talefish-open-file.desktop
-#opendesktopfile.path = /usr/share/harbour-talefish
+# opendesktopfile.files = harbour-talefish-open-file.desktop
+# opendesktopfile.path = /usr/share/harbour-talefish
 
-INSTALLS += opendesktopfile
+# INSTALLS += opendesktopfile
 
 # German translation is enabled as an example. If you aren't
 # planning to localize your app, remember to comment out the
