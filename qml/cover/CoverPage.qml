@@ -26,9 +26,6 @@ import '../lib'
 CoverBackground {
     id:mainCoverBackground
     property bool active: status === Cover.Active
-
-
-    property string coverActionCommand:''
     property var playerCommands: app.playlist.commands
 
     Item {

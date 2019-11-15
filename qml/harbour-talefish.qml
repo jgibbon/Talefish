@@ -31,10 +31,10 @@ import "lib/Jslib.js" as Jslib
 ApplicationWindow
 {
     id: app
-    property bool active: Qt.application.state === Qt.ApplicationActive
     initialPage: Component { PlayerPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
+    property bool active: Qt.application.state === Qt.ApplicationActive
     property var js: Jslib.lib()
     property var allowedFileExtensions // set via c++; used by directory list
     property bool commandLineArgumentDoEnqueue
@@ -44,7 +44,6 @@ ApplicationWindow
         if(state._loaded) {
             app.playlist.fromJSON(commandLineArgumentFilesToOpen,commandLineArgumentDoEnqueue);
         }
-
     }
 
     property Launcher launcher: Launcher {}
@@ -77,8 +76,6 @@ ApplicationWindow
             running: options.saveProgressPeriodically && audio.playbackState === audio.PlayingState
             onTriggered: parent.save(['playlistProgress'])
         }
-
-    property var log: console.log//(options.doLog ? console.log : function(){})
 
     Timer {
         id: reactivateTimer

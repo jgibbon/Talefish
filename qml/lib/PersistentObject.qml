@@ -47,7 +47,7 @@ QtObject {
     function save(keys){
         if(doPersist) {
             Store.save(settings, keys);
-            app.log('saved!', objectName)
+            console.log('saved!', objectName)
         }
     }
     function reset() {

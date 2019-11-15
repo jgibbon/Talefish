@@ -254,7 +254,7 @@ Page {
                 animateCoverContainerXBack0.duration =  (dragValue / maxDrag) * 400
                 animateCoverContainerXBack0.start()
                 if(sideTriggerActive){
-                    app.log('Player Page: Slided to skip' )
+                    console.log('Player Page: Slided to skip' )
 
 
                     sideTriggerActive = false;

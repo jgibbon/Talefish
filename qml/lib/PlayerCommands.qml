@@ -23,11 +23,11 @@ import Nemo.DBus 2.0
 
 Item {
     id: playerCommands
-    function play() { app.log('external command: play'); app.audio.play();}
-    function pause() {app.log('external command: pause'); app.audio.pause();}
-    function playPause() {app.log('external command: playPause'); app.audio.playPause();}
+    function play() { console.log('external command: play'); app.audio.play();}
+    function pause() {console.log('external command: pause'); app.audio.pause();}
+    function playPause() {console.log('external command: playPause'); app.audio.playPause();}
     function next() {
-        app.log('external command: next');
+        console.log('external command: next');
         switch(options.externalCommandSkipDuration){
         case 'small':
             playerCommands.seekBy(options.skipDurationSmall)
@@ -41,7 +41,7 @@ Item {
             app.playlist.next()
         }
     }
-    function prev() {app.log('external command: prev');
+    function prev() {console.log('external command: prev');
         switch(options.externalCommandSkipDuration){
         case 'small':
             playerCommands.seekBy(0 - options.skipDurationSmall)
@@ -60,7 +60,7 @@ Item {
             }
         }
     }
-    function stop() {app.log('external command: stop');
+    function stop() {console.log('external command: stop');
         playback.pause()
     }
 
