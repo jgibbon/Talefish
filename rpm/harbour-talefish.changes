@@ -18,7 +18,7 @@
  - Enhanced album cover handling
  - Enhanced slumber sleep timer integration (new rewind option)
  - Removed now obsolete options
- - Removed "Enqueue" pulley menu entry (it's now a setting when opening files)
+ - Removed "Enqueue" pulley menu entry (it's now a setting in directory view)
  - Taglib now included in binary (for future harbour compatibility)
  - A lot of translation updates (Thanks, translation team, you are awesome!)
 
