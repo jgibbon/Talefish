@@ -38,6 +38,12 @@ CONFIG += sailfishapp_i18n
 QT += dbus
 QT += multimedia
 
+# using mimer works without this
+#opendesktopfile.files = harbour-talefish-open-file.desktop
+#opendesktopfile.path = /usr/share/harbour-talefish
+
+INSTALLS += opendesktopfile
+
 # German translation is enabled as an example. If you aren't
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
