@@ -64,8 +64,7 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
         if(mimetype == "audio/mp4" || mimetype == "audio/m4a" || mimetype == "audio/x-m4b" || mimetype == "audio/x-m4a") {
             TagLib::MP4::File f(mediafilePath.toStdString().c_str());
             TagLib::MP4::Tag* tag = f.tag();
-            TagLib::MP4::ItemListMap itemsListMap = tag->itemListMap();
-            TagLib::MP4::Item coverItem = itemsListMap["covr"];
+            TagLib::MP4::Item coverItem = tag->item("covr");
             TagLib::MP4::CoverArtList coverArtList = coverItem.toCoverArtList();
             if (!coverArtList.isEmpty()) {
                 imageFound = true;
@@ -80,7 +79,6 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
                 imageFound = true;
                 TagLib::ID3v2::AttachedPictureFrame *Pic = static_cast<TagLib::ID3v2::AttachedPictureFrame *>(list.front());
                 img.loadFromData((const uchar *) Pic->picture().data(), Pic->picture().size());
-                //            img = img.scaled(45,45);
             }
         } else if(mimetype == "audio/flac" || mimetype == "audio/x-flac") {
             TagLib::FLAC::File f(mediafilePath.toStdString().c_str());
