@@ -44,7 +44,7 @@ PersistentObject {
     on_LoadedChanged: {
         var keepDays = options.keepUnopenedDirectoryProgressDays, //TODO options.keepUnopenedDirectoryProgressDays
             keepMs = keepDays * 24 * 360000;
-
+        var keepAfter = new Date().getTime() - keepMs
         // legacy progress import
 //        console.log('LEGACY PROGRESS', JSON.stringify(savedDirectoryProgress));
         for(var legacyProgressDirectory in savedDirectoryProgress) {
@@ -66,6 +66,8 @@ PersistentObject {
 //                console.log(JSON.stringify(playlistProgress[legacyProgressDirectory]));
             }
         }
+        // remove everything
+        savedDirectoryProgress = ({});
         // end legacy progress import
 
         if(keepDays < 9999) {
