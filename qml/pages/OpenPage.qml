@@ -20,7 +20,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-import Launcher 1.0
 import '../lib'
 import '../components'
 
@@ -30,7 +29,6 @@ Dialog {
     acceptDestinationAction: PageStackAction.Replace
     canAccept: forwardNavigation && (directoryList.selectedPaths.length > 0 || directoryList.useablePaths.length > 0)
     forwardNavigation: panel.expanded && !panel.moving
-    property Launcher launcher:Launcher {id:launcher}
     onAccepted: {
         var isWholeFolder = directoryList.selectedPaths.length === 0 || directoryList.selectedPaths.length === directoryList.useablePaths.length;
         var paths = isWholeFolder ? directoryList.useablePaths : directoryList.selectedPaths
@@ -48,7 +46,6 @@ Dialog {
 
     PlacesModels {
         id: places
-        launcher: page.launcher
     }
 
 
@@ -77,7 +74,6 @@ Dialog {
                 id: quickAccess
                 property alias modelContent: places.quickAccessModel
                 property string modelTitle: places.quickAccessTitle
-                property alias launcher: page.launcher
                 source: '../components/PlacesModelComponent.qml'
                 Connections { target: quickAccess.item; onPlaceClicked: page.displayDirectory(path)}
             }
@@ -85,7 +81,6 @@ Dialog {
                 id: general
                 property alias modelContent: places.generalModel
                 property string modelTitle: places.generalTitle
-                property alias launcher: page.launcher
                 source: '../components/PlacesModelComponent.qml'
                 Connections { target: general.item; onPlaceClicked: page.displayDirectory(path)}
             }
@@ -147,7 +142,7 @@ Dialog {
     Component.onCompleted: {
         if(app.options.placesAutoShowRecentDirectory) {
             var lastDir = app.state.lastDirectory.replace('file://', '');
-            if(lastDir !== '' && launcher.fileExists(lastDir)) {
+            if(lastDir !== '' && app.launcher.fileExists(lastDir)) {
 
                 displayDirectory(lastDir, true)
             }

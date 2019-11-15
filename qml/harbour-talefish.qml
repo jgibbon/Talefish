@@ -47,9 +47,8 @@ ApplicationWindow
 
     }
 
-    property TalefishState state: TalefishState {
-
-    }
+    property Launcher launcher: Launcher {}
+    property TalefishState state: TalefishState {}
     property Options options: Options {
         Component.onCompleted: {
             if(autoStartSlumber && launcher.fileExists('/usr/bin/harbour-slumber')
@@ -79,7 +78,6 @@ ApplicationWindow
             onTriggered: parent.save(['playlistProgress'])
         }
 
-    property Launcher launcher: Launcher {}
     property var log: console.log//(options.doLog ? console.log : function(){})
 
     Timer {

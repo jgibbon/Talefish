@@ -19,6 +19,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
 #include "launcher.h"
+#include <QDebug>
 
 Launcher::Launcher(QObject *parent) : QObject(parent),
     m_process(new QProcess(this))
@@ -75,6 +76,25 @@ QList<QVariant> Launcher::getExternalVolumes()
     }
     return mounts;
 }
+//  using mimer works without this, but we may need something like it in the future
+//void Launcher::setupFileHandling(const bool activate)
+//{
+//    qDebug() << "setupFileHandling" << activate;
+//    QString homeDir = QDir().homePath();
+//    QFile fileInterface;
+//    QString desktopTargetPath = homeDir + "/.local/share/applications/harbour-talefish-open-file.desktop";
+//    bool desktopTargetExists = fileExists(desktopTargetPath);
+//    qDebug() << "target exists" << desktopTargetExists << "source" << fileExists("/usr/share/harbour-talefish/harbour-talefish-open-file.desktop");
+//    if (activate && !desktopTargetExists) {
+//        fileInterface.copy("/usr/share/harbour-talefish/harbour-talefish-open-file.desktop", desktopTargetPath);
+//        launchAndForget("update-desktop-database ", QStringList(homeDir +"/.local/share/applications"));
+//        qDebug() << "enabled file handling";
+//    } else if (!activate && desktopTargetExists) {
+//        fileInterface.remove(desktopTargetPath);
+//        launchAndForget("update-desktop-database ", QStringList(homeDir +"/.local/share/applications"));
+//        qDebug() << "disable file handling";
+//    }
+//}
 
 
 Launcher::~Launcher() {

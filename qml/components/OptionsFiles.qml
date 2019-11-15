@@ -64,7 +64,6 @@ OptionArea {
         onClicked: {
             app.options.saveProgressPeriodically = checked
         }
-
     }
 
     OptionComboBox {

@@ -44,6 +44,8 @@ public:
     Q_INVOKABLE QString getRoot();
     Q_INVOKABLE QList<QVariant> getExternalVolumes();
 
+//    Q_INVOKABLE void setupFileHandling(const bool activate);
+
 signals:
 
 public slots:

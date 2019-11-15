@@ -19,12 +19,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
 import QtQuick 2.6
-import Launcher 1.0
 import Sailfish.Silica 1.0
 
 QtObject {
     id: places
-    property Launcher launcher: Launcher {id:launcher}
     //: Section Header for list of favourite and last opened directories
     property string quickAccessTitle: qsTr('Quick Access')
     property var quickAccessModel: {
@@ -95,13 +93,13 @@ QtObject {
                        //: Menu entry: Go to the root folder
                        //~ Context Opens File chooser
                        name: qsTr('Device memory'),
-                       path: launcher.getRoot(),
+                       path: app.launcher.getRoot(),
                        image: 'image://theme/icon-m-phone',
                        hideIfUnavailable: false,
                        hidePath: true,
                        isFavourite:false
                    }];
-        var mounts = launcher.getExternalVolumes()
+        var mounts = app.launcher.getExternalVolumes()
         //: Menu entry: Go to SD card
         //~ Context Opens File chooser
         var sdCardString = qsTr('SD Card');

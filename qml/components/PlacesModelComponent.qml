@@ -47,7 +47,7 @@ Column {
                     id: placeBackground
                     height: Theme.itemSizeSmall
                     width: parent.width
-                    property bool pathExists: modelData.path !== '' && launcher.folderExists(modelData.path)
+                    property bool pathExists: modelData.path !== '' && app.launcher.folderExists(modelData.path)
                     property string textColor: highlighted && (pathExists || removeFavouriteMenu.active) ? Theme.highlightColor : Theme.primaryColor
                     property string secondaryTextColor: highlighted && pathExists ? Theme.secondaryHighlightColor : Theme.secondaryColor
                     enabled: pathExists || modelData.isFavourite
