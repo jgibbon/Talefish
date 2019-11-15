@@ -109,7 +109,7 @@ CoverBackground {
         Label {
             width: parent.width
             id: progressLabel
-            text: app.js.formatMSeconds( app.audio.position )+" / "+app.js.formatMSeconds (app.audio.displayPosition)
+            text: app.js.formatMSeconds( app.audio.displayPosition )+" / "+app.js.formatMSeconds (app.playlist.currentMetaData.duration > 0 ? app.playlist.currentMetaData.duration : 0.1)
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
