@@ -126,13 +126,13 @@
 <context>
     <name>OpenPage</name>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="73"/>
+        <location filename="../qml/pages/OpenPage.qml" line="70"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="112"/>
+        <location filename="../qml/pages/OpenPage.qml" line="107"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -142,7 +142,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="115"/>
+        <location filename="../qml/pages/OpenPage.qml" line="110"/>
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -152,25 +152,25 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="119"/>
+        <location filename="../qml/pages/OpenPage.qml" line="114"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="122"/>
+        <location filename="../qml/pages/OpenPage.qml" line="117"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="125"/>
+        <location filename="../qml/pages/OpenPage.qml" line="120"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="130"/>
+        <location filename="../qml/pages/OpenPage.qml" line="125"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
         <translation type="unfinished"></translation>
@@ -417,23 +417,23 @@
         <translation>Indien uitgeschakeld wordt de huidige voortgaang pas opgeslagen wanneer de app juist wordt afgesloten. Anders wordt de voorgang om de paar seconden opgeslagen.</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="73"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="72"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
         <translation>Bewaar voortgang in map</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="82"/>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
         <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
         <translation>Om te verhinderen dat gecachete gegevens of zelfs verwijderde mappen zich met verloop van tijd opstapelen zal Talefish bij het opstarten van de applicatie controleren op oude items. Dit heeft geen effect op het huidig geladen map.</translation>
     </message>
     <message numerus="yes">
+        <location filename="../qml/components/OptionsFiles.qml" line="74"/>
         <location filename="../qml/components/OptionsFiles.qml" line="75"/>
         <location filename="../qml/components/OptionsFiles.qml" line="76"/>
         <location filename="../qml/components/OptionsFiles.qml" line="77"/>
         <location filename="../qml/components/OptionsFiles.qml" line="78"/>
-        <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation type="unfinished">
@@ -442,7 +442,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="80"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
         <translation>voor altijd</translation>
@@ -530,37 +530,67 @@
         <translation>Installeer de slaaptimertoepassing Slumber om deze opties in te schakelen</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="42"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="43"/>
+        <source>Rewind when paused by slumber:</source>
+        <extracomment>ComboBox label</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="46"/>
+        <source>no</source>
+        <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="48"/>
+        <source>Short Skip duration</source>
+        <extracomment>ComboBox option: skip back the duration set as &quot;short&quot; when paused by slumber</extracomment>
+        <translation>Duur voor kort overslaan</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="50"/>
+        <source>Long Skip duration</source>
+        <extracomment>ComboBox option: skip back the duration set as &quot;long&quot; when paused by slumber</extracomment>
+        <translation>Duur voor lang overslaan</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="52"/>
+        <source>Double Long Skip duration</source>
+        <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="59"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Slaaptimer automatisch opstarten</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="49"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="66"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
         <translation>Start de slaaptimertoepassing Slumber automatisch op bij het opstarten van Talefish.</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="56"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="73"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Plaats Talefish opnieuw in de voorgrand na het opstarten van Slumber</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="67"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="84"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Slumber enkel op bepaalde tijdstippen opstarten</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="105"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="117"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Slumber opstarten na</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="124"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="136"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Slumber opstarten vóór</translation>
@@ -569,37 +599,37 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="217"/>
         <source>Sort by Name</source>
         <extracomment>MenuItem: Sort directory content by name</extracomment>
         <translation>Sorteren op naam</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="194"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="196"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
         <translation>In wachtrij plaatsen</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="186"/>
         <source>Open</source>
         <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
         <translation>Openen</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="226"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="228"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
         <translation>Sorteren op laatst gewijzigd</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="247"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="249"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="292"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="294"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
         <translation type="unfinished"></translation>
@@ -617,69 +647,69 @@
 <context>
     <name>PlacesModels</name>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="29"/>
+        <location filename="../qml/components/PlacesModels.qml" line="27"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="34"/>
+        <location filename="../qml/components/PlacesModels.qml" line="32"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
         <translation type="unfinished"></translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="55"/>
+        <location filename="../qml/components/PlacesModels.qml" line="53"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
         <translation type="unfinished"></translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="61"/>
+        <location filename="../qml/components/PlacesModels.qml" line="59"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
         <translation type="unfinished"></translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="70"/>
+        <location filename="../qml/components/PlacesModels.qml" line="68"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
         <translation type="unfinished"></translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="79"/>
+        <location filename="../qml/components/PlacesModels.qml" line="77"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
         <translation type="unfinished"></translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="88"/>
+        <location filename="../qml/components/PlacesModels.qml" line="86"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
         <translation type="unfinished"></translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="97"/>
+        <location filename="../qml/components/PlacesModels.qml" line="95"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
         <translation type="unfinished"></translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="107"/>
+        <location filename="../qml/components/PlacesModels.qml" line="105"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
         <translation type="unfinished"></translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="110"/>
+        <location filename="../qml/components/PlacesModels.qml" line="108"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
         <translation type="unfinished"></translation>

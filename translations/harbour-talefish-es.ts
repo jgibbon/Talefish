@@ -14,25 +14,25 @@
         <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ver información de licencia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="73"/>
         <source>Hide license information</source>
         <extracomment>Button: Hide license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ocultar información de licencia</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="89"/>
         <source>Talefish comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See the GNU General Public License for more details:</source>
         <extracomment>Longer License Line. If you&apos;re in the least unsure about translation, leave it in english. Below it will be a Link to the full license text.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Talefish viene ABSOLUTAMENTE SIN GARANTÍA. Esto es software libre, y puedes redistribuirlo y/o modificarlo bajo los términos de la Licencia Pública General de GNU publicada por la Free Software Foundation; ya sea la versión 2 de la Licencia o (a tu elección) cualquier versión posterior. Consulta la Licencia Pública General de GNU para más detalles:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Este programa usa e incluye versiones modificadas o no modificadas de los siguientes componentes de software bajo los términos de la licencia LGPL 2.1:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
@@ -93,13 +93,13 @@
         <location filename="../qml/pages/AboutPage.qml" line="122"/>
         <source>See the GNU Lesser General Public License for more details:</source>
         <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Consulta la LIcencia Pública General Reducida para más detalles:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="64"/>
         <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
         <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Reproductor de audiolibros Talefish, Copyright (C) 2016-%1 John Gibbon</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="210"/>
@@ -126,54 +126,54 @@
 <context>
     <name>OpenPage</name>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="73"/>
+        <location filename="../qml/pages/OpenPage.qml" line="70"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Lugares</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="112"/>
+        <location filename="../qml/pages/OpenPage.qml" line="107"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Abrir %L1 archivo</numerusform>
+            <numerusform>Abrir %L1 archivos</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="115"/>
+        <location filename="../qml/pages/OpenPage.qml" line="110"/>
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Poner %L1 archivo en cola</numerusform>
+            <numerusform>Poner %L1 archivos en cola</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="119"/>
+        <location filename="../qml/pages/OpenPage.qml" line="114"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Abrir todos los archivos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="122"/>
+        <location filename="../qml/pages/OpenPage.qml" line="117"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Poner todos los archivos en cola</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/OpenPage.qml" line="120"/>
+        <source>Select directory</source>
+        <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
+        <translation>Seleccionar directorio</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="125"/>
-        <source>Select directory</source>
-        <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/OpenPage.qml" line="130"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>o seleccionar archivos a continuación</translation>
     </message>
 </context>
 <context>
@@ -183,7 +183,7 @@
         <source>Appearance</source>
         <comment>section header</comment>
         <extracomment>Section Header/Button Text for Options Section</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Apariencia</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="32"/>
@@ -225,19 +225,19 @@
         <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
         <source>playlist</source>
         <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>lista de reproducción</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
         <source>Display album cover images in directory list and playlist view</source>
         <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar portada del álbum en lista de directorio y lista de reproducción</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="74"/>
         <source>Extracting a lot of Images at once can be really slow.</source>
         <extracomment>Option Entry description</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Extraer muchas imágenes de una vez puede ser muy lento.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
@@ -256,7 +256,7 @@
         <source>Cassette tape</source>
         <comment>section header</comment>
         <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Cinta de casete</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="89"/>
@@ -296,7 +296,7 @@
         <source>External control</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options to control Talefish &quot;externally&quot;: Headphone buttons, app cover etc</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Control externo</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="33"/>
@@ -390,19 +390,19 @@
         <location filename="../qml/components/OptionsFiles.qml" line="32"/>
         <source>Automatically display most recent directory</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar automáticamente el directorio más reciente</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="40"/>
         <source>Remember sort mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Recordar modo de orden</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="49"/>
         <source>Remember enqueue mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Recordar modo de cola</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="59"/>
@@ -417,32 +417,32 @@
         <translation>Si está deshabilitado, la posición actual de la reproducción se guardará sólo cuando salga correctamente de la aplicación. En caso contrario, el progreso se guardará cada pocos segundos.</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="73"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="72"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
         <translation>Mantener progreso del directorio</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="82"/>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
         <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
         <translation>Para evitar que los datos almacenados en caché por directorios antiguos o eliminados se acumulen con el tiempo, Talefish comprobará las entradas antiguas al iniciar la aplicación. No afectará al directorio cargado actualmente.</translation>
     </message>
     <message numerus="yes">
+        <location filename="../qml/components/OptionsFiles.qml" line="74"/>
         <location filename="../qml/components/OptionsFiles.qml" line="75"/>
         <location filename="../qml/components/OptionsFiles.qml" line="76"/>
         <location filename="../qml/components/OptionsFiles.qml" line="77"/>
         <location filename="../qml/components/OptionsFiles.qml" line="78"/>
-        <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>durante %1 día</numerusform>
+            <numerusform>durante %1 días</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="80"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
         <translation>siempre</translation>
@@ -461,13 +461,13 @@
         <location filename="../qml/components/OptionsMisc.qml" line="37"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Para fines de depuración, a veces es útil restablecer todas las opciones y estados de la aplicación a los valores por defecto. Con suerte nunca necesitarás esto.</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsMisc.qml" line="42"/>
         <source>Reset &amp; Quit</source>
         <extracomment>Button Text: Reset all options/application state and quit</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Restablecer y salir</translation>
     </message>
 </context>
 <context>
@@ -521,7 +521,7 @@
         <source>Sleep timer integration</source>
         <comment>section header</comment>
         <extracomment>Section Header: Sleep timer options (for starting &quot;slumber&quot; automatically)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Integración temporizador de apagado</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="32"/>
@@ -530,37 +530,67 @@
         <translation>Instalar el temporizador slumber para habilitar estas opciones</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="42"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="43"/>
+        <source>Rewind when paused by slumber:</source>
+        <extracomment>ComboBox label</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="46"/>
+        <source>no</source>
+        <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="48"/>
+        <source>Short Skip duration</source>
+        <extracomment>ComboBox option: skip back the duration set as &quot;short&quot; when paused by slumber</extracomment>
+        <translation>Salto corto</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="50"/>
+        <source>Long Skip duration</source>
+        <extracomment>ComboBox option: skip back the duration set as &quot;long&quot; when paused by slumber</extracomment>
+        <translation>Salto largo</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="52"/>
+        <source>Double Long Skip duration</source>
+        <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="59"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Iniciar temporizador automáticamente</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="49"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="66"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
         <translation>Iniciar el temporizador slumber automáticamente al iniciar Talefish.</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="56"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="73"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Poner Talefish en primer plano tras iniciar slumber</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="67"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="84"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Iniciar slumber sólo en ciertos momentos</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="105"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="117"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Iniciar slumber después de</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="124"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="136"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Iniciar slumber antes de</translation>
@@ -569,40 +599,40 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="217"/>
         <source>Sort by Name</source>
         <extracomment>MenuItem: Sort directory content by name</extracomment>
         <translation>Ordenar por nombre</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="194"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="196"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
         <translation>En cola</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="186"/>
         <source>Open</source>
         <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="226"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="228"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
         <translation>Ordenar por últimas modificadas</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="247"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="249"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Más opciones</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="292"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="294"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Directorio principal</translation>
     </message>
 </context>
 <context>
@@ -611,78 +641,78 @@
         <location filename="../qml/components/PlacesModelComponent.qml" line="124"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Quitar de favoritos</translation>
     </message>
 </context>
 <context>
     <name>PlacesModels</name>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="29"/>
+        <location filename="../qml/components/PlacesModels.qml" line="27"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Acceso rápido</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="34"/>
+        <location filename="../qml/components/PlacesModels.qml" line="32"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Abierto recientemente</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="55"/>
+        <location filename="../qml/components/PlacesModels.qml" line="53"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dispositivo</translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="61"/>
+        <location filename="../qml/components/PlacesModels.qml" line="59"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta de usuario</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="70"/>
+        <location filename="../qml/components/PlacesModels.qml" line="68"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Música</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="79"/>
+        <location filename="../qml/components/PlacesModels.qml" line="77"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Descargas</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="88"/>
+        <location filename="../qml/components/PlacesModels.qml" line="86"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Almacenamiento Android</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="97"/>
+        <location filename="../qml/components/PlacesModels.qml" line="95"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Memoria de dispositivo</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="107"/>
+        <location filename="../qml/components/PlacesModels.qml" line="105"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tarjeta SD</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="110"/>
+        <location filename="../qml/components/PlacesModels.qml" line="108"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Almacenamiento externo</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
 </context>
@@ -750,9 +780,9 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="32"/>
         <source>%L1 file(s) opened</source>
         <extracomment>Playlist Page Header: Number of opened files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%L1 archivo abierto</numerusform>
+            <numerusform>%L1 archivos abiertos</numerusform>
         </translation>
     </message>
     <message>
@@ -768,7 +798,7 @@
     <message>
         <location filename="../qml/lib/PlaylistView.qml" line="41"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar</translation>
     </message>
     <message>
         <location filename="../qml/lib/PlaylistView.qml" line="184"/>

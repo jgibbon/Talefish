@@ -45,7 +45,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="148"/>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
         <extracomment>Label: introduction for &quot;TMO&quot; link</extracomment>
-        <translation>在 talk.maemo.org 讨论或点击感谢</translation>
+        <translation>在 talk.maemo.org 讨论或点击&quot;thanks&quot;：</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="157"/>
@@ -57,7 +57,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="163"/>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
         <extracomment>Label: introduction for github link</extracomment>
-        <translation>欢迎在 GitHub 上给本软件打分(Star)、表达诉求(Pull requests)及报告问题:</translation>
+        <translation>欢迎在 GitHub 上 star（打分）、pull requests （表达诉求）或 bug reports （报告缺陷）:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="172"/>
@@ -126,13 +126,13 @@
 <context>
     <name>OpenPage</name>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="73"/>
+        <location filename="../qml/pages/OpenPage.qml" line="70"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
         <translation>位置</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="112"/>
+        <location filename="../qml/pages/OpenPage.qml" line="107"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -141,7 +141,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="115"/>
+        <location filename="../qml/pages/OpenPage.qml" line="110"/>
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -150,25 +150,25 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="119"/>
+        <location filename="../qml/pages/OpenPage.qml" line="114"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation>打开所有文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="122"/>
+        <location filename="../qml/pages/OpenPage.qml" line="117"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation>排队所有文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="125"/>
+        <location filename="../qml/pages/OpenPage.qml" line="120"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
-        <translation>重选含音频目录</translation>
+        <translation>重选目录</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="130"/>
+        <location filename="../qml/pages/OpenPage.qml" line="125"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
         <translation>或从下方目录选择文件</translation>
@@ -241,13 +241,13 @@
         <location filename="../qml/components/OptionsAppearance.qml" line="56"/>
         <source>App-Cover Actions are external Commands, as well.</source>
         <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
-        <translation>应用程序封面操作也是外部指令</translation>
+        <translation>软件封面操作也是外部指令</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
         <source>Additional App-Cover Actions</source>
         <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
-        <translation>另一项应用程序封面操作</translation>
+        <translation>另一项软件封面操作</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
@@ -306,7 +306,7 @@
         <location filename="../qml/components/OptionsCommands.qml" line="43"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
         <extracomment>ComboBox description</extracomment>
-        <translation>外部命令是从锁屏或通过耳机/蓝牙执行的操作</translation>
+        <translation>外部命令是从锁屏或通过耳机或蓝牙执行的操作</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="36"/>
@@ -330,13 +330,13 @@
         <location filename="../qml/components/OptionsCommands.qml" line="49"/>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation>使用耳机按钮/蓝牙以控制 Talefish</translation>
+        <translation>使用耳机按钮或蓝牙控制 Talefish</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="82"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <extracomment>Label</extracomment>
-        <translation>你可以选择按压“接听/挂断”键时想要执行的操作，此时极可能耳机上仅有唯一按键。</translation>
+        <translation>你可以选择按下“接听/挂断”键时想要执行的操作，此时极可能耳机上仅有唯一按键。</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="87"/>
@@ -400,7 +400,7 @@
         <location filename="../qml/components/OptionsFiles.qml" line="49"/>
         <source>Remember enqueue mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation>记住队列模式</translation>
+        <translation>记住队列方式</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsFiles.qml" line="59"/>
@@ -412,26 +412,26 @@
         <location filename="../qml/components/OptionsFiles.qml" line="61"/>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
         <extracomment>Option Entry (TextSwitch) description for &quot;Save progress periodically&quot;</extracomment>
-        <translation>如果禁用, 则只有当应用完全退出时, 才会保存当前播放状态。否则, 将每隔几秒钟保存一次进度。</translation>
+        <translation>如果禁用, 则仅当软件完全退出时, 才会保存当前播放状态。否则, 将每隔几秒保存一次进度。</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="73"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="72"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
         <translation>目录进度保留时间</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="82"/>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
         <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
-        <translation>为了防止旧的缓存数据甚至已删除的目录随着时间推移不断累积，Talefish 会在应用启动之时检查旧项目。这并不会影响当前加载的目录。</translation>
+        <translation>为了防止旧的缓存数据甚至已删除的目录随着时间推移不断累积，Talefish 会在软件启动之时检查旧项目。放心，这并不会影响当前加载的目录。</translation>
     </message>
     <message numerus="yes">
+        <location filename="../qml/components/OptionsFiles.qml" line="74"/>
         <location filename="../qml/components/OptionsFiles.qml" line="75"/>
         <location filename="../qml/components/OptionsFiles.qml" line="76"/>
         <location filename="../qml/components/OptionsFiles.qml" line="77"/>
         <location filename="../qml/components/OptionsFiles.qml" line="78"/>
-        <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation>
@@ -439,7 +439,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="80"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
         <translation>永久</translation>
@@ -452,13 +452,13 @@
         <source>Miscellaneous</source>
         <comment>section header</comment>
         <extracomment>Section Header: Miscellaneous options</extracomment>
-        <translation>杂项</translation>
+        <translation>杂项操作</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsMisc.qml" line="37"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
-        <translation>为了解决故障，有时需要重置所有选项及恢复软件到默认状态。希望你永远也不要用到此功能。</translation>
+        <translation>为了解决故障，有时需要重置所有选项并且恢复软件到默认状态。我希望你永远也不要用到此功能。</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsMisc.qml" line="42"/>
@@ -524,40 +524,70 @@
         <location filename="../qml/components/OptionsSleepTimer.qml" line="32"/>
         <source>Install the slumber sleep timer application to enable these options</source>
         <extracomment>Label: Shown if &quot;slumber&quot; isn&apos;t installed</extracomment>
-        <translation>安装 Slumber 睡眠计时器应用以激活此选项</translation>
+        <translation>安装 Slumber 睡眠计时器软件以激活此选项</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="42"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="43"/>
+        <source>Rewind when paused by slumber:</source>
+        <extracomment>ComboBox label</extracomment>
+        <translation>当播放被 slumber 暂停时倒带</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="46"/>
+        <source>no</source>
+        <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
+        <translation>绝不</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="48"/>
+        <source>Short Skip duration</source>
+        <extracomment>ComboBox option: skip back the duration set as &quot;short&quot; when paused by slumber</extracomment>
+        <translation>短快进</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="50"/>
+        <source>Long Skip duration</source>
+        <extracomment>ComboBox option: skip back the duration set as &quot;long&quot; when paused by slumber</extracomment>
+        <translation>长快进</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="52"/>
+        <source>Double Long Skip duration</source>
+        <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
+        <translation>双倍长快进</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="59"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>自动开启睡眠计时器</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="49"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="66"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
         <translation>当启动 Talefish 时自动打开 Slumber 睡眠计时器</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="56"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="73"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>当开启 Slumber 后将 Talefish 转到前台运行</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="67"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="84"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>仅在特定时间启用 Slumber </translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="105"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="117"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>何时之后启用 Slumber</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="124"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="136"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>何时之前启用 Slumber</translation>
@@ -566,37 +596,37 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="217"/>
         <source>Sort by Name</source>
         <extracomment>MenuItem: Sort directory content by name</extracomment>
         <translation>按名称排序</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="194"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="196"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
         <translation>追加到播放列表</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="186"/>
         <source>Open</source>
         <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="226"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="228"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
         <translation>按最近编辑排序</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="247"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="249"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
         <translation>更多选项</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="292"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="294"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
         <translation>上级目录</translation>
@@ -614,69 +644,69 @@
 <context>
     <name>PlacesModels</name>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="29"/>
+        <location filename="../qml/components/PlacesModels.qml" line="27"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
         <translation>快速访问</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="34"/>
+        <location filename="../qml/components/PlacesModels.qml" line="32"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
         <translation>最近打开</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="55"/>
+        <location filename="../qml/components/PlacesModels.qml" line="53"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
         <translation>设备</translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="61"/>
+        <location filename="../qml/components/PlacesModels.qml" line="59"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
         <translation>主页</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="70"/>
+        <location filename="../qml/components/PlacesModels.qml" line="68"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
         <translation>音乐</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="79"/>
+        <location filename="../qml/components/PlacesModels.qml" line="77"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
         <translation>下载</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="88"/>
+        <location filename="../qml/components/PlacesModels.qml" line="86"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
         <translation>Android 存储</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="97"/>
+        <location filename="../qml/components/PlacesModels.qml" line="95"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
         <translation>设备存储</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="107"/>
+        <location filename="../qml/components/PlacesModels.qml" line="105"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
         <translation>SD 卡</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="110"/>
+        <location filename="../qml/components/PlacesModels.qml" line="108"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
         <translation>外部存储</translation>
