@@ -30,24 +30,16 @@ CoverBackground {
 
     Item {
         id: paddingcontainer
-        anchors.fill: parent
-        anchors.topMargin: Theme.paddingSmall
-        anchors.leftMargin: Theme.paddingSmall
-        anchors.rightMargin: Theme.paddingSmall
-        anchors.bottomMargin: Theme.paddingSmall
         clip: true
-
-
-
-
+        anchors {
+            fill: parent
+            margins: Theme.paddingSmall
+        }
         Image {
             id: coverImage
             source: 'image://taglib-cover-art/'+app.playlist.currentMetaData.path
-
             anchors.fill: parent
-
             fillMode: Image.PreserveAspectCrop
-            x: (parent.width - width) / 2
             z:-1
             opacity: 0.3
         }
@@ -59,8 +51,11 @@ CoverBackground {
         opacity: 0.3
         width: parent.width * 2
         height: width
-        x: (-width) / 2
-        y: parent.height - (height / 2)
+        anchors {
+            horizontalCenter: parent.left
+            verticalCenter: parent.bottom
+        }
+
         maximumValue: app.options.cassetteUseDirectoryDurationProgress
            ? app.playlist.totalDuration
            : app.audio.duration
@@ -81,21 +76,51 @@ CoverBackground {
             visible: app.playlist.metadata.count === 0
         }
     }
+    OpacityRampEffect {
+        sourceItem: centeredItem
+        direction: OpacityRamp.TopToBottom
+        slope: 5
+        offset: centeredItem.largeContent ? 0.7 : 1.0
+    }
+
     Column {
         id: centeredItem
-
+        property bool largeContent: implicitHeight > parent.height - bottomPadding + Theme.paddingLarge
         opacity: app.playlist.metadata.count > 0 ? 1 : 0
-        anchors.centerIn: parent
-
-        anchors.bottomMargin: coverCassette.tapeWidth / 3
-        //        height: folderNameLabel.implicitHeight + fileNameLabel.implicitHeight + progressLabel.implicitHeight
-        width: parent.width - Theme.paddingLarge * 2
+        states: [
+            State {
+                name: 'top'
+                when: centeredItem.largeContent
+                AnchorChanges {
+                    target: centeredItem
+                    anchors.verticalCenter: undefined
+                    anchors.top: parent.top
+                }
+            }
+        ]
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            verticalCenter: parent.verticalCenter
+        }
+        topPadding: Theme.paddingSmall
+        bottomPadding: width / 4
+        width: parent.width - Theme.paddingMedium * 2
 
         Label {
             width: parent.width
-            id: fileNameLabel
-
             text: app.playlist.currentTitle + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
+
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: Theme.fontSizeSmall
+            color: Theme.primaryColor
+            maximumLineCount: 4
+            elide: Text.ElideRight
+            wrapMode: 'WrapAtWordBoundaryOrAnywhere'
+        }
+        Label {
+            width: parent.width
+            text: app.js.formatMSeconds( app.audio.displayPosition )+" / "+app.js.formatMSeconds (app.playlist.currentMetaData.duration > 0 ? app.playlist.currentMetaData.duration : 0.1)
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -105,26 +130,28 @@ CoverBackground {
         }
         Label {
             width: parent.width
-            id: progressLabel
-            text: app.js.formatMSeconds( app.audio.displayPosition )+" / "+app.js.formatMSeconds (app.playlist.currentMetaData.duration > 0 ? app.playlist.currentMetaData.duration : 0.1)
-
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            font.pixelSize: Theme.fontSizeTiny
-            color: Theme.primaryColor
-            wrapMode: 'WrapAtWordBoundaryOrAnywhere'
-        }
-        Label {
-            width: parent.width
-            id: folderNameLabel3
-            property string displayPath:app.playlist.currentAlbum
-            visible: displayPath !== '' //&& options.playerDisplayDirectoryName
-            text: displayPath
+            visible: text !== ''
+            text: app.playlist.currentAlbum
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: Theme.fontSizeTiny
             color: Theme.secondaryColor
+            maximumLineCount: 4
+            elide: Text.ElideRight
+            wrapMode: 'WrapAtWordBoundaryOrAnywhere'
+        }
+        Label {
+            width: parent.width
+            visible: text !== ''
+            text: app.playlist.currentArtist
+
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: Theme.fontSizeTiny
+            color: Theme.secondaryColor
+            maximumLineCount: 4
+            elide: Text.ElideRight
             wrapMode: 'WrapAtWordBoundaryOrAnywhere'
         }
     }
