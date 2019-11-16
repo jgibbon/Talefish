@@ -31,7 +31,7 @@ import '../components'
 
 Page {
     id: page
-
+    objectName: 'playerPage' // to find this page easily (coverActionEmpty)
     allowedOrientations: Orientation.All
 
 

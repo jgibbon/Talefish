@@ -66,16 +66,20 @@ CoverBackground {
     }
 
     InteractionHintLabel {
-        anchors.bottom: parent.bottom
+        invert: true
+        anchors.fill: parent
         opacity: (app.playlist.metadata.count > 0) ? 0.0 : 1.0
         Behavior on opacity { FadeAnimation {} }
         InfoLabel {
+            anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text:qsTr('Nothing to play')
             visible: app.playlist.metadata.count === 0
         }
     }
+
+
     OpacityRampEffect {
         sourceItem: centeredItem
         direction: OpacityRamp.TopToBottom
@@ -121,7 +125,7 @@ CoverBackground {
         Label {
             width: parent.width
             text: app.js.formatMSeconds( app.audio.displayPosition )+" / "+app.js.formatMSeconds (app.playlist.currentMetaData.duration > 0 ? app.playlist.currentMetaData.duration : 0.1)
-
+            visible: app.playlist.metadata.count > 0
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: Theme.fontSizeExtraSmall
@@ -164,7 +168,7 @@ CoverBackground {
 
     CoverActionList {
         id: coverActionPrev
-        enabled: options.secondaryCoverAction === 'prev'
+        enabled: app.playlist.metadata.count > 0 && options.secondaryCoverAction === 'prev'
 
         CoverAction {
             iconSource: "image://theme/icon-cover-previous-song"
@@ -181,7 +185,7 @@ CoverBackground {
 
     CoverActionList {
         id: coverActionNext
-        enabled: options.secondaryCoverAction === 'next'
+        enabled: app.playlist.metadata.count > 0 && options.secondaryCoverAction === 'next'
 
         CoverAction {
             iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
@@ -198,7 +202,7 @@ CoverBackground {
 
     CoverActionList {
         id: coverActionBoth
-        enabled: options.secondaryCoverAction === 'both'
+        enabled: app.playlist.metadata.count > 0 && options.secondaryCoverAction === 'both'
 
         CoverAction {
             iconSource: "image://theme/icon-cover-previous-song"
@@ -221,12 +225,27 @@ CoverBackground {
 
     CoverActionList {
         id: coverAction
-        enabled: options.secondaryCoverAction === ''
+        enabled: app.playlist.metadata.count > 0 && options.secondaryCoverAction === ''
 
         CoverAction {
             iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
             onTriggered: playerCommands.playPause()
+        }
+    }
+    CoverActionList {
+        id: coverActionEmpty
+        enabled: app.playlist.metadata.count === 0
+
+        CoverAction {
+            iconSource:  "image://theme/icon-cover-new"
+            onTriggered: {
+                if(app.pageStack.depth > 1) { // remove all below PlayerPage
+                    app.pageStack.pop(app.pageStack.find(function(page){return page.objectName === 'playerPage';}), PageStackAction.Immediate);
+                }
+                pageStack.push(Qt.resolvedUrl("../pages/OpenPage.qml"), {}, PageStackAction.Immediate);
+                app.activate();
+            }
         }
     }
 
