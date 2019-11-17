@@ -14,8 +14,8 @@ Name:       harbour-talefish
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Talefish
 Version:    0.2
-Release:    1
-Group:      Qt/Qt
+Release:    2
+Group:      Applications/Multimedia
 License:    GPL2
 URL:        https://github.com/jgibbon/Talefish
 Source0:    %{name}-%{version}.tar.bz2
