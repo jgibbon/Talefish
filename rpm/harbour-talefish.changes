@@ -5,7 +5,10 @@
 # Add newest entries to the top of the list.
 # Separate entries from eachother with a blank line.
 
-* Fri Nov 15 2019 velox 0.2-1
+* Sun Nov 17 2019 velox 0.2-2
+ - Translation update HU (thanks)
+
+* Sun Nov 17 2019 velox 0.2-1
  - Package renamed (for future harbour compatibility)
  - Rewrite of most core functionality (audio/playlist handling)
  - New Interface for opening files

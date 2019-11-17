@@ -14,13 +14,13 @@
         <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Licencinformációk megtekintése</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="73"/>
         <source>Hide license information</source>
         <extracomment>Button: Hide license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Licencinformációk elrejtése</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="89"/>
@@ -99,7 +99,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="64"/>
         <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
         <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Talefish hangoskönyv-lejátszó, Copyright (C) 2016-%1 John Gibbon</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="210"/>
@@ -129,15 +129,15 @@
         <location filename="../qml/pages/OpenPage.qml" line="70"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Helyek</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OpenPage.qml" line="107"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%L1 fájl megnyitása</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -145,33 +145,33 @@
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%L1 fájl sorbaállítása</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="114"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Az összes fájl megnyitása</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="117"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Az összes fájl sorbaállítása</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="120"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Mappa kiválasztása</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="125"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>vagy válassz az alábbi fájlok közül</translation>
     </message>
 </context>
 <context>
@@ -181,7 +181,7 @@
         <source>Appearance</source>
         <comment>section header</comment>
         <extracomment>Section Header/Button Text for Options Section</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Megjelenés</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="32"/>
@@ -217,13 +217,13 @@
         <location filename="../qml/components/OptionsAppearance.qml" line="66"/>
         <source>Skip backward and forward</source>
         <extracomment>ComboBox option: Skip to next and previous track as secondary/tertiary App-Cover action</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ugrás hátra és előre</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="94"/>
         <source>playlist</source>
         <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>lejátszási lista</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="72"/>
@@ -247,14 +247,14 @@
         <location filename="../qml/components/OptionsAppearance.qml" line="54"/>
         <source>Additional App-Cover Actions</source>
         <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>További alkalmazás-csempe műveletek</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="83"/>
         <source>Cassette tape</source>
         <comment>section header</comment>
         <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kazettaszalag</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsAppearance.qml" line="89"/>
@@ -294,7 +294,7 @@
         <source>External control</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options to control Talefish &quot;externally&quot;: Headphone buttons, app cover etc</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Külső vezérlés</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="33"/>
