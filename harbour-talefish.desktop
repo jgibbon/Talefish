@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-talefish
+Exec=harbour-talefish %U
+Name=Talefish
+X-Nemo-Single-Instance=no
+#MimeType=application/vnd.rn-realmedia;application/x-extension-mp4;application/x-flac;application/x-matroska;audio/amr-wb;audio/amr;audio/flac;audio/m4a;audio/m4b;audio/mp3;audio/mp4;audio/mpeg;audio/ogg;audio/vnd.rn-realaudio;audio/webm;audio/x-flac+ogg;audio/x-flac;audio/x-m4a;audio/x-m4b;audio/x-matroska;audio/x-mp3;audio/x-mpeg;audio/x-mpegurl;audio/x-mpg;audio/x-ms-asf;audio/x-ms-asx;audio/x-ms-wax;audio/x-ogg;audio/x-opus+ogg;audio/x-pn-aiff;audio/x-pn-au;audio/x-pn-realaudio-plugin;audio/x-pn-realaudio;audio/x-pn-wav;audio/x-pn-windows-acm;audio/x-real-audio;audio/x-scpls;audio/x-vorbis+ogg;audio/x-vorbis;audio/x-wav;misc/ultravox;x-content/audio-cdda;x-content/audio-player;

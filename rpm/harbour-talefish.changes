@@ -1,0 +1,116 @@
+# Rename this file as Talefish.changes to include changelog
+# entries in your RPM file.
+#
+# Add new changelog entries following the format below.
+# Add newest entries to the top of the list.
+# Separate entries from eachother with a blank line.
+
+* Sun Nov 17 2019 velox 0.2-2
+ - Translation update HU (thanks)
+
+* Sun Nov 17 2019 velox 0.2-1
+ - Package renamed (for future harbour compatibility)
+ - Rewrite of most core functionality (audio/playlist handling)
+ - New Interface for opening files
+ - New Interface for options
+ - New Interface for "about" (better license view)
+ - Enhanced main player interface
+ - Enhanced playlist interface; added search
+ - Support for opening files from other applications (via mimer)
+ - Support for opening files/folders via command line
+ - Enhanced album cover handling
+ - Enhanced slumber sleep timer integration (new rewind option)
+ - Removed now obsolete options
+ - Removed "Enqueue" pulley menu entry (it's now a setting in directory view)
+ - Taglib now included in binary (for future harbour compatibility)
+ - A lot of translation updates (Thanks, translation team, you are awesome!)
+
+* Mon Feb 18 2019 velox 0.1-4
+ - bugfix: prevent stuttering on track change at 100% speed
+ - enhancement: skip to track beginning after 2s (instead of 1)
+ - translation updates: it, es, pl, zh, nl, nl_be
+
+* Mon Jan 14 2019 velox 0.1-3
+- new options: automatically start slumber sleep timer
+
+* Thu Jan 10 2019 velox 0.1-2
+- prevent taglib crash when starting with missing file
+
+* Sun Dec 30 2018 velox 0.1-1
+- enhancement: integrate taglib
+- performance: optimize file loading workflow
+- enhancement: add support for (some) cover images integrated in media files
+- enhancement: make "first start message" more readable
+- various small bugfixes
+
+* Mon Dec 17 2018 velox 0.0-14
+- bugfix: use regex based natural sorting
+
+* Sun Nov 25 2018 velox 0.0-13
+- bugfix: show correct pause cover action icon if secondary action is hidden
+- bugfix: further layout fixes: total progress area + tablet layout
+- bugfix: re-enable "progress slider swiping"; previously only click really worked
+- bugfix: prevent not updating ("zeroing") progress when opening new files
+- enhancement: readability enhancement for title in landscape with light ambiences
+- translation updates: zh_CN; ru (thanks all!)
+
+* Sun Nov 18 2018 velox 0.0-12
+- enhancement: headset "call accept button" now keeps triggering long press action until released
+- bugfix: hide empty total progress area with only one track loaded
+- new translations: hu (thanks leoka), nl_BE (thanks pljmn), sl (thanks sponka), zh_CN (thanks rui kon)
+
+* Thu Nov 08 2018 velox 0.0-11
+- allow opening of .mka (thanks rrunner64!)
+- enhancement: SF3 light ambience button colour fixes + cassette shade
+- performance: huge performance increase while opening lots of files (when mediainfo is installed)
+- enhancement: minor layout changes
+- enhancement: haptic feedback when swiping cover area to change tracks
+
+* Tue Jan 09 2018 velox 0.0-10
+- allow opening of .aac (thanks jakibaki!)
+
+* Sun Mar 05 2017 velox 0.0-9
+- new translation: Dutch (thanks pljmn!)
+
+* Sun Feb 12 2017 velox 0.0-8
+- user request: second app cover button
+- user request: .opus file support
+- enhancement: cassette indicator now looks nice on hi-res screens
+- packaging: reduce size dramatically
+- translation updates
+
+* Sun Jan 22 2017 velox 0.0-7
+- new (EXPERIMENTAL/UNTESTED) feature/options: configure hang up button press + long press
+- bugfix: fixed regression where skipping always paused playback
+- added available parts (some features were implemented later) of sv/es/ru/pl translations (thanks eson/caballlero/ancelad/marmistrz)
+- new page: about
+- new option: purge old saved directory progress
+- new convenience setting: reset playback speed by long pressing slider
+
+* Sat Jan 07 2017 velox 0.0-6
+- bugfix: fix playback bug introduced in 0.0-5 while trying to fix speed issue
+- bugfix: more sane speed reset workaround
+- bugfix: skipping by time pauses playback when it switches to previous track
+- add missing german translation strings
+
+* Fri Jan 06 2017 velox 0.0-5
+- bugfix: speed often resets to 100% as track switches
+- new option (experimental): control with head set buttons (call/hangup = play/pause)
+- new option: periodically save current progress
+- new option: verbose logging
+- new option: sort naturally when scanning files
+- options are saved when leaving options page (previously only on clean app exit)
+
+* Fri Jan 06 2017 velox 0.0-4
+- Display file/folder names on Lock Screen
+- Simple enqueue function (will not save progress for reopening that directory)
+- Show directory name in Playlist view
+
+* Sun Jan 03 2016 velox 0.0-3
+- uppercase file suffixes (*.MP3 instead of *.mp3) allowed
+
+* Sun Jan 03 2016 velox 0.0-2
+- now lets you open *.mp3, *.m4a, *.m4b, *.flac, *.ogg. *.wav files (ability to play equals system media player)
+
+
+
