@@ -37,6 +37,7 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256
 CONFIG += sailfishapp_i18n
 QT += dbus
 QT += multimedia
+QT += concurrent
 
 # using mimer works without this
 # opendesktopfile.files = harbour-talefish-open-file.desktop

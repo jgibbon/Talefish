@@ -118,7 +118,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="83"/>
+        <location filename="../qml/cover/CoverPage.qml" line="77"/>
         <source>Nothing to play</source>
         <translation type="unfinished"></translation>
     </message>
