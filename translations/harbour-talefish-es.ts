@@ -533,13 +533,13 @@
         <location filename="../qml/components/OptionsSleepTimer.qml" line="43"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Rebobinar al detener con slumber:</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="46"/>
         <source>no</source>
         <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>no</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="48"/>
@@ -557,7 +557,7 @@
         <location filename="../qml/components/OptionsSleepTimer.qml" line="52"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Doble duración de salto largo</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="59"/>
