@@ -48,7 +48,7 @@ Page {
                 }
             }
             MenuItem {
-                visible: app.playlist.metadata.count > 0
+                visible: app.playlist.metadata.count > 1
                 //: MenuItem: Go to Playlist Page
                 text: qsTr('Playlist', 'pulley')
                 onClicked: {
