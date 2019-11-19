@@ -5,8 +5,10 @@
 # Add newest entries to the top of the list.
 # Separate entries from eachother with a blank line.
 
-* Sun Nov 17 2019 velox 0.2-2
- - Translation update HU (thanks)
+* Tue Nov 19 2019 velox 0.2-2
+ - Directory list overlay: remove useless auto-scroll on open
+ - Hide playlist pulley entry with < 2 opened files
+ - Translation updates ES/HU (thanks!)
 
 * Sun Nov 17 2019 velox 0.2-1
  - Package renamed (for future harbour compatibility)
