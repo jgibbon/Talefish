@@ -41,7 +41,6 @@ Dialog {
         directoryList.folder = path;
         panel.animationDuration = instant ? 0 : 500;
         panel.open = true;
-        directoryList.contentY = 0;
     }
 
     PlacesModels {
@@ -94,13 +93,10 @@ Dialog {
         height: page.height// - pageHeader.height
         property real visibleOffset: visibleSize / height
         background: Item {}
-
         dock: Dock.Bottom
         PageHeader {
             id: dialogHeader
             title: {
-
-
                 if(directoryList.selectedPaths.length > 0 && directoryList.selectedPaths.length !== directoryList.useablePaths.length) {
                     if(!directoryList.enqueue) {
                         //: Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files
