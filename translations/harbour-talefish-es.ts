@@ -126,13 +126,13 @@
 <context>
     <name>OpenPage</name>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="70"/>
+        <location filename="../qml/pages/OpenPage.qml" line="69"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
         <translation>Lugares</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="107"/>
+        <location filename="../qml/pages/OpenPage.qml" line="103"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -142,7 +142,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="110"/>
+        <location filename="../qml/pages/OpenPage.qml" line="106"/>
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -152,25 +152,25 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="114"/>
+        <location filename="../qml/pages/OpenPage.qml" line="110"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation>Abrir todos los archivos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="117"/>
+        <location filename="../qml/pages/OpenPage.qml" line="113"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation>Poner todos los archivos en cola</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="120"/>
+        <location filename="../qml/pages/OpenPage.qml" line="116"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
         <translation>Seleccionar directorio</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="125"/>
+        <location filename="../qml/pages/OpenPage.qml" line="121"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
         <translation>o seleccionar archivos a continuación</translation>
@@ -332,7 +332,7 @@
         <location filename="../qml/components/OptionsCommands.qml" line="49"/>
         <source>Use head phone buttons/Bluetooth to control Talefish</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation>Usar botones del auricular/Bluetooth para controlar Talefish</translation>
+        <translation>Usar botones de auricular/bluetooth para controlar Talefish</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsCommands.qml" line="82"/>
@@ -521,7 +521,7 @@
         <source>Sleep timer integration</source>
         <comment>section header</comment>
         <extracomment>Section Header: Sleep timer options (for starting &quot;slumber&quot; automatically)</extracomment>
-        <translation>Integración temporizador de apagado</translation>
+        <translation>Temporizador de apagado</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="32"/>
@@ -557,7 +557,7 @@
         <location filename="../qml/components/OptionsSleepTimer.qml" line="52"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
-        <translation>Doble duración de salto largo</translation>
+        <translation>Doble salto largo</translation>
     </message>
     <message>
         <location filename="../qml/components/OptionsSleepTimer.qml" line="59"/>
