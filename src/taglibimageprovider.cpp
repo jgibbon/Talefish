@@ -26,7 +26,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include "flacfile.h"
 #include "vorbisfile.h"
 #include <QMimeDatabase>
-
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 #include <QFileInfo>
 #include <QDir>
 // levenshtein test
@@ -51,9 +52,12 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
 
     // try to get implicit requestedSize height=width from id as url fragment
     // because then we can still query for sourceSize.width === 1 in qml to check for "no image"
-    QUrl idUrl = QUrl(id);
-    if(idUrl.hasFragment()) {
-        mediafilePath = id.split("#")[0];
+    // we only search for digits here:
+    QRegularExpression hashRegex("(.*)(#)(\\d*)$");
+    QRegularExpressionMatch hashMatch = hashRegex.match(id);
+    if(hashMatch.hasMatch()) {
+//        qDebug() << "hashMatch!" << hashMatch.captured(0) << "…" << hashMatch.captured(1) << "…" << hashMatch.captured(2) << "…" << hashMatch.captured(3);
+        mediafilePath = hashMatch.captured(1); //id.split("#")[0];
     } else {
         mediafilePath = id;
     }
@@ -132,9 +136,9 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
 //            qDebug() << "scaling " << requestedSize.width() << "x" << requestedSize.height() << "";
             img = img.scaled(requestedSize, Qt::KeepAspectRatio);
         } else {
-            if(idUrl.hasFragment()) {
+            if(hashMatch.hasMatch()) {
 //                qDebug() << "image has fragment: " << idUrl.fragment().toInt();
-                QSize implicitRequestedSize(idUrl.fragment().toInt(), idUrl.fragment().toInt());
+                QSize implicitRequestedSize(hashMatch.captured(3).toInt(), hashMatch.captured(3).toInt());
                 img = img.scaled(implicitRequestedSize, Qt::KeepAspectRatio);
             }
         }
