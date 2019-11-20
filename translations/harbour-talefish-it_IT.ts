@@ -138,7 +138,7 @@
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
         <translation>
             <numerusform>Apri file %L1</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Apri file %Ln</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -148,7 +148,7 @@
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
         <translation>
             <numerusform>Metti in coda file %L1</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Metti in coda file %Ln</numerusform>
         </translation>
     </message>
     <message>
@@ -781,8 +781,8 @@
         <source>%L1 file(s) opened</source>
         <extracomment>Playlist Page Header: Number of opened files</extracomment>
         <translation>
-            <numerusform>%L1 file aperti</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%L1 file aperto</numerusform>
+            <numerusform>%Ln file aperti</numerusform>
         </translation>
     </message>
     <message>
