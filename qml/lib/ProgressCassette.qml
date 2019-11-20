@@ -52,7 +52,7 @@ Item {
 
     Rectangle {
         id: tape
-        property real valuefactor: maximumValue > minimumValue ? (progressComponent.value - minimumValue) / (maximumValue - minimumValue) : 0 //valuepercent / 100
+        property real valuefactor: maximumValue > minimumValue ? (Math.min(progressComponent.value, maximumValue) - minimumValue) / (maximumValue - minimumValue) : 0 //valuepercent / 100
         anchors.centerIn: parent
 
 

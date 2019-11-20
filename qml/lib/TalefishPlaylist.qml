@@ -144,7 +144,7 @@ Playlist {
         if (!json.items) {// case 1: json is just an array of urls (opening files etc)
             totalDuration = 0;
             for(i=0; i < json.length; i++) {
-                var source = Qt.resolvedUrl(json[i].replace('#', '%23'));
+                var source = Qt.resolvedUrl(json[i].replace(/#/g, '%23'));
                 playlist.addItem(source);
                 metadata.append({path:json[i], artist:'', title:'', album:'', duration:0, previousDurations:0});
                 taglib.getFileTagInfos(json[i], metadata.count - 1, false);
@@ -152,7 +152,7 @@ Playlist {
         } else {// case 2: json is prefilled
             totalDuration = json.totalDuration;
             for(i=0; i < json.items.length; i++) {
-                playlist.addItem(Qt.resolvedUrl(json.items[i].path.replace('#', '%23')));
+                playlist.addItem(Qt.resolvedUrl(json.items[i].path.replace(/#/g, '%23')));
                 metadata.append(json.items[i]);
             }
             pathsIdentifier = json.pathsIdentifier;
