@@ -118,7 +118,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="83"/>
+        <location filename="../qml/cover/CoverPage.qml" line="77"/>
         <source>Nothing to play</source>
         <translation>Niente da riprodurre</translation>
     </message>
@@ -126,13 +126,13 @@
 <context>
     <name>OpenPage</name>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="73"/>
+        <location filename="../qml/pages/OpenPage.qml" line="69"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
         <translation>Cartelle</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="112"/>
+        <location filename="../qml/pages/OpenPage.qml" line="103"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -142,7 +142,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="115"/>
+        <location filename="../qml/pages/OpenPage.qml" line="106"/>
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -152,25 +152,25 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="119"/>
+        <location filename="../qml/pages/OpenPage.qml" line="110"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation>Apri tutti i file</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="122"/>
+        <location filename="../qml/pages/OpenPage.qml" line="113"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation>Metti in coda tutti i file</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="125"/>
+        <location filename="../qml/pages/OpenPage.qml" line="116"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
         <translation>Seleziona cartella</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="130"/>
+        <location filename="../qml/pages/OpenPage.qml" line="121"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
         <translation>o seleziona file</translation>
@@ -417,23 +417,23 @@
         <translation>Se disattivato, lo stato di riproduzione verrá salvato solo all&apos;uscita dell&apos;app, se attivato, sará salvato periodicamente.</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="73"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="72"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
         <translation>Salva progresso cartella</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="83"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="82"/>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
         <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
         <translation>Per evitare l&apos;accumulo di dati nella cache o di cartelle eliminate, Talefish controllerá i vecchi dati all&apos;avvio. Non ha effetto sulla cartella corrente.</translation>
     </message>
     <message numerus="yes">
+        <location filename="../qml/components/OptionsFiles.qml" line="74"/>
         <location filename="../qml/components/OptionsFiles.qml" line="75"/>
         <location filename="../qml/components/OptionsFiles.qml" line="76"/>
         <location filename="../qml/components/OptionsFiles.qml" line="77"/>
         <location filename="../qml/components/OptionsFiles.qml" line="78"/>
-        <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation>
@@ -442,7 +442,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsFiles.qml" line="80"/>
+        <location filename="../qml/components/OptionsFiles.qml" line="79"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
         <translation>per sempre</translation>
@@ -599,37 +599,37 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="215"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="217"/>
         <source>Sort by Name</source>
         <extracomment>MenuItem: Sort directory content by name</extracomment>
         <translation>Ordina per nome</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="194"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="196"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
         <translation>In coda</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="184"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="186"/>
         <source>Open</source>
         <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
         <translation>Apri</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="226"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="228"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
         <translation>Ordina per ultima modifica</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="247"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="249"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
         <translation>Maggiori opzioni</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesDirectoryListView.qml" line="292"/>
+        <location filename="../qml/components/PlacesDirectoryListView.qml" line="294"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
         <translation>Cartella superiore</translation>
@@ -647,69 +647,69 @@
 <context>
     <name>PlacesModels</name>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="29"/>
+        <location filename="../qml/components/PlacesModels.qml" line="27"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
         <translation>Accesso rapido</translation>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="34"/>
+        <location filename="../qml/components/PlacesModels.qml" line="32"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
         <translation>Aperti di recente</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="55"/>
+        <location filename="../qml/components/PlacesModels.qml" line="53"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
         <translation>Dispositivo</translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="61"/>
+        <location filename="../qml/components/PlacesModels.qml" line="59"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
         <translation>Home</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="70"/>
+        <location filename="../qml/components/PlacesModels.qml" line="68"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
         <translation>Musica</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="79"/>
+        <location filename="../qml/components/PlacesModels.qml" line="77"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
         <translation>Scaricati</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="88"/>
+        <location filename="../qml/components/PlacesModels.qml" line="86"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
         <translation>Memoria Android</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="97"/>
+        <location filename="../qml/components/PlacesModels.qml" line="95"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
         <translation>Memoria dispositivo</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="107"/>
+        <location filename="../qml/components/PlacesModels.qml" line="105"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
         <translation>Scheda SD</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
-        <location filename="../qml/components/PlacesModels.qml" line="110"/>
+        <location filename="../qml/components/PlacesModels.qml" line="108"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
         <translation>Memoria esterna</translation>

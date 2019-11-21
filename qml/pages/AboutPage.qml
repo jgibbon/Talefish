@@ -220,6 +220,7 @@ Page {
                       + '<br /> leoka (hu)'
                       + '<br /> sponka (sl)'
                       + '<br /> rui kon + 天苯 (zh_CN)'
+                      + '<br /> fravaccaro (it_IT)'
                 width: parent.width
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
 
