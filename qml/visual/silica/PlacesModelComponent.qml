@@ -90,6 +90,7 @@ Column {
                             right: parent.right
                             rightMargin: placesFlow.halfWidth && (index % 2 === 0) ? 0 : Theme.horizontalPageMargin
                         }
+                        truncationMode: TruncationMode.Elide // TODO: Fade crashes the whole application?!
                         verticalAlignment: Text.AlignVCenter
                         text: modelData.name
                         color: placeBackground.textColor
