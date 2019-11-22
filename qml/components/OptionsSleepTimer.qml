@@ -26,13 +26,31 @@ OptionArea {
     //: Section Header: Sleep timer options (for starting "slumber" automatically)
     text: qsTr("Sleep timer integration", 'section header')
 
-    Label {
-        visible: !autoStartSlumberSwitch.enabled
-        //: Label: Shown if "slumber" isn't installed
-        text: qsTr('Install the slumber sleep timer application to enable these options')
-        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+    Item {
         width: parent.width - Theme.horizontalPageMargin*2
         x: Theme.horizontalPageMargin
+        height: installSlumberLabel.height
+        Icon {
+            id: installSlumberIcon
+            source: 'image://theme/icon-s-high-importance'
+            anchors.verticalCenter: parent.verticalCenter
+            highlighted: true
+        }
+
+        Label {
+            id: installSlumberLabel
+            visible: !autoStartSlumberSwitch.enabled
+            //: Label: Shown if "slumber" isn't installed
+            text: qsTr('Install the slumber sleep timer application to enable these options')
+            color: Theme.highlightColor
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+            anchors {
+                left: installSlumberIcon.right
+                leftMargin: Theme.paddingMedium
+                right: parent.right
+            }
+        }
+
     }
 
     OptionComboBox {

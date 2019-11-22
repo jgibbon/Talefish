@@ -524,73 +524,73 @@
         <translation>Temporizador de apagado</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="32"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="44"/>
         <source>Install the slumber sleep timer application to enable these options</source>
         <extracomment>Label: Shown if &quot;slumber&quot; isn&apos;t installed</extracomment>
         <translation>Instalar el temporizador slumber para habilitar estas opciones</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="43"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="61"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
         <translation>Rebobinar al detener con slumber:</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="46"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="64"/>
         <source>no</source>
         <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
         <translation>no</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="48"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="66"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;short&quot; when paused by slumber</extracomment>
         <translation>Salto corto</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="50"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="68"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;long&quot; when paused by slumber</extracomment>
         <translation>Salto largo</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="52"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="70"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
         <translation>Doble salto largo</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="59"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="77"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Iniciar temporizador automáticamente</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="66"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="84"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
         <translation>Iniciar el temporizador slumber automáticamente al iniciar Talefish.</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="73"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="91"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Poner Talefish en primer plano tras iniciar slumber</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="84"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="102"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Iniciar slumber sólo en ciertos momentos</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="117"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="135"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Iniciar slumber después de</translation>
     </message>
     <message>
-        <location filename="../qml/components/OptionsSleepTimer.qml" line="136"/>
+        <location filename="../qml/components/OptionsSleepTimer.qml" line="154"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Iniciar slumber antes de</translation>

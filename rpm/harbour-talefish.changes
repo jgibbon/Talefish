@@ -5,8 +5,9 @@
 # Add newest entries to the top of the list.
 # Separate entries from eachother with a blank line.
 
-* XXX XXX XX 2019 velox 0.2-5
- - Translation update it_IT
+* Fri Nov 22 2019 velox 0.2-5
+ - enhancement: highlightColor for "install slumber" notice in sleep timer options
+ - Translation update it_IT (thanks!)
 
 * Wed Nov 20 2019 velox 0.2-4
  - bugfix: cassette progress display errors with invalid files/durations
