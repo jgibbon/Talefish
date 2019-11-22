@@ -20,18 +20,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 import QtQuick 2.6
 import QtQml.Models 2.3
-import '../components'
-
-
 import Sailfish.Silica 1.0
+import '../visual'
+
 SilicaListView {
     id: root
     property string userFilterString: root.headerItem.text
     property string programFilterString: userFilterString.toString().toLowerCase().trim()
     onProgramFilterStringChanged: {
         model.applyFilter();
-//        root.headerItem.focus = true;
-//        root.headerItem.forceActiveFocus()
     }
 currentIndex: -1 // prevent inheriting the 'real' currentIndex; this would steal searchField focus at times
 
@@ -39,11 +36,6 @@ currentIndex: -1 // prevent inheriting the 'real' currentIndex; this would steal
         id: searchField
         width: parent.width
         placeholderText: qsTr("Search")
-        onHideClicked: {
-            console.log('hide clicked')
-//            focus = false
-
-        }
     }
     footer: Item {
         width: parent.width
@@ -134,9 +126,6 @@ currentIndex: -1 // prevent inheriting the 'real' currentIndex; this would steal
                 property url fileUrl: 'image://theme/icon-m-file-audio'
                 property url coverUrl: 'image://taglib-cover-art/'+model.path+'#'+Theme.iconSizeMedium
 
-//                sourceSize.width: Theme.iconSizeMedium
-//                sourceSize.height: Theme.iconSizeMedium
-
                 opacity: imgItem.status === Image.Ready ? 1.0 : 0.0
                 Behavior on opacity {NumberAnimation {duration: imgItem.source === imgItem.coverUrl ? 500 : 0; easing.type: Easing.InOutQuad}}
                 onStatusChanged: {
@@ -147,7 +136,6 @@ currentIndex: -1 // prevent inheriting the 'real' currentIndex; this would steal
                 anchors {
                     verticalCenter: parent.verticalCenter
                     left: parent.left
-//                    leftMargin: Theme.horizontalPageMargin
                 }
                 source: options.displayAlbumCoverInLists ? coverUrl : fileUrl
             }

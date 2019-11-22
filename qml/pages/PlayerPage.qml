@@ -23,11 +23,10 @@ import Sailfish.Silica 1.0
 import QtMultimedia 5.0
 import QtGraphicalEffects 1.0
 import QtFeedback 5.0
-//import QtSystemInfo 5.0
-
 
 import '../lib'
-import '../components'
+import '../visual'
+import '../visual/silica'
 
 Page {
     id: page
@@ -92,6 +91,7 @@ Page {
             ProgressCassette {
                 id:cassette
                 width: Math.min( page.width, page.height) * 2
+                reelAnchorColor: Theme.highlightColor
                 height: width
                 x: -width / 2
                 y: coverImage.sourceSize.width > 1 ? x : x/2

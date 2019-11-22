@@ -20,7 +20,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-//import Launcher 1.0
 import harbour.talefish.folderlistmodel 1.0
 
 SilicaListView {
@@ -248,7 +247,7 @@ SilicaListView {
                         //: MenuItem: display options page for file handling and saved directory progress
                         text: qsTr("More Options");
                         onClicked: {
-                            pageStack.push(Qt.resolvedUrl("../pages/OptionsPage.qml"), { loadComponents:['OptionsFiles']});
+                            pageStack.push(Qt.resolvedUrl("../../pages/OptionsPage.qml"), { loadComponents:['OptionsFiles']});
                         }
                     }
 

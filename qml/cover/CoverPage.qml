@@ -21,7 +21,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 
-import '../lib'
+import '../visual'
 
 CoverBackground {
     id:mainCoverBackground
@@ -45,11 +45,11 @@ CoverBackground {
         }
     }
 
-
     ProgressCassette {
         id: coverCassette
         opacity: 0.3
         width: parent.width * 2
+        reelAnchorColor: Theme.highlightColor
         height: width
         anchors {
             horizontalCenter: parent.left

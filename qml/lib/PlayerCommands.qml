@@ -76,7 +76,6 @@ Item {
             app.playlist.applyThisTrackPosition = -1;
             app.audio.seek(position);
         } else { // handle in audio.onSeekableChanged
-
             console.log('applying later', position)
             applyingSavedPosition = true
             applyThisTrackPosition = position;

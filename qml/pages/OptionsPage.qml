@@ -25,7 +25,7 @@ import QtMultimedia 5.0
 
 
 import "../lib/"
-import "../components/"
+import "../visual/"
 
 
 import harbour.talefish.folderlistmodel 1.0
@@ -34,33 +34,13 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property var loadComponents:(['OptionsPlayback', 'OptionsCommands', 'OptionsFiles', 'OptionsAppearance', 'OptionsSleepTimer', 'OptionsMisc'])
-//    property var loadComponents:(['OptionsFiles'])
     property var areas: ([]);
 
     function setActiveArea(activeArea) {
         areas.forEach(function(area){
             area.expanded = (area === activeArea)
         });
-//
     }
-//    Timer {
-//        id: scrollTimer
-//        property Item scrollToItem
-//        interval: 100
-//        onTriggered: {
-//            scrollAnimation.to = Math.min(listView.contentHeight-listView.height, scrollToItem.mapToItem(listView.contentItem, 0, 0).y)
-//            scrollAnimation.start()
-//        }
-//    }
-
-//    NumberAnimation {
-//        id: scrollAnimation
-//        target: listView
-//        property: "contentY"
-//        duration: 200
-//        easing.type: Easing.InOutQuad
-//    }
-
 
     SilicaFlickable {
         id: listView
@@ -72,7 +52,6 @@ Page {
         anchors.fill: parent
         contentHeight: mainColumn.height
 
-
         PullDownMenu {
             id: pulleyTop
 
@@ -83,7 +62,6 @@ Page {
                 }
             }
         }
-
 
         Column {
             width: parent.width
@@ -103,24 +81,14 @@ Page {
                                         page.setActiveArea(item);
                                     }
                                 });
-//                                item.heightChanged.connect(function(){
-//                                    if(item.expanded) {
-//                                        var to = Math.min(listView.contentHeight-listView.height, item.mapToItem(listView.contentItem, 0, 0).y)
-//                                        scrollAnimation.to = to;
-//                                        scrollAnimation.start()
-//                                    }
-//                                })
                             }
                         }
                         Component.onCompleted: {
-                            setSource('../components/'+modelData+'.qml', {expanded: index === 0, staticMode: page.loadComponents.length === 1});
+                            setSource('../visual/silica/'+modelData+'.qml', {expanded: index === 0, staticMode: page.loadComponents.length === 1});
                         }
-
                     }
                 }
             }
-
-
         }
     }
 

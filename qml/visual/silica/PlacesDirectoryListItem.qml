@@ -32,7 +32,6 @@ ListItem {
     onClicked: {
         if(pressIsHold) {return;}
         if(model.fileIsDir) {
-//            console.log('clicked dir', model.filePath);
             listView.folder = model.filePath//String(model.filePath).replace("file://", "")
         } else {
             // add file to selected.
@@ -48,9 +47,9 @@ ListItem {
                 metaData.getFileTagInfos(model.filePath)
             }
         }
-        onTagInfos: {
+//        onTagInfos: {
 //            console.log('qml tag infos', filePath, queryIndex, artist, title, album, duration)
-        }
+//        }
     }
     HighlightImage {
         id: fileIcon
@@ -61,8 +60,6 @@ ListItem {
             leftMargin: Theme.horizontalPageMargin
         }
         asynchronous: true
-//        sourceSize.width: width
-//        sourceSize.height: height
         width: Theme.iconSizeMedium
         height: Theme.iconSizeMedium
         property url folderUrl: "image://theme/icon-m-file-folder"
@@ -82,9 +79,6 @@ ListItem {
         id: centerContainer
         height: mainLabel.height +subLabel.height
         property bool fileMetaDataAvailable: !model.fileIsDir && metaData.loaded && metaData.title != ''
-        //            onFileMetaDataAvailableChanged: {
-        //                console.log('metadataavailable', metaData.title, typeof metaData.title, metaData.title != '', metaData.title !== '')
-        //            }
         states: [
             State {
                 name: 'big'
@@ -115,7 +109,6 @@ ListItem {
         ]
         anchors {
             left: fileIcon.right
-//            leftMargin: Theme.paddingMedium
             right: parent.right
             rightMargin: Theme.horizontalPageMargin
             verticalCenter: parent.verticalCenter
@@ -134,9 +127,6 @@ ListItem {
                 rightMargin: enabled ? -Theme.horizontalPageMargin : 0
             }
         }
-//        Label {
-//            text: parent.url
-//        }
         PlacesDirectoryProgressBar {
             path: (model.fileIsDir ? String(listView.sortMode) : '')+model.filePath
             highlighted: listItem.highlighted
@@ -154,7 +144,6 @@ ListItem {
             text: metaData.loaded ? app.js.formatMSeconds(metaData.duration) : ''
             visible: !model.fileIsDir
             width: implicitWidth
-//            anchors.fill: parent
             anchors {
                 top: mainLabel.bottom
                 left: centerContainer.left

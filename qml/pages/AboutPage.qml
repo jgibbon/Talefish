@@ -21,15 +21,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 
-import QtMultimedia 5.0
-
-
-import "../lib/"
-
-
-import harbour.talefish.folderlistmodel 1.0
-//import Qt.labs.folderlistmodel 1.0
-
 Page {
     id: page
     allowedOrientations: Orientation.All

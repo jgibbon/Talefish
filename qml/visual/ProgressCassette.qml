@@ -20,8 +20,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 import QtQuick 2.6
 
-import Sailfish.Silica 1.0
-
 Item {
     id:progressComponent
 
@@ -35,7 +33,7 @@ Item {
     property real value: 2000
 
     property string tapeColor: '#000'
-    property string reelAnchorColor: Theme.highlightColor
+    property string reelAnchorColor: '#f00b44'
     property alias tapeBackgroundColor: tape.color
 
 

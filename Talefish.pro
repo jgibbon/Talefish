@@ -20,9 +20,6 @@ SOURCES += \
     lib/folderlistmodel/fileinfothread.cpp \
     src/harbour-talefish.cpp \
     src/launcher.cpp \
-#    src/mpris/mprisobject.cpp \
-#    src/mpris/mprisplayer.cpp \
-#    src/resourcehandler.cpp \
     src/taglibplugin.cpp \
     src/taglibimageprovider.cpp
 
@@ -35,6 +32,7 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 256x256
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
+
 QT += dbus
 QT += multimedia
 QT += concurrent
@@ -54,45 +52,44 @@ TRANSLATIONS += \
 
 DISTFILES += \
     harbour-talefish.desktop \
-    qml/assets/icon-l-ffwd.svg \
-    qml/assets/icon-l-fwd.svg \
-    qml/assets/wheel_1.png \
-    qml/components/FadeImage.qml \
-    qml/components/MarqueeLabel.qml \
-    qml/components/OptionArea.qml \
-    qml/components/OptionComboBox.qml \
-    qml/components/OptionsAppearance.qml \
-    qml/components/OptionsCommands.qml \
-    qml/components/OptionsFiles.qml \
-    qml/components/OptionsMisc.qml \
-    qml/components/OptionsPlayback.qml \
-    qml/components/OptionsSleepTimer.qml \
-    qml/components/PlacesDirectoryListItem.qml \
-    qml/components/PlacesDirectoryListView.qml \
-    qml/components/PlacesDirectoryProgressBar.qml \
-    qml/components/PlacesModelComponent.qml \
-    qml/components/PlacesModels.qml \
-    qml/components/PlayerPageProgressArea.qml \
-    qml/components/PlayerPageSeekButton.qml \
     qml/harbour-talefish.qml \
-    qml/lib/CoverImage.qml \
+    qml/pages/AboutPage.qml \
+    qml/pages/OpenPage.qml \
+    qml/pages/OptionsPage.qml \
+    qml/pages/PlayerPage.qml \
+    qml/pages/PlaylistPage.qml \
+    qml/visual/FadeImage.qml \
+    qml/visual/ProgressCassette.qml \
+    qml/visual/silica/MarqueeLabel.qml \
+    qml/visual/silica/OptionArea.qml \
+    qml/visual/silica/OptionComboBox.qml \
+    qml/visual/silica/OptionsAppearance.qml \
+    qml/visual/silica/OptionsCommands.qml \
+    qml/visual/silica/OptionsFiles.qml \
+    qml/visual/silica/OptionsMisc.qml \
+    qml/visual/silica/OptionsPlayback.qml \
+    qml/visual/silica/OptionsSleepTimer.qml \
+    qml/visual/silica/PlacesDirectoryListItem.qml \
+    qml/visual/silica/PlacesDirectoryListView.qml \
+    qml/visual/silica/PlacesDirectoryProgressBar.qml \
+    qml/visual/silica/PlacesModelComponent.qml \
+    qml/visual/silica/PlacesModels.qml \
+    qml/visual/silica/PlayerPageProgressArea.qml \
+    qml/visual/silica/PlayerPageSeekButton.qml \
+    qml/visual/silica/PlaylistView.qml \
+    qml/cover/CoverPage.qml \
     qml/lib/Jslib.js \
     qml/lib/Options.qml \
     qml/lib/PersistentObject.qml \
     qml/lib/PersistentObjectStore.js \
     qml/lib/PlayerCommands.qml \
-    qml/lib/PlaylistView.qml \
-    qml/lib/ProgressCassette.qml \
     qml/lib/RemoteControl.qml \
-    qml/lib/StringScore.js \
     qml/lib/TalefishAudio.qml \
     qml/lib/TalefishPlaylist.qml \
     qml/lib/TalefishState.qml \
-    qml/pages/AboutPage.qml \
-    qml/pages/OptionsPage.qml \
-    qml/pages/PlayerPage.qml \
-    qml/pages/PlaylistPage.qml \
-    qml/pages/OpenPage.qml \
+    qml/assets/icon-l-ffwd.svg \
+    qml/assets/icon-l-fwd.svg \
+    qml/assets/wheel_1.png \
     rpm/harbour-talefish.changes \
     rpm/harbour-talefish.spec \
     rpm/harbour-talefish.yaml
@@ -105,22 +102,13 @@ HEADERS += \
     lib/folderlistmodel/fileproperty_p.h \
     lib/folderlistmodel/fileinfothread_p.h \
     src/launcher.h \
-#    src/mpris/mprisobject.h \
-#    src/mpris/mprisplayer.h \
-#    src/resourcehandler.h \
     src/taglibplugin.h \
     src/taglibimageprovider.h
-
-#LIBS += -ldl
-
-#unix: PKGCONFIG += taglib
-
 
 DEFINES += MAKE_TAGLIB_LIB
 DEFINES += TAGLIB_STATIC=1
 
 DEPENDPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/3rdparty
-#DEPENDPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/3rdparty/utf8-cpp
 DEPENDPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib
 DEPENDPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib/ape
 DEPENDPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib/asf
@@ -148,7 +136,6 @@ DEPENDPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib/wavpack
 DEPENDPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib/xm
 
 INCLUDEPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/3rdparty
-#INCLUDEPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/3rdparty/utf8-cpp
 INCLUDEPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib
 INCLUDEPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib/ape
 INCLUDEPATH += lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib/asf
@@ -397,5 +384,3 @@ SOURCES += \
     lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib/ape/apefooter.cpp \
     lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/taglib/ape/apeproperties.cpp \
     lib/taglib-54508df30bc888c4d2359576ceb0cc8f2fa8dbdf/bindings/c/tag_c.cpp
-
-

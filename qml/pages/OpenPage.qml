@@ -21,7 +21,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 import QtQuick 2.6
 import Sailfish.Silica 1.0
 import '../lib'
-import '../components'
+import '../visual/silica'
 
 Dialog {
     id: page
@@ -73,14 +73,14 @@ Dialog {
                 id: quickAccess
                 property alias modelContent: places.quickAccessModel
                 property string modelTitle: places.quickAccessTitle
-                source: '../components/PlacesModelComponent.qml'
+                source: '../visual/silica/PlacesModelComponent.qml'
                 Connections { target: quickAccess.item; onPlaceClicked: page.displayDirectory(path)}
             }
             Loader {
                 id: general
                 property alias modelContent: places.generalModel
                 property string modelTitle: places.generalTitle
-                source: '../components/PlacesModelComponent.qml'
+                source: '../visual/silica/PlacesModelComponent.qml'
                 Connections { target: general.item; onPlaceClicked: page.displayDirectory(path)}
             }
         }
