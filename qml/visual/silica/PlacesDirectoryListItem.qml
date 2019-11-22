@@ -25,31 +25,23 @@ import TaglibPlugin 1.0
 ListItem {
     id: listItem
     contentHeight: Theme.itemSizeSmall
-    highlighted: down || listView.selectedPaths.indexOf(model.filePath) > -1
+    highlighted: down || listView.selectedPaths.indexOf(filePath) > -1
     property bool pressIsHold: false // no click on long press
     onPressed: pressIsHold = false
 
     onClicked: {
         if(pressIsHold) {return;}
-        if(model.fileIsDir) {
-            listView.folder = model.filePath//String(model.filePath).replace("file://", "")
-        } else {
-            // add file to selected.
-            listView.togglePathSelection(model.filePath);
-        }
+        // add file to selected.
+        listView.togglePathSelection(filePath);
+
     }
     onPressAndHold: pressIsHold = true // just to prevent onClicked when holding for scroll…
 
     TaglibPlugin {
         id: metaData
         Component.onCompleted: {
-            if(!model.fileIsDir) {
-                metaData.getFileTagInfos(model.filePath)
-            }
+            metaData.getFileTagInfos(filePath)
         }
-//        onTagInfos: {
-//            console.log('qml tag infos', filePath, queryIndex, artist, title, album, duration)
-//        }
     }
     HighlightImage {
         id: fileIcon
@@ -62,23 +54,22 @@ ListItem {
         asynchronous: true
         width: Theme.iconSizeMedium
         height: Theme.iconSizeMedium
-        property url folderUrl: "image://theme/icon-m-file-folder"
         property url fileUrl: 'image://theme/icon-m-file-audio'
-        property url coverUrl: 'image://taglib-cover-art/'+model.filePath+'#'+Theme.iconSizeMedium
-        source: model.fileIsDir ? folderUrl : options.displayAlbumCoverInLists ? coverUrl : fileUrl
+        property url coverUrl: 'image://taglib-cover-art/'+filePath+'#'+Theme.iconSizeMedium
+        source: options.displayAlbumCoverInLists ? coverUrl : fileUrl
         opacity: fileIcon.status === Image.Ready ? 1.0 : 0.0
         Behavior on opacity {NumberAnimation {duration: fileIcon.source === fileIcon.coverUrl ? 500 : 0; easing.type: Easing.InOutQuad}}
         onStatusChanged: {
-            if(!model.fileIsDir && fileIcon.source === fileIcon.coverUrl && fileIcon.status === Image.Ready && fileIcon.sourceSize.width === 1) {
+            if(fileIcon.source === fileIcon.coverUrl && fileIcon.status === Image.Ready && fileIcon.sourceSize.width === 1) {
                 source = fileUrl
             }
         }
-
     }
+
     Item {
         id: centerContainer
         height: mainLabel.height +subLabel.height
-        property bool fileMetaDataAvailable: !model.fileIsDir && metaData.loaded && metaData.title != ''
+        property bool fileMetaDataAvailable: metaData.loaded && metaData.title != ''
         states: [
             State {
                 name: 'big'
@@ -86,7 +77,7 @@ ListItem {
 
                 PropertyChanges {
                     target: durationLabel
-                    width: model.fileIsDir ? 0 : Theme.itemSizeLarge
+                    width: Theme.itemSizeLarge
                     height: centerContainer.height
                     fontSizeMode: Text.HorizontalFit
                     font.pixelSize: Theme.fontSizeExtraLarge
@@ -116,7 +107,7 @@ ListItem {
 
         MarqueeLabel {
             id: mainLabel
-            text: parent.fileMetaDataAvailable ? metaData.title + ' - ' + metaData.album : model.fileName
+            text: parent.fileMetaDataAvailable ? metaData.title + ' - ' + metaData.album : fileName
             color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
             enabled: listItem.down
             anchors {
@@ -128,7 +119,7 @@ ListItem {
             }
         }
         PlacesDirectoryProgressBar {
-            path: (model.fileIsDir ? String(listView.sortMode) : '')+model.filePath
+            path: filePath
             highlighted: listItem.highlighted
             anchors {
                 left: mainLabel.left
@@ -142,7 +133,6 @@ ListItem {
         Label {
             id: durationLabel
             text: metaData.loaded ? app.js.formatMSeconds(metaData.duration) : ''
-            visible: !model.fileIsDir
             width: implicitWidth
             anchors {
                 top: mainLabel.bottom
@@ -158,7 +148,7 @@ ListItem {
 
         MarqueeLabel {
             id: subLabel
-            text: parent.fileMetaDataAvailable ? model.fileName : ''
+            text: parent.fileMetaDataAvailable ? fileName : ''
             color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
             height: text === '' ? 0 : contentHeight
             font.pixelSize: Theme.fontSizeExtraSmall

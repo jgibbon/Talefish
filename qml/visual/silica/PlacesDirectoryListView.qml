@@ -295,7 +295,24 @@ SilicaListView {
             }
         }
     }
-    delegate: PlacesDirectoryListItem {}
+    Component {
+        id: directoryComponent
+        PlacesDirectoryListItemDirectory {}
+    }
+    Component {
+        id: fileComponent
+        PlacesDirectoryListItem {}
+    }
+
+    delegate: Component {
+        Loader {
+            width: listView.width
+            property string filePath: model.filePath
+            property string fileName: model.fileName
+            sourceComponent: model.fileIsDir ? directoryComponent : fileComponent
+        }
+    }
+        //PlacesDirectoryListItem {}
 
     FolderListModel {
         id: folderModel
@@ -310,13 +327,8 @@ SilicaListView {
             });
             return cis;
         }
-//            ['*.mp3', '*.m4a', '*.m4b', '*.flac', '*.ogg', '*.wav', '*.opus', '*.aac', '*.mka',
-//                      '*.MP3', '*.M4A', '*.M4B', '*.FLAC', '*.OGG', '*.WAV', '*.OPUS', '*.AAC', '*.MKA']
         property string path: String(folder).replace('file://', '')
         property string folderName: app.js.fileName(path)
-//        property var baseNameRegex: /(.*)\.[^.]+$/
-//        property var findDotRegex: /\./g
-
 
         onCountChanged: {
             var files = []

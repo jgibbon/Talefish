@@ -70,6 +70,7 @@ DISTFILES += \
     qml/visual/silica/OptionsPlayback.qml \
     qml/visual/silica/OptionsSleepTimer.qml \
     qml/visual/silica/PlacesDirectoryListItem.qml \
+    qml/visual/silica/PlacesDirectoryListItemDirectory.qml \
     qml/visual/silica/PlacesDirectoryListView.qml \
     qml/visual/silica/PlacesDirectoryProgressBar.qml \
     qml/visual/silica/PlacesModelComponent.qml \

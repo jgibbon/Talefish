@@ -121,5 +121,16 @@ QtObject {
         }
         return arr;
     }
+    property var generalModelIcons: { // display icons in directoryList, as well
+        var icons = {};
+        generalModel.forEach(function(entry) {
+            icons[entry.path] = entry.image;
+        });
+        icons[StandardPaths.home] = 'image://theme/icon-m-home';
+        icons[StandardPaths.videos] = 'image://theme/icon-m-video';
+        icons[StandardPaths.pictures] = 'image://theme/icon-m-image';
+        icons[StandardPaths.documents] = 'image://theme/icon-m-document';
 
+        return icons;
+    }
 }
