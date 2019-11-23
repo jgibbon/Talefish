@@ -118,7 +118,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="77"/>
+        <location filename="../qml/cover/CoverPage.qml" line="78"/>
         <source>Nothing to play</source>
         <translation>Nincs mit lejátszani</translation>
     </message>
@@ -388,19 +388,19 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="32"/>
         <source>Automatically display most recent directory</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A legutóbbi mappa automatikus megjelenítése</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="40"/>
         <source>Remember sort mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Emlékezzen a rendezési módra</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="49"/>
         <source>Remember enqueue mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Emlékezzen a sorbaállítási módra</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="59"/>
@@ -464,7 +464,7 @@
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="42"/>
         <source>Reset &amp; Quit</source>
         <extracomment>Button Text: Reset all options/application state and quit</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Visszaállítás &amp; Kilépés</translation>
     </message>
 </context>
 <context>
@@ -518,13 +518,13 @@
         <source>Sleep timer integration</source>
         <comment>section header</comment>
         <extracomment>Section Header: Sleep timer options (for starting &quot;slumber&quot; automatically)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Elalvás-időzítő beépülő</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="44"/>
         <source>Install the slumber sleep timer application to enable these options</source>
         <extracomment>Label: Shown if &quot;slumber&quot; isn&apos;t installed</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Telepítsd a Slumber elalvás-időzítő alkalmazást, hogy engedélyezhesd ezeket az opciókat.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="61"/>
@@ -623,22 +623,22 @@
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="248"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>További lehetőségek</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="293"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Szülőmappa</translation>
     </message>
 </context>
 <context>
     <name>PlacesModelComponent</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="124"/>
+        <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="125"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Eltávolítás a kedvencek közül</translation>
     </message>
 </context>
 <context>
@@ -647,69 +647,69 @@
         <location filename="../qml/visual/silica/PlacesModels.qml" line="27"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Gyors elérés</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="32"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nemrég megnyitott</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="53"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Készülék</translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="59"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="68"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zene</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="77"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Letöltések</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="86"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Android tárhely</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="95"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Készülékmemória</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="105"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>SD kártya</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="108"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Külső tárhely</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
 </context>
@@ -737,27 +737,27 @@
         <translation>Megnyitás</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="202"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="207"/>
         <source>Nothing to play</source>
         <translation>Nincs mit lejátszani</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="206"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="211"/>
         <source>Open Files by pulling down.</source>
         <translation>Fájlok megnyitása lehúzással.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="316"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
         <source>Rewind Track</source>
         <translation>Felvétel visszatekerése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="316"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
         <source>Previous Track</source>
         <translation>Előző felvétel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="316"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
         <source>Next Track</source>
         <translation>Következő felvétel</translation>
     </message>
@@ -777,8 +777,8 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="32"/>
         <source>%L1 file(s) opened</source>
         <extracomment>Playlist Page Header: Number of opened files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%L1 fájl megnyitva</numerusform>
         </translation>
     </message>
     <message>
@@ -792,12 +792,12 @@
 <context>
     <name>PlaylistView</name>
     <message>
-        <location filename="../qml/visual/silica/PlaylistView.qml" line="38"/>
+        <location filename="../qml/visual/silica/PlaylistView.qml" line="37"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Keresés</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlaylistView.qml" line="172"/>
+        <location filename="../qml/visual/silica/PlaylistView.qml" line="171"/>
         <source>Error</source>
         <translation>Hiba</translation>
     </message>
