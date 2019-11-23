@@ -6,7 +6,7 @@
 # Separate entries from eachother with a blank line.
 
 * Sat Nov 23 2019 velox 0.2-5
- - enhancement: highlightColor for "install slumber" notice in sleep timer options
+ - enhancement: highlightColor for non clickable labels in options
  - enhancement: display "special directory" icons in file list
  - enhancement: indicate favourites in file list (visible from parent folder)
  - enhancement: elide long folder names in places (favourites)
