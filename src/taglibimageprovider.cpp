@@ -134,9 +134,9 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
     } else {
         if(requestedSize.width() > 0 && requestedSize.height() > 0) {
 //            qDebug() << "scaling " << requestedSize.width() << "x" << requestedSize.height() << "";
-            img = img.scaled(requestedSize, Qt::KeepAspectRatio);
+            img = img.scaled(requestedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         } else {
-            if(hashMatch.hasMatch()) {
+            if(hashMatch.hasMatch()) { // for really small versions in lists
 //                qDebug() << "image has fragment: " << idUrl.fragment().toInt();
                 QSize implicitRequestedSize(hashMatch.captured(3).toInt(), hashMatch.captured(3).toInt());
                 img = img.scaled(implicitRequestedSize, Qt::KeepAspectRatio);

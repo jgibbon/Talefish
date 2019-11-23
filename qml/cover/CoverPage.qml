@@ -41,6 +41,10 @@ CoverBackground {
             source: 'image://taglib-cover-art/'+app.playlist.currentMetaData.path
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop
+            sourceSize {
+                width: coverImage.width
+                height: coverImage.height
+            }
             z:-1
             opacity: 0.3
         }
