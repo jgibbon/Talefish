@@ -50,6 +50,6 @@ IconButton {
     }
     transformOrigin: Item.Center
     onClicked: {
-        app.playlist.commands.seekBy(seekBy)
+        app.playerCommands.seekBy(seekBy)
     }
 }

@@ -24,8 +24,8 @@ import TaglibPlugin 1.0
 
 Playlist {
     id: playlist
-    playbackMode: app.audio.error ? Playlist.CurrentItemOnce : Playlist.Sequential
-//    playbackMode: Playlist.Sequential
+    property TalefishAudio audio
+    playbackMode: audio.error ? Playlist.CurrentItemOnce : Playlist.Sequential
     property int totalDuration: 0
     property int totalPosition: 0
     property string pathsIdentifier // pathsIdentifier is for saving current progress
@@ -36,12 +36,11 @@ Playlist {
             setDurations();
         }
     }
-    property PlayerCommands commands: PlayerCommands {}
     onCurrentIndexChanged: {
-        console.log('currentIndex', currentIndex, app.audio.error) //error: 1
+        console.log('currentIndex', currentIndex, audio.error) //error: 1
         // when played through, we want to activate the first track again
-       if(currentIndex === -1 && metadata.count > 0 && !app.audio.error) {
-           app.audio.pause();
+       if(currentIndex === -1 && metadata.count > 0 && !audio.error) {
+           audio.pause();
            currentIndex = 0;
            // total position stays at "100%" by default, which is nice and correct but may be seen as inconsistent
            totalPosition = 0;
@@ -66,7 +65,7 @@ Playlist {
         if(md.title === '') {return app.js.fileName(md.path, true);}
         return md.title;
     }
-    property string currentTitle: title(currentIndex) + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
+    property string currentTitle: title(currentIndex) + (audio.errorString !== '' ? '<br>['+audio.errorString+']' : '')
 
     // album (or directory base name)
     function album(index) {
@@ -134,7 +133,7 @@ Playlist {
             enqueue = false;
         }
         if (!enqueue) {
-            app.audio.stop();
+            audio.stop();
             playlist.clear();
             playlist.metadata.clear();
         }
@@ -179,14 +178,14 @@ Playlist {
 
     function applySavedPosition() {
         var position = app.state.playlistProgress[pathsIdentifier] || {position:0,index:0};
-        commands.seek(position.position, position.index);
+        app.playerCommands.seek(position.position, position.index);
     }
 
     function saveCurrentPosition(){
         var position = {
             index: playlist.currentIndex,
-            position: app.audio.position,
-            totalPosition: currentMetaData.previousDurations + app.audio.displayPosition,
+            position: audio.position,
+            totalPosition: currentMetaData.previousDurations + audio.displayPosition,
             totalDuration: totalDuration,
             lastAccess: new Date().getTime()
         }
@@ -201,8 +200,8 @@ Playlist {
         interval: 30
         onTriggered: {
             if(playlist.applyingSavedPosition) {
-                app.audio.seek(playlist.applyThisTrackPosition);
-                if(app.audio.position === playlist.applyThisTrackPosition) {
+                audio.seek(playlist.applyThisTrackPosition);
+                if(audio.position === playlist.applyThisTrackPosition) {
                     playlist.applyingSavedPosition = false;
                     playlist.applyThisTrackPosition = -1;
                 } else {
@@ -215,12 +214,12 @@ Playlist {
     }
 
     property Connections audioConnections: Connections {
-                    target: app.audio
+                    target: audio
                     onSeekableChanged: {
-                        if(app.audio.seekable && playlist.applyingSavedPosition) {
-                            app.audio.seek(playlist.applyThisTrackPosition);
+                        if(audio.seekable && playlist.applyingSavedPosition) {
+                            audio.seek(playlist.applyThisTrackPosition);
                             // normally, seeking should be applied now with local tracks
-                            if(app.audio.position === playlist.applyThisTrackPosition) {
+                            if(audio.position === playlist.applyThisTrackPosition) {
                                 playlist.applyingSavedPosition = false;
                                 playlist.applyThisTrackPosition = -1;
                             } else { // it it doesn't, we force seeking with brute force
@@ -230,16 +229,16 @@ Playlist {
                     }
                     onPositionChanged: {
                         if(!playlist.applyingSavedPosition) {
-                            app.playlist.saveCurrentPosition()
+                            playlist.saveCurrentPosition()
                         }
                     }
                     onDurationChanged: {
                         if(playlist.currentIndex > -1
-                                && app.audio.duration > 20  // account for some variance with partly loaded data and VBR… TODO: still necessary?
-                                && app.playlist.currentMetaData.duration !== app.audio.duration) {
-                                    metadata.setProperty(playlist.currentIndex, 'duration', app.audio.duration);
+                                && audio.duration > 20  // account for some variance with partly loaded data and VBR… TODO: still necessary?
+                                && playlist.currentMetaData.duration !== audio.duration) {
+                                    metadata.setProperty(playlist.currentIndex, 'duration', audio.duration);
                                     //setDurations() directly may skew skipping, so we reuse durationListTimer:
-                                    app.playlist.durationListTimer.start()
+                                    playlist.durationListTimer.start()
                         }
                     }
                 }

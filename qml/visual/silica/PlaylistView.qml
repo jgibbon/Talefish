@@ -150,6 +150,7 @@ currentIndex: -1 // prevent inheriting the 'real' currentIndex; this would steal
                 anchors.rightMargin: Theme.horizontalPageMargin
                 anchors.leftMargin: Theme.paddingSmall
                 anchors.top: parent.top
+                textFormat: Text.PlainText
                 Behavior on width {NumberAnimation{duration: 200; easing.type: Easing.InOutCubic}}
             }
 
@@ -164,12 +165,14 @@ currentIndex: -1 // prevent inheriting the 'real' currentIndex; this would steal
                 anchors.rightMargin: Theme.paddingSmall
                 anchors.leftMargin: Theme.paddingSmall
                 anchors.bottom: parent.bottom
+                textFormat: Text.PlainText
                 Behavior on width {NumberAnimation{duration: 200; easing: Easing.InOutCubic}}
             }
             Label {
                 id: sizeItem
                 text: model.duration > 0 ? app.js.formatMSeconds(model.duration) : qsTr('Error')
                 font.pixelSize: Theme.fontSizeTiny
+                textFormat: Text.PlainText
                 anchors.right: parent.right
                 anchors.rightMargin: Theme.horizontalPageMargin
                 anchors.verticalCenter: folderItem.verticalCenter

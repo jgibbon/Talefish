@@ -92,6 +92,7 @@ Column {
                         }
                         truncationMode: TruncationMode.Elide // TODO: Fade crashes the whole application?!
                         verticalAlignment: Text.AlignVCenter
+                        textFormat: Text.PlainText
                         text: modelData.name
                         color: placeBackground.textColor
                     }
@@ -109,6 +110,7 @@ Column {
                         text: !modelData.hidePath ? modelData.path : ''
                         truncationMode: TruncationMode.Fade
                         color: placeBackground.secondaryTextColor
+                        textFormat: Text.PlainText
 
                         function setAlignment(){
                             horizontalAlignment = contentWidth < width ? Text.AlignLeft : Text.AlignRight

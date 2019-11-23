@@ -29,7 +29,8 @@ OptionArea {
     Item {
         width: parent.width - Theme.horizontalPageMargin*2
         x: Theme.horizontalPageMargin
-        height: installSlumberLabel.height
+        height: visible ? installSlumberLabel.height : 0
+        visible: !autoStartSlumberSwitch.enabled
         Icon {
             id: installSlumberIcon
             source: 'image://theme/icon-s-high-importance'
@@ -39,11 +40,11 @@ OptionArea {
 
         Label {
             id: installSlumberLabel
-            visible: !autoStartSlumberSwitch.enabled
             //: Label: Shown if "slumber" isn't installed
             text: qsTr('Install the slumber sleep timer application to enable these options')
             color: Theme.highlightColor
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+            textFormat: Text.PlainText
             anchors {
                 left: installSlumberIcon.right
                 leftMargin: Theme.paddingMedium

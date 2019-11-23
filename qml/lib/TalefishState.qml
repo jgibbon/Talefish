@@ -24,9 +24,6 @@ PersistentObject {
     objectName: 'appstate'
     //js representation of current playlist
     property var currentPlaylist: ({})
-    onCurrentPlaylistChanged: {
-//        console.log('state onCurrentPlaylistChanged: ', (Object.keys(currentPlaylist)), currentPlaylist.pathsIdentifier);
-    }
 
     //all saved progresses
     property var playlistProgress: ({})
@@ -37,7 +34,6 @@ PersistentObject {
     property string coverActionCommand: ''
     property var playlistJS: []
     property int playlistIndex:-1
-//    property int playlistDuration: appstate.playlist.duration
     property var savedDirectoryProgress: ({})
 
     //some logic:
@@ -100,7 +96,7 @@ PersistentObject {
                     : playlistJS;
             if(legacyPlaylist.length > 0) {
                 app.playlist.fromJSON(legacyPlaylist.map(function(el){return el.path;}));
-                app.playlist.commands.seek(currentPosition, playlistIndex);
+                app.playerCommands.seek(currentPosition, playlistIndex);
                 //kill the old playlist data
                 playlistJS = [];
             }

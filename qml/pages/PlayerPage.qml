@@ -33,6 +33,10 @@ Page {
     objectName: 'playerPage' // to find this page easily (coverActionEmpty)
     allowedOrientations: Orientation.All
 
+    // cache those for reduced lookups too app scope
+    property TalefishAudio audio
+    property TalefishPlaylist playlist
+    property int metadataCount: playlist.metadata.count
 
     SilicaFlickable {
         anchors.fill: parent
@@ -47,7 +51,7 @@ Page {
                 }
             }
             MenuItem {
-                visible: app.playlist.metadata.count > 1
+                visible: page.metadataCount > 1
                 //: MenuItem: Go to Playlist Page
                 text: qsTr('Playlist', 'pulley')
                 onClicked: {
@@ -95,12 +99,12 @@ Page {
                 height: width
                 x: -width / 2
                 y: coverImage.sourceSize.width > 1 ? x : x/2
-                opacity: page.status === PageStatus.Active ? (app.playlist.metadata.count > 0 && mainFlickable.contentY > -Theme.itemSizeSmall ? 0.8 : 0.2) : 0
+                opacity: page.status === PageStatus.Active ? (page.metadataCount > 0 && mainFlickable.contentY > -Theme.itemSizeSmall ? 0.8 : 0.2) : 0
                 maximumValue: (app.options.cassetteUseDirectoryDurationProgress
-                              ? app.playlist.totalDuration
-                              : app.playlist.currentMetaData.duration) || 0.5 //nothing loaded
-                value: app.options.cassetteUseDirectoryDurationProgress ? app.playlist.totalPosition: app.audio.displayPosition
-                running: app.active && page.status !== PageStatus.Inactive && app.options.useAnimations && app.options.usePlayerAnimations && app.audio.isPlaying
+                              ? playlist.totalDuration
+                              : playlist.currentMetaData.duration) || 0.5 //nothing loaded
+                value: app.options.cassetteUseDirectoryDurationProgress ? playlist.totalPosition: audio.displayPosition
+                running: app.active && page.status !== PageStatus.Inactive && app.options.useAnimations && app.options.usePlayerAnimations && audio.isPlaying
 
                 Behavior on opacity { NumberAnimation {duration: 500; easing.type: Easing.InOutCubic}}
 
@@ -147,13 +151,14 @@ Page {
 
             FadeImage {
                 id: coverImage
-                source: 'image://taglib-cover-art/'+app.playlist.currentMetaData.path
+                source: 'image://taglib-cover-art/'+playlist.currentMetaData.path
                 anchors.fill: parent
                 asynchronous: true
 
                 fillMode: Image.PreserveAspectFit
                 verticalAlignment: Image.AlignTop
                 horizontalAlignment: Image.AlignHCenter
+                // leads to re-process when resizing (mostly swiping back with search/vkb in playlist), but may be acceptable:
                 sourceSize {
                     width: coverImage.width
                     height: coverImage.height
@@ -184,7 +189,7 @@ Page {
 
         TouchInteractionHint {
             id: hint
-            property bool shouldBeRunning: app.playlist.metadata.count === 0
+            property bool shouldBeRunning: page.metadataCount === 0
             onShouldBeRunningChanged: check()
             function check() {
                 if(shouldBeRunning) {
@@ -198,14 +203,15 @@ Page {
             Component.onCompleted: check()
         }
         InteractionHintLabel {
-            opacity: (app.playlist.metadata.count > 0) ? 0.0 : 1.0
+            opacity: (page.metadataCount > 0) ? 0.0 : 1.0
             Behavior on opacity { FadeAnimation {} }
             anchors.bottom: parent.bottom
             InfoLabel {
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 text:qsTr('Nothing to play')
-                visible: app.playlist.metadata.count === 0
+                visible: page.metadataCount === 0
+                textFormat: Text.PlainText
 
                 Text {
                     text: qsTr('Open Files by pulling down.')
@@ -215,6 +221,7 @@ Page {
                     anchors.fill: parent
                     anchors.topMargin: Theme.itemSizeSmall
                     font.pixelSize: Theme.fontSizeSmall
+                    textFormat: Text.PlainText
                 }
             }
         }
@@ -224,15 +231,15 @@ Page {
             id: coverMouseArea
 
             property int maxDrag: Theme.itemSizeLarge
-            visible: options.playerSwipeForNextPrev && (app.playlist.metadata.count > 1 || app.audio.position > options.skipBackTrackThreshold)
+            visible: options.playerSwipeForNextPrev && (page.metadataCount > 1 || audio.position > options.skipBackTrackThreshold)
             property bool sideTriggerActive: false
             property alias target: coverImageContainer
             anchors.fill: target
             drag.target: target
             drag.axis: Drag.XAxis
             drag.threshold: 30
-            drag.minimumX: app.playlist.currentIndex < app.playlist.metadata.count-1 ? maxDrag*-1 : 0 //next
-            drag.maximumX: app.playlist.currentIndex > 0 || app.audio.position > options.skipBackTrackThreshold ? maxDrag:0 //prev
+            drag.minimumX: playlist.currentIndex < page.metadataCount-1 ? maxDrag*-1 : 0 //next
+            drag.maximumX: playlist.currentIndex > 0 || audio.position > options.skipBackTrackThreshold ? maxDrag:0 //prev
 
             onMouseXChanged: {
                 var m = mouse, act = sideTriggerActive;
@@ -264,12 +271,12 @@ Page {
 
                     sideTriggerActive = false;
                     if(target.x < 0){//next
-                        app.playlist.currentIndex = app.playlist.currentIndex + 1;
+                        playlist.currentIndex = playlist.currentIndex + 1;
                     } else if(target.x > 0) {//prev
-                        if(app.audio.position > options.skipBackTrackThreshold) {
-                            app.audio.seek(0)
+                        if(audio.position > options.skipBackTrackThreshold) {
+                            audio.seek(0)
                         } else {
-                            app.playlist.currentIndex = app.playlist.currentIndex - 1;
+                            playlist.currentIndex = playlist.currentIndex - 1;
                         }
                     }
                 }
@@ -318,10 +325,11 @@ Page {
                     height: parent.height
                     width: parent.width - (Theme.paddingSmall * 2)
                     horizontalAlignment: coverMouseArea.target.x > 0 ? Text.AlignRight: Text.AlignLeft // Text.AlignHCenter
-                    text: coverMouseArea.target.x > 0 ? (app.audio.position > options.skipBackTrackThreshold? qsTr('Rewind Track'): qsTr('Previous Track')): qsTr('Next Track')
+                    text: coverMouseArea.target.x > 0 ? (audio.position > options.skipBackTrackThreshold? qsTr('Rewind Track'): qsTr('Previous Track')): qsTr('Next Track')
                     verticalAlignment: Text.AlignVCenter
                     wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                     x: (-coverMouseArea.target.x ) + Theme.paddingSmall
+                    textFormat: Text.PlainText
                 }
             }
             Item {
@@ -397,7 +405,7 @@ Page {
 
             Column {
                 id: infoColumn
-                opacity: app.playlist.metadata.count > 0 ? 1 : 0
+                opacity: page.metadataCount > 0 ? 1 : 0
                 width: parent.width
 
                 anchors.bottom: parent.bottom
@@ -410,16 +418,17 @@ Page {
                         minimumPixelSize: Theme.fontSizeMedium
                         style: Theme.colorScheme ? Text.Raised : Text.Normal
                         styleColor: '#FFFFFF'
-                        text: app.playlist.currentTitle
+                        text: playlist.currentTitle
                         verticalAlignment: Text.AlignBottom//Text.AlignVCenter
                         width: parent.width - Theme.horizontalPageMargin * 2 // does not account for landscape, but that's acceptable
                         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         x: Theme.horizontalPageMargin
                         font.pixelSize: Theme.fontSizeLarge
+                        textFormat: Text.PlainText
                     }
 
                     Label {
-                        property string displayPath: app.playlist.currentAlbum
+                        property string displayPath: playlist.currentAlbum
                         color: Theme.secondaryHighlightColor
                         horizontalAlignment: Text.AlignHCenter
                         style: Theme.colorScheme ? Text.Raised : Text.Normal
@@ -430,9 +439,10 @@ Page {
                         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         x: Theme.paddingSmall
                         font.pixelSize: Theme.fontSizeSmall
+                        textFormat: Text.PlainText
                     }
                     Label {
-                        property string displayPath: app.playlist.currentArtist
+                        property string displayPath: playlist.currentArtist
                         color: Theme.secondaryHighlightColor
                         horizontalAlignment: Text.AlignHCenter
                         text: displayPath
@@ -442,11 +452,12 @@ Page {
                         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                         x: Theme.paddingSmall
                         font.pixelSize: Theme.fontSizeExtraSmall
+                        textFormat: Text.PlainText
                     }
 
                     PlayerPageProgressArea {
                         id: progressArea
-                        opacity: app.audio.error > 0 ? 0.0 : 1.0
+                        opacity: audio.error > 0 ? 0.0 : 1.0
                     }
             }
 
@@ -476,14 +487,14 @@ Page {
 
                 PlayerPageSeekButton {
                     enabled: play.enabled
-                    opacity: play.enabled && app.playlist.totalPosition > options.skipDurationNormal ? 1 : 0.4
+                    opacity: play.enabled && playlist.totalPosition > options.skipDurationNormal ? 1 : 0.4
                     rotation: 180
                     seekBy: -options.skipDurationNormal
                     icon.source: "../assets/icon-l-ffwd.svg"
                 }
                 PlayerPageSeekButton {
                     enabled: play.enabled
-                    opacity: play.enabled && app.playlist.totalPosition > options.skipDurationSmall ? 1 : 0.4
+                    opacity: play.enabled && playlist.totalPosition > options.skipDurationSmall ? 1 : 0.4
                     rotation: 180
                     seekBy: -options.skipDurationSmall
                     icon.source: "../assets/icon-l-fwd.svg"
@@ -491,22 +502,22 @@ Page {
 
                 IconButton {
                     id: play
-                    onClicked: app.audio.playPause()
-                    enabled: app.playlist.metadata.count > 0
+                    onClicked: audio.playPause()
+                    enabled: page.metadataCount > 0
                     height: width
                     width: Theme.iconSizeLarge
-                    icon.source: app.audio.isPlaying ? "image://theme/icon-l-pause": "image://theme/icon-l-play"
+                    icon.source: audio.isPlaying ? "image://theme/icon-l-pause": "image://theme/icon-l-play"
                 }
 
                 PlayerPageSeekButton {
                     enabled: play.enabled
-                    opacity: play.enabled && app.playlist.totalDuration - app.playlist.totalPosition > options.skipDurationSmall ? 1 : 0.4
+                    opacity: play.enabled && playlist.totalDuration - playlist.totalPosition > options.skipDurationSmall ? 1 : 0.4
                     seekBy: options.skipDurationSmall
                     icon.source: "../assets/icon-l-fwd.svg"
                 }
                 PlayerPageSeekButton {
                     enabled: play.enabled
-                    opacity: play.enabled && app.playlist.totalDuration - app.playlist.totalPosition > options.skipDurationNormal ? 1 : 0.4
+                    opacity: play.enabled && playlist.totalDuration - playlist.totalPosition > options.skipDurationNormal ? 1 : 0.4
                     seekBy: options.skipDurationNormal
                     icon.source: "../assets/icon-l-ffwd.svg"
                 }

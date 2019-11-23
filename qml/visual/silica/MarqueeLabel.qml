@@ -29,6 +29,7 @@ Item {
     property alias contentHeight: label.contentHeight
     property alias contentWidth: label.contentWidth
     property alias text: label.text
+    property alias textFormat: label.textFormat
 
     property int widthOverhang: label.contentWidth - width
     property bool contentIsWide: widthOverhang > 0

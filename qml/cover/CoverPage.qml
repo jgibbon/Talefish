@@ -27,8 +27,9 @@ import '../lib'
 CoverBackground {
     id:mainCoverBackground
     property bool active: status === Cover.Active
-    property PlayerCommands playerCommands: app.playlist.commands
-
+    property PlayerCommands playerCommands: app.playerCommands
+    property TalefishAudio audio: app.audio
+    property TalefishPlaylist playlist: app.playlist
     Item {
         id: paddingcontainer
         clip: true
@@ -38,7 +39,7 @@ CoverBackground {
         }
         Image {
             id: coverImage
-            source: 'image://taglib-cover-art/'+app.playlist.currentMetaData.path
+            source: 'image://taglib-cover-art/'+playlist.currentMetaData.path
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop
             sourceSize {
@@ -62,10 +63,10 @@ CoverBackground {
         }
 
         maximumValue: app.options.cassetteUseDirectoryDurationProgress
-           ? app.playlist.totalDuration
-           : app.audio.duration
-        value: app.options.cassetteUseDirectoryDurationProgress ? app.playlist.totalPosition: app.audio.displayPosition
-        running: app.options.useAnimations && app.options.usePlayerAnimations && app.audio.isPlaying
+           ? playlist.totalDuration
+           : audio.duration
+        value: app.options.cassetteUseDirectoryDurationProgress ? playlist.totalPosition: audio.displayPosition
+        running: app.options.useAnimations && app.options.usePlayerAnimations && audio.isPlaying
 
         rotationOffset: -45
     }
@@ -73,14 +74,15 @@ CoverBackground {
     InteractionHintLabel {
         invert: true
         anchors.fill: parent
-        opacity: (app.playlist.metadata.count > 0) ? 0.0 : 1.0
+        opacity: (playlist.metadata.count > 0) ? 0.0 : 1.0
         Behavior on opacity { FadeAnimation {} }
         InfoLabel {
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text:qsTr('Nothing to play')
-            visible: app.playlist.metadata.count === 0
+            visible: playlist.metadata.count === 0
+            textFormat: Text.PlainText
         }
     }
 
@@ -95,7 +97,7 @@ CoverBackground {
     Column {
         id: centeredItem
         property bool largeContent: implicitHeight > parent.height - bottomPadding + Theme.paddingLarge
-        opacity: app.playlist.metadata.count > 0 ? 1 : 0
+        opacity: playlist.metadata.count > 0 ? 1 : 0
         states: [
             State {
                 name: 'top'
@@ -117,11 +119,12 @@ CoverBackground {
 
         Label {
             width: parent.width
-            text: app.playlist.currentTitle
+            text: playlist.currentTitle
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: Theme.fontSizeSmall
+            textFormat: Text.PlainText
             color: Theme.primaryColor
             maximumLineCount: 4
             elide: Text.ElideRight
@@ -129,22 +132,24 @@ CoverBackground {
         }
         Label {
             width: parent.width
-            text: app.js.formatMSeconds( app.audio.displayPosition )+" / "+app.js.formatMSeconds (app.playlist.currentMetaData.duration > 0 ? app.playlist.currentMetaData.duration : 0.1)
-            visible: app.playlist.metadata.count > 0
+            text: app.js.formatMSeconds( audio.displayPosition )+" / "+app.js.formatMSeconds (playlist.currentMetaData.duration > 0 ? playlist.currentMetaData.duration : 0.1)
+            visible: playlist.metadata.count > 0
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: Theme.fontSizeExtraSmall
+            textFormat: Text.PlainText
             color: Theme.primaryColor
             wrapMode: 'WrapAtWordBoundaryOrAnywhere'
         }
         Label {
             width: parent.width
             visible: text !== ''
-            text: app.playlist.currentAlbum
+            text: playlist.currentAlbum
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: Theme.fontSizeTiny
+            textFormat: Text.PlainText
             color: Theme.secondaryColor
             maximumLineCount: 4
             elide: Text.ElideRight
@@ -153,11 +158,12 @@ CoverBackground {
         Label {
             width: parent.width
             visible: text !== ''
-            text: app.playlist.currentArtist
+            text: playlist.currentArtist
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: Theme.fontSizeTiny
+            textFormat: Text.PlainText
             color: Theme.secondaryColor
             maximumLineCount: 4
             elide: Text.ElideRight
@@ -173,7 +179,7 @@ CoverBackground {
 
     CoverActionList {
         id: coverActionPrev
-        enabled: app.playlist.metadata.count > 0 && options.secondaryCoverAction === 'prev'
+        enabled: playlist.metadata.count > 0 && options.secondaryCoverAction === 'prev'
 
         CoverAction {
             iconSource: "image://theme/icon-cover-previous-song"
@@ -182,7 +188,7 @@ CoverBackground {
         }
 
         CoverAction {
-            iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+            iconSource: audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
             onTriggered: playerCommands.playPause()
         }
@@ -190,10 +196,10 @@ CoverBackground {
 
     CoverActionList {
         id: coverActionNext
-        enabled: app.playlist.metadata.count > 0 && options.secondaryCoverAction === 'next'
+        enabled: playlist.metadata.count > 0 && options.secondaryCoverAction === 'next'
 
         CoverAction {
-            iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+            iconSource: audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
             onTriggered: playerCommands.playPause()
         }
@@ -207,7 +213,7 @@ CoverBackground {
 
     CoverActionList {
         id: coverActionBoth
-        enabled: app.playlist.metadata.count > 0 && options.secondaryCoverAction === 'both'
+        enabled: playlist.metadata.count > 0 && options.secondaryCoverAction === 'both'
 
         CoverAction {
             iconSource: "image://theme/icon-cover-previous-song"
@@ -216,7 +222,7 @@ CoverBackground {
         }
 
         CoverAction {
-            iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+            iconSource: audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
             onTriggered: playerCommands.playPause()
         }
@@ -230,17 +236,17 @@ CoverBackground {
 
     CoverActionList {
         id: coverAction
-        enabled: app.playlist.metadata.count > 0 && options.secondaryCoverAction === ''
+        enabled: playlist.metadata.count > 0 && options.secondaryCoverAction === ''
 
         CoverAction {
-            iconSource: app.audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
+            iconSource: audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
 
             onTriggered: playerCommands.playPause()
         }
     }
     CoverActionList {
         id: coverActionEmpty
-        enabled: app.playlist.metadata.count === 0
+        enabled: playlist.metadata.count === 0
 
         CoverAction {
             iconSource:  "image://theme/icon-cover-new"

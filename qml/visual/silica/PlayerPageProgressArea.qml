@@ -101,6 +101,7 @@ Item {
         horizontalAlignment: Text.AlignHCenter
 //                            anchors.bottom: parent.bottom
         font.pixelSize: Theme.fontSizeSmall
+        textFormat: Text.PlainText
         text: app.js.formatMSeconds(currentPositionSlider.value)+" / "+app.js.formatMSeconds(currentPositionSlider.maximumValue) +' ('+ (Math.floor(( currentPositionSlider.value / currentPositionSlider.maximumValue) * 1000 ) / 10)+'%)'
         anchors {
             verticalCenter: currentPositionSlider.bottom
@@ -158,6 +159,7 @@ Item {
         visible: totalPosition.visible
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: Theme.fontSizeExtraSmall
+        textFormat: Text.PlainText
         text:  qsTr('%1 / %2 (File %L3 of %L4)', 'formatted file/directory durations, then file number/count )').arg(app.js.formatMSeconds( totalPosition.value)).arg(app.js.formatMSeconds(totalPosition.maximumValue)).arg(app.playlist.currentIndex+1).arg(app.playlist.metadata.count)
         anchors {
             verticalCenter: totalPosition.bottom

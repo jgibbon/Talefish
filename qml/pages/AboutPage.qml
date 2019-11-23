@@ -56,6 +56,7 @@ Page {
                 width: parent.width
                 color: Theme.highlightColor
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
+                textFormat: Text.PlainText
             }
             Button {
                 //: Button: Display more license info
@@ -81,6 +82,7 @@ Page {
                     width: parent.width
                     color: Theme.highlightColor
                     font.pixelSize: Theme.fontSizeExtraSmall
+                    textFormat: Text.PlainText
                     wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                 }
                 Label {
@@ -97,6 +99,7 @@ Page {
                     width: parent.width
                     wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                     font.pixelSize: Theme.fontSizeExtraSmall
+                    textFormat: Text.PlainText
                     color: Theme.highlightColor
                 }
                 Label {
@@ -115,6 +118,7 @@ Page {
                     linkColor: Theme.primaryColor
                     font.pixelSize: Theme.fontSizeExtraSmall
                     color: Theme.highlightColor
+                    textFormat: Text.PlainText
                     wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                 }
                 Label {
@@ -142,6 +146,7 @@ Page {
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeExtraSmall
+                textFormat: Text.PlainText
             }
             Button {
                 //: Button: Linking to "talk.maemo.org" thread
@@ -157,6 +162,7 @@ Page {
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeExtraSmall
+                textFormat: Text.PlainText
             }
             Button {
                 //: Button: Linking to github repository
@@ -172,6 +178,7 @@ Page {
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeExtraSmall
+                textFormat: Text.PlainText
             }
             Button {
                 //: Button: Linking to transifex for translation
@@ -187,6 +194,7 @@ Page {
                 wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeExtraSmall
+                textFormat: Text.PlainText
             }
 
             Button {

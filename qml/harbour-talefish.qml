@@ -31,26 +31,30 @@ import "lib/Jslib.js" as Jslib
 ApplicationWindow
 {
     id: app
-    initialPage: Component { PlayerPage { } }
+    initialPage: Component { PlayerPage { audio: app.audio; playlist: app.playlist } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
     property bool active: Qt.application.state === Qt.ApplicationActive
     property var js: Jslib.lib()
+
     property var allowedFileExtensions // set via c++; used by directory list
     property bool commandLineArgumentDoEnqueue
     property var commandLineArgumentFilesToOpen
     onCommandLineArgumentFilesToOpenChanged: {
         // this should be set when state isn't loaded yet (and handled in state load), but just in case:
         if(state._loaded) {
-            app.playlist.fromJSON(commandLineArgumentFilesToOpen,commandLineArgumentDoEnqueue);
+            app.playlist.fromJSON(commandLineArgumentFilesToOpen, commandLineArgumentDoEnqueue);
         }
     }
 
     property Launcher launcher: Launcher {}
+    property TalefishAudio audio: TalefishAudio { playlist: app.playlist }
+    property TalefishPlaylist playlist: TalefishPlaylist { audio: app.audio }
+    property PlayerCommands playerCommands: PlayerCommands {audio: app.audio; playlist: app.playlist}
     property TalefishState state: TalefishState {}
     property Options options: Options {
         Component.onCompleted: {
-            if(autoStartSlumber && launcher.fileExists('/usr/bin/harbour-slumber')
+            if(options._loaded && autoStartSlumber && launcher.fileExists('/usr/bin/harbour-slumber')
                     && (!autoStartSlumberInTimeframe || js.isBetweenTimes(autoStartSlumberAfterTime, autoStartSlumberBeforeTime))) {
                 if(launcher.launch('ps -C harbour-slumber').indexOf('harbour-slumber') === -1) {
                     console.log('slumber does not seem to be running');
@@ -64,18 +68,14 @@ ApplicationWindow
             }
         }
     }
-    property TalefishPlaylist playlist: TalefishPlaylist{}
-    property TalefishAudio audio: TalefishAudio {
-        playlist: app.playlist
-    }
 
     Timer {
-            id: saveProgressPeriodicallyTimer
-            interval: 5000
-            repeat: true
-            running: options.saveProgressPeriodically && audio.playbackState === audio.PlayingState
-            onTriggered: parent.save(['playlistProgress'])
-        }
+        id: saveProgressPeriodicallyTimer
+        interval: 5000
+        repeat: true
+        running: options.saveProgressPeriodically && audio.isPlaying
+        onTriggered: app.state.save(['playlistProgress'])
+    }
 
     Timer {
         id: reactivateTimer
@@ -104,7 +104,6 @@ ApplicationWindow
              '  </interface>\n'
 
         function openFiles(files, enqueue) {
-            console.log("DBUS OPEN FILES", typeof files, JSON.stringify(files), files.length, enqueue)
             app.playlist.fromJSON(files,enqueue);
             app.activate();
         }

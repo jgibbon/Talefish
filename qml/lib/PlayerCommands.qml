@@ -23,9 +23,13 @@ import Nemo.DBus 2.0
 
 Item {
     id: playerCommands
-    function play() { console.log('external command: play'); app.audio.play();}
-    function pause() {console.log('external command: pause'); app.audio.pause();}
-    function playPause() {console.log('external command: playPause'); app.audio.playPause();}
+
+    property TalefishAudio audio: app.audio
+    property TalefishPlaylist playlist: app.playlist
+
+    function play() { console.log('external command: play'); audio.play();}
+    function pause() {console.log('external command: pause'); audio.pause();}
+    function playPause() {console.log('external command: playPause'); audio.playPause();}
     function next() {
         console.log('external command: next');
         switch(options.externalCommandSkipDuration){
@@ -56,7 +60,7 @@ Item {
                 app.playlist.previous();
             }
             else {
-                app.audio.seek(0);
+                audio.seek(0);
             }
         }
     }
@@ -66,46 +70,46 @@ Item {
 
     // standard internal commands
     function seek(position, index) {
-        if(index > -1 && index !== app.playlist.currentIndex) {
+        if(index > -1 && index !== playlist.currentIndex) {
 //            console.log('setting index', index)
-            app.playlist.currentIndex = index;
+            playlist.currentIndex = index;
         }
-        if(app.audio.seekable) {
+        if(audio.seekable) {
 //            console.log('seekable')
-            app.playlist.applyingSavedPosition = false;
-            app.playlist.applyThisTrackPosition = -1;
-            app.audio.seek(position);
+            playlist.applyingSavedPosition = false;
+            playlist.applyThisTrackPosition = -1;
+            audio.seek(position);
         } else { // handle in audio.onSeekableChanged
 //            console.log('applying later', position)
-            applyingSavedPosition = true
-            applyThisTrackPosition = position;
+            playlist.applyingSavedPosition = true
+            playlist.applyThisTrackPosition = position;
         }
     }
 
     function seekBy(mseconds) {
-        var totalMilliSeconds = app.playlist.totalPosition + mseconds;
-//        console.log('seekby',mseconds, 'from', app.playlist.totalPosition, 'to', totalMilliSeconds)
+        var totalMilliSeconds = playlist.totalPosition + mseconds;
+//        console.log('seekby',mseconds, 'from', playlist.totalPosition, 'to', totalMilliSeconds)
         if(totalMilliSeconds < 0) {
-            app.playlist.totalPosition = 0;
+            playlist.totalPosition = 0;
             seek(0,0);
             return;
         }
 
         // same track:
-        if((mseconds < 0 && totalMilliSeconds >= app.playlist.currentMetaData.previousDurations)
-                || mseconds > 0 && totalMilliSeconds <= app.playlist.currentMetaData.previousDurations + app.playlist.currentMetaData.duration) {
-            app.playlist.totalPosition = totalMilliSeconds;
-            seek(totalMilliSeconds - app.playlist.currentMetaData.previousDurations, app.playlist.currentIndex);
+        if((mseconds < 0 && totalMilliSeconds >= playlist.currentMetaData.previousDurations)
+                || mseconds > 0 && totalMilliSeconds <= playlist.currentMetaData.previousDurations + playlist.currentMetaData.duration) {
+            playlist.totalPosition = totalMilliSeconds;
+            seek(totalMilliSeconds - playlist.currentMetaData.previousDurations, playlist.currentIndex);
             return;
         }
         // search other track
         var cur, curMin, curMax;
-        for(var i=0; i < app.playlist.metadata.count; i++) {
-            cur = app.playlist.metadata.get(i);
+        for(var i=0; i < playlist.metadata.count; i++) {
+            cur = playlist.metadata.get(i);
             curMin = cur.previousDurations;
             if(curMin <= totalMilliSeconds && (cur.previousDurations + cur.duration) >= totalMilliSeconds) {
 //                console.log('matched other track #', i, totalMilliSeconds - curMin, 'of total', cur.duration)
-                app.playlist.totalPosition = totalMilliSeconds;
+                playlist.totalPosition = totalMilliSeconds;
                 seek(totalMilliSeconds - curMin, i);
                 return;
             }
@@ -143,7 +147,7 @@ Item {
         signalsEnabled: true
         function triggered(){
             // '0': disabled, 'small'/'normal': use set durations, 'long': normal*2
-            if(options.slumberPauseRewindDuration !== '0' && app.audio.isPlaying) {
+            if(options.slumberPauseRewindDuration !== '0' && audio.isPlaying) {
                 switch(options.slumberPauseRewindDuration){
                 case 'small':
                     console.log('slumber triggered small');

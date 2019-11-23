@@ -94,7 +94,7 @@ SilicaListView {
                     }
                     verticalAlignment: Text.AlignVCenter
                     font.pixelSize: Theme.fontSizeMedium
-
+                    textFormat: Text.PlainText
                     truncationMode: TruncationMode.Fade
                     color: Theme.highlightColor
 
@@ -125,7 +125,7 @@ SilicaListView {
                     text: folderModel.path
                     truncationMode: TruncationMode.Fade
                     color: Theme.secondaryHighlightColor
-
+                    textFormat: Text.PlainText
                     function setAlignment(){
                         horizontalAlignment = contentWidth < width ? Text.AlignLeft : Text.AlignRight
                     }
@@ -282,6 +282,7 @@ SilicaListView {
                     }
                 }
                 Label {
+                    textFormat: Text.PlainText
                     anchors {
                         left: folderUpImage.right
                         leftMargin: Theme.paddingMedium

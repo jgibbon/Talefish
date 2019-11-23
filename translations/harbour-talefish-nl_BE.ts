@@ -719,48 +719,48 @@
 <context>
     <name>PlayerPage</name>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="44"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="48"/>
         <source>Options</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Options Page</extracomment>
         <translation>Opties</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="52"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="56"/>
         <source>Playlist</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Playlist Page</extracomment>
         <translation>Afspeellijst</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="60"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="64"/>
         <source>Open</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to &quot;Open Files&quot; (Places) Page</extracomment>
         <translation>Openen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="207"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="211"/>
         <source>Nothing to play</source>
         <translation>Niks voor af te spelen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="211"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="215"/>
         <source>Open Files by pulling down.</source>
         <translation>Opent bestanden door omlaag te trekken.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
         <source>Rewind Track</source>
         <translation>Nummer terugspoelen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
         <source>Previous Track</source>
         <translation>Vorig nummer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
         <source>Next Track</source>
         <translation>Volgend nummer</translation>
     </message>

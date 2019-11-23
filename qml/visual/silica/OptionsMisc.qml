@@ -33,6 +33,7 @@ OptionArea {
         font.pixelSize: Theme.fontSizeSmall
         color: Theme.highlightColor
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+        textFormat: Text.PlainText
         //: Label text describing the reset & quit button
         text: qsTr('For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.')
     }

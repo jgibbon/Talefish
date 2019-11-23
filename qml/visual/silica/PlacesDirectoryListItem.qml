@@ -110,6 +110,7 @@ ListItem {
             text: parent.fileMetaDataAvailable ? metaData.title + ' - ' + metaData.album : fileName
             color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
             enabled: listItem.down
+            textFormat: Text.PlainText
             anchors {
                 left: parent.left
                 right: parent.right
@@ -140,6 +141,7 @@ ListItem {
                 leftMargin: Theme.paddingMedium
             }
 
+            textFormat: Text.PlainText
             font.pixelSize: Theme.fontSizeExtraSmall
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
@@ -152,6 +154,7 @@ ListItem {
             color: listItem.highlighted ? Theme.secondaryHighlightColor : Theme.secondaryColor
             height: text === '' ? 0 : contentHeight
             font.pixelSize: Theme.fontSizeExtraSmall
+            textFormat: Text.PlainText
             enabled: listItem.down
             anchors {
                 left: durationLabel.right

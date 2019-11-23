@@ -719,48 +719,48 @@
 <context>
     <name>PlayerPage</name>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="44"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="48"/>
         <source>Options</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Options Page</extracomment>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="52"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="56"/>
         <source>Playlist</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Playlist Page</extracomment>
         <translation>Soittolista</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="60"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="64"/>
         <source>Open</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to &quot;Open Files&quot; (Places) Page</extracomment>
         <translation>Avaa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="207"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="211"/>
         <source>Nothing to play</source>
         <translation>Ei toistettavaa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="211"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="215"/>
         <source>Open Files by pulling down.</source>
         <translation>Avaa tiedostoja vetämällä alas.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
         <source>Rewind Track</source>
         <translation>Kelaa taaksepäin</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
         <source>Previous Track</source>
         <translation>Edellinen raita</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
         <source>Next Track</source>
         <translation>Seuraava raita</translation>
     </message>

@@ -61,6 +61,7 @@ Item {
                 truncationMode: TruncationMode.Fade
                 font.pixelSize: area.staticMode ? Theme.fontSizeSmall : Theme.fontSizeMedium
                 color: button.highlighted || area.staticMode ? Theme.highlightColor : Theme.primaryColor
+                textFormat: Text.PlainText
             }
             HighlightImage {
                 id: image

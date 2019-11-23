@@ -86,6 +86,7 @@ ListItem {
             text: fileName
             color: listItem.highlighted ? Theme.highlightColor : Theme.primaryColor
             enabled: listItem.down
+            textFormat: Text.PlainText
             anchors {
                 left: parent.left
                 right: parent.right

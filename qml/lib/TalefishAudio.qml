@@ -27,7 +27,7 @@ Audio {
     playbackRate: app.options.playbackRate
     onPlaybackRateChanged: if(isPlaying) seek(position - 0.01);
     property bool isPlaying: playbackState === Audio.PlayingState
-    property int displayPosition: Math.max(position, app.playlist.applyThisTrackPosition)
+    property int displayPosition: Math.max(position, playlist.applyThisTrackPosition)
 
     function playPause() {
         if(!isPlaying) {
