@@ -11,86 +11,86 @@
         <translation>Acerca de Talefish</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="62"/>
+        <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
         <translation>Ver información de licencia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="64"/>
+        <location filename="../qml/pages/AboutPage.qml" line="65"/>
         <source>Hide license information</source>
         <extracomment>Button: Hide license info</extracomment>
         <translation>Ocultar información de licencia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
+        <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Talefish comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See the GNU General Public License for more details:</source>
         <extracomment>Longer License Line. If you&apos;re in the least unsure about translation, leave it in english. Below it will be a Link to the full license text.</extracomment>
         <translation>Talefish viene ABSOLUTAMENTE SIN GARANTÍA. Esto es software libre, y puedes redistribuirlo y/o modificarlo bajo los términos de la Licencia Pública General de GNU publicada por la Free Software Foundation; ya sea la versión 2 de la Licencia o (a tu elección) cualquier versión posterior. Consulta la Licencia Pública General de GNU para más detalles:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="96"/>
+        <location filename="../qml/pages/AboutPage.qml" line="98"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
         <translation>Este programa usa e incluye versiones modificadas o no modificadas de los siguientes componentes de software bajo los términos de la licencia LGPL 2.1:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="134"/>
+        <location filename="../qml/pages/AboutPage.qml" line="138"/>
         <source>Contribute</source>
         <comment>section header</comment>
         <extracomment>Section Header: How to contribute to this program</extracomment>
         <translation>Contribuir</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="139"/>
+        <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Discuss or click &quot;thanks&quot; at talk.maemo.org:</source>
         <extracomment>Label: introduction for &quot;TMO&quot; link</extracomment>
         <translation>Comenta o haz clic en &quot;gracias&quot; en talk.maemo.org:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="148"/>
+        <location filename="../qml/pages/AboutPage.qml" line="153"/>
         <source>TMO thread</source>
         <extracomment>Button: Linking to &quot;talk.maemo.org&quot; thread</extracomment>
         <translation>Hilo TMO</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="154"/>
+        <location filename="../qml/pages/AboutPage.qml" line="159"/>
         <source>Project stars, pull requests or bug reports are welcome on GitHub:</source>
         <extracomment>Label: introduction for github link</extracomment>
         <translation>Marca el proyecto como favorito, solicita modificaciones o informa de errores en GitHub:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="163"/>
+        <location filename="../qml/pages/AboutPage.qml" line="169"/>
         <source>GitHub page</source>
         <extracomment>Button: Linking to github repository</extracomment>
         <translation>Página GitHub</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="170"/>
+        <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
         <extracomment>Label: introduction for translation link</extracomment>
         <translation>También puedes enviar las traducciones por Transifex, si no te gusta GitHub:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="178"/>
+        <location filename="../qml/pages/AboutPage.qml" line="185"/>
         <source>Transifex page</source>
         <extracomment>Button: Linking to transifex for translation</extracomment>
         <translation>Página Transifex</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="185"/>
+        <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Or buy me a beer if you really feel like it:</source>
         <extracomment>Label: introduction for paypal link</extracomment>
         <translation>O invítame a una cerveza si realmente te gusta:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="194"/>
+        <location filename="../qml/pages/AboutPage.qml" line="202"/>
         <source>PayPal donation</source>
         <extracomment>Button: Linking to paypal donation page</extracomment>
         <translation>Donación por PayPal</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>See the GNU Lesser General Public License for more details:</source>
         <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
         <translation>Consulta la LIcencia Pública General Reducida para más detalles:</translation>
@@ -102,14 +102,14 @@
         <translation>Reproductor de audiolibros Talefish, Copyright (C) 2016-%1 John Gibbon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="201"/>
+        <location filename="../qml/pages/AboutPage.qml" line="209"/>
         <source>Translators</source>
         <comment>header</comment>
         <extracomment>Section Header: Translators (Thank you! Really!)</extracomment>
         <translation>Traductores</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="205"/>
+        <location filename="../qml/pages/AboutPage.qml" line="213"/>
         <source>A big thank you to the translators:</source>
         <extracomment>Label: Thank you for translators. Yes, that&apos;s you! Followed by list of Translators. IMPORTANT: I may forget to include people. If you&apos;re missing from the list and you&apos;d like to be mentioned inside the application, please let me know your desired user name!</extracomment>
         <translation>Muchísimas gracias a los traductores:</translation>
@@ -118,7 +118,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="82"/>
+        <location filename="../qml/cover/CoverPage.qml" line="83"/>
         <source>Nothing to play</source>
         <translation>Nada para reproducir</translation>
     </message>
@@ -335,43 +335,43 @@
         <translation>Usar botones de auricular/bluetooth para controlar Talefish</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="82"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="84"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <extracomment>Label</extracomment>
         <translation>Puedes elegir la acción que se ejecutará cuando presiones el botón de &quot;Llamar/Colgar&quot;, que a menudo es un sólo botón en los auriculares:</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="87"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="89"/>
         <source>Do nothing</source>
         <extracomment>ComboBox option: Do nothing on &quot;Call button&quot; press</extracomment>
         <translation>No hacer nada</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="89"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="91"/>
         <source>Play/Pause</source>
         <extracomment>ComboBox option: Play/Pause on &quot;Call button&quot; press</extracomment>
         <translation>Reproducir/Detener</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="91"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="93"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Next on &quot;Call button&quot; press</extracomment>
         <translation>Saltar hacia adelante</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="93"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="95"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Previous on &quot;Call button&quot; press</extracomment>
         <translation>Saltar hacia atrás</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="105"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="107"/>
         <source>Button Press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; short press</extracomment>
         <translation>Toque corto:</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="114"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="116"/>
         <source>Long press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; long press</extracomment>
         <translation>Toque largo:</translation>
@@ -458,13 +458,13 @@
         <translation>Varios</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsMisc.qml" line="37"/>
+        <location filename="../qml/visual/silica/OptionsMisc.qml" line="38"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
         <translation>Para fines de depuración, a veces es útil restablecer todas las opciones y estados de la aplicación a los valores por defecto. Con suerte nunca necesitarás esto.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsMisc.qml" line="42"/>
+        <location filename="../qml/visual/silica/OptionsMisc.qml" line="43"/>
         <source>Reset &amp; Quit</source>
         <extracomment>Button Text: Reset all options/application state and quit</extracomment>
         <translation>Restablecer y salir</translation>
@@ -530,67 +530,67 @@
         <translation>Instalar el temporizador slumber para habilitar estas opciones</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="61"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
         <translation>Rebobinar al detener con slumber:</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="64"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
         <source>no</source>
         <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
         <translation>no</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="66"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;short&quot; when paused by slumber</extracomment>
         <translation>Salto corto</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="68"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="69"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;long&quot; when paused by slumber</extracomment>
         <translation>Salto largo</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="70"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="71"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
         <translation>Doble salto largo</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="77"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="78"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Iniciar temporizador automáticamente</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="84"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="85"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
         <translation>Iniciar el temporizador slumber automáticamente al iniciar Talefish.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="91"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="92"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Poner Talefish en primer plano tras iniciar slumber</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="102"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="103"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Iniciar slumber sólo en ciertos momentos</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="135"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="136"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Iniciar slumber después de</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="154"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="155"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Iniciar slumber antes de</translation>
@@ -629,7 +629,7 @@
         <translation>Más opciones</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="293"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="294"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
         <translation>Directorio principal</translation>
@@ -638,7 +638,7 @@
 <context>
     <name>PlacesModelComponent</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="125"/>
+        <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="127"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
         <translation>Quitar de favoritos</translation>
@@ -740,27 +740,27 @@
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="211"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="212"/>
         <source>Nothing to play</source>
         <translation>Nada para reproducir</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="215"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="217"/>
         <source>Open Files by pulling down.</source>
         <translation>Abrir archivos deslizando hacia abajo.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
         <source>Rewind Track</source>
         <translation>Pista anterior</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
         <source>Previous Track</source>
         <translation>Pista previa</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="325"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
         <source>Next Track</source>
         <translation>Pista siguiente</translation>
     </message>
@@ -768,7 +768,7 @@
 <context>
     <name>PlayerPageProgressArea</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="161"/>
+        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="163"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation>%1 / %2 (Archivo %L3 de %L4)</translation>
@@ -801,7 +801,7 @@
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlaylistView.qml" line="171"/>
+        <location filename="../qml/visual/silica/PlaylistView.qml" line="173"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
