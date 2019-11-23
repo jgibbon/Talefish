@@ -149,10 +149,15 @@ Page {
                 id: coverImage
                 source: 'image://taglib-cover-art/'+app.playlist.currentMetaData.path
                 anchors.fill: parent
+                asynchronous: true
 
                 fillMode: Image.PreserveAspectFit
                 verticalAlignment: Image.AlignTop
                 horizontalAlignment: Image.AlignHCenter
+                sourceSize {
+                    width: coverImage.width
+                    height: coverImage.height
+                }
             }
 
             NumberAnimation on x {
@@ -405,7 +410,7 @@ Page {
                         minimumPixelSize: Theme.fontSizeMedium
                         style: Theme.colorScheme ? Text.Raised : Text.Normal
                         styleColor: '#FFFFFF'
-                        text: app.playlist.currentTitle + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
+                        text: app.playlist.currentTitle
                         verticalAlignment: Text.AlignBottom//Text.AlignVCenter
                         width: parent.width - Theme.horizontalPageMargin * 2 // does not account for landscape, but that's acceptable
                         wrapMode: Text.WrapAtWordBoundaryOrAnywhere

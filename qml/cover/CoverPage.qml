@@ -22,11 +22,12 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 
 import '../visual'
+import '../lib'
 
 CoverBackground {
     id:mainCoverBackground
     property bool active: status === Cover.Active
-    property var playerCommands: app.playlist.commands
+    property PlayerCommands playerCommands: app.playlist.commands
 
     Item {
         id: paddingcontainer
@@ -112,7 +113,7 @@ CoverBackground {
 
         Label {
             width: parent.width
-            text: app.playlist.currentTitle + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
+            text: app.playlist.currentTitle
 
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter

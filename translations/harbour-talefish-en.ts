@@ -118,7 +118,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="77"/>
+        <location filename="../qml/cover/CoverPage.qml" line="78"/>
         <source>Nothing to play</source>
         <translation type="unfinished"></translation>
     </message>
@@ -638,7 +638,7 @@
 <context>
     <name>PlacesModelComponent</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="124"/>
+        <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="125"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
         <translation type="unfinished"></translation>
@@ -740,27 +740,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="202"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="207"/>
         <source>Nothing to play</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="206"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="211"/>
         <source>Open Files by pulling down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="316"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
         <source>Rewind Track</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="316"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
         <source>Previous Track</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="316"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="321"/>
         <source>Next Track</source>
         <translation type="unfinished"></translation>
     </message>
@@ -796,12 +796,12 @@
 <context>
     <name>PlaylistView</name>
     <message>
-        <location filename="../qml/visual/silica/PlaylistView.qml" line="38"/>
+        <location filename="../qml/visual/silica/PlaylistView.qml" line="37"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlaylistView.qml" line="172"/>
+        <location filename="../qml/visual/silica/PlaylistView.qml" line="171"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>

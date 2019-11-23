@@ -66,7 +66,7 @@ Playlist {
         if(md.title === '') {return app.js.fileName(md.path, true);}
         return md.title;
     }
-    property string currentTitle: title(currentIndex)
+    property string currentTitle: title(currentIndex) + (app.audio.errorString !== '' ? '<br>['+app.audio.errorString+']' : '')
 
     // album (or directory base name)
     function album(index) {
@@ -128,7 +128,7 @@ Playlist {
         return json
     }
     function fromJSON(json, enqueue, directory) { //directory overrides pathsIdentifier to display progress in file selector
-        console.log('playlist fromJSON')
+//        console.log('playlist fromJSON')
         // console.log('fromJSON', JSON.stringify(json))
         if (enqueue && playlist.metadata.count === 0) {
             enqueue = false;
@@ -243,8 +243,4 @@ Playlist {
                         }
                     }
                 }
-
-    Component.onCompleted: {
-//        fromJSON();
-    }
 }

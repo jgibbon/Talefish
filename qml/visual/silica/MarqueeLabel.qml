@@ -58,7 +58,6 @@ Item {
 
     Label {
         id: label
-        text: 'this default text is a bit long to be honest this default text is a bit long to be honest this default text is a bit long to be honest'
         height: parent.height
         width: parent.width
         truncationMode: animation.running || resetAnimation.running ? TruncationMode.None : marqueeLabel.truncationMode

@@ -67,16 +67,16 @@ Item {
     // standard internal commands
     function seek(position, index) {
         if(index > -1 && index !== app.playlist.currentIndex) {
-            console.log('setting index', index)
+//            console.log('setting index', index)
             app.playlist.currentIndex = index;
         }
         if(app.audio.seekable) {
-            console.log('seekable')
+//            console.log('seekable')
             app.playlist.applyingSavedPosition = false;
             app.playlist.applyThisTrackPosition = -1;
             app.audio.seek(position);
         } else { // handle in audio.onSeekableChanged
-            console.log('applying later', position)
+//            console.log('applying later', position)
             applyingSavedPosition = true
             applyThisTrackPosition = position;
         }
