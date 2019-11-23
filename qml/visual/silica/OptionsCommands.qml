@@ -71,13 +71,15 @@ OptionArea {
             NumberAnimation { properties: "height,opacity"; easing.type: Easing.InOutQuad }
         }
         width: parent.width - Theme.horizontalPageMargin - x
-        x: Theme.horizontalPageMargin * 2
+        x: Theme.itemSizeExtraSmall + (Theme.colorScheme ? Theme.paddingMedium : 0) - Theme.paddingLarge
 
         Label {
             wrapMode: Text.Wrap
             x: Theme.horizontalPageMargin
-            width: parent.width - Theme.horizontalPageMargin * 2
-            font.pixelSize: Theme.fontSizeTiny
+            width: parent.width - x
+            font.pixelSize: Theme.fontSizeExtraSmall
+            textFormat: Text.PlainText
+            color: Theme.highlightColor
             //: Label
             text: qsTr('You can choose the action you prefer to be executed when pressing the "Call/Hangup" button, which often is the only button on a headset:')
         }
