@@ -46,17 +46,20 @@ function save(obj, keys) {
 
                     // Save all fields
                     var skippedAttributes = ['objectName', 'doPersist', 'storeSettings', '_loaded', 'reset'];
-                    for (var fieldName in (keys || obj)) {
+                    if(!keys) {
+                        keys = Object.keys(obj);
+                    }
+                    keys.forEach(function(fieldName) {
                         var value = JSON.stringify(obj[fieldName]);
                         //values starting with 'on' should be blatantly ignored.
                         if (typeof value === 'undefined' || skippedAttributes.indexOf(fieldName) > -1 || fieldName.lastIndexOf('on', 0) === 0) {
                             //                    console.log("NOT Saved: " + obj.objectName + "." + fieldName + " => " + value + "("+typeof obj[fieldName]+")");
-                            continue;
+                            return;
                         }
 
                         tx.executeSql('INSERT INTO settings (settingsName, keyName, value) VALUES (?, ?, ?);', [obj.objectName, fieldName, value]);
                         //                console.log("Saved: " + obj.objectName + "." + fieldName + " => " + value + "("+typeof obj[fieldName]+")");
-                    }
+                    })
                 }
                 );
 }
