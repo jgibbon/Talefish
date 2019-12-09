@@ -213,7 +213,7 @@ Page {
                 text: qsTr("A big thank you to the translators:")
                       + '<br /> eson (sv)'
                       + '<br /> carmenfdezb (es)'
-                      + '<br /> Ancelad (ru)'
+                      + '<br /> Ancelad + Laphilis (ru)'
                       + '<br /> marmistrz (pl)'
                       + '<br /> pljmn (nl + nl_BE)'
                       + '<br /> leoka (hu)'
