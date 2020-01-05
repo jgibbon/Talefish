@@ -1,7 +1,7 @@
 Name: harbour-talefish
 Summary: Talefish
 Version: 0.2
-Release: 5
+Release: 6
 # The contents of the Group field should be one of the groups listed here:
 # http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
 Group: Applications/Multimedia
@@ -17,8 +17,8 @@ Configure: none
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution
 Builder: qtc5
-Obsoletes: Talefish <= %{version}
-Provides: Talefish = %{version}
+#Obsoletes: Talefish <= %{version}
+#Provides: Talefish = %{version}
 Conflicts: Talefish <= %{version}
 
 # This section specifies build dependencies that are resolved using pkgconfig.

@@ -5,6 +5,11 @@
 # Add newest entries to the top of the list.
 # Separate entries from eachother with a blank line.
 
+* Sat Nov 23 2019 velox 0.2-6
+ - bugfix: prevent current progress info being lost in edge cases
+ - maintenance: remove obsoletes/provides from rpm (harbour compatibility)
+ - Translation updates ru, pl, sl (thanks, translation team!)
+
 * Sat Nov 23 2019 velox 0.2-5
  - enhancement: highlightColor for non clickable labels in options
  - enhancement: display "special directory" icons in file list

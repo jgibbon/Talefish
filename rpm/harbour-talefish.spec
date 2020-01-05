@@ -14,7 +14,7 @@ Name:       harbour-talefish
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Talefish
 Version:    0.2
-Release:    5
+Release:    6
 Group:      Applications/Multimedia
 License:    GPL2
 URL:        https://github.com/jgibbon/Talefish
@@ -29,9 +29,7 @@ BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5Multimedia)
 BuildRequires:  desktop-file-utils
-Provides:   Talefish = %{version}
 Conflicts:   Talefish <= %{version}
-Obsoletes:   Talefish <= %{version}
 
 %description
 Talefish is an open source directory based audio book player.
