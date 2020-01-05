@@ -14,25 +14,25 @@
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži informacije o licenci</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="65"/>
         <source>Hide license information</source>
         <extracomment>Button: Hide license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Skrij informacije o licenci</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Talefish comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See the GNU General Public License for more details:</source>
         <extracomment>Longer License Line. If you&apos;re in the least unsure about translation, leave it in english. Below it will be a Link to the full license text.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Talefish ne nudi popolnoma nobene garancije. Ta program spada med prosto programje; lahko ga razširjate in/ali spreminjate pod pogoji Splošnega dovoljenja GNU (GNU General Public License), kot ga je objavila ustanova Free Software Foundation; bodisi različice 2 ali (po vaši izbiri) katerekoli poznejše različice. Za podrobnosti glejte besedilo GNU General Public License:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="98"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ta program vsebuje nespremenjene ali spremenjene različičice naslednjih programskih komponent, licencirane pod pogoji LGPL 2.1:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="138"/>
@@ -93,13 +93,13 @@
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>See the GNU Lesser General Public License for more details:</source>
         <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Za podrobnosti glejte besedilo GNU Lesser General Public License:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
         <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Talefish predvajalnik avdio knjig, Copyright (C) 2016-%1 John Gibbon</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="209"/>
@@ -129,18 +129,18 @@
         <location filename="../qml/pages/OpenPage.qml" line="69"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Mesta</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OpenPage.qml" line="103"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Odpri %L1 datoteko</numerusform>
+            <numerusform>Odpri %L1 datoteki</numerusform>
+            <numerusform>Odpri %L1 datoteke</numerusform>
+            <numerusform>Odpri %L1 datotek</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -148,36 +148,36 @@
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Dodaj %L1 datoteko</numerusform>
+            <numerusform>Dodaj %L1 datoteki</numerusform>
+            <numerusform>Dodaj %L1 datoteke</numerusform>
+            <numerusform>Dodaj %L1 datotek</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="110"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Odpri vse datoteke</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="113"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj vse datoteke na seznam</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="116"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Izberi mapo</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="121"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>oziroma izberi spodnje datoteke</translation>
     </message>
 </context>
 <context>
@@ -187,7 +187,7 @@
         <source>Appearance</source>
         <comment>section header</comment>
         <extracomment>Section Header/Button Text for Options Section</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Videz</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="32"/>
@@ -229,19 +229,19 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="94"/>
         <source>playlist</source>
         <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>seznam predvajanja</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="72"/>
         <source>Display album cover images in directory list and playlist view</source>
         <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži naslovnico albuma v prikazu mape in seznama predvajanja</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="74"/>
         <source>Extracting a lot of Images at once can be really slow.</source>
         <extracomment>Option Entry description</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Izvlečenje velike količine slik naenkrat lahko zelo upočasni delovanje naprave.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="56"/>
@@ -260,7 +260,7 @@
         <source>Cassette tape</source>
         <comment>section header</comment>
         <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Predvajalnik kaset</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="89"/>
@@ -300,7 +300,7 @@
         <source>External control</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options to control Talefish &quot;externally&quot;: Headphone buttons, app cover etc</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Upravljanje z zunanjo napravo</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="33"/>
@@ -312,25 +312,25 @@
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="43"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
         <extracomment>ComboBox description</extracomment>
-        <translation>Zunanji ukaz je ukazi, izvršen preko zaklenjenega zaslona ali s tipkami na slušalkah</translation>
+        <translation>Zunanji ukaz je ukaz, izvršen preko zaklenjenega zaslona ali s tipkami na slušalkah</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="36"/>
         <source>to track beginning</source>
         <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation>na začetek posnetka</translation>
+        <translation>Na začetek posnetka</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="38"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox option: &quot;Short Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation>Nastavitev za kratek preskok</translation>
+        <translation>Kratek preskok</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="40"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox option: &quot;Long Skip duration&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation>Nastavitev za dolg preskok</translation>
+        <translation>Dolg preskok</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="49"/>
@@ -388,25 +388,25 @@
         <source>Open Files</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options for file handling and saved directory progress</extracomment>
-        <translation>Odpri datoteke</translation>
+        <translation>Odpiranje datotek</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="32"/>
         <source>Automatically display most recent directory</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Samodejno prikaži nedavno uporabljeno mapo</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="40"/>
         <source>Remember sort mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zapomni si način sortiranja</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="49"/>
         <source>Remember enqueue mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zapomni si vrstni red predvajanja</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="59"/>
@@ -418,7 +418,7 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="61"/>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
         <extracomment>Option Entry (TextSwitch) description for &quot;Save progress periodically&quot;</extracomment>
-        <translation>Ko je omogočeno se stanje shrani vsakih nekaj sekund. V nasprotnem primeru se bo stanje trenutnega predvajanje shranilo le v primeru, da za izhod iz aplikacije uporabite ukaz. </translation>
+        <translation>Če je možnost izključena se stanje shrani le ob izhodu iz aplikacije. Ča možnost vključite, se stanje samodejno shranjuje vsakih nekaj sekund.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="72"/>
@@ -440,11 +440,11 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="78"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>za %1 dan</numerusform>
+            <numerusform>za %1 dni</numerusform>
+            <numerusform>za %1 dni</numerusform>
+            <numerusform>za %1 dni</numerusform>
         </translation>
     </message>
     <message>
@@ -467,13 +467,13 @@
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="38"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Za potrebe razhroščevanja je včasih potrebno ponastaviti nastavitve aplikacije na privzeto. Upajmo, da to ne bo nikoli potrebno.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="43"/>
         <source>Reset &amp; Quit</source>
         <extracomment>Button Text: Reset all options/application state and quit</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ponastavi in zaključi</translation>
     </message>
 </context>
 <context>
@@ -527,7 +527,7 @@
         <source>Sleep timer integration</source>
         <comment>section header</comment>
         <extracomment>Section Header: Sleep timer options (for starting &quot;slumber&quot; automatically)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Integracija časovnika spanja</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="44"/>
@@ -539,31 +539,31 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Previj, ko Slumber naredi pavzo:</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
         <source>no</source>
         <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;short&quot; when paused by slumber</extracomment>
-        <translation>Nastavitev za kratek preskok</translation>
+        <translation>Kratek preskok</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="69"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;long&quot; when paused by slumber</extracomment>
-        <translation>Nastavitev za dolg preskok</translation>
+        <translation>Dolg preskok</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="71"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dvojni dolg preskok</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="78"/>
@@ -632,13 +632,13 @@
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="248"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Več možnosti</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="294"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nadrejena mapa</translation>
     </message>
 </context>
 <context>
@@ -647,7 +647,7 @@
         <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="127"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Odstrani iz priljubljenih</translation>
     </message>
 </context>
 <context>
@@ -656,69 +656,69 @@
         <location filename="../qml/visual/silica/PlacesModels.qml" line="27"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Hitri dostop</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="32"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nedavno odprto</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="53"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Naprava</translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="59"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Domov</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="68"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Glasba</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="77"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Prenosi</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="86"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Android shramba</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="95"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pomnilnik naprave</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="105"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>SD kartica</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="108"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zunanji pomnilnik</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
 </context>
@@ -786,11 +786,11 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="32"/>
         <source>%L1 file(s) opened</source>
         <extracomment>Playlist Page Header: Number of opened files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%L1 odprta datoteka</numerusform>
+            <numerusform>%L1 odprti datoteki</numerusform>
+            <numerusform>%L1 odprte datoteke</numerusform>
+            <numerusform>%L1 odprtih datotek</numerusform>
         </translation>
     </message>
     <message>
@@ -806,7 +806,7 @@
     <message>
         <location filename="../qml/visual/silica/PlaylistView.qml" line="37"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Iskanje</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlaylistView.qml" line="173"/>

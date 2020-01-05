@@ -14,13 +14,13 @@
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pokaż informacje o licencji</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="65"/>
         <source>Hide license information</source>
         <extracomment>Button: Hide license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ukryj informacje o licencji</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="81"/>
@@ -93,13 +93,13 @@
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>See the GNU Lesser General Public License for more details:</source>
         <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zajrzyj do GNU Lesser General Public License po więcej szczegółów:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
         <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Talefish jest odtwarzaczem audiobooków, Copyright (C) 2016-%1 John Gibbon</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="209"/>
@@ -129,17 +129,17 @@
         <location filename="../qml/pages/OpenPage.qml" line="69"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Miejsca</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OpenPage.qml" line="103"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Otwórz %L1 plik</numerusform>
+            <numerusform>Otwórz %L1 pliki</numerusform>
+            <numerusform>Otwórz %L1 plików</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -147,35 +147,35 @@
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Kolejkuj %L1 plik</numerusform>
+            <numerusform>Kolejkuj %L1 pliki</numerusform>
+            <numerusform>Kolejkuj %L1 plików</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="110"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Otwórz wszystkie pliki</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="113"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kolejkuj wszystkie pliki</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="116"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zaznacz katalog</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="121"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>albo zaznacz pliki poniżej</translation>
     </message>
 </context>
 <context>
@@ -185,7 +185,7 @@
         <source>Appearance</source>
         <comment>section header</comment>
         <extracomment>Section Header/Button Text for Options Section</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Wygląd</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="32"/>
@@ -203,19 +203,19 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="60"/>
         <source>Hidden</source>
         <extracomment>ComboBox option: No secondary App-Cover action</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ukryty</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="62"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Skip to next track as secondary App-Cover action</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przejdź do przodu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="64"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Skip to previous track as secondary App-Cover action</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przejdź do tyłu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="66"/>
@@ -227,7 +227,7 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="94"/>
         <source>playlist</source>
         <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>playlista</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="72"/>
@@ -251,14 +251,14 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="54"/>
         <source>Additional App-Cover Actions</source>
         <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dodatkowe akcje okładki</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="83"/>
         <source>Cassette tape</source>
         <comment>section header</comment>
         <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kaseta magnetofonowa</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="89"/>
@@ -282,7 +282,7 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="110"/>
         <source>Player Page Animation</source>
         <extracomment>Option Entry (TextSwitch): Enable (cassette) animations on the player page</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Animacja strony odtwarzacza</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="124"/>
@@ -298,7 +298,7 @@
         <source>External control</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options to control Talefish &quot;externally&quot;: Headphone buttons, app cover etc</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zewnętrzna kontrola</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="33"/>
@@ -316,7 +316,7 @@
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="36"/>
         <source>to track beginning</source>
         <extracomment>ComboBox option: &quot;to track beginning&quot; as end of sentence &quot;External Commands skip…&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>do początku utworu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="38"/>
@@ -346,37 +346,37 @@
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="89"/>
         <source>Do nothing</source>
         <extracomment>ComboBox option: Do nothing on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nie rób nic</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="91"/>
         <source>Play/Pause</source>
         <extracomment>ComboBox option: Play/Pause on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Odtwórz/Wstrzymaj</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="93"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Next on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przejdź do przodu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="95"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Previous on &quot;Call button&quot; press</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przejdź do tyłu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="107"/>
         <source>Button Press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; short press</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Naciśnięcie przycisku:</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="116"/>
         <source>Long press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; long press</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Długie naciśnięcie:</translation>
     </message>
 </context>
 <context>
@@ -392,19 +392,19 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="32"/>
         <source>Automatically display most recent directory</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automatycznie wyświetl najnowszy katalog</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="40"/>
         <source>Remember sort mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pamiętaj tryb sortowania</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="49"/>
         <source>Remember enqueue mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pamiętaj tryb kolejkowania</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="59"/>
@@ -438,17 +438,17 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="78"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>na %1 dzień</numerusform>
+            <numerusform>na %1 dni</numerusform>
+            <numerusform>na %1 dni</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="79"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
-        <translation type="unfinished"></translation>
+        <translation>zawsze</translation>
     </message>
 </context>
 <context>
@@ -470,7 +470,7 @@
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="43"/>
         <source>Reset &amp; Quit</source>
         <extracomment>Button Text: Reset all options/application state and quit</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zresetuj i Wyjdź</translation>
     </message>
 </context>
 <context>
@@ -542,7 +542,7 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
         <source>no</source>
         <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>nie</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
@@ -590,13 +590,13 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="136"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Uruchom Slumber po</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="155"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Uruchom Slumber przed</translation>
     </message>
 </context>
 <context>
@@ -629,13 +629,13 @@
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="248"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Więcej opcji</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="294"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Katalog nadrzędny</translation>
     </message>
 </context>
 <context>
@@ -644,7 +644,7 @@
         <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="127"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Usuń z ulubionych</translation>
     </message>
 </context>
 <context>
@@ -653,69 +653,69 @@
         <location filename="../qml/visual/silica/PlacesModels.qml" line="27"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Szybki Dostęp</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="32"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Niedawno otwarte</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="53"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Urządzenie</translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="59"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Katalog domowy</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="68"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Muzyka</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="77"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pobrane</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="86"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przestrzeń Androida</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="95"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pamięć urządzenia</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="105"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Karta SD</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="108"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Pamięć zewnętrzna</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
 </context>
@@ -783,10 +783,10 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="32"/>
         <source>%L1 file(s) opened</source>
         <extracomment>Playlist Page Header: Number of opened files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%L1 plik otwarty</numerusform>
+            <numerusform>%L1 pliki otwarte</numerusform>
+            <numerusform>%L1 plików otwartych</numerusform>
         </translation>
     </message>
     <message>
@@ -802,7 +802,7 @@
     <message>
         <location filename="../qml/visual/silica/PlaylistView.qml" line="37"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Szukaj</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlaylistView.qml" line="173"/>

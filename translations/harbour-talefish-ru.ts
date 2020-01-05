@@ -14,25 +14,25 @@
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>View license information</source>
         <extracomment>Button: Display more license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Просмотр информации о лицензии</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="65"/>
         <source>Hide license information</source>
         <extracomment>Button: Hide license info</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Скрыть информацию о лицензии</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Talefish comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See the GNU General Public License for more details:</source>
         <extracomment>Longer License Line. If you&apos;re in the least unsure about translation, leave it in english. Below it will be a Link to the full license text.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Talefish поставляется без АБСОЛЮТНЫХ ГАРАНТИЙ. Это бесплатное программное обеспечение, и вы можете распространять его и / или изменять его в соответствии с условиями Стандартной общественной лицензии GNU, опубликованной Free Software Foundation; либо версия 2 лицензии, либо (по вашему выбору) любая более поздняя версия. Смотрите GNU General Public License для более подробной информации:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="98"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Эта Программа использует и включает в себя неизменённые или изменённые версии следующих компонентов программного обеспечения в соответствии с условиями лицензии LGPL 2.1:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="138"/>
@@ -93,13 +93,13 @@
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>See the GNU Lesser General Public License for more details:</source>
         <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Смотрите GNU Lesser General Public License для более подробной информации:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
         <source>Talefish audio book player, Copyright (C) 2016-%1 John Gibbon</source>
         <extracomment>Short License Line. %1 will be replaced by the current year.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Проигрыватель аудиокниг Talefish, Copyright (C) 2016-% 1 Джон Гиббон</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="209"/>
@@ -129,17 +129,17 @@
         <location filename="../qml/pages/OpenPage.qml" line="69"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Места</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/pages/OpenPage.qml" line="103"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Открыть %L1 файл </numerusform>
+            <numerusform>Открыть %L1 файл</numerusform>
+            <numerusform>Открыть %L1 файлов</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -147,35 +147,35 @@
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Поставить в очередь % L1 файл</numerusform>
+            <numerusform>Поставить в очередь % L1 файлы</numerusform>
+            <numerusform>Поставить в очередь % L1 файлы</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="110"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Открыть все файлы</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="113"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Поставить в очередь все файлы</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="116"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Выберите каталог</translation>
     </message>
     <message>
         <location filename="../qml/pages/OpenPage.qml" line="121"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>или выберите файлы ниже</translation>
     </message>
 </context>
 <context>
@@ -185,7 +185,7 @@
         <source>Appearance</source>
         <comment>section header</comment>
         <extracomment>Section Header/Button Text for Options Section</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Внешний вид</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="32"/>
@@ -221,25 +221,25 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="66"/>
         <source>Skip backward and forward</source>
         <extracomment>ComboBox option: Skip to next and previous track as secondary/tertiary App-Cover action</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Пропустить назад и вперед</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="94"/>
         <source>playlist</source>
         <extracomment>ComboBox option: &quot;Playlist&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>плейлист</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="72"/>
         <source>Display album cover images in directory list and playlist view</source>
         <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Отображение обложек альбомов в списке каталогов и в списке воспроизведения</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="74"/>
         <source>Extracting a lot of Images at once can be really slow.</source>
         <extracomment>Option Entry description</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Извлечение большого количества изображений за один раз может быть очень медленным</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="56"/>
@@ -251,14 +251,14 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="54"/>
         <source>Additional App-Cover Actions</source>
         <extracomment>ComboBox label: Enable a second (or third) application cover button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Дополнительные действия на обложке приложения</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="83"/>
         <source>Cassette tape</source>
         <comment>section header</comment>
         <extracomment>Section Header: &apos;Cassette tape&apos; options (visible on player page and App-Cover)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Тип ленты</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="89"/>
@@ -270,7 +270,7 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="92"/>
         <source>track</source>
         <extracomment>ComboBox option: &quot;Track&quot; as end of sentence &quot;Cassette shows progress of…&quot;</extracomment>
-        <translation>трека</translation>
+        <translation>трек</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="99"/>
@@ -298,7 +298,7 @@
         <source>External control</source>
         <comment>section header</comment>
         <extracomment>Section Header: Options to control Talefish &quot;externally&quot;: Headphone buttons, app cover etc</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Внешнее управление</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="33"/>
@@ -392,19 +392,19 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="32"/>
         <source>Automatically display most recent directory</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Автоматически отображать самый последний каталог</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="40"/>
         <source>Remember sort mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Запомнить режим сортировки</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="49"/>
         <source>Remember enqueue mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Запомнить режим постановки в очередь</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="59"/>
@@ -438,10 +438,10 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="78"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>на % 1 день</numerusform>
+            <numerusform>на % 1 дней</numerusform>
+            <numerusform>на % 1 дней</numerusform>
         </translation>
     </message>
     <message>
@@ -464,13 +464,13 @@
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="38"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>В целях отладки иногда полезно сбросить все параметры и состояния приложения по умолчанию. Надеюсь, вам это никогда не понадобится.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="43"/>
         <source>Reset &amp; Quit</source>
         <extracomment>Button Text: Reset all options/application state and quit</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Сброс &amp; Выйти</translation>
     </message>
 </context>
 <context>
@@ -524,25 +524,25 @@
         <source>Sleep timer integration</source>
         <comment>section header</comment>
         <extracomment>Section Header: Sleep timer options (for starting &quot;slumber&quot; automatically)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Интеграция таймера сна</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="44"/>
         <source>Install the slumber sleep timer application to enable these options</source>
         <extracomment>Label: Shown if &quot;slumber&quot; isn&apos;t installed</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Установите приложение таймера сна, чтобы включить эти параметры</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Перемотка назад, когда она остановилась из-за сна:</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
         <source>no</source>
         <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>нет</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
@@ -560,43 +560,43 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="71"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Двойная продолжительность длинной перемотки</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="78"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Запуск таймер сна автоматически</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="85"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Запустите приложение таймера сна автоматически при запуске Talefish</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="92"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Выведите Talefish снова на передний план после запуска сна</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="103"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Запускать сон только в определенные моменты</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="136"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Запустить сон после</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="155"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Запустить сон перед</translation>
     </message>
 </context>
 <context>
@@ -629,13 +629,13 @@
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="248"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Больше опций</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="294"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Родительский каталог</translation>
     </message>
 </context>
 <context>
@@ -644,7 +644,7 @@
         <location filename="../qml/visual/silica/PlacesModelComponent.qml" line="127"/>
         <source>Remove from favourites</source>
         <extracomment>Menu entry: Remove currently selected (long pressed) Directory from favourites</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Удалить из избранного</translation>
     </message>
 </context>
 <context>
@@ -653,69 +653,69 @@
         <location filename="../qml/visual/silica/PlacesModels.qml" line="27"/>
         <source>Quick Access</source>
         <extracomment>Section Header for list of favourite and last opened directories</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Быстрый доступ</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="32"/>
         <source>Recently opened</source>
         <extracomment>Menu entry: Go to most recently opened location</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Недавно открыт</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="53"/>
         <source>Device</source>
         <extracomment>Section Header for list of common (home/music/…) directories on the device</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Устройство</translation>
         <extra-Context>Common Directories on device</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="59"/>
         <source>Home</source>
         <extracomment>Menu entry: Go to user directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Главная</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="68"/>
         <source>Music</source>
         <extracomment>Menu entry: Go to user music directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Музыка</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="77"/>
         <source>Downloads</source>
         <extracomment>Menu entry: Go to user downloads directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Загрузки</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="86"/>
         <source>Android Storage</source>
         <extracomment>Menu entry: Go to android (alien dalvik) storage directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Хранилище Android</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="95"/>
         <source>Device memory</source>
         <extracomment>Menu entry: Go to the root folder</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Память устройства</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="105"/>
         <source>SD Card</source>
         <extracomment>Menu entry: Go to SD card</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>SD Карта</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesModels.qml" line="108"/>
         <source>External Storage</source>
         <extracomment>Menu entry: Go to external storage</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Внешнее хранилище</translation>
         <extra-Context>Opens File chooser</extra-Context>
     </message>
 </context>
@@ -783,10 +783,10 @@
         <location filename="../qml/pages/PlaylistPage.qml" line="32"/>
         <source>%L1 file(s) opened</source>
         <extracomment>Playlist Page Header: Number of opened files</extracomment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>% L1 файл открыт</numerusform>
+            <numerusform>% L1 файлов открыто</numerusform>
+            <numerusform>% L1 файлов открыто</numerusform>
         </translation>
     </message>
     <message>
@@ -802,7 +802,7 @@
     <message>
         <location filename="../qml/visual/silica/PlaylistView.qml" line="37"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Поиск</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlaylistView.qml" line="173"/>
