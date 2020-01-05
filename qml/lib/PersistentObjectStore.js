@@ -41,12 +41,11 @@ function save(obj, keys) {
     var db = getDatabase();
     db.transaction(
                 function (tx) {
-                    // Clean all fields of this settings object first, so the DB is always clean from unused fields
-                    tx.executeSql('DELETE FROM settings WHERE settingsName=?;', [obj.objectName]);
-
                     // Save all fields
                     var skippedAttributes = ['objectName', 'doPersist', 'storeSettings', '_loaded', 'reset'];
                     if(!keys) {
+                        // Clean all fields of this settings object first, so the DB is always clean from unused fields
+                        tx.executeSql('DELETE FROM settings WHERE settingsName=?;', [obj.objectName]);
                         keys = Object.keys(obj);
                     }
                     keys.forEach(function(fieldName) {
