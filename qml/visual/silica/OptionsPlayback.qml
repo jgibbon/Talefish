@@ -79,6 +79,21 @@ OptionArea {
         }
     }
 
+    TextSwitch {
+        id:playNextFileEnabledSwitch
+        //: TextSwitch label: Enable playing next track in playlist when the current one is finished
+        text: qsTr('Play next Track automatically')
+        property bool playNextFile: app.options.playNextFile
+        onPlayNextFileChanged: {
+            checked = playNextFile
+        }
+
+        checked: playNextFile
+        onClicked: {
+            app.options.playNextFile = checked
+        }
+    }
+
 
 
 }

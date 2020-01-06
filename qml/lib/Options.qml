@@ -33,6 +33,7 @@ PersistentObject {
     property string externalCommandSkipDuration: '0' // '0': skip to track beginning, 'small'/'normal': use set durations
 
     property real playbackRate:1
+    property bool playNextFile: true //automatically play next file
 
     //open files
     property var placesFavourites: []

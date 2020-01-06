@@ -510,6 +510,12 @@
         <extracomment>ComboBox label: Set the duration for &quot;long skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
         <translation>长快进</translation>
     </message>
+    <message>
+        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="85"/>
+        <source>Play next Track automatically</source>
+        <extracomment>TextSwitch label: Enable playing next track in playlist when the current one is finished</extracomment>
+        <translation>自动播放下一则</translation>
+    </message>
 </context>
 <context>
     <name>OptionsSleepTimer</name>

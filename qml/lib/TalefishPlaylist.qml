@@ -25,6 +25,8 @@ import TaglibPlugin 1.0
 Playlist {
     id: playlist
     property TalefishAudio audio
+    // Playlist.CurrentItemOnce seems to reset index, so we don't use that for !app.options.playNextFile.
+    // see TalefishAudio onStatusChanged
     playbackMode: audio.error ? Playlist.CurrentItemOnce : Playlist.Sequential
     property int totalDuration: 0
     property int totalPosition: 0

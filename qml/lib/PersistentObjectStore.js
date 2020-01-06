@@ -43,13 +43,18 @@ function save(obj, keys) {
                 function (tx) {
                     // Save all fields
                     var skippedAttributes = ['objectName', 'doPersist', 'storeSettings', '_loaded', 'reset'];
-                    if(!keys) {
+                    var haskeys = !!keys;
+                    if(!haskeys) {
                         // Clean all fields of this settings object first, so the DB is always clean from unused fields
                         tx.executeSql('DELETE FROM settings WHERE settingsName=?;', [obj.objectName]);
                         keys = Object.keys(obj);
                     }
                     keys.forEach(function(fieldName) {
                         var value = JSON.stringify(obj[fieldName]);
+                        if(haskeys) {
+                            tx.executeSql('DELETE FROM settings WHERE settingsName=? AND keyName=?;', [obj.objectName, fieldName]);
+                        }
+
                         //values starting with 'on' should be blatantly ignored.
                         if (typeof value === 'undefined' || skippedAttributes.indexOf(fieldName) > -1 || fieldName.lastIndexOf('on', 0) === 0) {
                             //                    console.log("NOT Saved: " + obj.objectName + "." + fieldName + " => " + value + "("+typeof obj[fieldName]+")");
@@ -57,7 +62,7 @@ function save(obj, keys) {
                         }
 
                         tx.executeSql('INSERT INTO settings (settingsName, keyName, value) VALUES (?, ?, ?);', [obj.objectName, fieldName, value]);
-                        //                console.log("Saved: " + obj.objectName + "." + fieldName + " => " + value + "("+typeof obj[fieldName]+")");
+//                                        console.log("Saved: " + obj.objectName + "." + fieldName + " => " + value + "("+typeof obj[fieldName]+")");
                     })
                 }
                 );
