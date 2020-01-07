@@ -41,6 +41,18 @@ void Launcher::launchAndForget(const QString &program, const QStringList &argume
     forgettable->startDetached(program, arguments);
 }
 
+void Launcher::migrateTalefishDatabase()
+{
+    QString oldPath = QDir::homePath()+"/.local/share/Talefish";
+    if(folderExists(oldPath)) {
+        qDebug() << "Old database exists. Trying to migrate to harbour-compatible path.";
+
+        qDebug() << QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+//        QDir folder(path);
+//        return folder.mkpath(path);
+    }
+}
+
 QString Launcher::fileAbsolutePath(const QString &path)
 {
     QFileInfo fileinfo(path);

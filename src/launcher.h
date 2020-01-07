@@ -28,6 +28,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <QFileInfo>
 #include <QStorageInfo>
 #include <QVariant>
+#include <QStandardPaths> // for migrateTalefishDatabase
 
 class Launcher : public QObject
 {
@@ -41,6 +42,7 @@ public:
     Q_INVOKABLE bool fileExists(const QString &path);
     Q_INVOKABLE bool folderExists(const QString &path);
     Q_INVOKABLE void launchAndForget(const QString &program, const QStringList &arguments);
+    Q_INVOKABLE void migrateTalefishDatabase();
     Q_INVOKABLE QString getRoot();
     Q_INVOKABLE QList<QVariant> getExternalVolumes();
 
