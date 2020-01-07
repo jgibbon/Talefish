@@ -31,6 +31,7 @@ Audio {
     onStatusChanged: {
         if(status == Audio.EndOfMedia && !app.options.playNextFile) {
             pause();
+            playlist.next()
         }
     }
 

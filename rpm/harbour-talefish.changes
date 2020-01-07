@@ -5,6 +5,9 @@
 # Add newest entries to the top of the list.
 # Separate entries from eachother with a blank line.
 
+* Tue Jan 07 2020 velox 0.2-9
+ - enhancement: more useful handling of disabled "play next" (advance track instead of rewind)
+
 * Mon Jan 06 2020 velox 0.2-8
  - bugfix: squash yet another settings/progress bug
  - user request: re-introduce "play next" option
