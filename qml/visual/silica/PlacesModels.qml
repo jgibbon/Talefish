@@ -107,7 +107,7 @@ QtObject {
         //~ Context Opens File chooser
         var extStorageString = qsTr('External Storage');
         for(var i = 0; i < mounts.length; i++) {
-            var isSDCard = mounts[i][0].indexOf('mmcblk1p1') > -1;
+            var isSDCard = mounts[i][0].indexOf('mmcblk') > -1;
             arr.push({
                          name: isSDCard
                                ? sdCardString

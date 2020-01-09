@@ -80,7 +80,7 @@ QList<QVariant> Launcher::getExternalVolumes()
     QList<QVariant> mounts;
 
     foreach (const QStorageInfo &storage, QStorageInfo::mountedVolumes()) {
-            if (storage.isValid() && storage.isReady() && storage.rootPath().indexOf("/run/media") == 0) {
+            if (storage.isValid() && storage.isReady() && (storage.rootPath().indexOf("/run/media") == 0 || storage.rootPath().indexOf("/media") == 0)) {
                 QStringList mountList(storage.device());
                 mountList.append(storage.rootPath());
                 mounts.append(QVariant(mountList));
