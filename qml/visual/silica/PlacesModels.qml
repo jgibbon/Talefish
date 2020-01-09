@@ -99,14 +99,14 @@ QtObject {
                        hidePath: true,
                        isFavourite:false
                    }];
-        var mounts = app.launcher.getExternalVolumes()
+        var mounts = app.launcher.getExternalVolumes();
         //: Menu entry: Go to SD card
         //~ Context Opens File chooser
         var sdCardString = qsTr('SD Card');
         //: Menu entry: Go to external storage
         //~ Context Opens File chooser
         var extStorageString = qsTr('External Storage');
-        for(var i = 0; i < mounts; i++) {
+        for(var i = 0; i < mounts.length; i++) {
             var isSDCard = mounts[i][0].indexOf('mmcblk1p1') > -1;
             arr.push({
                          name: isSDCard
