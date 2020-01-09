@@ -46,10 +46,26 @@ int main(int argc, char *argv[])
 
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
 
-    //workaround to access pre-harbour-rename settings
-    QCoreApplication::setOrganizationName("Talefish");
-    QCoreApplication::setOrganizationDomain("Talefish");
-    QCoreApplication::setApplicationName("Talefish");
+    // migrate db from old versions:
+    QString oldPath = QDir::homePath()+"/.local/share/Talefish";
+    QDir oldPathFolder(oldPath);
+    if(oldPathFolder.exists()) {
+        qDebug() << "NOTICE: Old configuration directory exists. Trying to migrate to harbour-compatible path now.";
+        QString newPath = QDir::homePath()+"/.local/share/harbour-talefish";
+        oldPathFolder.mkpath(newPath);
+        if(oldPathFolder.rename(oldPath+"/Talefish", QStandardPaths::writableLocation(QStandardPaths::AppDataLocation))) {
+            qDebug() << "Successfully moved old configuration.";
+            if(oldPathFolder.removeRecursively()) {
+                qDebug() << "Obsolete config directory was removed successfully.";
+            } else {
+                qDebug() << "Obsolete config directory COULD NOT BE removed. Please delete"<< oldPath << "manually to speed up future application starts.";
+            }
+        } else {
+            qDebug() << "Old configuration path could not be moved and has been left untouched! Possibly there's already a directory at" << QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) ;
+            qDebug() << "Please migrate old files in" << oldPath+"/Talefish" << "manually to the path above or delete them if they are not needed anymore.";
+            qDebug() << "Also, please delete" << oldPath << "manually to speed up future application starts. Sorry for this.";
+        }
+    }
 
     // get files/directories to open/enqueue mode from arguments
     QStringList allowedFileExtensions;
