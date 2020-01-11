@@ -1,12 +1,6 @@
-# Rename this file as Talefish.changes to include changelog
-# entries in your RPM file.
-#
-# Add new changelog entries following the format below.
-# Add newest entries to the top of the list.
-# Separate entries from eachother with a blank line.
-
-#* XX Jan XX 2020 velox 0.4-1
-# - enhancement: show mounted SD card on places page
+* Sat Jan 11 2020 velox 0.4-1
+ - enhancement: show mounted SD card on places page
+ - translation update: added partial fr translation (thanks!)
 
 * Wed Jan 08 2020 velox 0.3-1
  - first jolla store release
