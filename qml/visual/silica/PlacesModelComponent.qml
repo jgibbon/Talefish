@@ -50,7 +50,7 @@ Column {
                     property bool pathExists: modelData.path !== '' && app.launcher.folderExists(modelData.path)
                     property string textColor: highlighted && (pathExists || removeFavouriteMenu.active) ? Theme.highlightColor : Theme.primaryColor
                     property string secondaryTextColor: highlighted && pathExists ? Theme.secondaryHighlightColor : Theme.secondaryColor
-                    enabled: pathExists || modelData.isFavourite
+                    enabled: pathExists || !!modelData.isFavourite
                     highlighted: down || removeFavouriteMenu.active
                     opacity: pathExists || removeFavouriteMenu.active ? 1 : 0.5
                     onPressAndHold: {

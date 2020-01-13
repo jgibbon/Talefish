@@ -1,3 +1,6 @@
+#* XX Jan XX 2020 velox 0.XX
+# - bugfix: work around multiple Silica ComboBox bugs (see https://together.jolla.com/question/49831/)
+
 * Sat Jan 11 2020 velox 0.4-1
  - enhancement: show mounted SD card on places page
  - translation update: added partial fr translation (thanks!)

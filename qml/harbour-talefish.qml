@@ -34,6 +34,7 @@ ApplicationWindow
     initialPage: Component { PlayerPage { audio: app.audio; playlist: app.playlist } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
+    _defaultPageOrientations: defaultAllowedOrientations // workaround for a Silica ComboBox bug in Landscape, see https://together.jolla.com/question/49831/
     property bool active: Qt.application.state === Qt.ApplicationActive
     property var js: Jslib.lib()
 

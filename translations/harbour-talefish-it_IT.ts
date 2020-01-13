@@ -387,53 +387,53 @@
         <translation>Apri file</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="32"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="62"/>
         <source>Automatically display most recent directory</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Mostra automaticamente cartella più recente</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="40"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="70"/>
         <source>Remember sort mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Ricorda ordinamento</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="49"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="79"/>
         <source>Remember enqueue mode</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Ricorda in coda</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="59"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="49"/>
         <source>Save progress periodically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Salva progresso periodicamente</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="61"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="51"/>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
         <extracomment>Option Entry (TextSwitch) description for &quot;Save progress periodically&quot;</extracomment>
         <translation>Se disattivato, lo stato di riproduzione verrá salvato solo all&apos;uscita dell&apos;app, se attivato, sará salvato periodicamente.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="72"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="33"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
         <translation>Salva progresso cartella</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="82"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="43"/>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
         <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
         <translation>Per evitare l&apos;accumulo di dati nella cache o di cartelle eliminate, Talefish controllerá i vecchi dati all&apos;avvio. Non ha effetto sulla cartella corrente.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="74"/>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="75"/>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="76"/>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="77"/>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="78"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="35"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="36"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="37"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="38"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="39"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
         <translation>
@@ -442,7 +442,7 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsFiles.qml" line="79"/>
+        <location filename="../qml/visual/silica/OptionsFiles.qml" line="40"/>
         <source>forever</source>
         <comment>keep progress forever</comment>
         <translation>per sempre</translation>
