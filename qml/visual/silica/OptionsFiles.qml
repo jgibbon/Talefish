@@ -44,15 +44,15 @@ OptionArea {
     }
 
     TextSwitch {
-        id:saveProgressPeriodicallySwitch
+        id:autoSaveProgressPeriodicallySwitch
         //: Option Entry (TextSwitch)
         text: qsTr('Save progress periodically')
         //: Option Entry (TextSwitch) description for "Save progress periodically"
         description: qsTr('If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.')
 
-        checked: app.options.saveProgressPeriodically
+        checked: app.options.autoSaveProgressPeriodically
         onClicked: {
-            app.options.saveProgressPeriodically = checked
+            app.options.autoSaveProgressPeriodically = checked
         }
     }
 

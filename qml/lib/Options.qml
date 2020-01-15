@@ -61,7 +61,7 @@ PersistentObject {
     property string headphoneCallButtonDoes: 'playPause' //'', 'prev', 'next', 'playpause', 'stop'
     property string headphoneCallButtonLongpressDoes: 'next' //'', 'prev', 'next', 'playpause', 'stop'
     property string secondaryCoverAction: 'prev' //'', 'prev', 'next'
-    property bool saveProgressPeriodically: false
+    property bool autoSaveProgressPeriodically: true
 //    property bool doLog: false
     property int keepUnopenedDirectoryProgressDays: 30
 
