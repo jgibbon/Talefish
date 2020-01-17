@@ -1,6 +1,7 @@
 #* XX Jan XX 2020 velox 0.5-1
 # - bugfix: work around multiple Silica ComboBox bugs (all devices SFOS <3.2.1; Gemini PDA) (see https://together.jolla.com/question/49831/)
 # - enhancement: set "save progress periodically" enabled as default; force default for all existing installations once.
+# - enhancement: make set skip mode visible on cover action buttons (small, big, track beginning) for users switching those sometimes
 
 * Sat Jan 11 2020 velox 0.4-1
  - enhancement: show mounted SD card on places page

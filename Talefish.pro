@@ -91,6 +91,14 @@ DISTFILES += \
     qml/assets/icon-l-ffwd.svg \
     qml/assets/icon-l-fwd.svg \
     qml/assets/wheel_1.png \
+    qml/assets/icon-cover-dark-frwd.png \
+    qml/assets/icon-cover-dark-rwd.png \
+    qml/assets/icon-cover-dark-fwd.png \
+    qml/assets/icon-cover-dark-ffwd.png \
+    qml/assets/icon-cover-light-frwd.png \
+    qml/assets/icon-cover-light-rwd.png \
+    qml/assets/icon-cover-light-fwd.png \
+    qml/assets/icon-cover-light-ffwd.png \
     rpm/harbour-talefish.changes \
     rpm/harbour-talefish.spec \
     rpm/harbour-talefish.yaml

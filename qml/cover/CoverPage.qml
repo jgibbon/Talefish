@@ -171,25 +171,23 @@ CoverBackground {
         }
     }
 
-
-
-
-
-
+    property string externalCommandSkipDuration: app.options.externalCommandSkipDuration
+    property string skipImageBase: '../assets/icon-cover-'+(Theme.colorScheme ? 'dark-' : 'light-')
+    property string skipImageDuration: externalCommandSkipDuration === 'normal' ? 'f' : ''
+    property string skipImagePrev: externalCommandSkipDuration === '0' ? 'image://theme/icon-cover-previous-song' : Qt.resolvedUrl(skipImageBase + skipImageDuration + 'rwd.svg')
+    property string skipImageNext: externalCommandSkipDuration === '0' ? 'image://theme/icon-cover-next-song' : Qt.resolvedUrl(skipImageBase + skipImageDuration + 'fwd.svg')
 
     CoverActionList {
         id: coverActionPrev
         enabled: playlist.metadata.count > 0 && options.secondaryCoverAction === 'prev'
 
         CoverAction {
-            iconSource: "image://theme/icon-cover-previous-song"
-
+            iconSource: mainCoverBackground.skipImagePrev
             onTriggered: playerCommands.prev()
         }
 
         CoverAction {
             iconSource: audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
-
             onTriggered: playerCommands.playPause()
         }
     }
@@ -200,12 +198,11 @@ CoverBackground {
 
         CoverAction {
             iconSource: audio.isPlaying ? "image://theme/icon-cover-pause" : "image://theme/icon-cover-play"
-
             onTriggered: playerCommands.playPause()
         }
 
         CoverAction {
-            iconSource: "image://theme/icon-cover-next-song"
+            iconSource: mainCoverBackground.skipImageNext
 
             onTriggered: playerCommands.next()
         }
@@ -216,8 +213,7 @@ CoverBackground {
         enabled: playlist.metadata.count > 0 && options.secondaryCoverAction === 'both'
 
         CoverAction {
-            iconSource: "image://theme/icon-cover-previous-song"
-
+            iconSource: mainCoverBackground.skipImagePrev
             onTriggered: playerCommands.prev()
         }
 
@@ -228,7 +224,7 @@ CoverBackground {
         }
 
         CoverAction {
-            iconSource: "image://theme/icon-cover-next-song"
+            iconSource: mainCoverBackground.skipImageNext
 
             onTriggered: playerCommands.next()
         }
