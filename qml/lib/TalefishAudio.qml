@@ -28,6 +28,7 @@ Audio {
     onPlaybackRateChanged: if(isPlaying) seek(position - 0.01);
     property bool isPlaying: playbackState === Audio.PlayingState
     property int displayPosition: Math.max(position, playlist.applyThisTrackPosition)
+    property bool errorVisible: audio.error > 0 && (audio.status === Audio.NoMedia || audio.status === Audio.InvalidMedia || audio.status === Audio.UnknownStatus)
     onStatusChanged: {
         if(status == Audio.EndOfMedia && !app.options.playNextFile) {
             pause();

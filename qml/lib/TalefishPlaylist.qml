@@ -67,7 +67,7 @@ Playlist {
         if(md.title === '') {return app.js.fileName(md.path, true);}
         return md.title;
     }
-    property string currentTitle: title(currentIndex) + (audio.errorString !== '' ? '<br>['+audio.errorString+']' : '')
+    property string currentTitle: title(currentIndex) + (audio.errorVisible ? '\n['+audio.errorString+']' : '')
 
     // album (or directory base name)
     function album(index) {

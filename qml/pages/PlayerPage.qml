@@ -457,7 +457,7 @@ Page {
 
                     PlayerPageProgressArea {
                         id: progressArea
-                        opacity: audio.error > 0 ? 0.0 : 1.0
+                        opacity: audio.errorVisible ? 0.0 : 1.0
                     }
             }
 
