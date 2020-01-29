@@ -181,6 +181,7 @@ Playlist {
     function applySavedPosition() {
         var position = app.state.playlistProgress[pathsIdentifier] || {position:0,index:0};
         app.playerCommands.seek(position.position, position.index);
+        totalPosition = currentMetaData.previousDurations + position.position
     }
 
     function saveCurrentPosition(){
