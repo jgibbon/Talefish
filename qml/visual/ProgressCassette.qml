@@ -31,28 +31,37 @@ Item {
     property real maximumValue: 2000
     property real minimumValue: 0
     property real value: 2000
+    property bool reverseDirectionAfterHalf: true
 
     property string tapeColor: '#000'
     property string reelAnchorColor: '#f00b44'
     property alias tapeBackgroundColor: tape.color
 
-
     property real rotationOffset: 0
-
-
-
 
     property alias tapeWidth: tape.width
     clip: true
 
+    // this does not care about minimumValue (performance; unused)
+    property bool isSecondHalf: reverseDirectionAfterHalf && (value / maximumValue) >= 0.5
+    property int animationTargetDegrees: isSecondHalf ? 360 : -360;
+    property bool animationPaused: false
 
+    onIsSecondHalfChanged: {
+        animationPaused = true;
+        directionChangeTimer.start();
+    }
 
+    Timer {
+        id: directionChangeTimer
+        interval: 3
+        onTriggered: animationPaused = false
+    }
 
     Rectangle {
         id: tape
         property real valuefactor: maximumValue > minimumValue ? (Math.min(progressComponent.value, maximumValue) - minimumValue) / (maximumValue - minimumValue) : 0 //valuepercent / 100
         anchors.centerIn: parent
-
 
         property int maxReelBorder: parent.width / 4
         property int reelWidthBase: parent.width / 2
@@ -78,7 +87,6 @@ Item {
         anchors.centerIn: parent
         height: width
 
-
         Rectangle {
             id: anchorRectangle
             width: parent.width
@@ -100,8 +108,8 @@ Item {
             RotationAnimation on rotation {
                 loops: Animation.Infinite
                 from: cassetteWheelImage.rotation
-                to: cassetteWheelImage.rotation-360
-                running: progressComponent.running
+                to: cassetteWheelImage.rotation + progressComponent.animationTargetDegrees
+                running: progressComponent.running && !progressComponent.animationPaused
                 duration:12000
             }
         }
