@@ -29,8 +29,8 @@ OptionArea {
 
     Slider {
         width: parent.width
-        minimumValue: 0.8
-        maximumValue: 1.2
+        minimumValue: 0.5
+        maximumValue: 2.0
         value: app.options.playbackRate
         stepSize: 0.01
         property bool isLongPressed: false
