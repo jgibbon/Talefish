@@ -203,11 +203,22 @@ void QQuickFolderListModelPrivate::_q_sortFinished(const QList<FileProperty> &li
 
 QString QQuickFolderListModelPrivate::resolvePath(const QUrl &path)
 {
+
     QString localPath = QQmlFile::urlToLocalFileOrQrc(path);
+
+    if (path.hasFragment()) {
+        localPath = localPath + '#' + path.fragment();
+    }
+
     QUrl localUrl = QUrl(localPath);
     QString fullPath = localUrl.path();
+
     if (localUrl.scheme().length())
       fullPath = localUrl.scheme() + ":" + fullPath;
+
+    if (localUrl.hasFragment())
+        fullPath = fullPath + '#' + localUrl.fragment();
+
     return QDir::cleanPath(fullPath);
 }
 
@@ -396,7 +407,6 @@ QUrl QQuickFolderListModel::folder() const
 void QQuickFolderListModel::setFolder(const QUrl &folder)
 {
     Q_D(QQuickFolderListModel);
-
     if (folder == d->currentDir)
         return;
 
