@@ -126,13 +126,13 @@
 <context>
     <name>OpenPage</name>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="69"/>
+        <location filename="../qml/pages/OpenPage.qml" line="80"/>
         <source>Places</source>
         <comment>PageHeader Text for storage folders (open file)</comment>
         <translation>Orte</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="103"/>
+        <location filename="../qml/pages/OpenPage.qml" line="114"/>
         <source>Open %L1 files</source>
         <comment>open x files</comment>
         <extracomment>Dialog Header (Open as Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -142,7 +142,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/OpenPage.qml" line="106"/>
+        <location filename="../qml/pages/OpenPage.qml" line="117"/>
         <source>Enqueue %L1 files</source>
         <comment>enqueue x files</comment>
         <extracomment>Dialog Header (Append to Playlist): Shown when files are selected, %L1 is the number of files</extracomment>
@@ -152,25 +152,25 @@
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="110"/>
+        <location filename="../qml/pages/OpenPage.qml" line="121"/>
         <source>Open all files</source>
         <extracomment>Dialog Header (Open as Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation>Alle Dateien öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="113"/>
+        <location filename="../qml/pages/OpenPage.qml" line="124"/>
         <source>Enqueue all files</source>
         <extracomment>Dialog Header (Append to Playlist): Shown when no (or all) files are selected – whole directory will be opened</extracomment>
         <translation>Alle Dateien einreihen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="116"/>
+        <location filename="../qml/pages/OpenPage.qml" line="127"/>
         <source>Select directory</source>
         <extracomment>Dialog Header (Open or Append): Shown when no files are available in current Directory</extracomment>
         <translation>Wähle Verzeichnis</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OpenPage.qml" line="121"/>
+        <location filename="../qml/pages/OpenPage.qml" line="132"/>
         <source>or select files below</source>
         <extracomment>Dialog Sub-Header: Shown when no files are but can be selected (Open all Files… or select files to open)</extracomment>
         <translation>oder wähle Dateien aus</translation>
@@ -605,40 +605,40 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="216"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation>Nach Dateinamen sortieren</translation>
-    </message>
-    <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="195"/>
-        <source>Enqueue</source>
-        <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
-        <translation>Einreihen</translation>
-    </message>
-    <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="185"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
         <source>Open</source>
         <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation>Öffnen</translation>
+        <translation type="unfinished">Öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="227"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
+        <source>Enqueue</source>
+        <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="251"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
-        <translation>Nach Änderungsdatum sortieren</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="248"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="280"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation>Weitere Optionen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="294"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="326"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation>Übergeordnetes Verzeichnis</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

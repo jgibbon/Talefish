@@ -301,7 +301,6 @@ void FileInfoThread::getFileInfos(const QString &path)
     }
     if (!fileInfoList.isEmpty()) {
         foreach (QFileInfo info, fileInfoList) {
-            //qDebug() << "Adding file : " << info.fileName() << "to list ";
             filePropertyList << FileProperty(info);
         }
         if (folderUpdate) {
@@ -310,7 +309,6 @@ void FileInfoThread::getFileInfos(const QString &path)
             findChangeRange(filePropertyList, fromIndex, toIndex);
             folderUpdate = false;
             currentFileList = filePropertyList;
-            //qDebug() << "emit directoryUpdated : " << fromIndex << " " << toIndex;
             emit directoryUpdated(path, filePropertyList, fromIndex, toIndex);
         } else {
             currentFileList = filePropertyList;
@@ -318,6 +316,7 @@ void FileInfoThread::getFileInfos(const QString &path)
                 emit sortFinished(filePropertyList);
                 sortUpdate = false;
             } else
+                qDebug() << "emit directoryChanged : " << path << " " ;
                 emit directoryChanged(path, filePropertyList);
         }
     } else {

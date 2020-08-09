@@ -29,11 +29,22 @@ Dialog {
     acceptDestinationAction: PageStackAction.Replace
     canAccept: forwardNavigation && (directoryList.selectedPaths.length > 0 || directoryList.useablePaths.length > 0)
     forwardNavigation: panel.expanded && !panel.moving
+    onAcceptBlocked: {
+        console.log(forwardNavigation && (directoryList.selectedPaths.length > 0 || directoryList.useablePaths.length > 0))
+        console.log('expanded', panel.expanded)
+        console.log('!panel.moving', !panel.moving)
+
+        console.log('forwardNav',forwardNavigation)
+
+        console.log('directoryList.selectedPaths.length', directoryList.selectedPaths.length)
+        console.log('or directoryList.useablePaths.length', directoryList.useablePaths.length)
+    }
+
     onAccepted: {
         var isWholeFolder = directoryList.selectedPaths.length === 0 || directoryList.selectedPaths.length === directoryList.useablePaths.length;
         var paths = isWholeFolder ? directoryList.useablePaths : directoryList.selectedPaths
         var enqueue = directoryList.enqueue
-        app.playlist.fromJSON(paths, enqueue, isWholeFolder ? (String(directoryList.sortMode) + directoryList.folderPath) : null);
+        app.playlist.fromJSON(paths, enqueue, isWholeFolder ? (String(directoryList.sortMode) + (directoryList.sortReversed?'rev':'') + directoryList.folderPath) : null);
         app.state.lastDirectory = directoryList.folderPath
     }
 

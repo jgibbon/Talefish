@@ -1,6 +1,9 @@
-# XX Feb XX 2020 velox 0.5-3
-# - bugfix: check skip button greyed-out state on load
-# - user request: "secret" visual easter egg no one will notice
+* Mon Aug 10 2020 velox 0.5-3
+ - bugfix: check skip button greyed-out state on load
+ - bugfix: allow opening files/folders containing # (pound) signs
+ - user request: "secret" visual easter egg no one will notice
+ - user request: Increased range for playbackRate (thanks thigg)
+ - user request: enable "descending" sorting in file chooser
 
 * Thu Jan 23 2020 velox 0.5-2
  - bugfix: change error output format (for example for deleted files)

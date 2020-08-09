@@ -42,6 +42,7 @@ PersistentObject {
     property bool placesEnqueue: false // value
     property bool placesRememberSort: false // remember it?
     property int placesSort: 1 // value
+    property bool placesSortReversed: false // value
 
     //playback page options
 

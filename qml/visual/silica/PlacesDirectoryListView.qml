@@ -25,10 +25,13 @@ import harbour.talefish.folderlistmodel 1.0
 SilicaListView {
     id: listView
     property bool enqueue: app.options.placesRememberEnqueue && app.options.placesEnqueue
-    property alias folder: folderModel.folder // url, set here
+    // folder can't be alias; model sometimes 'forgets' change signal.
+    // especially when sorting by modified time.
+    property alias folder: folderModel.folder //'file://'+StandardPaths.home// url, set here;
     property alias folderPath: folderModel.path // path, automatically filled
     onFolderChanged: selectedPaths = [];
     property int sortMode: app.options.placesRememberSort ? app.options.placesSort : FolderListModel.Name
+    property bool sortReversed: app.options.placesRememberSort ? app.options.placesSortReversed : false
     property var selectedPaths:[]
     property var useablePaths:[] // gets used if available and selectedPaths.length === 0
     model: folderModel
@@ -100,7 +103,7 @@ SilicaListView {
 
                 }
                 PlacesDirectoryProgressBar {
-                    path: String(listView.sortMode)+listView.folderPath
+                    path: String(listView.sortMode)+(listView.sortReversed?'rev':'')+listView.folderPath
                     highlighted: true
                     anchors {
                         left: folderNameLabel.left
@@ -161,6 +164,19 @@ SilicaListView {
                             bottom: parent.bottom
                             bottomMargin: -Theme.paddingSmall
                         }
+                    } // icon-s-low-importance
+
+                    HighlightImage {
+                        highlighted: parent.highlighted
+                        visible: listView.sortReversed
+                        opacity: 0.7
+                        rotation: 180
+                        source: 'image://theme/icon-s-low-importance'
+                        anchors {
+                            horizontalCenter: parent.horizontalCenter
+                            bottom: parent.bottom
+                            bottomMargin: -Theme.paddingSmall
+                        }
                     }
                     HighlightImage {
                         highlighted: parent.highlighted
@@ -213,8 +229,16 @@ SilicaListView {
                         color: down || highlighted || current ? Theme.highlightColor : Theme.primaryColor
                         property bool current: listView.sortMode === FolderListModel.Name
                         //: MenuItem: Sort directory content by name
-                        text: qsTr("Sort by Name");
+                        text: qsTr("Sort by Name") + (current && listView.sortReversed ? ' ↑' : '');
                         onClicked: {
+                            if(current) {
+                                listView.sortReversed = !listView.sortReversed
+                            } else {
+                                listView.sortReversed = false
+                            }
+
+                            app.options.placesSortReversed = listView.sortReversed
+
                             listView.sortMode = FolderListModel.Name
                             app.options.placesSort = listView.sortMode
                         }
@@ -224,8 +248,16 @@ SilicaListView {
                         color: down || highlighted || current ? Theme.highlightColor : Theme.primaryColor
                         property bool current: listView.sortMode === FolderListModel.Time
                         //: MenuItem: Sort directory content by modification date
-                        text: qsTr("Sort by Last Modified");
+                        text: qsTr("Sort by Last Modified") + (current && listView.sortReversed ? ' ↑' : '');
                         onClicked: {
+                            if(current) {
+                                listView.sortReversed = !listView.sortReversed
+                            } else {
+                                listView.sortReversed = false
+                            }
+
+                            app.options.placesSortReversed = listView.sortReversed
+
                             listView.sortMode = FolderListModel.Time
                             app.options.placesSort = listView.sortMode
                         }
@@ -320,6 +352,9 @@ SilicaListView {
         showOnlyReadable: true
         showDirsFirst: true
         sortField: listView.sortMode
+//        folder: listView.folder
+
+        sortReversed: listView.sortReversed
         nameFilters: {
             var cis=[];
             app.allowedFileExtensions.forEach(function(ext){
@@ -328,19 +363,22 @@ SilicaListView {
             });
             return cis;
         }
-        property string path: String(folder).replace('file://', '')
+        property string path: String(listView.folder).replace('file://', '')
         property string folderName: app.js.fileName(path)
 
         onCountChanged: {
+//            console.log(count)
             var files = []
             var i = 0;
             while(i < count) {
                 if(!folderModel.isFolder(i)){
                     files.push(folderModel.get(i, 'filePath'));
                 }
+//                console.log('file', folderModel.get(i, 'filePath'), 'folder?', folderModel.isFolder(i))
                 i++;
             }
-            useablePaths = files;
+//            console.log(files.length, JSON.stringify(files));
+            listView.useablePaths = files;
         }
     }
 }
