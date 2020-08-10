@@ -26,20 +26,20 @@
         <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Talefish comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See the GNU General Public License for more details:</source>
         <extracomment>Longer License Line. If you&apos;re in the least unsure about translation, leave it in english. Below it will be a Link to the full license text.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Talefish NIE JEST OBJĘTY GWARANCJĄ. Jest to wolne oprogramowanie i możesz je rozpowszechniać i / lub modyfikować zgodnie z warunkami Powszechnej Licencji Publicznej GNU opublikowanej przez Free Software Foundation; albo wersja 2 licencji, albo (według twojego wyboru) dowolna późniejsza wersja. Aby uzyskać więcej informacji, zobacz Powszechną Licencję Publiczną GNU:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="98"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ten program wykorzystuje i zawiera niezmodyfikowane lub zmodyfikowane wersje następujących składników oprogramowania zgodnie z warunkami licencji LGPL 2.1:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="138"/>
         <source>Contribute</source>
         <comment>section header</comment>
         <extracomment>Section Header: How to contribute to this program</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Wnieś wkład</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
@@ -197,7 +197,7 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="43"/>
         <source>Swipe Cover (or above Title) to skip Tracks</source>
         <extracomment>Option Entry (TextSwitch): Enable swiping album cover area (or if there is no cover, the area above track info) on player page</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przesuń okładkę (lub powyżej tytułu), aby pominąć utwory</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="60"/>
@@ -221,7 +221,7 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="66"/>
         <source>Skip backward and forward</source>
         <extracomment>ComboBox option: Skip to next and previous track as secondary/tertiary App-Cover action</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przejdź do tyłu i do przodu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="94"/>
@@ -233,19 +233,19 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="72"/>
         <source>Display album cover images in directory list and playlist view</source>
         <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetlaj okładki albumów w liście katalogów i widoku listy odtwarzania</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="74"/>
         <source>Extracting a lot of Images at once can be really slow.</source>
         <extracomment>Option Entry description</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Wyodrębnianie wielu obrazów jednocześnie może być naprawdę powolne.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="56"/>
         <source>App-Cover Actions are external Commands, as well.</source>
         <extracomment>ComboBox description: Skip commands follow duration set with &quot;external command duration&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Akcje okładek to także polecenia zewnętrzne.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="54"/>
@@ -310,7 +310,7 @@
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="43"/>
         <source>External Commands are those executed from the lock screen or via headsets/bluetooth.</source>
         <extracomment>ComboBox description</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Polecenia zewnętrzne to polecenia wykonywane z ekranu blokady lub zestawu słuchawkowego / bluetooth.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="36"/>
@@ -340,7 +340,7 @@
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="84"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <extracomment>Label</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Możesz wybrać akcję, którą chcesz wykonać, naciskając przycisk „Zadzwoń / Rozłącz”, który często jest jedynym przyciskiem zestawu słuchawkowego:</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsCommands.qml" line="89"/>
@@ -416,19 +416,19 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="51"/>
         <source>If disabled, the current playback state will only be saved when the app cleanly exits. Otherwise, It will save the progress every few seconds.</source>
         <extracomment>Option Entry (TextSwitch) description for &quot;Save progress periodically&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Jeśli wyłączone, bieżący stan odtwarzania zostanie zapisany tylko wtedy, gdy aplikacja zostanie poprawnie zamknięta. W przeciwnym razie postęp będzie zapisywany co kilka sekund.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="33"/>
         <source>Keep directory progress</source>
         <extracomment>ComboBox label: Beginning of sentence &quot;Keep directory progress for X days&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zachowaj postęp katalogu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="43"/>
         <source>To prevent cached data for old or even deleted directories to accumulate over time, Talefish will check for old entries at application start. This will not affect the currently loaded directory.</source>
         <extracomment>ComboBox description for &quot;Keep directory progress&quot;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Aby zapobiec gromadzeniu danych w pamięci podręcznej dla starych lub nawet usuniętych katalogów w miarę upływu czasu, Talefish sprawdzi stare wpisy przy starcie aplikacji. Nie wpłynie to na aktualnie załadowany katalog.</translation>
     </message>
     <message numerus="yes">
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="35"/>
@@ -464,7 +464,7 @@
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="38"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Do celów debugowania czasem przydatne jest zresetowanie wszystkich opcji i stanów aplikacji do wartości domyślnych. Mam nadzieję, że nigdy nie będziesz tego potrzebować.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="43"/>
@@ -530,19 +530,19 @@
         <source>Sleep timer integration</source>
         <comment>section header</comment>
         <extracomment>Section Header: Sleep timer options (for starting &quot;slumber&quot; automatically)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Integracja wyłącznika czasowego</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="44"/>
         <source>Install the slumber sleep timer application to enable these options</source>
         <extracomment>Label: Shown if &quot;slumber&quot; isn&apos;t installed</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zainstaluj aplikację slumber, wyłącznik czasowy uśpienia, aby włączyć te opcje</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przewijanie do tyłu po wstrzymaniu przez slumber:</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
@@ -572,25 +572,25 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="78"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Uruchom automatycznie wyłącznik czasowy</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="85"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Uruchom aplikację slumber czasowego wyłączenia automatycznie podczas uruchamiania Talefish.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="92"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Przenieś Talefisha na pierwszy plan po uruchomieniu slumber</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="103"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Uruchom Slumber w określonych momentach</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="136"/>
@@ -608,40 +608,40 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation type="unfinished">Otwórz</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Sortuj według nazwy</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj do kolejki</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Otwórz</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="251"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Sortuj według daty modyfikacji</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="280"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Więcej opcji</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="326"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Katalog nadrzędny</translation>
     </message>
 </context>
 <context>

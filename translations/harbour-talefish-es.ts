@@ -93,7 +93,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>See the GNU Lesser General Public License for more details:</source>
         <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
-        <translation>Consulta la LIcencia Pública General Reducida para más detalles:</translation>
+        <translation>Consulta la Licencia Pública General Reducida para más detalles:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
@@ -605,40 +605,40 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation type="unfinished">Abrir</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Ordenar por nombre</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Poner en cola</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="251"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ordenar por fecha de modificación</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="280"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Más opciones</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="326"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Directorio padre</translation>
     </message>
 </context>
 <context>

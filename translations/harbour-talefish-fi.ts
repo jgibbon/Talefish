@@ -605,28 +605,28 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation type="unfinished">Avaa</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Järjestä nimen mukaan</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Lisää jonoon</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Avaa</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="251"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Järjestä viimeisen muokkausajan mukaan</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="280"/>

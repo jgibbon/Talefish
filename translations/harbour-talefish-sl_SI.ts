@@ -611,40 +611,40 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation type="unfinished">Odpri</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Uredi po imenu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
         <source>Enqueue</source>
         <extracomment>MenuItem: Enqueue (add after currently open items) current files</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj na seznam</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation type="unfinished"></translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Odpri</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="251"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Uredi po datumu zadnje spremembe</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="280"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Več možnosti</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="326"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Nadrejena mapa</translation>
     </message>
 </context>
 <context>
