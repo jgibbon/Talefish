@@ -1,3 +1,6 @@
+* Tue Aug 11 2020 velox 0.5-4
+ - translation update: sync with transifex (some strings got lost in translation)
+
 * Mon Aug 10 2020 velox 0.5-3
  - bugfix: check skip button greyed-out state on load
  - bugfix: allow opening files/folders containing # (pound) signs
