@@ -626,19 +626,19 @@
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="251"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="256"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
         <translation>Сортировать по дате изменения</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="280"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="289"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
         <translation>Больше опций</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="326"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="335"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
         <translation>Родительский каталог</translation>

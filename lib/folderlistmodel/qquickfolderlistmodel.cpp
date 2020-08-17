@@ -45,6 +45,7 @@
 #include "fileproperty_p.h"
 #include <qqmlcontext.h>
 #include <qqmlfile.h>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 
@@ -61,7 +62,8 @@ public:
         nameFilters << QLatin1String("*");
     }
 
-
+    QTimer sortFlagsTimer;
+    QDir::SortFlags sortFlags;
     QQuickFolderListModel *q_ptr;
     QUrl currentDir;
     QUrl rootDir;
@@ -81,7 +83,9 @@ public:
     void init();
     void updateSorting();
 
-    // private slots
+// private slots:
+
+    void _q_updateInfoThreadSorting();
     void _q_directoryChanged(const QString &directory, const QList<FileProperty> &list);
     void _q_directoryUpdated(const QString &directory, const QList<FileProperty> &list, int fromIndex, int toIndex);
     void _q_sortFinished(const QList<FileProperty> &list);
@@ -100,13 +104,19 @@ void QQuickFolderListModelPrivate::init()
                q, SLOT(_q_directoryUpdated(QString, QList<FileProperty>, int, int)));
     q->connect(&fileInfoThread, SIGNAL(sortFinished(QList<FileProperty>)),
                q, SLOT(_q_sortFinished(QList<FileProperty>)));
+    q->connect(&sortFlagsTimer, SIGNAL(timeout()),
+               q, SLOT(_q_updateInfoThreadSorting()));
+
+    sortFlagsTimer.setInterval(100);
+    sortFlagsTimer.setSingleShot(true);
+
+
 }
 
 
 void QQuickFolderListModelPrivate::updateSorting()
 {
     Q_Q(QQuickFolderListModel);
-
     QDir::SortFlags flags = 0;
 
     switch (sortField) {
@@ -131,10 +141,17 @@ void QQuickFolderListModelPrivate::updateSorting()
 
     emit q->layoutAboutToBeChanged();
 
-    if (sortReversed)
+    if (sortReversed) {
         flags |= QDir::Reversed;
-
-    fileInfoThread.setSortFlags(flags);
+    }
+    sortFlags = flags;
+    sortFlagsTimer.stop();
+    sortFlagsTimer.start();
+//    sortFlagsTimer(5000, this, [] () {MySlot(1); });
+}
+void QQuickFolderListModelPrivate::_q_updateInfoThreadSorting() {
+    Q_Q(QQuickFolderListModel);
+    fileInfoThread.setSortFlags(sortFlags);
 }
 
 void QQuickFolderListModelPrivate::_q_directoryChanged(const QString &directory, const QList<FileProperty> &list)

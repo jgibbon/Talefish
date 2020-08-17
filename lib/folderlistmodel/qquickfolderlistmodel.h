@@ -161,6 +161,7 @@ private:
     Q_PRIVATE_SLOT(d_func(), void _q_directoryChanged(const QString &directory, const QList<FileProperty> &list))
     Q_PRIVATE_SLOT(d_func(), void _q_directoryUpdated(const QString &directory, const QList<FileProperty> &list, int fromIndex, int toIndex))
     Q_PRIVATE_SLOT(d_func(), void _q_sortFinished(const QList<FileProperty> &list))
+    Q_PRIVATE_SLOT(d_func(), void _q_updateInfoThreadSorting())
 };
 //![class end]
 

@@ -233,14 +233,16 @@ SilicaListView {
                         onClicked: {
                             if(current) {
                                 listView.sortReversed = !listView.sortReversed
+                                app.options.placesSortReversed = listView.sortReversed
                             } else {
+//                                listView.sortReversed = false
+                                listView.sortMode = FolderListModel.Name
+                                app.options.placesSort = listView.sortMode
+
                                 listView.sortReversed = false
+                                app.options.placesSortReversed = listView.sortReversed
                             }
 
-                            app.options.placesSortReversed = listView.sortReversed
-
-                            listView.sortMode = FolderListModel.Name
-                            app.options.placesSort = listView.sortMode
                         }
                     }
 
@@ -252,14 +254,16 @@ SilicaListView {
                         onClicked: {
                             if(current) {
                                 listView.sortReversed = !listView.sortReversed
+                                app.options.placesSortReversed = listView.sortReversed
                             } else {
+                                listView.sortMode = FolderListModel.Time
+                                app.options.placesSort = listView.sortMode
+
                                 listView.sortReversed = false
+                                app.options.placesSortReversed = listView.sortReversed
                             }
 
-                            app.options.placesSortReversed = listView.sortReversed
 
-                            listView.sortMode = FolderListModel.Time
-                            app.options.placesSort = listView.sortMode
                         }
                     }
 
@@ -345,7 +349,6 @@ SilicaListView {
             sourceComponent: model.fileIsDir ? directoryComponent : fileComponent
         }
     }
-        //PlacesDirectoryListItem {}
 
     FolderListModel {
         id: folderModel
