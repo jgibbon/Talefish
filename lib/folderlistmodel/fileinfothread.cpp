@@ -256,7 +256,7 @@ void FileInfoThread::getFileInfos(const QString &path)
                         return false;
                     }
 
-                    if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                    if(c.compare(lhs.fileName(), rhs.fileName()) < 0) {
                         return true;
                     }
                     return false;
@@ -269,7 +269,7 @@ void FileInfoThread::getFileInfos(const QString &path)
                         return false;
                     }
 
-                    if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                    if(c.compare(lhs.fileName(), rhs.fileName()) < 0) {
                         return false;
                     }
                     return true;
@@ -281,7 +281,7 @@ void FileInfoThread::getFileInfos(const QString &path)
             if(!isReversed) {
 
                 std::sort(fileInfoList.begin(), fileInfoList.end(), [&c](QFileInfo lhs, QFileInfo rhs) {
-                    if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                    if(c.compare(lhs.fileName(), rhs.fileName()) < 0) {
                         return true;
                     }
                     return false;
@@ -290,7 +290,7 @@ void FileInfoThread::getFileInfos(const QString &path)
             } else {
 
                 std::sort(fileInfoList.begin(), fileInfoList.end(), [&c](QFileInfo lhs, QFileInfo rhs) {
-                    if(c.compare(lhs.baseName(), rhs.baseName()) < 0) {
+                    if(c.compare(lhs.fileName(), rhs.fileName()) < 0) {
                         return false;
                     }
                     return true;

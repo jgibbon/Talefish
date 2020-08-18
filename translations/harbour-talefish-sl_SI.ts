@@ -629,19 +629,19 @@
         <translation>Odpri</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="256"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="253"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
         <translation>Uredi po datumu zadnje spremembe</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="289"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="284"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
         <translation>Več možnosti</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="335"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="330"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
         <translation>Nadrejena mapa</translation>

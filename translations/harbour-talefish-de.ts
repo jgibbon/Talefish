@@ -623,19 +623,19 @@
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="256"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="253"/>
         <source>Sort by Last Modified</source>
         <extracomment>MenuItem: Sort directory content by modification date</extracomment>
         <translation>Nach Änderungsdatum sortieren</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="289"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="284"/>
         <source>More Options</source>
         <extracomment>MenuItem: display options page for file handling and saved directory progress</extracomment>
         <translation>Weitere Optionen</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="335"/>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="330"/>
         <source>Parent Directory</source>
         <extracomment>Menu entry: Go up one Folder/Directory</extracomment>
         <translation>Übergeordnetes Verzeichnis</translation>
