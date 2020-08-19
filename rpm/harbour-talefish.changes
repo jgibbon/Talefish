@@ -1,5 +1,9 @@
+* Wed Aug 19 2020 velox 0.5-5
+- bugfix: use fileName instead of baseName for sorting in FolderListModel
+- bugfix: work around race condition in FolderListModel
+
 * Tue Aug 11 2020 velox 0.5-4
- - translation update: sync with transifex (some strings got lost in translation)
+- translation update: sync with transifex (some strings got lost in translation)
 
 * Mon Aug 10 2020 velox 0.5-3
  - bugfix: check skip button greyed-out state on load
