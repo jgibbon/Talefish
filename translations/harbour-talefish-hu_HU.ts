@@ -26,20 +26,20 @@
         <location filename="../qml/pages/AboutPage.qml" line="81"/>
         <source>Talefish comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. See the GNU General Public License for more details:</source>
         <extracomment>Longer License Line. If you&apos;re in the least unsure about translation, leave it in english. Below it will be a Link to the full license text.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A Talefish programra semmiféle garancia nem érvényesíthető. Ez egy szabad szoftver amit bárki szabadon terjeszthet és módosíthat a Free Software Foundation által kiadott GNU General Public License bármely 2 verziója, vagy (választásod szerint) bármely legfrisebb verziója alapján. További információ a GNU General Public License oldalán található:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="98"/>
         <source>This Program uses and includes unmodified or modified versions of the following software components under the terms of the LGPL 2.1 license:</source>
         <extracomment>License information for LGPL libraries used. If you&apos;re in the least unsure about translation, leave it in english.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ez a Program, a LGPL 2.1 licensz feltételei alapján a kovetkezo szoftver komponenseket használja és telepíti eredeti vagy módosított formában:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="138"/>
         <source>Contribute</source>
         <comment>section header</comment>
         <extracomment>Section Header: How to contribute to this program</extracomment>
-        <translation>Közreműködés</translation>
+        <translation>Közreműködők</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="143"/>
@@ -93,7 +93,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>See the GNU Lesser General Public License for more details:</source>
         <extracomment>Label: introduction for &quot;GNU Lesser General Public License&quot; link</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>További információ a GNU Lesser General Public License oldalán található:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="55"/>
@@ -229,13 +229,13 @@
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="72"/>
         <source>Display album cover images in directory list and playlist view</source>
         <extracomment>Option Entry (TextSwitch): Enable Album-Cover Images in Directory lists and Playlist</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Album borító kép megjelenítése a könyvtár- és letászási lista nézetben</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="74"/>
         <source>Extracting a lot of Images at once can be really slow.</source>
         <extracomment>Option Entry description</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Egyszerre sok kép feldolgozása nagyon lassú lehet.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsAppearance.qml" line="56"/>
@@ -434,8 +434,8 @@
         <location filename="../qml/visual/silica/OptionsFiles.qml" line="39"/>
         <source>for %1 day(s)</source>
         <comment>keep progress for x days</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%1 napig</numerusform>
         </translation>
     </message>
     <message>
@@ -458,7 +458,7 @@
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="38"/>
         <source>For debugging purposes, it is sometimes useful to reset all options and application states to default. You will hopefully never need this.</source>
         <extracomment>Label text describing the reset &amp; quit button</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Hibakeresés céljából néha hasznos az alkalmazás státuszát és összes beállítását alapertékre visszaállítani. Remélhetőleg erre soha nem lesz szükséged.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsMisc.qml" line="43"/>
@@ -536,13 +536,13 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Folytatás amikor a Slumber által felfüggesztve</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
         <source>no</source>
         <extracomment>ComboBox option: no, do not rewind when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>nem</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
@@ -560,43 +560,43 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="71"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dupla hosszú kihagyás időtartama</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="78"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Alvó mód időzítő automatikus indítása</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="85"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A Slumber elalvás-időzítő automatikus indítása amikor a Tailfish elindul</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="92"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A Talefish előtérbe hozása a Slumber indítása után</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="103"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A Slumber aktiválása csak egy bizonyos időpontban</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="136"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Slumber indítása miután</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="155"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Slumber indítása mielőtt</translation>
     </message>
 </context>
 <context>
