@@ -263,7 +263,7 @@ Page {
             }
 
             onReleased: {
-                animateCoverContainerXBack0.duration =  (dragValue / maxDrag) * 400
+                animateCoverContainerXBack0.duration = (dragValue / maxDrag) * 400
                 animateCoverContainerXBack0.start()
                 if(sideTriggerActive){
                     console.log('Player Page: Slided to skip' )
@@ -274,7 +274,7 @@ Page {
                         playlist.currentIndex = playlist.currentIndex + 1;
                     } else if(target.x > 0) {//prev
                         if(audio.displayPosition > options.skipBackTrackThreshold) {
-                            audio.seek(0)
+                            app.playerCommands.seek(0, playlist.currentIndex)
                         } else {
                             playlist.currentIndex = playlist.currentIndex - 1;
                         }

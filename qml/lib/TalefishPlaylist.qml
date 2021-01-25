@@ -129,8 +129,6 @@ Playlist {
         return json
     }
     function fromJSON(json, enqueue, directory) { //directory overrides pathsIdentifier to display progress in file selector
-//        console.log('playlist fromJSON')
-        // console.log('fromJSON', JSON.stringify(json))
         if (enqueue && playlist.metadata.count === 0) {
             enqueue = false;
         }
@@ -176,6 +174,11 @@ Playlist {
     }
     property bool applyingSavedPosition: false
     property int applyThisTrackPosition: -1
+    onApplyThisTrackPositionChanged: {
+        if(applyingSavedPosition) {
+            totalPosition = currentMetaData.previousDurations + applyThisTrackPosition
+        }
+    }
 
 
     function applySavedPosition() {
@@ -211,7 +214,6 @@ Playlist {
                 } else {
                     reSeekTimer.start()
                 }
-                console.log('RESEEKED')
             }
         }
 
@@ -232,10 +234,9 @@ Playlist {
                         }
                     }
                     onDisplayPositionChanged: {
-                        console.log("displayPositionChanged", audio.displayPosition, playlist.applyingSavedPosition)
-                        playlist.saveCurrentPosition()
-//                        if(!playlist.applyingSavedPosition) {
-//                        }
+                        if(!playlist.applyingSavedPosition) {
+                            playlist.saveCurrentPosition()
+                        }
                     }
                     onDurationChanged: {
                         if(playlist.currentIndex > -1

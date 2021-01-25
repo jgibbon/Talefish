@@ -24,7 +24,6 @@ PersistentObject {
     objectName: 'appstate'
     //js representation of current playlist
     property var currentPlaylist: ({})
-    onCurrentPlaylistChanged: app.state.save(['currentPlaylist'])
 
     //all saved progresses
     property var playlistProgress: ({})
@@ -40,13 +39,9 @@ PersistentObject {
             var progress = {}
             var now = new Date().getTime();
             for(var dir in playlistProgress) {
-                if(currentPlaylist.pathsIdentifier === dir) {
-                    continue;
-                }
-
                 var el = playlistProgress[dir];
                 var diff = now - el.lastAccess;
-                if(diff < keepMs){
+                if(diff < keepMs || currentPlaylist.pathsIdentifier === dir){
                     progress[dir] = el;
                 } else {
                     console.log('removing progress for ', dir);
@@ -54,7 +49,6 @@ PersistentObject {
             }
             playlistProgress = progress;
         }
-//        console.log(JSON.stringify(playlistProgress));
         if(!app.commandLineArgumentFilesToOpen || app.commandLineArgumentDoEnqueue) {
             // load previous playlist:
             app.playlist.fromJSON(currentPlaylist);
@@ -62,8 +56,6 @@ PersistentObject {
         if(app.commandLineArgumentFilesToOpen) {
             app.playlist.fromJSON(app.commandLineArgumentFilesToOpen,app.commandLineArgumentDoEnqueue);
         }
-
-
     }
 
 }

@@ -82,7 +82,7 @@ Item {
 
         onDownChanged: {
             if(!down)
-                app.audio.seek(value)
+                app.playerCommands.seek(value, app.playlist.currentIndex)
                 value = Qt.binding(function() { return app.audio.displayPosition })
         }
         z:2

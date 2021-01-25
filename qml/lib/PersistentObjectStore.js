@@ -1,4 +1,3 @@
-.pragma library // jshint ignore:line
 var locstorage;
 var db;
 var settings = ['SettingsDB','1.0','Settings'];
@@ -31,9 +30,6 @@ function initialize(sttngs, ls) {
     console.log('DB initialized', settings[3]);
 }
 function reset() {
-    if(!obj._loaded) {
-        return;
-    }
     var db = getDatabase();
     db.transaction(
                 function(tx) {
@@ -48,6 +44,7 @@ function save(obj, keys) {
     if(!obj._loaded) {
         return;
     }
+    console.log("persistent save", JSON.stringify(settings));
 
     var db = getDatabase();
     db.transaction(
@@ -81,6 +78,7 @@ function save(obj, keys) {
 
 function load(obj) {
     var db = getDatabase();
+    console.log("persistent load", JSON.stringify(settings));
     db.transaction(
                 function (tx) {
 

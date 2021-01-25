@@ -75,12 +75,10 @@ Item {
             playlist.currentIndex = index;
         }
         if(audio.seekable) {
-//            console.log('seekable')
             playlist.applyingSavedPosition = false;
             playlist.applyThisTrackPosition = -1;
             audio.seek(position);
         } else { // handle in audio.onSeekableChanged
-//            console.log('applying later', position)
             playlist.applyingSavedPosition = true
             playlist.applyThisTrackPosition = position;
         }
