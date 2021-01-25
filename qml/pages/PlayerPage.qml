@@ -231,7 +231,7 @@ Page {
             id: coverMouseArea
 
             property int maxDrag: Theme.itemSizeLarge
-            visible: options.playerSwipeForNextPrev && (page.metadataCount > 1 || audio.position > options.skipBackTrackThreshold)
+            visible: options.playerSwipeForNextPrev && (page.metadataCount > 1 || audio.displayPosition > options.skipBackTrackThreshold)
             property bool sideTriggerActive: false
             property alias target: coverImageContainer
             anchors.fill: target
@@ -239,7 +239,7 @@ Page {
             drag.axis: Drag.XAxis
             drag.threshold: 30
             drag.minimumX: playlist.currentIndex < page.metadataCount-1 ? maxDrag*-1 : 0 //next
-            drag.maximumX: playlist.currentIndex > 0 || audio.position > options.skipBackTrackThreshold ? maxDrag:0 //prev
+            drag.maximumX: playlist.currentIndex > 0 || audio.displayPosition > options.skipBackTrackThreshold ? maxDrag:0 //prev
 
             onMouseXChanged: {
                 var m = mouse, act = sideTriggerActive;
@@ -273,7 +273,7 @@ Page {
                     if(target.x < 0){//next
                         playlist.currentIndex = playlist.currentIndex + 1;
                     } else if(target.x > 0) {//prev
-                        if(audio.position > options.skipBackTrackThreshold) {
+                        if(audio.displayPosition > options.skipBackTrackThreshold) {
                             audio.seek(0)
                         } else {
                             playlist.currentIndex = playlist.currentIndex - 1;
@@ -325,7 +325,7 @@ Page {
                     height: parent.height
                     width: parent.width - (Theme.paddingSmall * 2)
                     horizontalAlignment: coverMouseArea.target.x > 0 ? Text.AlignRight: Text.AlignLeft // Text.AlignHCenter
-                    text: coverMouseArea.target.x > 0 ? (audio.position > options.skipBackTrackThreshold? qsTr('Rewind Track'): qsTr('Previous Track')): qsTr('Next Track')
+                    text: coverMouseArea.target.x > 0 ? (audio.displayPosition > options.skipBackTrackThreshold? qsTr('Rewind Track'): qsTr('Previous Track')): qsTr('Next Track')
                     verticalAlignment: Text.AlignVCenter
                     wrapMode: 'WrapAtWordBoundaryOrAnywhere'
                     x: (-coverMouseArea.target.x ) + Theme.paddingSmall

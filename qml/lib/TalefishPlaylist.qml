@@ -185,9 +185,10 @@ Playlist {
     }
 
     function saveCurrentPosition(){
+        console.log("save current position")
         var position = {
             index: playlist.currentIndex,
-            position: audio.position,
+            position: audio.displayPosition,
             totalPosition: currentMetaData.previousDurations + audio.displayPosition,
             totalDuration: totalDuration,
             lastAccess: new Date().getTime()
@@ -230,10 +231,11 @@ Playlist {
                             }
                         }
                     }
-                    onPositionChanged: {
-                        if(!playlist.applyingSavedPosition) {
-                            playlist.saveCurrentPosition()
-                        }
+                    onDisplayPositionChanged: {
+                        console.log("displayPositionChanged", audio.displayPosition, playlist.applyingSavedPosition)
+                        playlist.saveCurrentPosition()
+//                        if(!playlist.applyingSavedPosition) {
+//                        }
                     }
                     onDurationChanged: {
                         if(playlist.currentIndex > -1

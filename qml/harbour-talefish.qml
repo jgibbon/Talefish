@@ -75,7 +75,7 @@ ApplicationWindow
         interval: 5000
         repeat: true
         running: options.autoSaveProgressPeriodically && audio.isPlaying
-        onTriggered: app.state.save(['playlistProgress', 'currentPlaylist'])
+        onTriggered: app.state.save(['playlistProgress'])
     }
 
     Timer {

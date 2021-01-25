@@ -24,6 +24,7 @@ PersistentObject {
     objectName: 'appstate'
     //js representation of current playlist
     property var currentPlaylist: ({})
+    onCurrentPlaylistChanged: app.state.save(['currentPlaylist'])
 
     //all saved progresses
     property var playlistProgress: ({})
