@@ -3,6 +3,10 @@ var locstorage;
 var db;
 var settings = ['SettingsDB','1.0','Settings'];
 function getDatabase() {
+    if(!locstorage) {
+        return;
+    }
+
     if(!db) db = locstorage.openDatabaseSync(settings[0],settings[1],settings[2], 5000);
     return db;
 }
@@ -27,6 +31,9 @@ function initialize(sttngs, ls) {
     console.log('DB initialized', settings[3]);
 }
 function reset() {
+    if(!obj._loaded) {
+        return;
+    }
     var db = getDatabase();
     db.transaction(
                 function(tx) {
@@ -38,6 +45,10 @@ function reset() {
 }
 
 function save(obj, keys) {
+    if(!obj._loaded) {
+        return;
+    }
+
     var db = getDatabase();
     db.transaction(
                 function (tx) {
