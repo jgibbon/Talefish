@@ -105,12 +105,16 @@ Item {
             width: parent.width
             height:width
             rotation: rotationOffset
+            property int rotationProxy: rotationOffset
             RotationAnimation on rotation {
                 loops: Animation.Infinite
-                from: cassetteWheelImage.rotation
-                to: cassetteWheelImage.rotation + progressComponent.animationTargetDegrees
+                from: cassetteWheelImage.rotationProxy
+                to: cassetteWheelImage.rotationProxy + progressComponent.animationTargetDegrees
                 running: progressComponent.running && !progressComponent.animationPaused
                 duration:12000
+                onStopped: {
+                    cassetteWheelImage.rotationProxy = cassetteWheelImage.rotation
+                }
             }
         }
 
