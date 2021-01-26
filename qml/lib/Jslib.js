@@ -24,8 +24,9 @@ function lib() {
         formatMSeconds: function (duration) {
             var dur = duration / 1000,
                     hours =  Math.floor(dur /3600),
-                    minutes =  Math.floor((dur - hours * 3600) / 60),
-                    seconds = Math.floor(dur - (hours * 3600) - minutes * 60);
+                    hourSeconds = hours * 3600,
+                    minutes =  Math.floor((dur - hourSeconds) / 60),
+                    seconds = Math.floor(dur - (hourSeconds) - minutes * 60);
 
             return (hours?(hours+':'):'')+ ("0"+minutes).slice(-2) + ':' + ("0"+seconds).slice(-2);
         },

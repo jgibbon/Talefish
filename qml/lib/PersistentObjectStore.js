@@ -30,7 +30,6 @@ function initialize(sttngs, ls) {
     console.log('DB initialized', settings[3]);
 }
 function reset() {
-    var db = getDatabase();
     db.transaction(
                 function(tx) {
                     // Create the settings table if it doesn't already exist
@@ -44,9 +43,6 @@ function save(obj, keys) {
     if(!obj._loaded) {
         return;
     }
-    console.log("persistent save", JSON.stringify(settings));
-
-    var db = getDatabase();
     db.transaction(
                 function (tx) {
                     // Save all fields
@@ -54,31 +50,26 @@ function save(obj, keys) {
                     var haskeys = !!keys;
                     if(!haskeys) {
                         // Clean all fields of this settings object first, so the DB is always clean from unused fields
-                        tx.executeSql('DELETE FROM settings WHERE settingsName=?;', [obj.objectName]);
+                        //tx.executeSql('DELETE FROM settings WHERE settingsName=?;', [obj.objectName]);
                         keys = Object.keys(obj);
                     }
-                    keys.forEach(function(fieldName) {
-                        var value = JSON.stringify(obj[fieldName]);
-                        if(haskeys) {
-                            tx.executeSql('DELETE FROM settings WHERE settingsName=? AND keyName=?;', [obj.objectName, fieldName]);
+                    for(var i = 0; i < keys.length; i +=1) {
+                        if(skippedAttributes.indexOf(keys[i]) > -1 || keys[i].lastIndexOf('on', 0) === 0) {
+                            continue;
                         }
+                        var value = JSON.stringify(obj[keys[i]]);
 
-                        //values starting with 'on' should be blatantly ignored.
-                        if (typeof value === 'undefined' || skippedAttributes.indexOf(fieldName) > -1 || fieldName.lastIndexOf('on', 0) === 0) {
-                            //                    console.log("NOT Saved: " + obj.objectName + "." + fieldName + " => " + value + "("+typeof obj[fieldName]+")");
-                            return;
+                        if (typeof value !== 'undefined') {
+                            tx.executeSql('REPLACE INTO settings (settingsName, keyName, value) VALUES (?, ?, ?);', [obj.objectName, keys[i], value]);
+                        } else if(haskeys) {
+                            tx.executeSql('DELETE FROM settings WHERE settingsName=? AND keyName=?;', [obj.objectName, keys[i]]);
                         }
-
-                        tx.executeSql('INSERT INTO settings (settingsName, keyName, value) VALUES (?, ?, ?);', [obj.objectName, fieldName, value]);
-//                                        console.log("Saved: " + obj.objectName + "." + fieldName + " => " + value + "("+typeof obj[fieldName]+")");
-                    })
+                    }
                 }
                 );
 }
 
 function load(obj) {
-    var db = getDatabase();
-    console.log("persistent load", JSON.stringify(settings));
     db.transaction(
                 function (tx) {
 
