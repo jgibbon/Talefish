@@ -25,8 +25,8 @@ import Sailfish.Silica 1.0
 Item {
     id: progressArea
 //    state: 'big'
-    property int sliderHeight: Theme.itemSizeExtraSmall
-    property int sliderTopMargin: -sliderHeight * 0.2
+    readonly property int sliderHeight: Theme.itemSizeExtraSmall
+    readonly property int sliderTopMargin: -sliderHeight * 0.2
     states: [
         State {
             name: 'small'

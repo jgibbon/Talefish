@@ -23,7 +23,6 @@ import QtQuick 2.6
 PersistentObject {
     id: options
     objectName: 'options'
-    storeSettings: ['Talefish','1.0','Options', objectName]
     doPersist: true
 
     //milliseconds:

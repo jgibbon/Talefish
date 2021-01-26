@@ -35,8 +35,8 @@ ApplicationWindow
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
     _defaultPageOrientations: defaultAllowedOrientations // workaround for a Silica ComboBox bug in Landscape, see https://together.jolla.com/question/49831/
-    property bool active: Qt.application.state === Qt.ApplicationActive
-    property var js: Jslib.lib()
+    readonly property bool active: Qt.application.state === Qt.ApplicationActive
+    readonly property var js: Jslib.lib()
 
     property var allowedFileExtensions // set via c++; used by directory list
     property bool commandLineArgumentDoEnqueue
@@ -48,12 +48,12 @@ ApplicationWindow
         }
     }
 
-    property Launcher launcher: Launcher {}
-    property TalefishAudio audio: TalefishAudio { playlist: app.playlist }
-    property TalefishPlaylist playlist: TalefishPlaylist { audio: app.audio }
-    property PlayerCommands playerCommands: PlayerCommands {audio: app.audio; playlist: app.playlist}
-    property TalefishState state: TalefishState {}
-    property Options options: Options {
+    readonly property Launcher launcher: Launcher {}
+    readonly property TalefishAudio audio: TalefishAudio { playlist: app.playlist }
+    readonly property TalefishPlaylist playlist: TalefishPlaylist { audio: app.audio }
+    readonly property PlayerCommands playerCommands: PlayerCommands {audio: app.audio; playlist: app.playlist}
+    readonly property TalefishState state: TalefishState {}
+    readonly property Options options: Options {
         Component.onCompleted: {
             if(options._loaded && autoStartSlumber && launcher.fileExists('/usr/bin/harbour-slumber')
                     && (!autoStartSlumberInTimeframe || js.isBetweenTimes(autoStartSlumberAfterTime, autoStartSlumberBeforeTime))) {
@@ -75,14 +75,17 @@ ApplicationWindow
         interval: 10000
         repeat: true
         running: options.autoSaveProgressPeriodically && audio.isPlaying
-        onTriggered: app.state.save(['playlistProgress'])
+        onTriggered: {
+            playlist.saveCurrentPosition();
+            app.state.saveKey('playlistProgress')
+        }
     }
 
     Timer {
         id: reactivateTimer
         interval: 50
         onTriggered: {
-            if(Qt.application.state === Qt.ApplicationActive) {
+            if(app.active) {
                 reactivateTimer.restart()
             } else {
                 app.activate()

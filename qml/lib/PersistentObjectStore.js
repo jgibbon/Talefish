@@ -1,3 +1,5 @@
+.pragma library
+
 var locstorage;
 var db;
 var settings = ['SettingsDB','1.0','Settings'];
@@ -40,11 +42,7 @@ function reset() {
 }
 
 function save(obj, keys) {
-    if(!obj._loaded) {
-        return;
-    }
-    db.transaction(
-                function (tx) {
+    db.transaction(function (tx) {
                     // Save all fields
                     var skippedAttributes = ['objectName', 'doPersist', 'storeSettings', '_loaded', 'reset'];
                     var haskeys = !!keys;
@@ -65,8 +63,13 @@ function save(obj, keys) {
                             tx.executeSql('DELETE FROM settings WHERE settingsName=? AND keyName=?;', [obj.objectName, keys[i]]);
                         }
                     }
-                }
-                );
+                });
+}
+
+function saveKey(obj, key) { // convenience method to more quickly save just one key (without checks!)
+    db.transaction(function (tx) {
+                    tx.executeSql('REPLACE INTO settings (settingsName, keyName, value) VALUES (?, ?, ?);', [obj.objectName, key, JSON.stringify(obj[key])]);
+                });
 }
 
 function load(obj) {
@@ -76,7 +79,7 @@ function load(obj) {
                     // Load fields
                     for (var fieldName in obj) {
                         //values starting with 'on' should be blatantly ignored
-                        if ( true || fieldName.lastIndexOf('on', 0) !== 0) {
+                        if (fieldName.lastIndexOf('on', 0) !== 0) {
 
                             var rs = tx.executeSql('SELECT value FROM settings WHERE settingsName=? AND keyName=?;', [obj.objectName, fieldName]);
 

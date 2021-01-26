@@ -24,16 +24,16 @@ import QtQuick.LocalStorage 2.0
 import "PersistentObjectStore.js" as Store
 
 QtObject {
-    id: settings
+    id: persistentObject
     objectName: "default"
-    property var storeSettings: ['Talefish','1.0','Settings', objectName]
+    readonly property var storeSettings: ['Talefish','1.0','Settings', objectName]
     property bool doPersist: true
     property bool _loaded: false
 
     Component.onCompleted: {
         Store.initialize(storeSettings, LocalStorage);
 
-        doPersist && Store.load(settings);
+        doPersist && Store.load(persistentObject);
 
         console.log('loaded DB', objectName)
     }
@@ -44,14 +44,19 @@ QtObject {
             save()
         }
     }
-    function save(keys){
-        if(doPersist) {
-            Store.save(settings, keys);
-            console.log('saved!', objectName)
+    function save(keys) {
+        if(doPersist && _loaded) {
+            Store.save(persistentObject, keys);
         }
     }
+    function saveKey(key) { // fewer checks and loops
+        if(doPersist && _loaded) {
+            Store.saveKey(persistentObject, key);
+        }
+    }
+
     function reset() {
-        doPersist= false
+        doPersist = false
         Store.reset()
     }
 }

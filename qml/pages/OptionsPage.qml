@@ -34,6 +34,7 @@ Page {
     id: page
     allowedOrientations: Orientation.All
     property var loadComponents:(['OptionsPlayback', 'OptionsCommands', 'OptionsFiles', 'OptionsAppearance', 'OptionsSleepTimer', 'OptionsMisc'])
+    readonly property bool staticMode: loadComponents.length === 1
     property var areas: ([]);
 
     function setActiveArea(activeArea) {
@@ -84,7 +85,7 @@ Page {
                             }
                         }
                         Component.onCompleted: {
-                            setSource('../visual/silica/'+modelData+'.qml', {expanded: index === 0, staticMode: page.loadComponents.length === 1});
+                            setSource('../visual/silica/'+modelData+'.qml', {expanded: index === 0, staticMode: page.staticMode});
                         }
                     }
                 }

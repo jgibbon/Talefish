@@ -26,10 +26,10 @@ import '../lib'
 
 CoverBackground {
     id:mainCoverBackground
-    property bool active: status === Cover.Active
-    property PlayerCommands playerCommands: app.playerCommands
-    property TalefishAudio audio: app.audio
-    property TalefishPlaylist playlist: app.playlist
+    readonly property bool active: status === Cover.Active
+    readonly property PlayerCommands playerCommands: app.playerCommands
+    readonly property TalefishAudio audio: app.audio
+    readonly property TalefishPlaylist playlist: app.playlist
     Item {
         id: paddingcontainer
         clip: true
@@ -66,7 +66,7 @@ CoverBackground {
            ? playlist.totalDuration
            : audio.duration
         value: app.options.cassetteUseDirectoryDurationProgress ? playlist.totalPosition: audio.displayPosition
-        running: app.options.useAnimations && app.options.usePlayerAnimations && audio.isPlaying
+        running: mainCoverBackground.active && app.options.useAnimations && app.options.usePlayerAnimations && audio.isPlaying
 
         rotationOffset: -45
     }

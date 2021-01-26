@@ -24,7 +24,7 @@ import Sailfish.Silica 1.0
 IconButton {
     id: button
     width: Theme.iconSizeLarge
-    property int padding: Screen.widthRatio === 1 ? 0 : Theme.paddingLarge  // jolla phone: same size
+    readonly property int padding: Screen.widthRatio === 1 ? 0 : Theme.paddingLarge  // jolla phone: same size
     property int seekBy
     height: width
     states: [

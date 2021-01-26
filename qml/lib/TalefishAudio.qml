@@ -26,9 +26,9 @@ Audio {
     autoLoad: true
     playbackRate: app.options.playbackRate
     onPlaybackRateChanged: if(isPlaying) seek(position - 0.01);
-    property bool isPlaying: playbackState === Audio.PlayingState
-    property int displayPosition: playlist.applyingSavedPosition ? playlist.applyThisTrackPosition : position
-    property bool errorVisible: audio.error > 0 && (audio.status === Audio.NoMedia || audio.status === Audio.InvalidMedia || audio.status === Audio.UnknownStatus)
+    readonly property bool isPlaying: playbackState === Audio.PlayingState
+    readonly property int displayPosition: playlist.applyingSavedPosition ? playlist.applyThisTrackPosition : position
+    readonly property bool errorVisible: audio.error > 0 && (audio.status === Audio.NoMedia || audio.status === Audio.InvalidMedia || audio.status === Audio.UnknownStatus)
     onStatusChanged: {
         if(status == Audio.EndOfMedia && !app.options.playNextFile) {
             pause();

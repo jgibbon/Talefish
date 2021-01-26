@@ -470,13 +470,13 @@
 <context>
     <name>OptionsPage</name>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="59"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="60"/>
         <source>About</source>
         <comment>pulley</comment>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="69"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="70"/>
         <source>Options</source>
         <comment>header</comment>
         <translation>选项</translation>
@@ -722,48 +722,48 @@
 <context>
     <name>PlayerPage</name>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="48"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="54"/>
         <source>Options</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Options Page</extracomment>
         <translation>选项</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="56"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="62"/>
         <source>Playlist</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Playlist Page</extracomment>
         <translation>播放列表</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="64"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="70"/>
         <source>Open</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to &quot;Open Files&quot; (Places) Page</extracomment>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="212"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="219"/>
         <source>Nothing to play</source>
         <translation>没有可播放的音频</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="217"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="224"/>
         <source>Open Files by pulling down.</source>
         <translation>下拉以打开文件</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Rewind Track</source>
         <translation>倒带</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Previous Track</source>
         <translation>上一则音频</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Next Track</source>
         <translation>下一则音频</translation>
     </message>

@@ -479,13 +479,13 @@
 <context>
     <name>OptionsPage</name>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="59"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="60"/>
         <source>About</source>
         <comment>pulley</comment>
         <translation>O programu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="69"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="70"/>
         <source>Options</source>
         <comment>header</comment>
         <translation>Možnosti</translation>
@@ -731,48 +731,48 @@
 <context>
     <name>PlayerPage</name>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="48"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="54"/>
         <source>Options</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Options Page</extracomment>
         <translation>Možnosti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="56"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="62"/>
         <source>Playlist</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Playlist Page</extracomment>
         <translation>Seznam predvajanja</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="64"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="70"/>
         <source>Open</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to &quot;Open Files&quot; (Places) Page</extracomment>
         <translation>Odpri</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="212"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="219"/>
         <source>Nothing to play</source>
         <translation>Ni datotek za predvajanje</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="217"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="224"/>
         <source>Open Files by pulling down.</source>
         <translation>Za odpiranje datotek potegni navzdol</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Rewind Track</source>
         <translation>Previj posnetek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Previous Track</source>
         <translation>Prejšnji posnetek</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Next Track</source>
         <translation>Naslednji posnetek</translation>
     </message>

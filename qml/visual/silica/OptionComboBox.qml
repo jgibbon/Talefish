@@ -36,7 +36,7 @@ ComboBox {
         id: timeropts
         Repeater {
             model: ListModel {
-                dynamicRoles: true
+//                dynamicRoles: true
             }
             Component.onCompleted: {
                 var i = 0;
@@ -46,18 +46,20 @@ ComboBox {
                 }
             }
 
-            MenuItem {
-                text: model.text ? model.text + '' : '-'
+            delegate: Component {
+                MenuItem {
+                    text: model.text ? model.text + '' : '-'
 
-                onClicked: {
-                    options[optionname] =  model.value;
-                }
-
-                Component.onCompleted: {
-                    if(model.value === options[optionname]) {
-                        root.currentIndex = index
+                    onClicked: {
+                        options[optionname] =  model.value;
                     }
 
+                    Component.onCompleted: {
+                        if(model.value === options[optionname]) {
+                            root.currentIndex = index
+                        }
+
+                    }
                 }
             }
 

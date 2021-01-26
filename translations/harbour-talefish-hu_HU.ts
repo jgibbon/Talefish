@@ -470,13 +470,13 @@
 <context>
     <name>OptionsPage</name>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="59"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="60"/>
         <source>About</source>
         <comment>pulley</comment>
         <translation>Névjegy</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="69"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="70"/>
         <source>Options</source>
         <comment>header</comment>
         <translation>Opciók</translation>
@@ -722,48 +722,48 @@
 <context>
     <name>PlayerPage</name>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="48"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="54"/>
         <source>Options</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Options Page</extracomment>
         <translation>Opciók</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="56"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="62"/>
         <source>Playlist</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Playlist Page</extracomment>
         <translation>Lejátszási lista</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="64"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="70"/>
         <source>Open</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to &quot;Open Files&quot; (Places) Page</extracomment>
         <translation>Megnyitás</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="212"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="219"/>
         <source>Nothing to play</source>
         <translation>Nincs mit lejátszani</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="217"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="224"/>
         <source>Open Files by pulling down.</source>
         <translation>Fájlok megnyitása lehúzással.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Rewind Track</source>
         <translation>Felvétel visszatekerése</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Previous Track</source>
         <translation>Előző felvétel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="328"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
         <source>Next Track</source>
         <translation>Következő felvétel</translation>
     </message>

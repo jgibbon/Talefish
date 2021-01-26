@@ -102,11 +102,15 @@ Item {
         Image {
             id: cassetteWheelImage
             source: "../assets/wheel_1.svg"
+            asynchronous: true
             width: parent.width
             height:width
             rotation: rotationOffset
+            cache: false
+            sourceSize.width: width
+            sourceSize.height: height
             property int rotationProxy: rotationOffset
-            RotationAnimation on rotation {
+            RotationAnimator on rotation {
                 loops: Animation.Infinite
                 from: cassetteWheelImage.rotationProxy
                 to: cassetteWheelImage.rotationProxy + progressComponent.animationTargetDegrees

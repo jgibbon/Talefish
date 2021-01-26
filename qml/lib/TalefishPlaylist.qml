@@ -31,7 +31,7 @@ Playlist {
     property int totalDuration: 0
     property int totalPosition: 0
     property string pathsIdentifier // pathsIdentifier is for saving current progress
-    property Timer durationListTimer: Timer {
+    readonly property Timer durationListTimer: Timer {
         // we want to debounce some operations to reduce double work
         interval: 100
         onTriggered: {
@@ -49,7 +49,7 @@ Playlist {
        }
     }
 
-    property var currentMetaData: {
+    readonly property var currentMetaData: {
         var md = metadata.get(currentIndex);
         if(!md || metadata.count === 0) {// we need to access .count here to trigger update nicely (otherwise it becomes null)
             return {title:'',album:'',artist:'', duration: 0};
@@ -78,7 +78,7 @@ Playlist {
         if(md.album === '') {return app.js.fileName(app.js.filePath(currentItemSource)); }
         return md.album;
     }
-    property string currentAlbum: album(currentIndex)
+    readonly property string currentAlbum: album(currentIndex)
 
     // artist (or empty string)
     function artist(index) {
@@ -88,10 +88,10 @@ Playlist {
         var md = metadata.get(index);
         return md.artist;
     }
-    property string currentArtist: artist(currentIndex)
+    readonly property string currentArtist: artist(currentIndex)
 
-    property ListModel metadata: ListModel {}
-    property TaglibPlugin taglib: TaglibPlugin {
+    readonly property ListModel metadata: ListModel {}
+    readonly property TaglibPlugin taglib: TaglibPlugin {
         id: taglib
         onTagInfos: {
             if(queryIndex > -1 && queryIndex <= playlist.metadata.count) {
@@ -188,21 +188,19 @@ Playlist {
     }
 
     function saveCurrentPosition(){
-        console.log("save current position")
         var position = {
             index: playlist.currentIndex,
             position: audio.displayPosition,
-            totalPosition: currentMetaData.previousDurations + audio.displayPosition,
+            totalPosition: totalPosition,
             totalDuration: totalDuration,
             lastAccess: new Date().getTime()
         }
         if(position.index > -1 && position.totalPosition > 1) {
-            totalPosition = position.totalPosition;
+//            totalPosition = position.totalPosition;
             app.state.playlistProgress[pathsIdentifier] = position;
-            app.state.playlistProgressChanged()
         }
     }
-    property Timer reseekTimer: Timer {
+    readonly property Timer reseekTimer: Timer {
         id: reSeekTimer //when seeking multiple times abruptly, audio doesn't seem to do it
         interval: 30
         onTriggered: {
@@ -216,10 +214,9 @@ Playlist {
                 }
             }
         }
-
     }
 
-    property Connections audioConnections: Connections {
+    readonly property Connections audioConnections: Connections {
                     target: audio
                     onSeekableChanged: {
                         if(audio.seekable && playlist.applyingSavedPosition) {
@@ -235,6 +232,7 @@ Playlist {
                     }
                     onDisplayPositionChanged: {
                         if(!playlist.applyingSavedPosition) {
+                            totalPosition = currentMetaData.previousDurations + audio.displayPosition
                             playlist.saveCurrentPosition()
                         }
                     }
