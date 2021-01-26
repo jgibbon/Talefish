@@ -75,6 +75,7 @@ DISTFILES += \
     qml/visual/silica/PlacesDirectoryProgressBar.qml \
     qml/visual/silica/PlacesModelComponent.qml \
     qml/visual/silica/PlacesModels.qml \
+    qml/visual/silica/PlayerPageContent.qml \
     qml/visual/silica/PlayerPageProgressArea.qml \
     qml/visual/silica/PlayerPageSeekButton.qml \
     qml/visual/silica/PlaylistView.qml \

@@ -19,14 +19,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
 import QtQuick 2.6
-
 import Sailfish.Silica 1.0
 
 Item {
     id: progressArea
-//    state: 'big'
+    width: parent.width
+    height: childrenRect.height
+
     readonly property int sliderHeight: Theme.itemSizeExtraSmall
-    readonly property int sliderTopMargin: -sliderHeight * 0.2
+    property int sliderTopMargin: -sliderHeight * 0.2
     states: [
         State {
             name: 'small'
@@ -40,37 +41,13 @@ Item {
                 target: progressArea
                 sliderTopMargin: -sliderHeight / 3
             }
-//            AnchorChanges {
-//                target: currentPositionLabel
-//                anchors {
-//                    bottom: undefined
-//                    top: currentPositionSlider.verticalCenter
-//                }
-//            }
-//            PropertyChanges {
-//                target: currentPositionLabel
-//                anchors.topMargin: Theme.paddingMedium
-//            }
-//            AnchorChanges {
-//                target: totalPositionLabel
-//                anchors {
-//                    top: currentPositionLabel.bottom
-//                }
-//            }
         }
-
     ]
-
-    width: parent.width
-    height: currentPositionSlider.height + currentPositionLabel.height/2 + currentPositionSlider.anchors.topMargin
-            + (totalPosition.visible ? totalPosition.height + totalPositionLabel.height/2 + totalPosition.anchors.topMargin : 0)
 
     Slider {
         id: currentPositionSlider
         height: progressArea.sliderHeight
         width: parent.width
-//        leftMargin: Theme.horizontalPageMargin
-//        rightMargin: Theme.horizontalPageMargin
         anchors {
             top: parent.top
             topMargin:sliderTopMargin
@@ -86,20 +63,13 @@ Item {
                 value = Qt.binding(function() { return app.audio.displayPosition })
         }
         z:2
-
-//        Rectangle {
-//            anchors.fill: parent
-//            color:'blue'
-//            opacity: 0.3
-//        }
     }
 
     Label {
         id: currentPositionLabel
-        color: Theme.highlightColor//secondaryColor
+        color: Theme.highlightColor
         width: parent.width
         horizontalAlignment: Text.AlignHCenter
-//                            anchors.bottom: parent.bottom
         font.pixelSize: Theme.fontSizeSmall
         textFormat: Text.PlainText
         text: app.js.formatMSeconds(currentPositionSlider.value)+" / "+app.js.formatMSeconds(currentPositionSlider.maximumValue) +' ('+ (Math.floor(( currentPositionSlider.value / currentPositionSlider.maximumValue) * 1000 ) / 10)+'%)'
@@ -107,12 +77,6 @@ Item {
             verticalCenter: currentPositionSlider.bottom
             topMargin: -currentPositionSlider.height / 3
         }
-
-//        Rectangle {
-//            anchors.fill: parent
-//            color:'yellow'
-//            opacity: 0.3
-//        }
     }
     Slider {
         id: totalPosition
@@ -121,9 +85,8 @@ Item {
         height: visible ? progressArea.sliderHeight : 0
         leftMargin: currentPositionSlider.leftMargin
         rightMargin: currentPositionSlider.rightMargin
-
         value: app.playlist.totalPosition
-        visible: options.playerDisplayDirectoryProgress && app.playlist.metadata.count > 1// options.directoryFiles && options.directoryFiles.length > 1// && appstate.playlistIndex !== -1
+        visible: options.playerDisplayDirectoryProgress && app.playlist.metadata.count > 1
         opacity: Theme.colorScheme ? 0.7 : 0.5
         minimumValue: 0
         maximumValue: app.playlist.totalDuration || 0.1
@@ -139,23 +102,15 @@ Item {
             if('_backgroundItem' in totalPosition) {
                 _backgroundItem.radius = Qt.binding(function(){
                     return (Theme.colorScheme ? 1.0 : 2.0)
-//                                        slider.colorScheme === Theme.DarkOnLight ? 0.06 : 0.05
                 })
             }
-
         }
-//        Rectangle {
-//            anchors.fill: parent
-//            color:'red'
-//            opacity: 0.3
-//        }
     }
 
     Label {
         id: totalPositionLabel
-        color: Theme.secondaryHighlightColor//secondaryColor
+        color: Theme.secondaryHighlightColor
         width: parent.width
-//        height: visible ? implicitHeight : 0
         visible: totalPosition.visible
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: Theme.fontSizeExtraSmall
@@ -164,11 +119,6 @@ Item {
         anchors {
             verticalCenter: totalPosition.bottom
         }
-//        Rectangle {
-//            anchors.fill: parent
-//            color:'green'
-//            opacity: 0.3
-//        }
     }
 
 }

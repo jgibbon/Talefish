@@ -725,56 +725,59 @@
 <context>
     <name>PlayerPage</name>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="54"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="47"/>
         <source>Options</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Options Page</extracomment>
         <translation>Opzioni</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="62"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="55"/>
         <source>Playlist</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to Playlist Page</extracomment>
         <translation>Playlist</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="70"/>
+        <location filename="../qml/pages/PlayerPage.qml" line="63"/>
         <source>Open</source>
         <comment>pulley</comment>
         <extracomment>MenuItem: Go to &quot;Open Files&quot; (Places) Page</extracomment>
         <translation>Apri</translation>
     </message>
+</context>
+<context>
+    <name>PlayerPageContent</name>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="219"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="176"/>
         <source>Nothing to play</source>
-        <translation>Niente da riprodurre</translation>
+        <translation type="unfinished">Niente da riprodurre</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="224"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="181"/>
         <source>Open Files by pulling down.</source>
-        <translation>Apri file trascinando in basso.</translation>
+        <translation type="unfinished">Apri file trascinando in basso.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Rewind Track</source>
-        <translation>Riavvolgi traccia</translation>
+        <translation type="unfinished">Riavvolgi traccia</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Previous Track</source>
-        <translation>Traccia precedente</translation>
+        <translation type="unfinished">Traccia precedente</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PlayerPage.qml" line="335"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Next Track</source>
-        <translation>Traccia successiva</translation>
+        <translation type="unfinished">Traccia successiva</translation>
     </message>
 </context>
 <context>
     <name>PlayerPageProgressArea</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="163"/>
+        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="119"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation>%1 / %2 (file %L3 di %L4)</translation>
