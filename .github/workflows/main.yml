@@ -24,7 +24,7 @@ jobs:
       id: build_armv7hl
       uses: coderus/github-sfos-build@master
       with:
-        release: latest
+        release: 3.4.0.24
       
     - name: Upload build result
       uses: actions/upload-artifact@v2
