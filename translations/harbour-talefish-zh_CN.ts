@@ -602,10 +602,10 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation>按名称排序</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>打开</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
@@ -614,10 +614,10 @@
         <translation>追加到播放列表</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation>打开</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>按名称排序</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="253"/>
@@ -748,33 +748,33 @@
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="176"/>
         <source>Nothing to play</source>
-        <translation type="unfinished">没有可供播放的音频</translation>
+        <translation>没有可供播放的音频</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="181"/>
         <source>Open Files by pulling down.</source>
-        <translation type="unfinished">下拉以打开文件</translation>
+        <translation>下拉以打开文件</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Rewind Track</source>
-        <translation type="unfinished">倒带</translation>
+        <translation>倒带</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Previous Track</source>
-        <translation type="unfinished">上一则音频</translation>
+        <translation>上一则音频</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Next Track</source>
-        <translation type="unfinished">下一则音频</translation>
+        <translation>下一则音频</translation>
     </message>
 </context>
 <context>
     <name>PlayerPageProgressArea</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="119"/>
+        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="118"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation>%1 / %2 (文件 %L3 of %L4)</translation>

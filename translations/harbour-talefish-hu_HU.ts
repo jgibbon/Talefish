@@ -602,10 +602,10 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation>Rendezés Név alapján</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Megnyitás</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
@@ -614,10 +614,10 @@
         <translation>Sorbaállítás</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation>Megnyitás</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Rendezés Név alapján</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="253"/>
@@ -748,33 +748,33 @@
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="176"/>
         <source>Nothing to play</source>
-        <translation type="unfinished">Nincs mit lejátszani</translation>
+        <translation>Nincs mit lejátszani</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="181"/>
         <source>Open Files by pulling down.</source>
-        <translation type="unfinished">Fájlok megnyitása lehúzással.</translation>
+        <translation>Fájlok megnyitása lehúzással.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Rewind Track</source>
-        <translation type="unfinished">Felvétel visszatekerése</translation>
+        <translation>Felvétel visszatekerése</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Previous Track</source>
-        <translation type="unfinished">Előző felvétel</translation>
+        <translation>Előző felvétel</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Next Track</source>
-        <translation type="unfinished">Következő felvétel</translation>
+        <translation>Következő felvétel</translation>
     </message>
 </context>
 <context>
     <name>PlayerPageProgressArea</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="119"/>
+        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="118"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation>%1 / %2 (Fájl %L3 a %L4 -ből)</translation>

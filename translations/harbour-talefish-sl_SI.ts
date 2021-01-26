@@ -611,10 +611,10 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation>Uredi po imenu</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Odpri</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
@@ -623,10 +623,10 @@
         <translation>Dodaj na seznam</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation>Odpri</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Uredi po imenu</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="253"/>
@@ -757,33 +757,33 @@
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="176"/>
         <source>Nothing to play</source>
-        <translation type="unfinished">Ni datotek za predvajanje</translation>
+        <translation>Ni datotek za predvajanje</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="181"/>
         <source>Open Files by pulling down.</source>
-        <translation type="unfinished">Za odpiranje datotek potegni navzdol</translation>
+        <translation>Za odpiranje datotek potegni navzdol</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Rewind Track</source>
-        <translation type="unfinished">Previj posnetek</translation>
+        <translation>Previj posnetek</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Previous Track</source>
-        <translation type="unfinished">Prejšnji posnetek</translation>
+        <translation>Prejšnji posnetek</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Next Track</source>
-        <translation type="unfinished">Naslednji posnetek</translation>
+        <translation>Naslednji posnetek</translation>
     </message>
 </context>
 <context>
     <name>PlayerPageProgressArea</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="119"/>
+        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="118"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation>%1 / %2 (datoteka %L3 od %L4)</translation>

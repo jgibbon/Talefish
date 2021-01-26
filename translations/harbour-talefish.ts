@@ -774,7 +774,7 @@
 <context>
     <name>PlayerPageProgressArea</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="119"/>
+        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="118"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation type="unfinished"></translation>

@@ -605,10 +605,10 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation>Sortera efter namn</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Öppna</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
@@ -617,10 +617,10 @@
         <translation>Köa</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation>Öppna</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Sortera efter namn</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="253"/>
@@ -751,33 +751,33 @@
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="176"/>
         <source>Nothing to play</source>
-        <translation type="unfinished">Inget att spela upp</translation>
+        <translation>Inget att spela upp</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="181"/>
         <source>Open Files by pulling down.</source>
-        <translation type="unfinished">Öppna filer genom att dra neråt</translation>
+        <translation>Öppna filer genom att dra neråt</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Rewind Track</source>
-        <translation type="unfinished">Spola tillbaka spåret</translation>
+        <translation>Spola tillbaka spåret</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Previous Track</source>
-        <translation type="unfinished">Föregående spår</translation>
+        <translation>Föregående spår</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Next Track</source>
-        <translation type="unfinished">Nästa spår</translation>
+        <translation>Nästa spår</translation>
     </message>
 </context>
 <context>
     <name>PlayerPageProgressArea</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="119"/>
+        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="118"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation>%1 / %2 (fil %L3 av %L4)</translation>

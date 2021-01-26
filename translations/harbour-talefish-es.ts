@@ -605,10 +605,10 @@
 <context>
     <name>PlacesDirectoryListView</name>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
-        <source>Sort by Name</source>
-        <extracomment>MenuItem: Sort directory content by name</extracomment>
-        <translation>Ordenar por nombre</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
+        <source>Open</source>
+        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
+        <translation>Abrir</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="211"/>
@@ -617,10 +617,10 @@
         <translation>Poner en cola</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="201"/>
-        <source>Open</source>
-        <extracomment>MenuItem: Open (replace currently open items) current files</extracomment>
-        <translation>Abrir</translation>
+        <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="232"/>
+        <source>Sort by Name</source>
+        <extracomment>MenuItem: Sort directory content by name</extracomment>
+        <translation>Ordenar por nombre</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlacesDirectoryListView.qml" line="253"/>
@@ -751,33 +751,33 @@
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="176"/>
         <source>Nothing to play</source>
-        <translation type="unfinished">Nada para reproducir</translation>
+        <translation>Nada para reproducir</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="181"/>
         <source>Open Files by pulling down.</source>
-        <translation type="unfinished">Abrir archivos deslizando hacia abajo.</translation>
+        <translation>Abrir archivos deslizando hacia abajo.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Rewind Track</source>
-        <translation type="unfinished">Pista anterior</translation>
+        <translation>Pista anterior</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Previous Track</source>
-        <translation type="unfinished">Pista previa</translation>
+        <translation>Pista previa</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
         <source>Next Track</source>
-        <translation type="unfinished">Pista siguiente</translation>
+        <translation>Pista siguiente</translation>
     </message>
 </context>
 <context>
     <name>PlayerPageProgressArea</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="119"/>
+        <location filename="../qml/visual/silica/PlayerPageProgressArea.qml" line="118"/>
         <source>%1 / %2 (File %L3 of %L4)</source>
         <comment>formatted file/directory durations, then file number/count )</comment>
         <translation>%1 / %2 (Archivo %L3 de %L4)</translation>
