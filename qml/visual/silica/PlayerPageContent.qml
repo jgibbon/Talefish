@@ -122,8 +122,6 @@ Item {
             width: parent.width
             height: parent.height
             asynchronous: true
-            cache: false
-
             fillMode: Image.PreserveAspectFit
             verticalAlignment: Image.AlignTop
             horizontalAlignment: Image.AlignHCenter
