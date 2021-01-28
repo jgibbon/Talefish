@@ -69,7 +69,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="176"/>
         <source>You can also submit translations at Transifex, if you don&apos;t like GitHub:</source>
         <extracomment>Label: introduction for translation link</extracomment>
-        <translation>如果不愿使用 GitHub，也可以在 Transifex 提交翻译:</translation>
+        <translation>如果不愿使用 GitHub，也可以在 Transifex 提交翻译：</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="185"/>
@@ -81,7 +81,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Or buy me a beer if you really feel like it:</source>
         <extracomment>Label: introduction for paypal link</extracomment>
-        <translation>如果你的确喜欢本软件，不妨给我买瓶啤酒:</translation>
+        <translation>如果你的确喜欢本软件，不妨给我买瓶啤酒：</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="202"/>
