@@ -6,6 +6,7 @@
 Name:       harbour-talefish
 
 # >> macros
+%define __provides_exclude_from ^%{_datadir}/.*$
 # << macros
 
 %{!?qtc_qmake:%define qtc_qmake %qmake}
@@ -13,8 +14,8 @@ Name:       harbour-talefish
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Talefish
-Version:    0.5
-Release:    6
+Version:    0.6
+Release:    1
 Group:      Applications/Multimedia
 License:    GPL2
 URL:        https://github.com/jgibbon/Talefish

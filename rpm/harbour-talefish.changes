@@ -1,5 +1,4 @@
-* Wed Jan 27 2021 velox 0.5-6
-- (test build "release")
+* Sat Feb 06 2021 velox 0.6-1
 - bugfix: fix directory progress cache/state handling
 - bugfix: display correct progress in more places while seeking (and the file is not seekable)
 - enhancement: optimize cassette animation bindings
@@ -7,7 +6,7 @@
 - enhancement: reduce player page layout complexity/bindings
 - maintenance: docker sdk compatibility
 - maintenance: sync transifex translations
-- maintenance: (test) add github build action
+- maintenance: add github build action
 
 * Wed Aug 19 2020 velox 0.5-5
 - bugfix: use fileName instead of baseName for sorting in FolderListModel

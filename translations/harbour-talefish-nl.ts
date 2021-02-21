@@ -749,27 +749,27 @@
 <context>
     <name>PlayerPageContent</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="176"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="174"/>
         <source>Nothing to play</source>
         <translation>Niets om af te spelen</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="181"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="179"/>
         <source>Open Files by pulling down.</source>
         <translation>Open bestanden door omlaag te trekken.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
         <source>Rewind Track</source>
         <translation>Nummer terugspoelen</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
         <source>Previous Track</source>
         <translation>Vorig nummer</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="292"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
         <source>Next Track</source>
         <translation>Volgend nummer</translation>
     </message>
