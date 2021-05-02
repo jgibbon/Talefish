@@ -30,14 +30,16 @@ Audio {
     readonly property int displayPosition: playlist.applyingSavedPosition ? playlist.applyThisTrackPosition : position
     readonly property bool errorVisible: audio.error > 0 && (audio.status === Audio.NoMedia || audio.status === Audio.InvalidMedia || audio.status === Audio.UnknownStatus)
     onStatusChanged: {
-        if(status == Audio.EndOfMedia && !app.options.playNextFile) {
+        if(status === Audio.EndOfMedia && !app.options.playNextFile) {
             pause();
             playlist.next()
+            playbackRate = app.options.playbackRate
         }
     }
 
     function playPause() {
         if(!isPlaying) {
+            playbackRate = app.options.playbackRate
             play();
         } else {
             pause();
