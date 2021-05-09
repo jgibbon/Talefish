@@ -71,5 +71,6 @@ PersistentObject {
     property bool autoStartSlumberAndRefocusTalefish: true
     property date autoStartSlumberAfterTime: new Date(1970,0,1,21,0)
     property date autoStartSlumberBeforeTime: new Date(1970,0,1,6,0)
-    property string slumberPauseRewindDuration: '0' // '0': disabled, 'small'/'normal': use set durations, 'long': normal*2
+    property string slumberPauseRewindDuration: '0' // '0': disabled, 'small'/'normal': use set durations, 'long': normal*2, 'timer': timer duration
+    property bool slumberTriggerOnPlaylistEnd: true
 }

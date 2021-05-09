@@ -505,19 +505,19 @@
         <translation>Prędkość odtwarzania: %1%</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="70"/>
+        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="72"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;short skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="77"/>
+        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="79"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;long skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="85"/>
+        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="87"/>
         <source>Play next Track automatically</source>
         <extracomment>TextSwitch label: Enable playing next track in playlist when the current one is finished</extracomment>
         <translation>Odtwórz następny utwór automatycznie</translation>
@@ -539,10 +539,22 @@
         <translation>Zainstaluj aplikację slumber, wyłącznik czasowy uśpienia, aby włączyć te opcje</translation>
     </message>
     <message>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="86"/>
+        <source>Stop slumber and trigger timeout actions when the playlist ends. Only if slumber is active.</source>
+        <extracomment>Option Entry (TextSwitch) description text</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
         <translation>Przewijanie do tyłu po wstrzymaniu przez slumber:</translation>
+    </message>
+    <message>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
+        <source>Slumber timer duration</source>
+        <extracomment>ComboBox option: skip back the duration of the slumber timer itself when paused by slumber</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
@@ -551,55 +563,61 @@
         <translation>nie</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="69"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;short&quot; when paused by slumber</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="69"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="71"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;long&quot; when paused by slumber</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="71"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="73"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="78"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="92"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Uruchom automatycznie wyłącznik czasowy</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="85"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="99"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
         <translation>Uruchom aplikację slumber czasowego wyłączenia automatycznie podczas uruchamiania Talefish.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="92"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="106"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Przenieś Talefisha na pierwszy plan po uruchomieniu slumber</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="103"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="117"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Uruchom Slumber w określonych momentach</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="136"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="79"/>
+        <source>Trigger slumber on end</source>
+        <extracomment>Option Entry (TextSwitch)</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="150"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Uruchom Slumber po</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="155"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="169"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Uruchom Slumber przed</translation>
@@ -762,17 +780,17 @@
         <translation>Otwórz pliki przez pociągnięcie w dół.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
         <source>Rewind Track</source>
         <translation>Przewiń do początku</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
         <source>Previous Track</source>
         <translation>Poprzedni utwór</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
         <source>Next Track</source>
         <translation>Następny utwór</translation>
     </message>

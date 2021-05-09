@@ -508,19 +508,19 @@
         <translation>Hitrost predvajanja: %1%</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="70"/>
+        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="72"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;short skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
         <translation>Nastavitev za kratek preskok</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="77"/>
+        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="79"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox label: Set the duration for &quot;long skip&quot; on the player page (values are in seconds; for example 30s)</extracomment>
         <translation>Nastavitev za dolg preskok</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="85"/>
+        <location filename="../qml/visual/silica/OptionsPlayback.qml" line="87"/>
         <source>Play next Track automatically</source>
         <extracomment>TextSwitch label: Enable playing next track in playlist when the current one is finished</extracomment>
         <translation>Samodejno predvajaj naslednji posnetek</translation>
@@ -542,10 +542,22 @@
         <translation>Da omogočite te funkcije naprej namestite aplikacijo Slumber</translation>
     </message>
     <message>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="86"/>
+        <source>Stop slumber and trigger timeout actions when the playlist ends. Only if slumber is active.</source>
+        <extracomment>Option Entry (TextSwitch) description text</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
         <source>Rewind when paused by slumber:</source>
         <extracomment>ComboBox label</extracomment>
         <translation>Previj, ko Slumber naredi pavzo:</translation>
+    </message>
+    <message>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
+        <source>Slumber timer duration</source>
+        <extracomment>ComboBox option: skip back the duration of the slumber timer itself when paused by slumber</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
@@ -554,55 +566,61 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="69"/>
         <source>Short Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;short&quot; when paused by slumber</extracomment>
         <translation>Kratek preskok</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="69"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="71"/>
         <source>Long Skip duration</source>
         <extracomment>ComboBox option: skip back the duration set as &quot;long&quot; when paused by slumber</extracomment>
         <translation>Dolg preskok</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="71"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="73"/>
         <source>Double Long Skip duration</source>
         <extracomment>ComboBox option: skip back double the duration set as &quot;long&quot; when paused by slumber</extracomment>
         <translation>Dvojni dolg preskok</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="78"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="92"/>
         <source>Launch sleep timer automatically</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Samodejno zaženi časovnik spanja</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="85"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="99"/>
         <source>Launch the slumber sleep timer application automatically when starting Talefish.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
         <translation>Ob zagonu Talefish samodejno zaženi tudi aplikacijo Slumber.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="92"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="106"/>
         <source>Bring Talefish to foreground again after launching slumber</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Po zagonu aplikacije Slumber prikaži Talefish v ospredju</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="103"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="117"/>
         <source>Only launch slumber at certain times</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
         <translation>Aplikacijo Slumber zaženi le ob določenem času</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="136"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="79"/>
+        <source>Trigger slumber on end</source>
+        <extracomment>Option Entry (TextSwitch)</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="150"/>
         <source>Launch slumber after</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only after &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Zaženi aplikacijo Slumber po</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="155"/>
+        <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="169"/>
         <source>Launch slumber before</source>
         <extracomment>ComboBox/ValueButton label: Launch slumber application only before &quot;X o&apos;clock&quot; (starts time picker after click)</extracomment>
         <translation>Zaženi aplikacijo Slumber pred</translation>
@@ -765,17 +783,17 @@
         <translation>Za odpiranje datotek potegni navzdol</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
         <source>Rewind Track</source>
         <translation>Previj posnetek</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
         <source>Previous Track</source>
         <translation>Prejšnji posnetek</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="290"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
         <source>Next Track</source>
         <translation>Naslednji posnetek</translation>
     </message>

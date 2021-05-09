@@ -41,12 +41,17 @@ Playlist {
     onCurrentIndexChanged: {
         console.log('currentIndex', currentIndex, audio.error) //error: 1
         // when played through, we want to activate the first track again
-       if(currentIndex === -1 && metadata.count > 0 && !audio.error) {
-           audio.pause();
-           currentIndex = 0;
-           // total position stays at "100%" by default, which is nice and correct but may be seen as inconsistent
-           totalPosition = 0;
-       }
+        if(currentIndex === -1 && metadata.count > 0 && !audio.error) {
+
+            audio.pause();
+            currentIndex = 0;
+            // total position stays at "100%" by default, which is nice and correct but may be seen as inconsistent
+            totalPosition = 0;
+            if(options.slumberTriggerOnPlaylistEnd) {
+                app.playerCommands.slumberInterface.call('trigger')
+            }
+
+        }
     }
 
     readonly property var currentMetaData: {
@@ -170,7 +175,7 @@ Playlist {
         if(!enqueue) {
             applySavedPosition();
         }
-//        console.log('opened playlist', pathsIdentifier)
+        //        console.log('opened playlist', pathsIdentifier)
     }
     property bool applyingSavedPosition: false
     property int applyThisTrackPosition: -1
@@ -196,7 +201,7 @@ Playlist {
             lastAccess: new Date().getTime()
         }
         if(position.index > -1 && position.totalPosition > 1) {
-//            totalPosition = position.totalPosition;
+            //            totalPosition = position.totalPosition;
             app.state.playlistProgress[pathsIdentifier] = position;
         }
     }
@@ -217,33 +222,38 @@ Playlist {
     }
 
     readonly property Connections audioConnections: Connections {
-                    target: audio
-                    onSeekableChanged: {
-                        if(audio.seekable && playlist.applyingSavedPosition) {
-                            audio.seek(playlist.applyThisTrackPosition);
-                            // normally, seeking should be applied now with local tracks
-                            if(audio.position === playlist.applyThisTrackPosition) {
-                                playlist.applyingSavedPosition = false;
-                                playlist.applyThisTrackPosition = -1;
-                            } else { // it it doesn't, we force seeking with brute force
-                                reSeekTimer.start()
-                            }
-                        }
-                    }
-                    onDisplayPositionChanged: {
-                        if(!playlist.applyingSavedPosition) {
-                            totalPosition = currentMetaData.previousDurations + audio.displayPosition
-                            playlist.saveCurrentPosition()
-                        }
-                    }
-                    onDurationChanged: {
-                        if(playlist.currentIndex > -1
-                                && audio.duration > 20  // account for some variance with partly loaded data and VBR… TODO: still necessary?
-                                && playlist.currentMetaData.duration !== audio.duration) {
-                                    metadata.setProperty(playlist.currentIndex, 'duration', audio.duration);
-                                    //setDurations() directly may skew skipping, so we reuse durationListTimer:
-                                    playlist.durationListTimer.start()
-                        }
-                    }
+        target: audio
+        onSeekableChanged: {
+            if(audio.seekable && playlist.applyingSavedPosition) {
+                console.log("seekable applying?!")
+                audio.seek(playlist.applyThisTrackPosition);
+                // normally, seeking should be applied now with local tracks
+                if(audio.position === playlist.applyThisTrackPosition) {
+                    playlist.applyingSavedPosition = false;
+                    playlist.applyThisTrackPosition = -1;
+                    //                                audio.playbackRateWorkaround();
+                } else { // it it doesn't, we force seeking with brute force
+                    reSeekTimer.start()
                 }
+            } else if(audio.seekable && app.options.playbackRate !== 1.0) { // seek to force playbackRate
+                console.log("seek for playbackRate");
+                audio.playbackRateWorkaround(true);
+            }
+        }
+        onDisplayPositionChanged: {
+            if(!playlist.applyingSavedPosition) {
+                totalPosition = currentMetaData.previousDurations + audio.displayPosition
+                playlist.saveCurrentPosition()
+            }
+        }
+        onDurationChanged: {
+            if(playlist.currentIndex > -1
+                    && audio.duration > 20  // account for some variance with partly loaded data and VBR… TODO: still necessary?
+                    && playlist.currentMetaData.duration !== audio.duration) {
+                metadata.setProperty(playlist.currentIndex, 'duration', audio.duration);
+                //setDurations() directly may skew skipping, so we reuse durationListTimer:
+                playlist.durationListTimer.start()
+            }
+        }
+    }
 }

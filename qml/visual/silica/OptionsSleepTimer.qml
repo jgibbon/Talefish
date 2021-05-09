@@ -63,6 +63,8 @@ OptionArea {
         jsonData: [
             //: ComboBox option: no, do not rewind when paused by slumber
             {text: qsTr('no'), value: '0'},
+            //: ComboBox option: skip back the duration of the slumber timer itself when paused by slumber
+            {text: qsTr('Slumber timer duration'), value: 'timer'},
             //: ComboBox option: skip back the duration set as "short" when paused by slumber
             {text: qsTr('Short Skip duration'), value: 'small'},
             //: ComboBox option: skip back the duration set as "long" when paused by slumber
@@ -70,6 +72,18 @@ OptionArea {
             //: ComboBox option: skip back double the duration set as "long" when paused by slumber
             {text: qsTr('Double Long Skip duration'), value: 'long'},
         ]
+    }
+    TextSwitch {
+        id: slumberTriggerOnPlaylistEndSwitch
+        //: Option Entry (TextSwitch)
+        text: qsTr('Trigger slumber on end')
+        enabled: autoStartSlumberSwitch.enabled
+        checked: app.options.slumberTriggerOnPlaylistEnd
+        onClicked: {
+            app.options.slumberTriggerOnPlaylistEnd = checked
+        }
+        //: Option Entry (TextSwitch) description text
+        description: qsTr('Stop slumber and trigger timeout actions when the playlist ends. Only if slumber is active.')
     }
     TextSwitch {
         id:autoStartSlumberSwitch

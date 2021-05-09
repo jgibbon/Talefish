@@ -200,6 +200,9 @@ Item {
         drag.threshold: 30
         drag.minimumX: playlist.currentIndex < page.metadataCount-1 ? maxDrag*-1 : 0 //next
         drag.maximumX: playlist.currentIndex > 0 || audio.displayPosition > options.skipBackTrackThreshold ? maxDrag:0 //prev
+        onClicked: {
+            app.audio.playPause();
+        }
 
         onMouseXChanged: {
             var m = mouse, act = sideTriggerActive;

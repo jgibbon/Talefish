@@ -43,11 +43,13 @@ OptionArea {
 
         onPressAndHold: {
             app.options.playbackRate = value = 1
+            app.audio.playbackRateWorkaround(true)
             isLongPressed = true
         }
         onReleased: {
             if(!isLongPressed) {
                 app.options.playbackRate = value
+                app.audio.playbackRateWorkaround(true)
             }
             else {
                 value = 1

@@ -30,7 +30,7 @@ Audio {
     readonly property int displayPosition: playlist.applyingSavedPosition ? playlist.applyThisTrackPosition : position
     readonly property bool errorVisible: audio.error > 0 && (audio.status === Audio.NoMedia || audio.status === Audio.InvalidMedia || audio.status === Audio.UnknownStatus)
     onStatusChanged: {
-        if(status == Audio.EndOfMedia && !app.options.playNextFile) {
+        if(status === Audio.EndOfMedia && !app.options.playNextFile) {
             pause();
             playlist.next()
         }
@@ -39,8 +39,15 @@ Audio {
     function playPause() {
         if(!isPlaying) {
             play();
+            playbackRateWorkaround();
         } else {
             pause();
+        }
+    }
+
+    function playbackRateWorkaround(doForce) {
+        if(doForce || (isPlaying && app.options.playbackRate !== 1.0)) {
+            seek(position+1);
         }
     }
 }

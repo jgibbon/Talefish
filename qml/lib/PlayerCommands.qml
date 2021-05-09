@@ -26,6 +26,7 @@ Item {
 
     property TalefishAudio audio: app.audio
     property TalefishPlaylist playlist: app.playlist
+    property alias slumberInterface: slumberInterface
 
     function play() { console.log('external command: play'); audio.play();}
     function pause() {console.log('external command: pause'); audio.pause();}
@@ -71,7 +72,7 @@ Item {
     // standard internal commands
     function seek(position, index) {
         if(index > -1 && index !== playlist.currentIndex) {
-//            console.log('setting index', index)
+            //            console.log('setting index', index)
             playlist.currentIndex = index;
         }
         if(audio.seekable) {
@@ -86,7 +87,7 @@ Item {
 
     function seekBy(mseconds) {
         var totalMilliSeconds = playlist.totalPosition + mseconds;
-//        console.log('seekby',mseconds, 'from', playlist.totalPosition, 'to', totalMilliSeconds)
+        //        console.log('seekby',mseconds, 'from', playlist.totalPosition, 'to', totalMilliSeconds)
         if(totalMilliSeconds < 0) {
             playlist.totalPosition = 0;
             seek(0,0);
@@ -106,7 +107,7 @@ Item {
             cur = playlist.metadata.get(i);
             curMin = cur.previousDurations;
             if(curMin <= totalMilliSeconds && (cur.previousDurations + cur.duration) >= totalMilliSeconds) {
-//                console.log('matched other track #', i, totalMilliSeconds - curMin, 'of total', cur.duration)
+                //                console.log('matched other track #', i, totalMilliSeconds - curMin, 'of total', cur.duration)
                 playlist.totalPosition = totalMilliSeconds;
                 seek(totalMilliSeconds - curMin, i);
                 return;
@@ -115,27 +116,27 @@ Item {
     }
 
     RemoteControl {
-            parent: app //needed for MediaKey
-            onCommand: {
-                console.log('remote control', cmd);
-                switch(cmd) {
-                case 'pause':
-                case 'play':
-                case 'playPause':
-                    playerCommands.playPause()
-                    break;
-                case 'stop':
-                    playerCommands.stop()
-                    break;
-                case 'next':
-                    playerCommands.next()
-                    break;
-                case 'prev':
-                    playerCommands.prev()
-                    break;
-                }
+        parent: app //needed for MediaKey
+        onCommand: {
+            console.log('remote control', cmd);
+            switch(cmd) {
+            case 'pause':
+            case 'play':
+            case 'playPause':
+                playerCommands.playPause()
+                break;
+            case 'stop':
+                playerCommands.stop()
+                break;
+            case 'next':
+                playerCommands.next()
+                break;
+            case 'prev':
+                playerCommands.prev()
+                break;
             }
         }
+    }
 
     DBusInterface {
         id:slumberInterface
@@ -143,6 +144,8 @@ Item {
         path: '/de/gibbon/slumber'
         iface: 'de.gibbon.slumber'
         signalsEnabled: true
+        watchServiceStatus: true
+
         function triggered(){
             // '0': disabled, 'small'/'normal': use set durations, 'long': normal*2
             if(options.slumberPauseRewindDuration !== '0' && audio.isPlaying) {
@@ -159,6 +162,13 @@ Item {
                 case 'long':
                     console.log('slumber triggered long');
                     playerCommands.seekBy(0 - options.skipDurationNormal * 2)
+                    break;
+                case 'timer':
+                    var secs = slumberInterface.getProperty("timerSeconds");
+                    if(secs) {
+                        playerCommands.seekBy(0 - secs*1000)
+                    }
+
                     break;
                 }
             }

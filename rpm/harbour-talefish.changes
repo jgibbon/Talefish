@@ -1,3 +1,9 @@
+* Sun May 09 2021 velox 0.7-1
+- enhancement: new option to trigger slumber actions when playlist ends
+- enhancement: tap cover image area for play/pause
+- bugfix: re-enable workaround for system bug not applying playback speed (thanks thigg for issue and some work fixing it)
+- translation update (thanks translation team!)
+
 * Sat Feb 06 2021 velox 0.6-1
 - bugfix: fix directory progress cache/state handling
 - bugfix: display correct progress in more places while seeking (and the file is not seekable)
