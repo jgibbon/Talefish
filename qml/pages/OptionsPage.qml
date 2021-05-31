@@ -20,28 +20,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 import QtQuick 2.6
 import Sailfish.Silica 1.0
-
 import QtMultimedia 5.0
 
 
 import "../lib/"
 import "../visual/"
 
-
-import harbour.talefish.folderlistmodel 1.0
-
 Page {
     id: page
     allowedOrientations: Orientation.All
     property var loadComponents:(['OptionsPlayback', 'OptionsCommands', 'OptionsFiles', 'OptionsAppearance', 'OptionsSleepTimer', 'OptionsMisc'])
     readonly property bool staticMode: loadComponents.length === 1
-    property var areas: ([]);
-
-    function setActiveArea(activeArea) {
-        areas.forEach(function(area){
-            area.expanded = (area === activeArea)
-        });
-    }
+    signal setActiveArea(int activeAreaIndex)
 
     SilicaFlickable {
         id: listView
@@ -74,18 +64,8 @@ Page {
                 delegate: Component {
                     Loader {
                         width: parent.width
-                        onStatusChanged: {
-                            if(status === Loader.Ready) {
-                                page.areas.push(item);
-                                item.expandedChanged.connect(function(){
-                                    if(item.expanded) {
-                                        page.setActiveArea(item);
-                                    }
-                                });
-                            }
-                        }
                         Component.onCompleted: {
-                            setSource('../visual/silica/'+modelData+'.qml', {expanded: index === 0, staticMode: page.staticMode});
+                            setSource('../visual/silica/'+modelData+'.qml', {expanded: index === 0, page: page});
                         }
                     }
                 }
