@@ -473,13 +473,13 @@
 <context>
     <name>OptionsPage</name>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="60"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="50"/>
         <source>About</source>
         <comment>pulley</comment>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="70"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="60"/>
         <source>Options</source>
         <comment>header</comment>
         <translation>Alternativ</translation>

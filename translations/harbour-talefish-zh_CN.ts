@@ -470,13 +470,13 @@
 <context>
     <name>OptionsPage</name>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="60"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="50"/>
         <source>About</source>
         <comment>pulley</comment>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="../qml/pages/OptionsPage.qml" line="70"/>
+        <location filename="../qml/pages/OptionsPage.qml" line="60"/>
         <source>Options</source>
         <comment>header</comment>
         <translation>选项</translation>
@@ -536,7 +536,7 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="86"/>
         <source>Stop slumber and trigger timeout actions when the playlist ends. Only if slumber is active.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>播放列表播完后停止 slumber 并开启超时操作。仅在 slumber 运行时有效。</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
@@ -548,7 +548,7 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
         <source>Slumber timer duration</source>
         <extracomment>ComboBox option: skip back the duration of the slumber timer itself when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Slumber 计时器时长</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
@@ -602,7 +602,7 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="79"/>
         <source>Trigger slumber on end</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>结束时开启 slumber</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="150"/>
