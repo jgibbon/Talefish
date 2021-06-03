@@ -545,7 +545,7 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="86"/>
         <source>Stop slumber and trigger timeout actions when the playlist ends. Only if slumber is active.</source>
         <extracomment>Option Entry (TextSwitch) description text</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ob koncu seznama predvajanja ustavi aplikacijo Slumber in zaženi dejanja. Velja le, če je aplikacija Slumber zagnana.</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="62"/>
@@ -557,7 +557,7 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="67"/>
         <source>Slumber timer duration</source>
         <extracomment>ComboBox option: skip back the duration of the slumber timer itself when paused by slumber</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Dolžina časovnika aplikacije Slumber</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="65"/>
@@ -611,7 +611,7 @@
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="79"/>
         <source>Trigger slumber on end</source>
         <extracomment>Option Entry (TextSwitch)</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ob koncu zaženi aplikacijo Slumber</translation>
     </message>
     <message>
         <location filename="../qml/visual/silica/OptionsSleepTimer.qml" line="150"/>
