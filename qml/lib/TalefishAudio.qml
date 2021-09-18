@@ -47,7 +47,8 @@ Audio {
 
     function playbackRateWorkaround(doForce) {
         if(doForce || (isPlaying && app.options.playbackRate !== 1.0)) {
-            seek(position+1);
+            seek(position+5);
+            seek(position);
         }
     }
 }
