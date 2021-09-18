@@ -47,6 +47,7 @@ OptionArea {
         id:useHeadphoneCommandsSwitch
         //: Option Entry (TextSwitch)
         text: qsTr('Use head phone buttons/Bluetooth to control Talefish')
+        visible: app.launcher.sf_major < 4 || (app.launcher.sf_major === 4 && app.launcher.sf_minor < 2)
 
         checked: app.options.useHeadphoneCommands
         onClicked: {
@@ -62,7 +63,7 @@ OptionArea {
         states: [
             State {
                 name: "active"
-                when: app.options.useHeadphoneCommands
+                when: useHeadphoneCommandsSwitch.visible && app.options.useHeadphoneCommands
                 PropertyChanges { target: headPhoneButtonColumn; height: headPhoneButtonColumn.implicitHeight; opacity: 1 }
             }
         ]

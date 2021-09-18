@@ -48,7 +48,16 @@ ApplicationWindow
         }
     }
 
-    readonly property Launcher launcher: Launcher {}
+    readonly property Launcher launcher: Launcher {
+        property int sf_major
+        property int sf_minor
+        Component.onCompleted: {
+            var sf_version = app.launcher.getSFVersion()
+                .split('.');
+            sf_major = parseInt(sf_version[0]);
+            sf_minor = parseInt(sf_version[1]);
+        }
+    }
     readonly property TalefishAudio audio: TalefishAudio { playlist: app.playlist }
     readonly property TalefishPlaylist playlist: TalefishPlaylist { audio: app.audio }
     readonly property PlayerCommands playerCommands: PlayerCommands {audio: app.audio; playlist: app.playlist}

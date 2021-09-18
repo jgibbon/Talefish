@@ -339,43 +339,43 @@
         <translation>Za nadzor programa uporabi gumbe na slušalkah</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="84"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="85"/>
         <source>You can choose the action you prefer to be executed when pressing the &quot;Call/Hangup&quot; button, which often is the only button on a headset:</source>
         <extracomment>Label</extracomment>
         <translation>Tu nastavite katero dejanje naj se izvede pri pritisku na gumb za &quot;sprejem / prekinitev klica&quot; na slušalkah. Pogosto je to edini gumb na slušalki.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="89"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="90"/>
         <source>Do nothing</source>
         <extracomment>ComboBox option: Do nothing on &quot;Call button&quot; press</extracomment>
         <translation>Brez dejanja</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="91"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="92"/>
         <source>Play/Pause</source>
         <extracomment>ComboBox option: Play/Pause on &quot;Call button&quot; press</extracomment>
         <translation>Predvajaj / Premor</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="93"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="94"/>
         <source>Skip forward</source>
         <extracomment>ComboBox option: Next on &quot;Call button&quot; press</extracomment>
         <translation>Preskoči naprej</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="95"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="96"/>
         <source>Skip backward</source>
         <extracomment>ComboBox option: Previous on &quot;Call button&quot; press</extracomment>
         <translation>Preskoči nazaj</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="107"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="108"/>
         <source>Button Press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; short press</extracomment>
         <translation>Prisitk na gumb:</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/OptionsCommands.qml" line="116"/>
+        <location filename="../qml/visual/silica/OptionsCommands.qml" line="117"/>
         <source>Long press:</source>
         <extracomment>ComboBox label: What to do on &quot;Call button&quot; long press</extracomment>
         <translation>Dolgi pritisk:</translation>

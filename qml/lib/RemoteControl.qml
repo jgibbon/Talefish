@@ -151,15 +151,7 @@ Item {
 
         try {
             // policy is already handled in sfos 4.2
-
-            var sf_version = app.launcher.getSFVersion()
-                .split('.');
-            var sf_major = parseInt(sf_version[0]);
-            var sf_minor = parseInt(sf_version[1]);
-            console.log('sf major', sf_major, 'sf_minor', sf_minor);
-
-
-            if(sf_major < 4 || (sf_major === 4 && sf_minor < 2)) {
+            if(app.launcher.sf_major < 4 || (app.launcher.sf_major === 4 && app.launcher.sf_minor < 2)) {
                 _policy = Qt.createQmlObject(policyStr, remoteControl, 'dynamic-policy');
                 // Permission gets revoked on call or by another player…
                 // workaround: request again when app is put in foreground or background

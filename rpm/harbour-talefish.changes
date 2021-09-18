@@ -1,6 +1,6 @@
 * Sat Sep 18 2021 velox 0.8-1
 - bugfix: expand playbackRate workaround again (thanks dimpflmoser for submitting issue)
-- bugfix: limit media keys permission system to SFOS < 4.2 (which already handles it; thanks KappaAlphaOmega for submitting issue)
+- bugfix: limit media keys permission system incl custom button actions to SFOS < 4.2 (which already handles it; thanks KappaAlphaOmega for submitting issue)
 - enhancement: optimize settings page transitions
 - translation update: sl, cn (thanks translation team!)
 - maintenance: enable github actions pre-releases and other architectures
