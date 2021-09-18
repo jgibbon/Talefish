@@ -28,6 +28,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <QFileInfo>
 #include <QStorageInfo>
 #include <QVariant>
+#include <QRegExp>
 #include <QStandardPaths> // for migrateTalefishDatabase
 
 class Launcher : public QObject
@@ -48,6 +49,7 @@ public:
 
 //    Q_INVOKABLE void setupFileHandling(const bool activate);
 
+    Q_INVOKABLE QString getSFVersion();
 signals:
 
 public slots:

@@ -140,7 +140,7 @@ Item {
         }
     }
 ';
-        var policyStr = 'import org.nemomobile.policy 1.0; Permissions {applicationClass: "player"; enabled: app.playlist.metadata.count > 0; Resource {type: Resource.HeadsetButtons;optional: true;}}'
+        var policyStr = 'import Nemo.Policy 1.0; Permissions {applicationClass: "player"; enabled: !!remoteControl._mpris.currentService && app.playlist.metadata.count > 0; Resource {type: Resource.HeadsetButtons;optional: false; required: true; onAcquiredChanged:{console.log("permission acquired changed", acquired)}}}'
 
         try {
             _mpris = Qt.createQmlObject(mprisStr, remoteControl, 'dynamic-mpris');
@@ -150,32 +150,52 @@ Item {
         }
 
         try {
+            // policy is already handled in sfos 4.2
+
+            var sf_version = app.launcher.getSFVersion()
+                .split('.');
+            var sf_major = parseInt(sf_version[0]);
+            var sf_minor = parseInt(sf_version[1]);
+            console.log('sf major', sf_major, 'sf_minor', sf_minor);
+
+
+            if(sf_major < 4 || (sf_major === 4 && sf_minor < 2)) {
+                _policy = Qt.createQmlObject(policyStr, remoteControl, 'dynamic-policy');
+                // Permission gets revoked on call or by another player…
+                // workaround: request again when app is put in foreground or background
+                _policy.granted.connect(function(){
+                    console.log('policy: granted')
+                    remoteControl.tryToReaquire = false
+                });
+                _policy.lost.connect(function(){
+                    console.log('policy: lost')
+                    remoteControl.tryToReaquire = true
+                });
+                _policy.released.connect(function(){
+                    console.log('policy: released')
+                    remoteControl.tryToReaquire = true
+                });
+                _policy.releasedByManager.connect(function(){
+                    console.log('policy: releasedByManager')
+                    remoteControl.tryToReaquire = true
+                });
+                app.activeChanged.connect(function(){
+                    if(remoteControl.tryToReaquire) {
+                        _policy.enabled = false;
+                        _policy.enabled = Qt.binding(function(){return app.playlist.metadata.count > 0;})
+                    }
+                });
+            }
+        } catch (policyError) {
+            console.warn('Compatibility: headphone control not possible');
+        }
+        try {
             _keys = Qt.createQmlObject(keyStr, remoteControl, 'dynamic-keys');
             _keys.command.connect(remoteControl.command)
         } catch (keysError) {
             console.warn('Compatibility: remote control not possible');
         }
 
-        try {
-            _policy = Qt.createQmlObject(policyStr, remoteControl, 'dynamic-policy');
-            // Permission gets revoked on call or by another player…
-            // workaround: request again when app is put in foreground or background
-            _policy.granted.connect(function(){
-                remoteControl.tryToReaquire = false
-            });
-            _policy.lost.connect(function(){
-                remoteControl.tryToReaquire = true
-            });
-            app.activeChanged.connect(function(){
-                if(remoteControl.tryToReaquire) {
-                    _policy.enabled = false;
-                    _policy.enabled = Qt.binding(function(){return app.playlist.metadata.count > 0;})
-                }
-            });
-
-        } catch (policyError) {
-            console.warn('Compatibility: headphone control not possible');
-        }
 
     }
 }

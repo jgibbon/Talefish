@@ -71,6 +71,18 @@ bool Launcher::folderExists(const QString &path)
     return folder.exists();
 }
 
+QString Launcher::getSFVersion()
+{
+    QString val = this->launch("bash -c \"rpm -qa --queryformat '%{NAME} %{VERSION}\n' | grep sailfish-version\"");
+    QRegExp rx("(\\d+.\\d+)");
+    int pos = rx.indexIn(val);
+    if (pos > -1) {
+        return rx.cap(1);
+    } else {
+        return "0.0";
+    }
+}
+
 QString Launcher::getRoot() {
     return QDir::rootPath();
 }
