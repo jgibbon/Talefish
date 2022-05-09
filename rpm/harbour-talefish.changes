@@ -1,3 +1,6 @@
+* Tue May 10 2022 velox 0.8-2
+- bugfix: opt out of sailjail for now to make slumber interaction possible
+
 * Sat Sep 18 2021 velox 0.8-1
 - bugfix: expand playbackRate workaround again (thanks dimpflmoser for submitting issue)
 - bugfix: limit media keys permission system incl custom button actions to SFOS < 4.2 (which already handles it; thanks KappaAlphaOmega for submitting issue)
