@@ -53,6 +53,13 @@ Playlist {
 
         }
     }
+    property string currentAlbumArtUrl: ''
+    function setAlbumArt(coverUrl) {
+        if(coverUrl !== currentAlbumArtUrl) {
+            currentAlbumArtUrl = coverUrl
+            playlist.currentMetaDataChanged()
+        }
+    }
 
     readonly property var currentMetaData: {
         var md = metadata.get(currentIndex);

@@ -21,6 +21,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include "launcher.h"
 #include <QDebug>
 
+#include <QCryptographicHash>
+
 Launcher::Launcher(QObject *parent) : QObject(parent),
     m_process(new QProcess(this))
 {
@@ -99,6 +101,15 @@ QList<QVariant> Launcher::getExternalVolumes()
             }
     }
     return mounts;
+}
+
+QString Launcher::getGeneratedCoverImgPath(const QString &mediafilePath)
+{
+
+    QString appDataLocation = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/coverimg/";
+    QString mediaLocationHash = QString(QCryptographicHash::hash((mediafilePath.toUtf8()),QCryptographicHash::Md5).toHex());
+    QString coverImgPath = appDataLocation + "/" + mediaLocationHash + ".jpg";
+    return coverImgPath;
 }
 //  using mimer works without this, but we may need something like it in the future
 //void Launcher::setupFileHandling(const bool activate)

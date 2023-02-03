@@ -30,6 +30,7 @@ Item {
     property alias source: primaryImage.source
     property alias verticalAlignment: primaryImage.verticalAlignment
     property alias sourceSize: primaryImage.sourceSize
+    property alias status: primaryImage.status
 
     property alias primaryImage: primaryImage
     property alias secondaryImage: secondaryImage

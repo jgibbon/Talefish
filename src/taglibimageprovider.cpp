@@ -32,6 +32,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <QDir>
 // levenshtein test
 #include <QVector>
+// save current image
+#include <QStandardPaths>
+#include <QCryptographicHash>
 
 //#include <QElapsedTimer>
 //#include <QDebug>
@@ -146,6 +149,25 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
             *size = QSize(img.width(), img.height());
         }
     }
+
+
+    // save the album art for mpris / lock screen
+
+    QString appDataLocation = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/coverimg";
+    QString mediaLocationHash = QString(QCryptographicHash::hash((mediafilePath.toUtf8()),QCryptographicHash::Md5).toHex());
+
+    QDir dir(appDataLocation);
+    QFile coverimage(appDataLocation + "/" + mediaLocationHash + ".jpg");
+
+    // qDebug() << "paths…" << mediafilePath << "hashy" << mediaLocationHash << coverimage.fileName();
+    if(!coverimage.exists()) {
+        dir.removeRecursively();
+        // qDebug() << "creating path for image copy" << appDataLocation; // << "hashy" << mediaLocationHash;
+        dir.mkpath(".");
+
+        img.save(coverimage.fileName(),"JPG",90);
+    }
+
 
 //    qDebug() << "Image took" << timer.elapsed() << "milliseconds";
     return img;

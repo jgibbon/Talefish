@@ -71,6 +71,7 @@ MprisPlayer {
 
                     infos[Mpris.metadataToString(Mpris.Artist)] = [app.playlist.currentMetaData.artist]
                     infos[Mpris.metadataToString(Mpris.Title)] = app.playlist.currentMetaData.title
+                    infos[Mpris.metadataToString(Mpris.ArtUrl)] = app.playlist.currentAlbumArtUrl
                     mpris.metadata = infos;
                 }
                 property Item wrap: Item {

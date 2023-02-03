@@ -136,6 +136,15 @@ Item {
                 duration: 500
                 easing.type: Easing.InOutQuad
             }
+
+            onStatusChanged: {
+                var cover = ''
+                if (coverImage.status === Image.Ready) {
+                     // set the cover img url for mpris only when loaded!
+                    cover = launcher.getGeneratedCoverImgPath(String(app.playlist.currentItemSource).replace("file://", ""))
+                 }
+                playlist.setAlbumArt(cover)
+            }
         }
 
     }
