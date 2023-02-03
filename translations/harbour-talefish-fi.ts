@@ -767,27 +767,27 @@
 <context>
     <name>PlayerPageContent</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="174"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="183"/>
         <source>Nothing to play</source>
         <translation>Ei toistettavaa</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="179"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="188"/>
         <source>Open Files by pulling down.</source>
         <translation>Avaa tiedostoja vetämällä alas.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
         <source>Rewind Track</source>
         <translation>Kelaa taaksepäin</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
         <source>Previous Track</source>
         <translation>Edellinen raita</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
         <source>Next Track</source>
         <translation>Seuraava raita</translation>
     </message>

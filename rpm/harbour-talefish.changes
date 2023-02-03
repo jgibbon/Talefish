@@ -1,3 +1,8 @@
+* Fri Feb 03 2023 velox 0.9-1
+- enhancement: album art on lock screen (sfos 4.5)
+- enhancement: remove loader for player page content because of visual side effects
+- overdue translation update: fi (thanks ZeiP!)
+
 * Tue May 10 2022 velox 0.8-2
 - bugfix: opt out of sailjail for now to make slumber interaction possible
 

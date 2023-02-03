@@ -770,27 +770,27 @@
 <context>
     <name>PlayerPageContent</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="174"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="183"/>
         <source>Nothing to play</source>
         <translation>Brak utworów do odtworzenia</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="179"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="188"/>
         <source>Open Files by pulling down.</source>
         <translation>Otwórz pliki przez pociągnięcie w dół.</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
         <source>Rewind Track</source>
         <translation>Przewiń do początku</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
         <source>Previous Track</source>
         <translation>Poprzedni utwór</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="293"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
         <source>Next Track</source>
         <translation>Następny utwór</translation>
     </message>
