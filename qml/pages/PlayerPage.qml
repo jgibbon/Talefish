@@ -67,13 +67,8 @@ Page {
 
         }
 
-
-        Loader {
-            active: app.active
+        PlayerPageContent {
             anchors.fill: parent
-            opacity: status === Loader.Ready ? 1.0 : 0.0
-            Behavior on opacity { FadeAnimator {} }
-            source: Qt.resolvedUrl("../visual/silica/PlayerPageContent.qml");
         }
 
     }
