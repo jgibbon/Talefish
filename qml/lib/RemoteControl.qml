@@ -19,6 +19,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
 import QtQuick 2.6
+import Amber.Mpris 1.0
 /* This is an ugly, bad hack for harbour. Sorry, please regard this as non-existent. */
 
 Item {
@@ -26,82 +27,75 @@ Item {
 
     signal command(string cmd)
 
-    property QtObject _mpris
+    property QtObject _mpris: MprisPlayer {
+        id: mpris
+        serviceName: "talefish"
+
+        identity: "Talefish"
+        supportedUriSchemes: ["file"]
+        supportedMimeTypes: ["audio/x-wav", "audio/x-vorbis+ogg", "audio/mpeg", "audio/mp4a-latm", "audio/x-aiff"]
+        // Mpris2 Player Interface
+        canControl: true
+
+        canGoNext: true //appstate.playlistIndex < appstate.playlist.count
+        canGoPrevious: true // appstate.playlistIndex > 0
+        canPause: true
+        canPlay: true
+
+        canSeek: true// playback.seekable
+        hasTrackList: true
+        playbackStatus: Mpris.Paused
+        loopStatus: Mpris.LoopNone
+        shuffle: false
+        volume: 1.0
+
+        onPauseRequested: remoteControl.command("pause")
+        onPlayRequested: remoteControl.command("play")
+        onPlayPauseRequested: remoteControl.command("playPause")
+        onStopRequested: remoteControl.command("stop")
+        onNextRequested: remoteControl.command("next")
+
+        onPreviousRequested: remoteControl.command("prev")
+
+        //metadata handling
+        function updateMetaData(){
+            mpris.metaData.contributingArtist =  [app.playlist.currentMetaData.artist]
+            mpris.metaData.title = app.playlist.currentMetaData.title
+            mpris.metaData.artUrl =  app.playlist.currentAlbumArtUrl
+        }
+        property Item wrap: Item {
+            Connections {
+                target: app.audio
+                onIsPlayingChanged: {
+                    if(app.audio.isPlaying) {
+                        mpris.playbackStatus = Mpris.Playing
+                    } else {
+                        mpris.playbackStatus = Mpris.Paused
+                    }
+                }
+            }
+            Connections {
+                target: app.playlist
+                onCurrentMetaDataChanged: {
+                    if(!metadataTimer.running) {
+                        mpris.updateMetaData();
+                    }
+                }
+            }
+            Timer { // workaround: data got ignored if set directly after load
+                id: metadataTimer
+                running: true
+                interval: 400
+                repeat: false
+                onTriggered: mpris.updateMetaData()
+            }
+        }
+    }
     property QtObject _keys
     property QtObject _policy
     property bool tryToReaquire
 
     Component.onCompleted: {
-        var mprisStr = 'import org.nemomobile.mpris 1.0
-import QtQuick 2.6
-MprisPlayer {
-                id: mpris
-                serviceName: "talefish"
-
-                identity: "Talefish"
-                supportedUriSchemes: ["file"]
-                supportedMimeTypes: ["audio/x-wav", "audio/x-vorbis+ogg", "audio/mpeg", "audio/mp4a-latm", "audio/x-aiff"]
-                // Mpris2 Player Interface
-                canControl: true
-
-                canGoNext: true //appstate.playlistIndex < appstate.playlist.count
-                canGoPrevious: true // appstate.playlistIndex > 0
-                canPause: true
-                canPlay: true
-
-                canSeek: true// playback.seekable
-                hasTrackList: true
-                playbackStatus: Mpris.Paused
-                loopStatus: Mpris.None
-                shuffle: false
-                volume: 1.0
-                signal command(string cmd)
-                onPauseRequested: command("pause")
-
-                onPlayRequested: command("play")
-                onPlayPauseRequested: command("playPause")
-                onStopRequested: command("stop")
-                onNextRequested: command("next")
-
-                onPreviousRequested: command("prev")
-
-                //metadata handling
-                function updateMetaData(){
-                    var infos = mpris.metadata;
-
-                    infos[Mpris.metadataToString(Mpris.Artist)] = [app.playlist.currentMetaData.artist]
-                    infos[Mpris.metadataToString(Mpris.Title)] = app.playlist.currentMetaData.title
-                    infos[Mpris.metadataToString(Mpris.ArtUrl)] = app.playlist.currentAlbumArtUrl
-                    mpris.metadata = infos;
-                }
-                property Item wrap: Item {
-                    Connections {
-                        target: app.audio
-                        onIsPlayingChanged: {
-                            if(app.audio.isPlaying) {
-                                mpris.playbackStatus = Mpris.Playing
-                            } else {
-                                mpris.playbackStatus = Mpris.Paused
-                            }
-                        }
-                    }
-                    Connections {
-                        target: app.playlist
-                        onCurrentMetaDataChanged: {
-                            if(!metadataTimer.running) {
-                                mpris.updateMetaData();
-                            }
-                        }
-                    }
-                    Timer { // workaround: data gets ignored if set directly after load
-                        id: metadataTimer
-                        running: true
-                        interval: 400
-                        repeat: false
-                        onTriggered: mpris.updateMetaData()
-                    }
-                }
-        }';
 
         var keyStr = 'import Sailfish.Media 1.0
 import QtQuick 2.6
@@ -142,13 +136,6 @@ Item {
     }
 ';
         var policyStr = 'import Nemo.Policy 1.0; Permissions {applicationClass: "player"; enabled: !!remoteControl._mpris.currentService && app.playlist.metadata.count > 0; Resource {type: Resource.HeadsetButtons;optional: false; required: true; onAcquiredChanged:{console.log("permission acquired changed", acquired)}}}'
-
-        try {
-            _mpris = Qt.createQmlObject(mprisStr, remoteControl, 'dynamic-mpris');
-            _mpris.command.connect(remoteControl.command)
-        } catch (mprisError) {
-            console.warn('Compatibility: connecting to mpris not possible');
-        }
 
         try {
             // policy is already handled in sfos 4.2
