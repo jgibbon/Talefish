@@ -108,7 +108,7 @@ QString Launcher::getGeneratedCoverImgPath(const QString &mediafilePath)
 
     QString appDataLocation = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/coverimg/";
     QString mediaLocationHash = QString(QCryptographicHash::hash((mediafilePath.toUtf8()),QCryptographicHash::Md5).toHex());
-    QString coverImgPath = appDataLocation + "/" + mediaLocationHash + ".jpg";
+    QString coverImgPath = appDataLocation + mediaLocationHash + ".jpg";
     return coverImgPath;
 }
 //  using mimer works without this, but we may need something like it in the future
