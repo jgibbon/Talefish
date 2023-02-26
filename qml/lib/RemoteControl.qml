@@ -59,9 +59,10 @@ Item {
 
         //metadata handling
         function updateMetaData(){
-            mpris.metaData.contributingArtist =  [app.playlist.currentMetaData.artist]
-            mpris.metaData.title = app.playlist.currentMetaData.title
-            mpris.metaData.artUrl =  app.playlist.currentAlbumArtUrl
+//            console.log('currentTitle', currentTitle)
+            mpris.metaData.contributingArtist = [app.playlist.currentArtist || playlist.currentAlbum]
+            mpris.metaData.title = app.playlist.currentTitle
+            mpris.metaData.artUrl = app.playlist.currentAlbumArtUrl
         }
         property Item wrap: Item {
             Connections {
