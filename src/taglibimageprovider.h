@@ -27,6 +27,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <QFileInfo>
 #include <QImage>
 #include <QPainter>
+#include <QDir>
 
 class taglibImageprovider : public QQuickImageProvider
 {
@@ -35,8 +36,11 @@ public:
 
     QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize);
 
-    static int levenshteinDistance( const QString &string1, const QString &string2, bool caseSensitive = false );
+    static int levenshteinDistance(const QString &source, const QString &target);
     QString nearestName(const QString& actual, const QStringList& candidates);
+private:
+    QString appDataLocationString;
+    QDir appDataLocation;
 
 };
 

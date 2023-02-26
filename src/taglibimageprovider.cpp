@@ -29,17 +29,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QFileInfo>
-#include <QDir>
 // levenshtein test
 #include <QVector>
 // save current image
 #include <QStandardPaths>
 #include <QCryptographicHash>
+#include <QDateTime>
 
 //#include <QElapsedTimer>
 //#include <QDebug>
 
-taglibImageprovider::taglibImageprovider() : QQuickImageProvider(QQuickImageProvider::Image) {}
+taglibImageprovider::taglibImageprovider() : QQuickImageProvider(QQuickImageProvider::Image) {
+    // delete all cached covers
+    appDataLocationString = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/coverimg";
+    appDataLocation = appDataLocationString;
+    appDataLocation.removeRecursively();
+}
 
 
 
@@ -52,7 +57,6 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
     QMimeDatabase db;
     QString mediafilePath;
     bool imageFound = false;
-
     // try to get implicit requestedSize height=width from id as url fragment
     // because then we can still query for sourceSize.width === 1 in qml to check for "no image"
     // we only search for digits here:
@@ -120,7 +124,7 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
         if(!imageFound) {
             QFileInfo mediafileinfo(mediafile);
             QDir filedir = mediafileinfo.absoluteDir();
-            QStringList images = filedir.entryList(QStringList() << "*.jpg" << "*.JPG" << "*.png" << "*.PNG" << "*.bmp" << "*.BMP",QDir::Files);
+            QStringList images = filedir.entryList(QStringList() << "*.jpg" << "*.JPG" << "*.png" << "*.PNG" << "*.bmp" << "*.BMP", QDir::Files, QDir::Name);
             if(images.count() > 0) {
                 imageFound = true;
                 img.load(filedir.absolutePath()+"/"+this->nearestName(mediafileinfo.fileName(), images));
@@ -153,17 +157,22 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
 
     // save the album art for mpris / lock screen
 
-    QString appDataLocation = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/coverimg";
     QString mediaLocationHash = QString(QCryptographicHash::hash((mediafilePath.toUtf8()),QCryptographicHash::Md5).toHex());
 
-    QDir dir(appDataLocation);
-    QFile coverimage(appDataLocation + "/" + mediaLocationHash + ".jpg");
+    QFile coverimage(appDataLocationString + "/" + mediaLocationHash + ".jpg");
+    QDateTime now = QDateTime::currentDateTime();
 
     // qDebug() << "paths…" << mediafilePath << "hashy" << mediaLocationHash << coverimage.fileName();
     if(!coverimage.exists()) {
-        dir.removeRecursively();
-        // qDebug() << "creating path for image copy" << appDataLocation; // << "hashy" << mediaLocationHash;
-        dir.mkpath(".");
+        QFileInfoList previousCovers = appDataLocation.entryInfoList(QDir::Files);
+        for (const QFileInfo &previousCoverInfo : previousCovers) {
+            if(previousCoverInfo.created().daysTo(now) > 3) { // delete old files just in case
+                QFile delFile(previousCoverInfo.filePath());
+                delFile.remove();
+            }
+        }
+        // qDebug() << "creating path for image copy" << appDataLocationString; // << "hashy" << mediaLocationHash;
+        appDataLocation.mkpath(".");
 
         img.save(coverimage.fileName(),"JPG",90);
     }
@@ -173,86 +182,57 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
     return img;
 }
 
-int taglibImageprovider::levenshteinDistance(const QString &string1, const QString &string2, bool caseSensitive)
+int taglibImageprovider::levenshteinDistance(const QString &source, const QString &target)
 {
+    // from https://qgis.org/api/2.14/qgsstringutils_8cpp_source.html which is GPL2, so all is well.
 
-    int length1 = string1.length();
-    int length2 = string2.length();
-    //empty strings? solution is trivial...
-    if ( string1.isEmpty() )
-    {
-        return length2;
-    }
-    else if ( string2.isEmpty() )
-    {
-        return length1;
-    }
-    //handle case sensitive flag (or not)
-    QString s1( caseSensitive ? string1 : string1.toLower() );
-    QString s2( caseSensitive ? string2 : string2.toLower() );
-    const QChar* s1Char = s1.constData();
-    const QChar* s2Char = s2.constData();
-    //strip out any common prefix
-    int commonPrefixLen = 0;
-    while ( length1 > 0 && length2 > 0 && *s1Char == *s2Char )
-    {
-        commonPrefixLen++;
-        length1--;
-        length2--;
-        s1Char++;
-        s2Char++;
-    }
-    //strip out any common suffix
-    while ( length1 > 0 && length2 > 0 && s1.at( commonPrefixLen + length1 - 1 ) == s2.at( commonPrefixLen + length2 - 1 ) )
-    {
-        length1--;
-        length2--;
-    }
-    //fully checked either string? if so, the answer is easy...
-    if ( length1 == 0 )
-    {
-        return length2;
-    }
-    else if ( length2 == 0 )
-    {
-        return length1;
-    }
-    //ensure the inner loop is longer
-    if ( length1 > length2 )
-    {
-        qSwap( s1, s2 );
-        qSwap( length1, length2 );
-    }
-    //levenshtein algorithm begins here
-    QVector< int > col;
-    col.fill( 0, length2 + 1 );
-    QVector< int > prevCol;
-    prevCol.reserve( length2 + 1 );
-    for ( int i = 0; i < length2 + 1; ++i )
-    {
-        prevCol << i;
-    }
-    const QChar* s2start = s2Char;
-    for ( int i = 0; i < length1; ++i )
-    {
-        col[0] = i + 1;
-        s2Char = s2start;
-        for ( int j = 0; j < length2; ++j )
-        {
-            col[j + 1] = qMin( qMin( 1 + col[j], 1 + prevCol[1 + j] ), prevCol[j] + (( *s1Char == *s2Char ) ? 0 : 1 ) );
-            s2Char++;
-        }
-        col.swap( prevCol );
-        s1Char++;
-    }
-    return prevCol[length2];
+   if (source == target) {
+       return 0;
+   }
+
+   const int sourceCount = source.count();
+   const int targetCount = target.count();
+
+   if (source.isEmpty()) {
+       return targetCount;
+   }
+
+   if (target.isEmpty()) {
+       return sourceCount;
+   }
+
+   if (sourceCount > targetCount) {
+       return levenshteinDistance(target, source);
+   }
+
+   QVector<int> column;
+   column.fill(0, targetCount + 1);
+   QVector<int> previousColumn;
+   previousColumn.reserve(targetCount + 1);
+   for (int i = 0; i < targetCount + 1; i++) {
+       previousColumn.append(i);
+   }
+
+   for (int i = 0; i < sourceCount; i++) {
+       column[0] = i + 1;
+       for (int j = 0; j < targetCount; j++) {
+           column[j + 1] = std::min({
+               1 + column.at(j),
+               1 + previousColumn.at(1 + j),
+               previousColumn.at(j) + ((source.at(i) == target.at(j)) ? 0 : 1)
+           });
+       }
+       column.swap(previousColumn);
+   }
+
+   return previousColumn.at(targetCount);
 }
 
 QString taglibImageprovider::nearestName(const QString &actual, const QStringList &candidates)
 {
     int deltaBest = 10000;
     QString best;
-    QString actualBaseName = QFileInfo(actual).baseName();
+    QString actualBaseName = QFileInfo(actual).baseName().toLower();
     for (const QString &candidate : candidates) {
 
         QString candidateBaseName = QFileInfo(candidate).baseName().toLower();
@@ -262,7 +242,6 @@ QString taglibImageprovider::nearestName(const QString &actual, const QStringLis
         } else {
             delta = this->levenshteinDistance(actualBaseName, candidateBaseName);
         }
-
         if ( delta < deltaBest )
         {
             deltaBest = delta;
