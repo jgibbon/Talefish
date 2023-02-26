@@ -39,7 +39,11 @@ CoverBackground {
         }
         Image {
             id: coverImage
-            source: 'image://taglib-cover-art/'+playlist.currentMetaData.path
+
+            onSourceChanged: {
+                console.log('CoverPage Image cover image:', source, coverImage.width > 0 && coverImage.height > 0, width, height)
+            }
+
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop
             sourceSize {
@@ -48,6 +52,13 @@ CoverBackground {
             }
             z:-1
             opacity: 0.3
+
+            Binding {
+                target: coverImage
+                when: coverImage.width > 0 && coverImage.height > 0
+                property: 'source'
+                value: 'image://taglib-cover-art/'+playlist.currentMetaData.path
+            }
         }
     }
 

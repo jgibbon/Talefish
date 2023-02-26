@@ -118,7 +118,6 @@ Item {
 
         FadeImage {
             id: coverImage
-            source: 'image://taglib-cover-art/'+playlist.currentMetaData.path
             width: parent.width
             height: parent.height
             asynchronous: true
@@ -144,6 +143,12 @@ Item {
                     cover = launcher.getGeneratedCoverImgPath(String(app.playlist.currentItemSource).replace("file://", ""))
                  }
                 playlist.setAlbumArt(cover)
+            }
+            Binding {
+                target: coverImage
+                when: coverImage.width > 0 && coverImage.height > 0
+                property: 'source'
+                value: 'image://taglib-cover-art/'+playlist.currentMetaData.path
             }
         }
 
@@ -203,7 +208,12 @@ Item {
         visible: options.playerSwipeForNextPrev && (page.metadataCount > 1 || audio.displayPosition > options.skipBackTrackThreshold)
         property bool sideTriggerActive: false
         readonly property alias target: coverImage
-        anchors.fill: coverImageContainer
+        anchors {
+            fill: coverImageContainer
+            leftMargin: Theme.horizontalPageMargin
+            rightMargin: Theme.horizontalPageMargin
+        }
+
         drag.target: target
         drag.axis: Drag.XAxis
         drag.threshold: 30
@@ -212,7 +222,6 @@ Item {
         onClicked: {
             app.audio.playPause();
         }
-
         onMouseXChanged: {
             var m = mouse, act = sideTriggerActive;
             act = false;
@@ -270,7 +279,13 @@ Item {
 
         Item {
             id: coverDraggedLabelContainer
-            anchors.fill: parent
+
+            anchors {
+                fill: parent
+                leftMargin: -Theme.horizontalPageMargin
+                rightMargin: -Theme.horizontalPageMargin
+            }
+
             visible: coverMouseArea.dragValue > coverMouseArea.maxDrag * 0.5
             opacity: coverMouseArea.sideTriggerActive ? 1.0 : 0.0
 
@@ -307,7 +322,12 @@ Item {
         }
         Item {
             id: draggableContainer
-            anchors.fill: parent
+
+            anchors {
+                fill: parent
+                leftMargin: -Theme.horizontalPageMargin
+                rightMargin: -Theme.horizontalPageMargin
+            }
             clip:true
             Item {
                 id: maxItem
