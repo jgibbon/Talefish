@@ -19,7 +19,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
 import QtQuick 2.6
-import Amber.Mpris 1.0
 /* This is an ugly, bad hack for harbour. Sorry, please regard this as non-existent. */
 
 Item {
@@ -27,74 +26,16 @@ Item {
 
     signal command(string cmd)
 
-    property QtObject _mpris: MprisPlayer {
-        id: mpris
-        serviceName: "talefish"
-
-        identity: "Talefish"
-        supportedUriSchemes: ["file"]
-        supportedMimeTypes: ["audio/x-wav", "audio/x-vorbis+ogg", "audio/mpeg", "audio/mp4a-latm", "audio/x-aiff"]
-        // Mpris2 Player Interface
-        canControl: true
-
-        canGoNext: true //appstate.playlistIndex < appstate.playlist.count
-        canGoPrevious: true // appstate.playlistIndex > 0
-        canPause: true
-        canPlay: true
-
-        canSeek: true// playback.seekable
-        hasTrackList: true
-        playbackStatus: Mpris.Paused
-        loopStatus: Mpris.LoopNone
-        shuffle: false
-        volume: 1.0
-
-        onPauseRequested: remoteControl.command("pause")
-        onPlayRequested: remoteControl.command("play")
-        onPlayPauseRequested: remoteControl.command("playPause")
-        onStopRequested: remoteControl.command("stop")
-        onNextRequested: remoteControl.command("next")
-
-        onPreviousRequested: remoteControl.command("prev")
-
-        //metadata handling
-        function updateMetaData(){
-//            console.log('currentTitle', currentTitle)
-            mpris.metaData.contributingArtist = [app.playlist.currentArtist || playlist.currentAlbum]
-            mpris.metaData.title = app.playlist.currentTitle
-            mpris.metaData.artUrl = app.playlist.currentAlbumArtUrl
-        }
-        property Item wrap: Item {
-            Connections {
-                target: app.audio
-                onIsPlayingChanged: {
-                    if(app.audio.isPlaying) {
-                        mpris.playbackStatus = Mpris.Playing
-                    } else {
-                        mpris.playbackStatus = Mpris.Paused
-                    }
-                }
-            }
-            Connections {
-                target: app.playlist
-                onCurrentMetaDataChanged: {
-                    if(!metadataTimer.running) {
-                        mpris.updateMetaData();
-                    }
-                }
-            }
-            Timer { // workaround: data got ignored if set directly after load
-                id: metadataTimer
-                running: true
-                interval: 400
-                repeat: false
-                onTriggered: mpris.updateMetaData()
-            }
-        }
-    }
+    property QtObject _mpris:mprisLoader.item
     property QtObject _keys
     property QtObject _policy
     property bool tryToReaquire
+
+    property Loader mprisLoader: Loader {
+        source: (app.launcher.sf_major < 4 || (app.launcher.sf_major === 4 && app.launcher.sf_minor < 3))
+                ? './MprisControllerLegacy.qml'
+                : './MprisController.qml';
+    }
 
     Component.onCompleted: {
 
