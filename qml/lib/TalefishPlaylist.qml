@@ -55,9 +55,9 @@ Playlist {
     }
     property string currentAlbumArtUrl: ''
     function setAlbumArt(coverUrl) {
-        if(coverUrl !== currentAlbumArtUrl) {
-            currentAlbumArtUrl = coverUrl
-            playlist.currentMetaDataChanged()
+        var setCoverUrl = launcher.fileExists(coverUrl) ? coverUrl : '';
+        if(setCoverUrl !== currentAlbumArtUrl) {
+            currentAlbumArtUrl = setCoverUrl;
         }
     }
 

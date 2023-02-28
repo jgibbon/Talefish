@@ -20,7 +20,6 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 import QtQuick 2.6
 import Amber.Mpris 1.0
-/* This is an ugly, bad hack for harbour. Sorry, please regard this as non-existent. */
 
 MprisPlayer {
         id: mpris
@@ -54,10 +53,8 @@ MprisPlayer {
 
         //metadata handling
         function updateMetaData(){
-//            console.log('currentTitle', currentTitle)
-            mpris.metaData.contributingArtist = [app.playlist.currentArtist || playlist.currentAlbum]
+            mpris.metaData.contributingArtist = [app.playlist.currentArtist || playlist.currentAlbum || '']
             mpris.metaData.title = app.playlist.currentTitle
-            mpris.metaData.artUrl = app.playlist.currentAlbumArtUrl
         }
         property Item wrap: Item {
             Connections {
@@ -75,7 +72,12 @@ MprisPlayer {
                 onCurrentMetaDataChanged: {
                     if(!metadataTimer.running) {
                         mpris.updateMetaData();
+                    } else {
+                        metadataTimer.restart();
                     }
+                }
+                onCurrentAlbumArtUrlChanged: {
+                    mpris.metaData.artUrl = app.playlist.currentAlbumArtUrl
                 }
             }
             Timer { // workaround: data got ignored if set directly after load

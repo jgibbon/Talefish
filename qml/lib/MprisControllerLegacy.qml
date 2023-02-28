@@ -19,8 +19,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
 
-import org.nemomobile.mpris 1.0
 import QtQuick 2.6
+import org.nemomobile.mpris 1.0
+
 MprisPlayer {
     id: mpris
     serviceName: "talefish"
@@ -54,10 +55,8 @@ MprisPlayer {
     //metadata handling
     function updateMetaData(){
         var infos = mpris.metadata;
-
-        infos[Mpris.metadataToString(Mpris.Artist)] = [app.playlist.currentArtist || playlist.currentAlbum]
+        infos[Mpris.metadataToString(Mpris.Artist)] = [app.playlist.currentArtist || playlist.currentAlbum || '']
         infos[Mpris.metadataToString(Mpris.Title)] = app.playlist.currentTitle
-        infos[Mpris.metadataToString(Mpris.ArtUrl)] = app.playlist.currentAlbumArtUrl
         mpris.metadata = infos;
     }
     property Item wrap: Item {
@@ -76,10 +75,15 @@ MprisPlayer {
             onCurrentMetaDataChanged: {
                 if(!metadataTimer.running) {
                     mpris.updateMetaData();
+                } else {
+                    metadataTimer.restart();
                 }
             }
+            onCurrentAlbumArtUrlChanged: {
+                infos[Mpris.metadataToString(Mpris.ArtUrl)] = app.playlist.currentAlbumArtUrl
+            }
         }
-        Timer { // workaround: data gets ignored if set directly after load
+        Timer { // workaround: data gets ignored if set directly after load. Also used as a throttle.
             id: metadataTimer
             running: true
             interval: 400
