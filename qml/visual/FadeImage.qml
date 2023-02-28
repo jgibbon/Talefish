@@ -45,9 +45,9 @@ Item {
             if(previousSource){
                 secondaryImage.source = previousSource;
                 secondaryImage.opacity = 1;
+                opacity = 0;
+                fadeImageAnimation.start();
             }
-            opacity = 0;
-            fadeImageAnimation.start();
 
             previousSource = source
         }

@@ -1,3 +1,9 @@
+* Tue Feb 28 2023 velox 0.10-1
+- enhancement: move to Amber.MPris (newly flashed devices only have that) with Fallback (sfos <4.4).
+- enhancement: show filename on lock screen if no meta data available
+- enhancement: reduce album-art click/drag area size to reduce accidental skipping
+- bugfix: throttle setting mpris data setting to work around qtmpris segfault in obscure timing situations
+
 * Fri Feb 03 2023 velox 0.9-1
 - enhancement: album art on lock screen (sfos 4.5)
 - enhancement: remove loader for player page content because of visual side effects

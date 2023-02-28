@@ -20,15 +20,15 @@ jobs:
 
     - name: Prepare
       run: mkdir output
-#
-    - name: Build armv7hl legacy
-      # id: build_armv7hl
-      uses: coderus/github-sfos-build@master
-      with:
-        release: 3.4.0.22
 
-    - name: Rename legacy rpm
-      run: for x in ./RPMS/*.rpm; do sudo mv "$x" "./RPMS/`basename "$x" .rpm`.legacy-sfos-3.4.rpm"; done
+    #- name: Build armv7hl legacy
+    #  # id: build_armv7hl
+    #  uses: coderus/github-sfos-build@master
+    #  with:
+    #    release: 3.4.0.22
+
+    #- name: Rename legacy rpm
+    #  run: for x in ./RPMS/*.rpm; do sudo mv "$x" "./RPMS/`basename "$x" .rpm`.legacy-sfos-3.4.rpm"; done
 
     - name: Build armv7hl
       id: build_armv7hl
