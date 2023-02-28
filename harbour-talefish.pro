@@ -53,6 +53,8 @@ TRANSLATIONS += \
 DISTFILES += \
     harbour-talefish.desktop \
     qml/harbour-talefish.qml \
+    qml/lib/MprisController.qml \
+    qml/lib/MprisControllerLegacy.qml \
     qml/pages/AboutPage.qml \
     qml/pages/OpenPage.qml \
     qml/pages/OptionsPage.qml \

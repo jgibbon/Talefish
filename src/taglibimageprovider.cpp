@@ -68,10 +68,10 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
     } else {
         mediafilePath = id;
     }
-
     QFile mediafile(mediafilePath);
     if (mediafile.exists()) {
         QString mimetype = db.mimeTypeForFile(mediafilePath).name();
+
         if(mimetype == "audio/mp4" || mimetype == "audio/m4a" || mimetype == "audio/x-m4b" || mimetype == "audio/x-m4a") {
             TagLib::MP4::File f(mediafilePath.toStdString().c_str());
             TagLib::MP4::Tag* tag = f.tag();
@@ -127,6 +127,7 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
             QStringList images = filedir.entryList(QStringList() << "*.jpg" << "*.JPG" << "*.png" << "*.PNG" << "*.bmp" << "*.BMP", QDir::Files, QDir::Name);
             if(images.count() > 0) {
                 imageFound = true;
+
                 img.load(filedir.absolutePath()+"/"+this->nearestName(mediafileinfo.fileName(), images));
             }
         }
@@ -152,33 +153,27 @@ QImage taglibImageprovider::requestImage(const QString &id, QSize *size, const Q
         if(size) {
             *size = QSize(img.width(), img.height());
         }
-    }
 
+        // save the album art for mpris / lock screen
 
-    // save the album art for mpris / lock screen
+        QString mediaLocationHash = QString(QCryptographicHash::hash((mediafilePath.toUtf8()),QCryptographicHash::Md5).toHex());
 
-    QString mediaLocationHash = QString(QCryptographicHash::hash((mediafilePath.toUtf8()),QCryptographicHash::Md5).toHex());
+        QFile coverimage(appDataLocationString + "/" + mediaLocationHash + ".jpg");
+        QDateTime now = QDateTime::currentDateTime();
 
-    QFile coverimage(appDataLocationString + "/" + mediaLocationHash + ".jpg");
-    QDateTime now = QDateTime::currentDateTime();
-
-    // qDebug() << "paths…" << mediafilePath << "hashy" << mediaLocationHash << coverimage.fileName();
-    if(!coverimage.exists()) {
-        QFileInfoList previousCovers = appDataLocation.entryInfoList(QDir::Files);
-        for (const QFileInfo &previousCoverInfo : previousCovers) {
-            if(previousCoverInfo.created().daysTo(now) > 3) { // delete old files just in case
-                QFile delFile(previousCoverInfo.filePath());
-                delFile.remove();
+        if(!coverimage.exists()) {
+            QFileInfoList previousCovers = appDataLocation.entryInfoList(QDir::Files);
+            for (const QFileInfo &previousCoverInfo : previousCovers) {
+                if(previousCoverInfo.created().daysTo(now) > 3) { // delete old files just in case
+                    QFile delFile(previousCoverInfo.filePath());
+                    delFile.remove();
+                }
             }
+            appDataLocation.mkpath(".");
+            img.save(coverimage.fileName(),"JPG",90);
         }
-        // qDebug() << "creating path for image copy" << appDataLocationString; // << "hashy" << mediaLocationHash;
-        appDataLocation.mkpath(".");
 
-        img.save(coverimage.fileName(),"JPG",90);
     }
-
-
-//    qDebug() << "Image took" << timer.elapsed() << "milliseconds";
     return img;
 }
 

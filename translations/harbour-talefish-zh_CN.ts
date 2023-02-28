@@ -118,7 +118,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="83"/>
+        <location filename="../qml/cover/CoverPage.qml" line="94"/>
         <source>Nothing to play</source>
         <translation>没有可供播放的音频</translation>
     </message>
@@ -764,27 +764,27 @@
 <context>
     <name>PlayerPageContent</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="183"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="188"/>
         <source>Nothing to play</source>
         <translation>没有可供播放的音频</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="188"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="193"/>
         <source>Open Files by pulling down.</source>
         <translation>下拉以打开文件</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="317"/>
         <source>Rewind Track</source>
         <translation>倒带</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="317"/>
         <source>Previous Track</source>
         <translation>上一则音频</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="317"/>
         <source>Next Track</source>
         <translation>下一则音频</translation>
     </message>

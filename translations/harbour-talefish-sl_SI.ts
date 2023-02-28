@@ -118,7 +118,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="83"/>
+        <location filename="../qml/cover/CoverPage.qml" line="94"/>
         <source>Nothing to play</source>
         <translation>Ni datotek za predvajanje</translation>
     </message>
@@ -773,27 +773,27 @@
 <context>
     <name>PlayerPageContent</name>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="183"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="188"/>
         <source>Nothing to play</source>
         <translation>Ni datotek za predvajanje</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="188"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="193"/>
         <source>Open Files by pulling down.</source>
         <translation>Za odpiranje datotek potegni navzdol</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="317"/>
         <source>Rewind Track</source>
         <translation>Previj posnetek</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="317"/>
         <source>Previous Track</source>
         <translation>Prejšnji posnetek</translation>
     </message>
     <message>
-        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="302"/>
+        <location filename="../qml/visual/silica/PlayerPageContent.qml" line="317"/>
         <source>Next Track</source>
         <translation>Naslednji posnetek</translation>
     </message>

@@ -1,9 +1,10 @@
-name: Test build
+name: SFOS build
 
 on:
   push:
     branches:
       - master
+      - legacy
     tags:
       - '*'
   pull_request:
@@ -19,13 +20,22 @@ jobs:
 
     - name: Prepare
       run: mkdir output
+#
+    - name: Build armv7hl legacy
+      # id: build_armv7hl
+      uses: coderus/github-sfos-build@master
+      with:
+        release: 3.4.0.22
+
+    - name: Rename legacy rpm
+      run: for x in ./RPMS/*.rpm; do sudo mv "$x" "./RPMS/`basename "$x" .rpm`.legacy-sfos-3.4.rpm"; done
 
     - name: Build armv7hl
       id: build_armv7hl
       uses: coderus/github-sfos-build@master
       with:
         release: 4.2.0.21
-        
+
     - name: Build i486
       id: build_i486
       uses: coderus/github-sfos-build@master
@@ -39,7 +49,7 @@ jobs:
       with:
         release: 4.2.0.21
         arch: aarch64
-      
+
     - name: Upload build result
       uses: actions/upload-artifact@v2
       with:
@@ -58,7 +68,7 @@ jobs:
         hub release create "${assets[@]}" -m "$tag_name" "$tag_name"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         
+
     - name: Create prerelease
       if: contains(github.ref, 'pre')
       run: |
