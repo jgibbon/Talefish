@@ -121,7 +121,11 @@ Item {
             console.log('remote control', cmd);
             switch(cmd) {
             case 'pause':
+                playerCommands.pause()
+                break;
             case 'play':
+                playerCommands.play()
+                break;
             case 'playPause':
                 playerCommands.playPause()
                 break;
