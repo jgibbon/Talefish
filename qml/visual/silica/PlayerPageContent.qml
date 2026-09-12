@@ -270,7 +270,7 @@ Item {
 
         property QtObject _ngfEffect //qt feedback won't run if
         Component.onCompleted: {
-            _ngfEffect = Qt.createQmlObject("import org.nemomobile.ngf 1.0; NonGraphicalFeedback { event: 'pulldown_highlight' }",
+            _ngfEffect = Qt.createQmlObject("import Nemo.Ngf 1.0; NonGraphicalFeedback { event: 'pulldown_highlight' }",
                                coverMouseArea, 'NonGraphicalFeedback');
         }
 
