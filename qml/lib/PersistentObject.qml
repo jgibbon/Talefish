@@ -35,7 +35,7 @@ QtObject {
 
         doPersist && Store.load(persistentObject);
 
-        console.log('loaded DB', objectName)
+//        console.log('PersistentObjectStore QML: loaded DB', objectName)
     }
 
     Component.onDestruction: {

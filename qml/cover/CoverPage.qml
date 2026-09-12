@@ -40,9 +40,9 @@ CoverBackground {
         Image {
             id: coverImage
 
-            onSourceChanged: {
-                console.log('CoverPage Image cover image:', source, coverImage.width > 0 && coverImage.height > 0, width, height)
-            }
+//            onSourceChanged: {
+//                console.log('CoverPage Image cover image:', source, coverImage.width > 0 && coverImage.height > 0, width, height)
+//            }
 
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop

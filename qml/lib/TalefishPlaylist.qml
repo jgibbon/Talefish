@@ -30,6 +30,7 @@ Playlist {
     playbackMode: audio.error ? Playlist.CurrentItemOnce : Playlist.Sequential
     property int totalDuration: 0
     property int totalPosition: 0
+
     property string pathsIdentifier // pathsIdentifier is for saving current progress
     readonly property Timer durationListTimer: Timer {
         // we want to debounce some operations to reduce double work
@@ -39,10 +40,9 @@ Playlist {
         }
     }
     onCurrentIndexChanged: {
-        console.log('currentIndex', currentIndex, audio.error) //error: 1
+        // console.log('currentIndex', currentIndex, audio.error)
         // when played through, we want to activate the first track again
         if(currentIndex === -1 && metadata.count > 0 && !audio.error) {
-
             audio.pause();
             currentIndex = 0;
             // total position stays at "100%" by default, which is nice and correct but may be seen as inconsistent
@@ -116,7 +116,7 @@ Playlist {
         }
     }
     function setDurations() {
-        console.log('setDurations')
+//        console.log('setDurations')
         var totalDuration = 0;
         for(var i=0; i < playlist.metadata.count; i++) {
             var metadataItem = playlist.metadata.get(i);
@@ -127,7 +127,7 @@ Playlist {
 
         // if this is done, we can save the current playlist:
         app.state.currentPlaylist = playlist.toJSON();
-        console.log('saved current playlist…');
+//        console.log('saved current playlist…');
     }
     function toJSON() { // to save current state
         var json = {
@@ -232,7 +232,7 @@ Playlist {
         target: audio
         onSeekableChanged: {
             if(audio.seekable && playlist.applyingSavedPosition) {
-                console.log("seekable applying?!")
+//                console.log("seekable applying?!")
                 audio.seek(playlist.applyThisTrackPosition);
                 // normally, seeking should be applied now with local tracks
                 if(audio.position === playlist.applyThisTrackPosition) {
@@ -243,7 +243,7 @@ Playlist {
                     reSeekTimer.start()
                 }
             } else if(audio.seekable && app.options.playbackRate !== 1.0) { // seek to force playbackRate
-                console.log("seek for playbackRate");
+//                console.log("seek for playbackRate");
                 audio.playbackRateWorkaround(true);
             }
         }

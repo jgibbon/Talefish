@@ -29,7 +29,7 @@ function initialize(sttngs, ls) {
                     tx.executeSql('CREATE UNIQUE INDEX IF NOT EXISTS fullKeyName ON settings (settingsName, keyName);');
                 }
                 );
-    console.log('DB initialized', settings[3]);
+//    console.log('DB initialized', settings[3]);
 }
 function reset() {
     db.transaction(
