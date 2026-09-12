@@ -20,6 +20,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 import QtQuick 2.6
 import Amber.Mpris 1.0
+import QtMultimedia 5.6
 
 MprisPlayer {
         id: mpris
@@ -30,62 +31,61 @@ MprisPlayer {
         supportedMimeTypes: ["audio/x-wav", "audio/x-vorbis+ogg", "audio/mpeg", "audio/mp4a-latm", "audio/x-aiff"]
         // Mpris2 Player Interface
         canControl: true
-
-        canGoNext: true //appstate.playlistIndex < appstate.playlist.count
-        canGoPrevious: true // appstate.playlistIndex > 0
-        canPause: true
-        canPlay: true
-
-        canSeek: true// playback.seekable
+        canGoNext: app.playerCommands.canGoNext
+        canGoPrevious: app.playerCommands.canGoPrevious
+        canPlay: app.audio.playbackState !== Mpris.Playing && !!(app.audio.source || playlist.itemCount)
+        canPause: app.audio.playbackState === Mpris.Playing
+        canSeek: app.audio.seekable
         hasTrackList: true
-        playbackStatus: Mpris.Paused
+
+        playbackStatus: {
+            switch (app.audio.playbackState) {
+            case Audio.PlayingState:
+                return Mpris.Playing
+            case Audio.PausedState:
+                return Mpris.Paused
+            default:
+                return Mpris.Stopped
+            }
+        }
         loopStatus: Mpris.LoopNone
-        shuffle: false
-        volume: 1.0
+        shuffle: app.playlist ? app.playlist.playbackMode === Playlist.Random : false
+        rate: app.audio.playbackRate
+        volume: app.audio.muted ? 0 : app.audio.volume
 
         onPauseRequested: remoteControl.command("pause")
         onPlayRequested: remoteControl.command("play")
         onPlayPauseRequested: remoteControl.command("playPause")
         onStopRequested: remoteControl.command("stop")
         onNextRequested: remoteControl.command("next")
-
         onPreviousRequested: remoteControl.command("prev")
+        onPositionRequested: position = app.audio.position
 
-        //metadata handling
-        function updateMetaData(){
-            mpris.metaData.contributingArtist = [app.playlist.currentArtist || playlist.currentAlbum || '']
-            mpris.metaData.title = app.playlist.currentTitle
+        onSetPositionRequested: {
+            var trackNum = parseInt((''+trackId).replace("/talefish/track/", "0"))
+            player.seek(position, trackNum)
+        }
+        onSeekRequested: {
+            app.playerCommands.seekBy(offset)
+        }
+
+        metaData {
+            url: app.audio.source
+            artUrl: app.playlist.currentAlbumArtUrl
+            trackId: "/talefish/track/" + (app.playlist && app.playlist.currentIndex >= 0 ? app.playlist.currentIndex : '0')
+            duration: app.audio.duration
+            albumTitle: app.playlist.currentAlbum
+            albumArtist: [app.playlist.currentArtist || playlist.currentAlbum || '']
+            contributingArtist: [app.playlist.currentArtist || playlist.currentAlbum || '']
+            title: app.playlist.currentTitle
+            trackNumber: app.playlist && app.playlist.currentIndex >= 0 ? app.playlist.currentIndex + 1 : null
         }
         property Item wrap: Item {
             Connections {
-                target: app.audio
-                onIsPlayingChanged: {
-                    if(app.audio.isPlaying) {
-                        mpris.playbackStatus = Mpris.Playing
-                    } else {
-                        mpris.playbackStatus = Mpris.Paused
-                    }
+                target: app.playerCommands
+                onSeeked: {
+                    mpris.seeked(position)
                 }
-            }
-            Connections {
-                target: app.playlist
-                onCurrentMetaDataChanged: {
-                    if(!metadataTimer.running) {
-                        mpris.updateMetaData();
-                    } else {
-                        metadataTimer.restart();
-                    }
-                }
-                onCurrentAlbumArtUrlChanged: {
-                    mpris.metaData.artUrl = app.playlist.currentAlbumArtUrl
-                }
-            }
-            Timer { // workaround: data got ignored if set directly after load
-                id: metadataTimer
-                running: true
-                interval: 400
-                repeat: false
-                onTriggered: mpris.updateMetaData()
             }
         }
     }

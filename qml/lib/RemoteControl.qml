@@ -26,18 +26,18 @@ Item {
 
     signal command(string cmd)
 
+
     property QtObject _mpris:mprisLoader.item
     property QtObject _keys
     property QtObject _policy
     property bool tryToReaquire
 
-    property Loader mprisLoader: Loader {
-        source: (app.launcher.sf_major < 4 || (app.launcher.sf_major === 4 && app.launcher.sf_minor < 3))
-                ? './MprisControllerLegacy.qml'
-                : './MprisController.qml';
-    }
+    property Loader mprisLoader: Loader {}
 
     Component.onCompleted: {
+        mprisLoader.source =  (app.launcher.sf_major < 4 || (app.launcher.sf_major === 4 && app.launcher.sf_minor < 3))
+                ? './MprisControllerLegacy.qml'
+                : './MprisController.qml';
 
         var keyStr = 'import Sailfish.Media 1.0
 import QtQuick 2.6

@@ -24,46 +24,49 @@ import Nemo.DBus 2.0
 Item {
     id: playerCommands
 
+    signal seeked(int position)
+
     property TalefishAudio audio: app.audio
     property TalefishPlaylist playlist: app.playlist
     property alias slumberInterface: slumberInterface
 
+    readonly property int skipDuration: options.externalCommandSkipDuration === 'small'
+                                            ? options.skipDurationSmall
+                                            : options.externalCommandSkipDuration === 'normal'
+                                                ? options.skipDurationNormal
+                                                : 0
+    readonly property bool canGoNext: skipDuration
+        ? playlist.totalDuration > playlist.totalPosition + skipDuration
+        : playlist.currentIndex < playlist.metadata.count - 1
+    readonly property bool canGoPrevious: skipDuration
+        ? playlist.totalPosition > skipDuration
+        : playlist.currentIndex > 0
+
+
     function play() { console.log('external command: play'); audio.play();}
     function pause() {console.log('external command: pause'); audio.pause();}
     function playPause() {console.log('external command: playPause'); audio.playPause();}
+
     function next() {
         console.log('external command: next');
-        switch(options.externalCommandSkipDuration){
-        case 'small':
-            playerCommands.seekBy(options.skipDurationSmall)
-            break;
-
-        case 'normal':
-            playerCommands.seekBy(options.skipDurationNormal)
-            break;
-
-        default:
-            app.playlist.next()
+        if(!canGoNext) {
+            return;
         }
+
+        if(skipDuration === 0) {
+            return app.playlist.next()
+        }
+        playerCommands.seekBy(skipDuration)
     }
     function prev() {console.log('external command: prev');
-        switch(options.externalCommandSkipDuration){
-        case 'small':
-            playerCommands.seekBy(0 - options.skipDurationSmall)
-            break;
-
-        case 'normal':
-            playerCommands.seekBy(0 - options.skipDurationNormal)
-            break;
-
-        default:
-            if(app.playlist.metadata.count > 0){
-                app.playlist.previous();
-            }
-            else {
-                audio.seek(0);
-            }
+        if(!canGoPrevious) {
+            return;
         }
+
+        if(skipDuration === 0) {
+            return app.playlist.previous()
+        }
+        playerCommands.seekBy(0 - skipDuration)
     }
     function stop() {console.log('external command: stop');
         playback.pause()
@@ -79,6 +82,7 @@ Item {
             playlist.applyingSavedPosition = false;
             playlist.applyThisTrackPosition = -1;
             audio.seek(position);
+            seeked(position)
         } else { // handle in audio.onSeekableChanged
             playlist.applyingSavedPosition = true
             playlist.applyThisTrackPosition = position;
