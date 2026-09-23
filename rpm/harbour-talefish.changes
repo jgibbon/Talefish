@@ -3,6 +3,7 @@
 - bugfix/enhancement: improve SFOS 4.3+ mpris integration (legacy stays untouched but is untested as of now!)
 - maintenance: update deprecated org.nemomobile.ngf import to Nemo.Ngf
 - maintenance: update transifex tx config api host
+- maintenance: update gh actions upload-artifact
 
 * Tue Feb 28 2023 velox 0.10-1
 - enhancement: move to Amber.MPris (newly flashed devices only have that) with Fallback (sfos <4.4).
