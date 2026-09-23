@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
 
     steps:
     - uses: actions/checkout@v4.2.2
@@ -59,20 +59,97 @@ jobs:
         name: github-actions-test
         path: RPMS
 
+    - name: Prepare release metadata
+      id: release_meta
+      if: startsWith(github.ref_name, 'release-') || startsWith(github.ref_name, 'pre-')
+      shell: bash
+      run: |
+        ref="${GITHUB_REF_NAME}"
+        kind="${ref%%-*}"
+        remainder="${ref#"$kind"-}"
+
+        version="$remainder"
+        build=""
+        if [[ "$remainder" == *-* ]]; then
+          version="${remainder%-*}"
+          build="${remainder#"$version"-}"
+        fi
+        if [[ -z "$build" ]]; then
+          build="1"
+        fi
+
+        if [[ "$kind" == "release" ]]; then
+          if [[ "$build" != "1" && -n "$build" ]]; then
+            name="v${version} Build ${build}"
+          else
+            name="v${version}"
+          fi
+        else
+          if [[ "$build" != "1" && -n "$build" ]]; then
+            name="pre${version} Build ${build}"
+          else
+            name="pre${version}"
+          fi
+        fi
+
+        echo "release_name=${name}" >> "$GITHUB_OUTPUT"
+
+        changelog_file="rpm/harbour-talefish.changes"
+        release_body=""
+        if [[ -f "$changelog_file" ]]; then
+          release_body="$(awk -v version="$version" -v build="$build" '
+            BEGIN { capture = 0; out = "" }
+            /^\*/ {
+              if (capture) {
+                exit
+              }
+              if ($0 ~ ("[[:space:]]" version "-" build "[[:space:]]*$")) {
+                capture = 1
+                next
+              }
+            }
+            capture {
+              if ($0 ~ /^\*/) {
+                exit
+              }
+              if ($0 ~ /^-/) {
+                out = out $0 ORS
+              }
+            }
+            END { printf "%s", out }
+          ' "$changelog_file")"
+        fi
+
+        if [[ -n "$release_body" ]]; then
+          printf 'release_body<<EOF\n%s\nEOF\n' "$release_body" >> "$GITHUB_OUTPUT"
+        else
+          echo "release_body=" >> "$GITHUB_OUTPUT"
+        fi
+
     - name: Create release
-      if: startsWith(github.ref, 'refs/tags/release')
-      uses: softprops/action-gh-release@v2
+      if: startsWith(github.ref_name, 'release-')
+      uses: softprops/action-gh-release@v3
       with:
+        tag_name: ${{ github.ref_name }}
+        name: ${{ steps.release_meta.outputs.release_name }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         files: RPMS/*.rpm
+        body: ${{ steps.release_meta.outputs.release_body }}
         generate_release_notes: true
         fail_on_unmatched_files: true
 
     - name: Create prerelease
-      if: startsWith(github.ref, 'refs/tags/pre')
-      uses: softprops/action-gh-release@v2
+      if: startsWith(github.ref_name, 'pre-')
+      uses: softprops/action-gh-release@v3
       with:
+        tag_name: ${{ github.ref_name }}
+        name: ${{ steps.release_meta.outputs.release_name }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         files: RPMS/*.rpm
         prerelease: true
-        body: This is a pre-release for testing purposes only. It may or may not be unstable.
+        body: |
+          This is a pre-release for testing purposes only. It may or may not be unstable.
+
+          ${{ steps.release_meta.outputs.release_body }}
         generate_release_notes: true
         fail_on_unmatched_files: true
