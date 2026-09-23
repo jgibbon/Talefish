@@ -81,7 +81,7 @@
         <location filename="../qml/pages/AboutPage.qml" line="192"/>
         <source>Or buy me a beer if you really feel like it:</source>
         <extracomment>Label: introduction for paypal link</extracomment>
-        <translation>Tai osta minulle olut, jos siltä tuntuu:</translation>
+        <translation>Halutessasi voit tukea työtäni antamalla lahjoituksen:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="202"/>
