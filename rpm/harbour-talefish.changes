@@ -1,4 +1,4 @@
-* Wed Sep 23 2026 velox 0.11-1
+* Sun Oct 11 2026 velox 0.11-1
 - translation update: finally update finnish string (thanks ZeiP!)
 - bugfix/enhancement: improve SFOS 4.3+ mpris integration (legacy stays untouched but is untested as of now!)
 - maintenance: update deprecated org.nemomobile.ngf import to Nemo.Ngf
